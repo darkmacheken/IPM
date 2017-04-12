@@ -11,7 +11,7 @@ body {
     height: 10em;
     vertical-align: middle;
     text-align: center;
-    font-family: Helvetica;
+    font-family: "PT Sans";
 }
 
 img { /* Disable image dragging */

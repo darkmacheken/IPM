@@ -219,7 +219,7 @@
     border: 3px black solid;
     position: absolute;
     width: 40em;
-    height: 32em;
+    height: 35em;
     top: 9em;
     left: 29em;
     visibility: hidden;
@@ -287,11 +287,19 @@ label.btn {
 
 .submit {
     position:relative;
-    bottom:2em;
+    bottom:1.7em;
     margin-left:220px;
     border:1px black solid;
     height:30px;
     padding-top:10px;
+}
+
+#textMenuRegisto{
+  float: left;
+  position: relative;
+  bottom: 3.8em;
+  left: 1.9em;
+  color: red;
 }
 
 #invalid-data {
