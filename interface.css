@@ -373,3 +373,69 @@
   height:20px;
   font-size:16px;
 }
+
+#confirmacaoSimNao{
+  position: absolute;
+  top: 150px;
+  left: 0px;
+  font-size: 30px;
+  font-weight: bold;
+  padding: inherit;
+  width: 600px;
+  height: 150px;
+  padding:10px;
+}
+#confirmacaoSimbtn{
+  position: absolute;
+  left:90px;
+  bottom: 5px;
+  float:center;
+  width: 150px;
+  height:40px;
+  padding: 10px 10px;
+  padding-top: 15px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  font-weight:bold;
+}
+#confirmacaoNaobtn{
+  position: absolute;
+  right:90px;
+  bottom: 5px;
+  float:center;
+  width: 150px;
+  height:40px;
+  padding: 10px 10px;
+  padding-top: 15px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  font-weight:bold;
+}
+#confirmacaoOk{
+  position: absolute;
+  top: 150px;
+  left: 0px;
+  font-size: 30px;
+  font-weight: bold;
+  padding: inherit;
+  width: 600px;
+  height: 150px;
+  padding:10px;
+}
+
+#confirmacaoOkbtn{
+  position: absolute;
+  left:220px;
+  bottom: 5px;
+  float:center;
+  width: 150px;
+  height:40px;
+  padding: 10px 10px;
+  padding-top: 15px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  font-weight:bold;
+}
