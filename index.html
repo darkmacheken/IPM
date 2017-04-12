@@ -7,22 +7,21 @@
 <script src="jstorage.js"></script>
 <script src="activatablesFunctions.js"></script>
 <script src="changing.js"></script>
-<link type="text/css" rel="stylesheet" href="stylesheet.css">
+<link type="text/css" rel="stylesheet" href="style.css">
+<link type="text/css" rel="stylesheet" href="interface.css">
 </head>
 
+<body onload="startTime()">
 
-
-<body id="ecran" onload="startTime()">
-	
-	<table style="height:100%; width:100%; position:relative; top:0; left: 0;">
+	<table id="screen">
 		<tr>
 			<td height="126" colspan="2">
 				<!--Botão Help-->
-				<div id="helpbtn">
+				<div class="box btn" id="helpbtn">
 					?
 				</div>
 				<!--Botão Chamar Empregado-->
-				<div class="btn">
+				<div class="box btn" id="callbtn">
 					Chamar Empregado
 				</div>
 				<!--Logotipo-->
@@ -30,27 +29,27 @@
 					Logótipo
 				</div>
 			</td>
-			
+
 			<td width="258" height="126">
 				<!--Relógio-->
 				<span class="box" id="clock">
 				</span>
 			</td>
 		</tr>
-		
+
 		<tr>
 			<td width="400" height="60%" valign="top">
 				<!--Menu Jogos-->
 				<div class="title" id="game">
 					JOGOS
 				</div>
-				<div class="btn" id="games">
+				<div class="box btn" id="games">
 					Jogo do Galo
 				</div>
-				<div class="btn" id="games">
+				<div class="box btn" id="games">
 					Esmurre ISTo
 				</div>
-				<div class="btn" id="games">
+				<div class="box btn" id="games">
 					Pong
 				</div>
 				<!--Menu Música-->
@@ -63,18 +62,18 @@
 					de: Eiffel 65
 				</div>
 				<!--Botão Votar Próxima Música-->
-				<div class="btn" id="votemusic" >
-					Votar próxima música
+				<div class="box btn" id="votemusic" >
+					Votar na pr&oacute;xima m&uacute;sica
 				</div>
 			</td>
-			
+
 			<td width="628" height="60%" align="center" valign="middle">
 				<!--Botão Fazer Pedido-->
 				<div id="orderfoodbtn" >
 					<br />Fazer <br />Pedido
 				</div>
 			</td>
-			
+
 			<td height="60%" valign="top">
 				<!--Menu Conta de Utilizador-->
 				<div class="title" id="contautilizador" >
@@ -83,33 +82,33 @@
 				<div class="box" id="boxcontautilizador" >
 					<br />
 					<!--Botão Entrar-->
-					<div class="btn" id="entrarbtn" onclick="openWindow('login')">
+					<div class="box btn" id="entrarbtn" onclick="openWindow('login')">
 						ENTRAR
 					</div>
 					<br /><br /><br /><br /><br /><br />
 					<!--Botão Registar-->
-					<div class="btn" id="registobtn" onclick="openWindow('registar')">
+					<div class="box btn" id="registobtn" onclick="openWindow('registar')">
 						REGISTAR
 					</div>
 				</div>
 				<!--Caixa Login quando o utilizador entrou na conta-->
 				<div class="box" id="boxcontautilizadorlogged">
-		
+
 				</div>
 			</td>
 		</tr>
 	</table>
-	
+
 	<!--Blocker, div preta com opacidade-->
 	<div id="blocker"></div>
-	
+
 	<!--Janela Login-->
 	<div class="window" id="login">
 		<h3>ENTRAR</h3>
 		<div class="closeWindow" onclick="closeLoginWindow()">
 			X
 		</div>
-		
+
 		<div class="form">
 			<form>
 				<table>
@@ -136,19 +135,19 @@
 						<p id="invalid-data">Palavra-passe ou Nome de Utilizador inválidos</p>
 			</form>
 		</div>
-		
+
 		<div class="btn submit" onclick="checkLogin()">
 			ENTRAR
 		</div>
 	</div>
-	
+
 	<!--Janela Registar-->
 	<div class="window" id="registar">
 		<h3>REGISTAR</h3>
 		<div class="closeWindow" onclick="closeRegistarWindow()">
 			X
 		</div>
-		
+
 		<div class="form">
 			<form id="reg-form">
 				<table>
@@ -214,13 +213,13 @@
 					</table>
 			</form>
 		</div>
-		
+
 		<div class="btn submit" onclick="registar()">
 			REGISTAR
 			<div class="disabler" id="reg-submit-disabler"></div>
 		</div>
-		
-		
+
+
 	</div>
 </body>
 </html>
