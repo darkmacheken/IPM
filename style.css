@@ -11,7 +11,7 @@ body {
     height: 10em;
     vertical-align: middle;
     text-align: center;
-    font-family: "PT Sans";
+    font-family: Helvetica;
 }
 
 img { /* Disable image dragging */
@@ -22,8 +22,4 @@ img { /* Disable image dragging */
     -webkit-user-drag: none;
     user-drag: none;
     -webkit-touch-callout: none;
-}
-
-div {
-    overflow: hidden;
 }
