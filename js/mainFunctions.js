@@ -32,38 +32,15 @@ function submitReg() {
 	}
 }
 
-function check_text_field(id) {
-	obj = document.getElementById(id);
-	if (obj.type == "text") {
-		console.log(this.value);
-		if (obj.value == "")
-			reg1ht = false;
-		else
-			reg1ht = true;
-	} else {
-		if (obj.value == "")
-			reg2ht = false;
-		else
-			reg2ht = true;
-	}
+function checkField(field) {
+    if (field.value == "")
+        reg_req_fields[this.id] = false;
+    else
+        reg_req_fields[this.id] = false;
+        
 	if (reg1ht && reg2ht) {
 		toggle_hidden("reg-submit-disabler");
 	} else {
 		toggle_visible("reg-submit-disabler");
 	}
-}
-
-
-/*** FUNÇÕES AUXILIARES ***/
-function closeLoginWindow() {
-	closeWindow("login-window");
-	toggle_hidden("invalid-data");
-}
-
-function closeRegistarWindow() {
-	document.getElementById("reg-form").reset();
-	check_text_field('reg-email-txtbx');
-	check_text_field('reg-password-txtbx');
-	closeWindow("reg-window");
-	toggle_inherit("reg-submit-disabler");
 }

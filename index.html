@@ -181,17 +181,6 @@
 		<div class="form">
 			<form id="reg-form">
 				<table>
-					<!--Nome-->
-					<tr>
-						<td>
-							<label for="reg-name-txtbx">Nome: *</label>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<input type="text" name="reg-name" id="reg-name-txtbx" onkeyup="checkField(this);"><br>
-							</td>
-					</tr>
 					<!--Nome de Utilizador-->
 					<tr>
 						<td>
@@ -220,12 +209,12 @@
 					<tr>
 						<td>
 							<br />
-							<label for="reg-nif-numbx">Número de Contribuinte: *</label>
+							<label for="reg-nif-numbx">Número de Contribuinte (NIF):</label>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<input type="text" name="reg-nif" id="reg-nif-numbx" onkeyup="checkField(this);"><br>
+							<input type="text" name="reg-nif" id="reg-nif-numbx" maxlength="9"><br>
 							</td>
 					</tr>
 					<!--Nr Telemóvel-->
@@ -237,7 +226,7 @@
 					</tr>
 					<tr>
 						<td>
-							<input type="text" name="reg-tel" id="reg-tel-numbx" onkeyup="checkField(this);"><br>
+							<input type="text" name="reg-tel" id="reg-tel-numbx" maxlength="9" onkeyup="checkField(this);"><br>
 							</td>
 					</tr>
 					<tr>

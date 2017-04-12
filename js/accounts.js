@@ -1,4 +1,5 @@
 var contas = {}
+var loggedIn = false;
 
 function isLoginValid(username, password) {
     return contas[username] == password;

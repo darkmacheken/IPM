@@ -1,7 +1,3 @@
-var loggedIn = false;
-var reg1ht = false;
-var reg2ht = false;
-
 function toggle_visibility(id) {
 	var e = document.getElementById(id);
 	if (e.style.visibility == 'visible')

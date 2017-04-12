@@ -213,14 +213,14 @@
 }
 
 #invalid-data {
-    visibility:hidden;
-    color:red;
+    visibility: hidden;
+    color: red;
 }
 
 #boxcontautilizadorlogged {
-    position:relative;
-    bottom:220px;
-    float:right;
+    position: relative;
+    bottom: 220px;
+    float: right;
     height: 230px;
     width: 250px;
     font-size: 15px;
@@ -228,7 +228,7 @@
     border-top:none;
     background-color:white;
     text-align: left;
-    visibility:visible;
+    visibility: visible;
 }
 
 #textContaUtilizador{
