@@ -48,12 +48,18 @@
     border-radius: 50%;
     font-size: 86px;
     margin-right: 10px;
+    line-height: 100px;
 }
 
 /* Botão de chamar o empregado */
 #callbtn {
-    width: 200px; /* É AQUI PRA ALTERARES PEDRO */
-    height: 60px;
+    width: 250px; /* É AQUI PRA ALTERARES PEDRO */
+    height: 70px;
+    font-size: 25px;
+    padding: inherit;
+    line-height: 70px;
+    position: relative;
+    top: 10px;
 }
 
 /* Logótipo */
@@ -69,6 +75,8 @@
     width: 150px;
     height: 60px;
     float: right;
+    line-height: 60px;
+    padding: inherit;
 }
 
 #orderfoodbtn {
@@ -95,6 +103,7 @@
     width: 250px;
     font-size: 15px;
     padding: 10px 20px;
+    line-height: 10px;
 }
 #boxcontautilizador {
     float:right;
@@ -139,6 +148,7 @@
     padding: 10px 20px;
     position: relative;
     bottom: -14em;
+    line-height: 10px;
 }
 #boxmusic {
     float: left;
@@ -161,6 +171,7 @@
     position: relative;
     bottom: -10.5em;
     padding: 10px 20px;
+    line-height: 20px;
 }
 /* Capa da música a ser reproduzida */
 #cover {
@@ -180,6 +191,7 @@
     width: 250px;
     font-size: 15px;
     padding: 10px 20px;
+    line-height: 10px;
 }
 #games {
     float:left;
@@ -189,6 +201,7 @@
     padding: 10px 20px;
     border-top:none;
     font-size: 30px;
+    line-height: 50px;
 }
 #blocker {
     background-color: black;
@@ -296,5 +309,5 @@ label.btn {
     padding: 10px 20px;
     border-top:none;
     background-color:white;
-    visibility:visible;
+    visibility:hidden;
 }
