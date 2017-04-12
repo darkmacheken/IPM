@@ -74,7 +74,7 @@ h3 {
     top: -4em;
 }
 
-.inputReg {
+.window input {
     width:583px;
     height:30px;
     font-size:24px;
@@ -99,6 +99,7 @@ label.btn {
     width: 100%;
     background-color: black;
     opacity: 0.4;
+    cursor: default;
 }
 
 .submit {
@@ -108,4 +109,12 @@ label.btn {
     border:1px black solid;
     height:30px;
     padding-top:10px;
+}
+
+.attentionText {
+  color: red;
+}
+
+.calmText {
+  color: black;
 }

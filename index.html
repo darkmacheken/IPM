@@ -140,11 +140,11 @@
 			<!--Definicoes de Conta-->
 			<div id="DefinicoesConta">
 			<div class="title" id="historicoTittle" >
-				Definicoes de  Conta
+				Definicoes de Conta
 			</div>
 			<div class="box" id="boxHistorico">
 				<div class="form">
-					<form id="reg-form">
+					<form id="def-form">
 						<table>
 							<!--Nome de Utilizador-->
 							<tr>
@@ -216,36 +216,46 @@
 			X
 		</div>
 
-		<div class="form">
-			<form>
+        <form id="login-form">
+		    <div class="form">
+
 				<table>
 					<tr>
 						<td>
-							<label class="labelReg" for="login-uname-txtbx">Nome de Utilizador:</label>
+                            <br />
+							<label for="login-uname-txtbx">Nome de Utilizador:<span id="login-uname-att" class="attentionText">*</span></label>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<input type="text" class="inputReg" name="login-uname" id="login-uname-txtbx" onkeyup="checkField(this);"><br>
+							<input type="text" class="req-field" name="login-uname" id="login-uname-txtbx"><br>
 							</td>
 					</tr>
 					<tr>
 						<td>
-							<br /><br /><br />
-							<label class="labelReg" for="login-pword-txtbx">Palavra-Passe:</label>
+							<br />
+							<label for="login-pword-txtbx">Palavra-Passe:<span id="login-pword-att" class="attentionText">*</span></label>
 						</td>
 					</tr>
 					<tr>
-						<td><input type="password" class="inputReg" name="login-pword" id="login-pword-txtbx" onkeyup="checkField(this);"><br></td>
+						<td><input type="password" class="req-field" name="login-pword" id="login-pword-txtbx"><br></td>
+					</tr>
+                    <tr>
+						<td>
+                            <br />
+							<span class="attentionText att-warning">* Campos de preenchimento obrigatório.</span>
+						</td>
 					</tr>
 					</table>
 						<p id="invalid-data">Palavra-passe ou Nome de Utilizador inválidos</p>
-			</form>
+
 		</div>
 
 		<div class="box btn submit" onclick="submitLogin()">
 			ENTRAR
+            <div class="disabler" id="login-submit-disabler"></div>
 		</div>
+        </form>
 	</div>
 
 	<!--Janela Registar-->
@@ -255,31 +265,32 @@
 			X
 		</div>
 
+        <form id="reg-form">
 		<div class="form">
-			<form id="reg-form">
+
 				<table>
 					<!--Nome de Utilizador-->
 					<tr>
 						<td>
 							<br />
-							<label for="reg-uname-txtbx">Nome de Utilizador: *</label>
+							<label for="reg-uname-txtbx">Nome de Utilizador:<span id="reg-uname-att" class="attentionText">*</span></label>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<input type="text"  class="inputReg" name="reg-uname" id="reg-uname-txtbx" onkeyup="checkField(this);"><br>
-							</td>
+							<input type="text"  class="inputReg req-field" name="reg-uname" id="reg-uname-txtbx"><br>
+						</td>
 					</tr>
 					<!--Password-->
 					<tr>
 						<td>
 							<br />
-							<label for="reg-pword-txtbx">Palavra-Passe: *</label>
+							<label for="reg-pword-txtbx">Palavra-Passe:<span id="reg-pword-att" class="attentionText">*</span></label>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<input type="password"  class="inputReg" name="reg-pword" id="reg-pword-txtbx" onkeyup="checkField(this);"><br />
+							<input type="password"  class="req-field" name="reg-pword" id="reg-pword-txtbx"><br />
 							</td>
 					</tr>
 					<!--NIF-->
@@ -291,52 +302,58 @@
 					</tr>
 					<tr>
 						<td>
-							<input type="text"  class="inputReg" name="reg-nif" id="reg-nif-numbx" maxlength="9"><br>
-							</td>
+							<input type="text" name="reg-nif" id="reg-nif-numbx" maxlength="9"><br>
+						</td>
 					</tr>
 					<!--Nr Telemóvel-->
 					<tr>
 						<td>
 							<br />
-							<label for="reg-tel-numbx">Número de Telemóvel: *</label>
+							<label for="reg-tel-numbx">Número de Telemóvel:<span id="reg-tel-att" class="attentionText">*</span></label>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<input type="text" class="inputReg" name="reg-tel" id="reg-tel-numbx" maxlength="9" onkeyup="checkField(this);"><br>
+							<input type="text" class="req-field" name="reg-tel" id="reg-tel-numbx" maxlength="9"><br>
 							</td>
 					</tr>
 					<tr>
-						<td id="textMenuRegisto">
-							* Campos de preenchimento obrigatório.
+						<td>
+                            <br />
+							<span class="attentionText att-warning">* Campos de preenchimento obrigatório.</span>
 						</td>
 					</tr>
 					</table>
-			</form>
+
 		</div>
 
-		<div class="box btn submit" onclick="submitReg()">
+		<div class="box btn submit" id="reg-submit" onclick="submitReg()">
 			REGISTAR
 			<div class="disabler" id="reg-submit-disabler"></div>
 		</div>
-		<!--Janela confirmação Sim ou Não-->
-		<div class="window" id="confirmacaoSimNao">
-				Tem a certeza que quer fazer esta merdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa ?
-				<div class="box btn" id="confirmacaoSimbtn">
-					Sim
-				</div>
-				<div class="box btn" id="confirmacaoNaobtn">
-					Não
-				</div>
-		</div>
+        </form>
 
-		<!--Janela confirmação Ok-->
-		<div class="window" id="confirmacaoOk">
-				Uma treta acabou de se passar, clica OK caralho.
-				<div class="box btn" id="confirmacaoOkbtn">
-					Ok
-				</div>
-		</div>
 	</div>
+
+    		<!--Janela confirmação Sim ou Não-->
+    		<div class="window" id="confirmacaoSimNao">
+    				Tem a certeza que quer fazer esta merdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa ?
+    				<div class="box btn" id="confirmacaoSimbtn">
+    					Sim
+    				</div>
+    				<div class="box btn" id="confirmacaoNaobtn">
+    					Não
+    				</div>
+    		</div>
+
+    		<!--Janela confirmação Ok-->
+    		<div class="window" id="confirmacaoOk">
+    				Uma treta acabou de se passar, clica OK caralho.
+    				<div class="box btn" id="confirmacaoOkbtn">
+    					Ok
+    				</div>
+    		</div>
+
+<script src="js/jq.js"></script>
 </body>
 </html>

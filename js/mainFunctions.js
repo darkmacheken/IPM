@@ -21,6 +21,10 @@ function submitLogin() {
 
 /* Função chamada quando é clicado botão de registar na janela de registar. */
 function submitReg() {
+    if ($.trim($(".req-field").val()) === "") {
+        // Prevenir que o botao seja clicado acidentalmente quando desativado
+        return;
+    }
 	var username = document.getElementById("reg-email-txtbx").value;
 	var password = document.getElementById("reg-password-txtbx").value;
 	var vegetarian = document.getElementById("reg-ra-veg").checked;
@@ -32,15 +36,19 @@ function submitReg() {
 	}
 }
 
-function checkField(field) {
-    if (field.value == "")
-        reg_req_fields[this.id] = false;
-    else
-        reg_req_fields[this.id] = false;
-        
-	if (reg1ht && reg2ht) {
-		toggle_hidden("reg-submit-disabler");
+/* Verificar se um formulario foi preenchido */
+function checkForm(form) {
+    var formReady = true;
+    $("form#" + form + " input.req-field").each(function() {
+        if ($.trim($(this).val()) === "")
+            formReady = false;
+    });
+
+    if (formReady) {
+		toggle_hidden($("form#" + form + " div.disabler").attr("id"));
+        $("form#" + form + " span.att-warning").removeClass().addClass("att-warning").addClass("calmText");
 	} else {
-		toggle_visible("reg-submit-disabler");
+		toggle_visible($("form#" + form + " div.disabler").attr("id"));
+        $("form#" + form + " span.att-warning").removeClass().addClass("att-warning").addClass("attentionText");
 	}
 }

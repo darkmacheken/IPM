@@ -204,14 +204,6 @@
     line-height: 50px;
 }
 
-#textMenuRegisto {
-  float: left;
-  position: relative;
-  bottom: 3.8em;
-  left: 1.9em;
-  color: red;
-}
-
 #invalid-data {
     visibility: hidden;
     color: red;
