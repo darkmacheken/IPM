@@ -231,25 +231,19 @@
     visibility:visible;
 }
 
-#historicobtn{
-  position: relative;
-  top:-32px;
-  left:-20px;
-  height: 10px;
-  width: 250px;
-  padding: inherit;
-  text-align: center;
-  font-size: 15px;
-  line-height: 10px;
-  border-left: none;
-  border-top: none;
-  border-right: none;
-}
-
 #textContaUtilizador{
   position: relative;
-  top: -5px;
+  top: -20px;
   font-size: 16px;
+}
+
+#historicobtn{
+  font-size: 15px;
+  padding: inherit;
+  width: 200px;
+  text-align: center;
+  position: relative;
+  top: 0px;
 }
 
 #definicoesContabtn{
@@ -268,4 +262,37 @@
   text-align: center;
   position: relative;
   top: 20px;
+}
+#historicoTittle{
+      float:right;
+      height: 10px;
+      width: 250px;
+      font-size: 15px;
+      padding: 10px 20px;
+      line-height: 10px;
+      position:relative;
+      top:-530px;
+      background-color: white;
+}
+#boxHistorico{
+  position:relative;
+  top:-530px;
+  float:right;
+  height: 253px;
+  width: 250px;
+  font-size: 15px;
+  padding: 10px 20px;
+  border-top:none;
+  background-color:white;
+  text-align: left;
+  visibility:visible;
+}
+
+#boxHistoricoVoltarbtn{
+  font-size: 15px;
+  padding: inherit;
+  width: 200px;
+  text-align: center;
+  position: absolute;
+  bottom: 5px;
 }
