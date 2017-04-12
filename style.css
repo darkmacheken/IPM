@@ -6,10 +6,17 @@ html {
     -ms-user-select: none;
 }
 
-.body {
+body {
+    width: 95em;
+    height: 10em;
+    vertical-align: middle;
     text-align: center;
+    font-family: Helvetica;
+}
+
+/*isto nao faz nada. se tirar o ponto fode tudo*/
+.body {
     overflow: hidden; /* Disable page scrolling */
-    font-family:calibri;
 }
 
 img { /* Disable image dragging */

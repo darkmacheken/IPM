@@ -1,13 +1,35 @@
-#ecran {
-    width: 95em;
-    height: 10em;
-    vertical-align: middle;
-    text-align: center;
+/* Todas as caixas da interface */
+.box {
+    border: 3px solid black;
+    color: black;
+    padding: 30px 32px 15px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    font-weight: bold;
+    float: left;
+    alignment-adjust:central;
 }
+
+/* Todos os objetos clicáveis */
+.btn {
+    cursor: pointer;
+}
+
+/* Tabela que contém o ecrã todo */
+#screen {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+/* Botão de ajuda */
 #helpbtn {
-    display:block;
-    height: 100px;
     width: 100px;
+    height: 100px;
+    display: block;
     border-radius: 50%;
     border: 3px solid black;
     background-color:#FFF;
@@ -21,30 +43,39 @@
     margin-right: 10px;
     cursor: pointer;
 }
+
+/* Botão de chamar o empregado */
+#callbtn {
+    width: 150px;
+    height: 60px;
+}
+
+/* Logótipo */
+#logotipo {
+    width: 600px;
+    height: 60px;
+    position: relative;
+    left: 2em;
+}
+
+/* Relógio */
+#clock {
+    width: 150px;
+    height: 60px;
+    float:right;
+}
+
 #cover {
-    display:block;
-    height: 40px;
     width: 40px;
+    height: 40px;
+    display:block;
     border-radius: 50%;
     border: 1px solid black;
     background-color:#FFF;
     color:#000;
     float:left;
 }
-.btn {
-    border: 3px solid black;
-    color: black;
-    height: 60px;
-    padding: 15px 32px;
-    padding-top: 30px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 30px;
-    font-weight:bold;
-    float:left;
-    cursor: pointer;
-    alignment-adjust:central;
-}
+
 .title {
     border: 3px solid black;
     color: black;
@@ -58,24 +89,8 @@
     float:left;
     alignment-adjust:central;
 }
-.box {
-    border: 3px solid black;
-    color: black;
-    height: 60px;
-    padding: 15px 32px;
-    padding-top: 30px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 30px;
-    font-weight:bold;
-    float:left;
-    alignment-adjust:central;
-}
-#logotipo{
-    position: relative;
-    width: 600px;
-    left: 2em;
-}
+
+
 #orderfoodbtn {
     display:block;
     height: 500px;
@@ -95,9 +110,6 @@
     cursor: pointer;
 }
 
-#clock {
-    float:right;
-}
 #contautilizador {
     float:right;
     height: 10px;

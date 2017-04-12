@@ -11,11 +11,9 @@
 <link type="text/css" rel="stylesheet" href="interface.css">
 </head>
 
+<body onload="startTime()">
 
-
-<body id="ecran" onload="startTime()">
-
-	<table style="height:100%; width:100%; position:relative; top:0; left: 0;">
+	<table id="screen">
 		<tr>
 			<td height="126" colspan="2">
 				<!--Botão Help-->
@@ -23,7 +21,7 @@
 					?
 				</div>
 				<!--Botão Chamar Empregado-->
-				<div class="btn" id="callbtn">
+				<div class="box btn" id="callbtn">
 					Chamar Empregado
 				</div>
 				<!--Logotipo-->
@@ -45,13 +43,13 @@
 				<div class="title" id="game">
 					JOGOS
 				</div>
-				<div class="btn" id="games">
+				<div class="box btn" id="games">
 					Jogo do Galo
 				</div>
-				<div class="btn" id="games">
+				<div class="box btn" id="games">
 					Esmurre ISTo
 				</div>
-				<div class="btn" id="games">
+				<div class="box btn" id="games">
 					Pong
 				</div>
 				<!--Menu Música-->
@@ -64,7 +62,7 @@
 					de: Eiffel 65
 				</div>
 				<!--Botão Votar Próxima Música-->
-				<div class="btn" id="votemusic" >
+				<div class="box btn" id="votemusic" >
 					Votar próxima música
 				</div>
 			</td>
@@ -84,12 +82,12 @@
 				<div class="box" id="boxcontautilizador" >
 					<br />
 					<!--Botão Entrar-->
-					<div class="btn" id="entrarbtn" onclick="openWindow('login')">
+					<div class="box btn" id="entrarbtn" onclick="openWindow('login')">
 						ENTRAR
 					</div>
 					<br /><br /><br /><br /><br /><br />
 					<!--Botão Registar-->
-					<div class="btn" id="registobtn" onclick="openWindow('registar')">
+					<div class="box btn" id="registobtn" onclick="openWindow('registar')">
 						REGISTAR
 					</div>
 				</div>
