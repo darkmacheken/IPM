@@ -1,0 +1,296 @@
+#ecran {
+    width: 95em;
+    height: 10em;
+    vertical-align: middle;
+    text-align: center;
+}
+#helpbtn {
+    display:block;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid black;
+    background-color:#FFF;
+    text-align:center;
+    color:#000;
+    font-weight:bold;
+    text-decoration:none;
+    font-size:86px;
+    float:left;
+    overflow:hidden;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#cover {
+    display:block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color:#FFF;
+    color:#000;
+    float:left;
+}
+.btn {
+    border: 3px solid black;
+    color: black;
+    height: 60px;
+    padding: 15px 32px;
+    padding-top: 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    font-weight:bold;
+    float:left;
+    cursor: pointer;
+    alignment-adjust:central;
+}
+.title {
+    border: 3px solid black;
+    color: black;
+    height: 60px;
+    padding: 15px 32px;
+    padding-top: 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    font-weight:bold;
+    float:left;
+    alignment-adjust:central;
+}
+.box {
+    border: 3px solid black;
+    color: black;
+    height: 60px;
+    padding: 15px 32px;
+    padding-top: 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    font-weight:bold;
+    float:left;
+    alignment-adjust:central;
+}
+#logotipo{
+    position: relative;
+    width: 600px;
+    left: 2em;
+}
+#orderfoodbtn {
+    display:block;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    border: 3px solid black;
+    text-align:center;
+    color:#000;
+    font-weight:bold;
+    text-decoration:none;
+    font-size:86px;
+    float:left;
+    overflow:hidden;
+    position: relative;
+    left: 0.5em;
+    bottom: -1em;
+    cursor: pointer;
+}
+
+#clock {
+    float:right;
+}
+#contautilizador {
+    float:right;
+    height: 10px;
+    width: 250px;
+    font-size: 15px;
+    padding: 10px 20px;
+}
+#boxcontautilizador {
+    float:right;
+    height: 220px;
+    width: 250px;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-top:none;
+}
+#entrarbtn {
+    position: relative;
+    left:1.4em;
+    float:center;
+    width: 150px;
+    height:40px;
+    padding: 10px 10px;
+    padding-top: 15px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    font-weight:bold;
+}
+#registobtn {
+    position: relative;
+    left:1.4em;
+    float:center;
+    width: 150px;
+    height:40px;
+    padding: 10px 10px;
+    padding-top: 15px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    font-weight:bold;
+}
+#music {
+    float:left;
+    height: 10px;
+    width: 250px;
+    font-size: 15px;
+    padding: 10px 20px;
+    position: relative;
+    bottom: -14em;
+}
+#boxmusic {
+    float:left;
+    height: 40px;
+    width: 250px;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-top:none;
+    font-size:20px;
+    position: relative;
+    left: 0em;
+    bottom: -10.5em;
+}
+#votemusic {
+    float:left;
+    height: 20px;
+    width: 250px;
+    font-size: 20px;
+    border-top:none;
+    position: relative;
+    bottom: -10.5em;
+    padding: 10px 20px;
+}
+#game {
+    float:left;
+    height: 10px;
+    width: 250px;
+    font-size: 15px;
+    padding: 10px 20px;
+}
+#games {
+    float:left;
+    height: 50px;
+    width: 250px;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-top:none;
+    font-size: 30px;
+}
+#blocker {
+    background-color: black;
+    position: absolute;
+    width: 100em;
+    height: 50em;
+    top: 0em;
+    left: 0em;
+    opacity: 0.5;
+    visibility: hidden;
+    z-index:4;
+}
+.window {
+    background-color: white;
+    border: 3px black solid;
+    position: absolute;
+    width: 40em;
+    height: 32em;
+    top: 9em;
+    left: 29em;
+    visibility: hidden;
+    z-index:4;
+}
+.closeWindow {
+    border: 1px solid black;
+    color: white;
+    background-color:#B22222;
+    height: 40px;
+    width:40px;
+    position:relative;
+    padding-top:5px;
+    right:0.2em;
+    top:0.2em;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight:bold;
+    float:right;
+    cursor: pointer;
+    alignment-adjust:central;
+}
+h3 {
+    color: black;
+    height: 60px;
+    position:relative;
+    left:8em;
+    top:-0.5em;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight:bold;
+    float:left;
+    alignment-adjust:central;
+}
+.login-field {
+    float:left;
+    position:relative;
+    left:2em;
+    top:-4em;
+}
+input[type="text"], input[type="password"] {
+    width:583px;
+    height:30px;
+    font-size:24px;
+}
+label.btn {
+    font-size:16px;
+    height: 25px;
+    width: 180px;
+    border: 1px black solid;
+    padding: 5px;
+    font-weight: normal;
+    text-align: left;
+    margin-right: 5px;
+}
+.btn .disabler {
+    position:absolute;
+    top:0px;
+    left:0px;
+    height:100%;
+    width:100%;
+    background-color:black;
+    opacity:0.4;
+}
+
+.submit {
+    position:relative;
+    bottom:2em;
+    margin-left:220px;
+    border:1px black solid;
+    height:30px;
+    padding-top:10px;
+}
+
+#invalid-data {
+    visibility:hidden;
+    color:red;
+}
+
+#boxcontautilizadorlogged {
+    position:relative;
+    bottom:220px;
+    float:right;
+    height: 350px;
+    width: 250px;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-top:none;
+    background-color:white;
+    visibility:visible;
+}

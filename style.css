@@ -1,0 +1,23 @@
+html {
+    overflow: hidden; /* Disable Page scrolling */
+    -webkit-touch-callout: none; /* Disable text selection */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.body {
+    text-align: center;
+    overflow: hidden; /* Disable page scrolling */
+    font-family:calibri;
+}
+
+img { /* Disable image dragging */
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+    -webkit-touch-callout: none;
+}
