@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Com.ISTo</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="jstorage.js"></script>
+<script src="activatablesFunctions.js"></script>
+<script src="changing.js"></script>
+<link type="text/css" rel="stylesheet" href="stylesheet.css">
+</head>
+
+
+
+<body id="ecran" onload="startTime()">
+	
+	<table style="height:100%; width:100%; position:relative; top:0; left: 0;">
+		<tr>
+			<td height="126" colspan="2">
+				<!--Botão Help-->
+				<div id="helpbtn">
+					?
+				</div>
+				<!--Botão Chamar Empregado-->
+				<div class="btn">
+					Chamar Empregado
+				</div>
+				<!--Logotipo-->
+				<div class="box" id="logotipo">
+					Logótipo
+				</div>
+			</td>
+			
+			<td width="258" height="126">
+				<!--Relógio-->
+				<span class="box" id="clock">
+				</span>
+			</td>
+		</tr>
+		
+		<tr>
+			<td width="400" height="60%" valign="top">
+				<!--Menu Jogos-->
+				<div class="title" id="game">
+					JOGOS
+				</div>
+				<div class="btn" id="games">
+					Jogo do Galo
+				</div>
+				<div class="btn" id="games">
+					Esmurre ISTo
+				</div>
+				<div class="btn" id="games">
+					Pong
+				</div>
+				<!--Menu Música-->
+				<div class="title" id="music">
+					M&Uacute;SICA AMBIENTE
+				</div>
+				<div class="box" id="boxmusic" >
+					<div id="cover" ></div>
+					A tocar: I'm Blue<br />
+					de: Eiffel 65
+				</div>
+				<!--Botão Votar Próxima Música-->
+				<div class="btn" id="votemusic" >
+					Votar próxima música
+				</div>
+			</td>
+			
+			<td width="628" height="60%" align="center" valign="middle">
+				<!--Botão Fazer Pedido-->
+				<div id="orderfoodbtn" >
+					<br />Fazer <br />Pedido
+				</div>
+			</td>
+			
+			<td height="60%" valign="top">
+				<!--Menu Conta de Utilizador-->
+				<div class="title" id="contautilizador" >
+					CONTA DE UTILIZADOR
+				</div>
+				<div class="box" id="boxcontautilizador" >
+					<br />
+					<!--Botão Entrar-->
+					<div class="btn" id="entrarbtn" onclick="openWindow('login')">
+						ENTRAR
+					</div>
+					<br /><br /><br /><br /><br /><br />
+					<!--Botão Registar-->
+					<div class="btn" id="registobtn" onclick="openWindow('registar')">
+						REGISTAR
+					</div>
+				</div>
+				<!--Caixa Login quando o utilizador entrou na conta-->
+				<div class="box" id="boxcontautilizadorlogged">
+		
+				</div>
+			</td>
+		</tr>
+	</table>
+	
+	<!--Blocker, div preta com opacidade-->
+	<div id="blocker"></div>
+	
+	<!--Janela Login-->
+	<div class="window" id="login">
+		<h3>ENTRAR</h3>
+		<div class="closeWindow" onclick="closeLoginWindow()">
+			X
+		</div>
+		
+		<div class="form">
+			<form>
+				<table>
+					<tr>
+						<td class="login-field">
+							<label for="email-txtbx">Nome de Utilizador:</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="login-field">
+							<input type="text" name="e-mail" id="email-txtbx"><br>
+							</td>
+					</tr>
+					<tr>
+						<td class="login-field">
+							<br /><br /><br />
+							<label for="password-txtbx">Palavra-Passe:</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="login-field"><input type="password" name="password" id="password-txtbx"><br></td>
+					</tr>
+					</table>
+						<p id="invalid-data">Palavra-passe ou Nome de Utilizador inválidos</p>
+			</form>
+		</div>
+		
+		<div class="btn submit" onclick="checkLogin()">
+			ENTRAR
+		</div>
+	</div>
+	
+	<!--Janela Registar-->
+	<div class="window" id="registar">
+		<h3>REGISTAR</h3>
+		<div class="closeWindow" onclick="closeRegistarWindow()">
+			X
+		</div>
+		
+		<div class="form">
+			<form id="reg-form">
+				<table>
+					<!--Nome-->
+					<tr>
+						<td class="login-field">
+							<label for="email-txtbx">Nome: *</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="login-field">
+							<input type="text" name="e-mail" id="reg-email-txtbx" onkeyup="check_text_field('reg-email-txtbx');"><br>
+							</td>
+					</tr>
+					<!--Nome de Utilizador-->
+					<tr>
+						<td class="login-field">
+							<br />
+							<label for="email-txtbx">Nome de Utilizador: *</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="login-field">
+							<input type="text" name="e-mail" id="reg-email-txtbx" onkeyup="check_text_field('reg-email-txtbx');"><br>
+							</td>
+					</tr>
+					<!--Password-->
+					<tr>
+						<td class="login-field">
+							<br />
+							<label for="password-txtbx">Palavra-Passe: *</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="login-field">
+							<input type="password" name="password" id="reg-password-txtbx" onkeyup="check_text_field('reg-password-txtbx');"><br />
+							</td>
+					</tr>
+					<!--NIF-->
+					<tr>
+						<td class="login-field">
+							<br />
+							<label for="email-txtbx">Número de Contribuinte: *</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="login-field">
+							<input type="text" name="e-mail" id="reg-email-txtbx" onkeyup="check_text_field('reg-email-txtbx');"><br>
+							</td>
+					</tr>
+					<!--Nr Telemóvel-->
+					<tr>
+						<td class="login-field">
+							<br />
+							<label for="email-txtbx">Número de Telemóvel: *</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="login-field">
+							<input type="text" name="e-mail" id="reg-email-txtbx" onkeyup="check_text_field('reg-email-txtbx');"><br>
+							</td>
+					</tr>
+					</table>
+			</form>
+		</div>
+		
+		<div class="btn submit" onclick="registar()">
+			REGISTAR
+			<div class="disabler" id="reg-submit-disabler"></div>
+		</div>
+		
+		
+	</div>
+</body>
+</html>
