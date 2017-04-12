@@ -14,11 +14,6 @@ body {
     font-family: Helvetica;
 }
 
-/*isto nao faz nada. se tirar o ponto fode tudo*/
-.body {
-    overflow: hidden; /* Disable page scrolling */
-}
-
 img { /* Disable image dragging */
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -27,4 +22,8 @@ img { /* Disable image dragging */
     -webkit-user-drag: none;
     user-drag: none;
     -webkit-touch-callout: none;
+}
+
+div {
+    overflow: hidden;
 }

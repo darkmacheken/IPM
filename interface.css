@@ -9,11 +9,26 @@
     font-weight: bold;
     float: left;
     alignment-adjust:central;
+    background-color: white;
 }
 
 /* Todos os objetos clicáveis */
 .btn {
     cursor: pointer;
+}
+
+/* Títulos das diversas caixas */
+.title { /* game music contautilizador */
+    border: 3px solid black;
+    color: black;
+    padding: 15px 32px;
+    padding-top: 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    float: left;
+    alignment-adjust: central;
 }
 
 /* Tabela que contém o ecrã todo */
@@ -29,19 +44,10 @@
 #helpbtn {
     width: 100px;
     height: 100px;
-    display: block;
+    padding: 0px;
     border-radius: 50%;
-    border: 3px solid black;
-    background-color:#FFF;
-    text-align:center;
-    color:#000;
-    font-weight:bold;
-    text-decoration:none;
-    font-size:86px;
-    float:left;
-    overflow:hidden;
+    font-size: 86px;
     margin-right: 10px;
-    cursor: pointer;
 }
 
 /* Botão de chamar o empregado */
@@ -62,34 +68,8 @@
 #clock {
     width: 150px;
     height: 60px;
-    float:right;
+    float: right;
 }
-
-#cover {
-    width: 40px;
-    height: 40px;
-    display:block;
-    border-radius: 50%;
-    border: 1px solid black;
-    background-color:#FFF;
-    color:#000;
-    float:left;
-}
-
-.title {
-    border: 3px solid black;
-    color: black;
-    height: 60px;
-    padding: 15px 32px;
-    padding-top: 30px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 30px;
-    font-weight:bold;
-    float:left;
-    alignment-adjust:central;
-}
-
 
 #orderfoodbtn {
     display:block;
@@ -98,12 +78,11 @@
     border-radius: 50%;
     border: 3px solid black;
     text-align:center;
-    color:#000;
-    font-weight:bold;
-    text-decoration:none;
-    font-size:86px;
-    float:left;
-    overflow:hidden;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 86px;
+    float: left;
     position: relative;
     left: 0.5em;
     bottom: -1em;
@@ -151,8 +130,9 @@
     font-size: 24px;
     font-weight:bold;
 }
+
 #music {
-    float:left;
+    float: left;
     height: 10px;
     width: 250px;
     font-size: 15px;
@@ -161,13 +141,13 @@
     bottom: -14em;
 }
 #boxmusic {
-    float:left;
+    float: left;
     height: 40px;
     width: 250px;
     font-size: 15px;
     padding: 10px 20px;
     border-top:none;
-    font-size:20px;
+    font-size: 20px;
     position: relative;
     left: 0em;
     bottom: -10.5em;
@@ -182,6 +162,18 @@
     bottom: -10.5em;
     padding: 10px 20px;
 }
+/* Capa da música a ser reproduzida */
+#cover {
+    width: 40px;
+    height: 40px;
+    display:block;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color:#FFF;
+    color: #000;
+    float: left;
+}
+
 #game {
     float:left;
     height: 10px;
