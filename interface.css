@@ -221,11 +221,51 @@
     position:relative;
     bottom:220px;
     float:right;
-    height: 350px;
+    height: 230px;
     width: 250px;
     font-size: 15px;
     padding: 10px 20px;
     border-top:none;
     background-color:white;
-    visibility:hidden;
+    text-align: left;
+    visibility:visible;
+}
+
+#historicobtn{
+  position: relative;
+  top:-32px;
+  left:-20px;
+  height: 10px;
+  width: 250px;
+  padding: inherit;
+  text-align: center;
+  font-size: 15px;
+  line-height: 10px;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+}
+
+#textContaUtilizador{
+  position: relative;
+  top: -5px;
+  font-size: 16px;
+}
+
+#definicoesContabtn{
+  font-size: 15px;
+  padding: inherit;
+  width: 200px;
+  text-align: center;
+  position: relative;
+  top: 10px;
+}
+
+#sairSessaobtn{
+  font-size: 15px;
+  padding: inherit;
+  width: 200px;
+  text-align: center;
+  position: relative;
+  top: 20px;
 }
