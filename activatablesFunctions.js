@@ -38,7 +38,7 @@ function closeWindow(id){
 }
 
 function closeLoginWindow(){
-	closeWindow("login");
+	closeWindow("login-window");
 	toggle_hidden("invalid-data");
 }
 function checkLogin(){
@@ -54,7 +54,7 @@ function closeRegistarWindow(){
 	document.getElementById("reg-form").reset();
 	check_text_field('reg-email-txtbx');
 	check_text_field('reg-password-txtbx');
-	closeWindow("registar");
+	closeWindow("reg-window");
 	toggle_inherit("reg-submit-disabler");
 }
 

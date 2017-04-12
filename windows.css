@@ -1,0 +1,111 @@
+/* Janelas de entrar e registar */
+.window {
+    background-color: white;
+    border: 3px black solid;
+    position: absolute;
+    width: 40em;
+    height: 35em;
+    top: 9em;
+    left: 29em;
+    visibility: hidden;
+    z-index:4;
+}
+
+/* Janela de entrar */
+#login-window {
+    ;
+}
+
+/* Janela de registar */
+#reg-window {
+    ;
+}
+
+/* Botão de fechar janelas */
+.closeWindow {
+    border: 1px solid black;
+    color: white;
+    background-color:#B22222;
+    height: 40px;
+    width:40px;
+    position:relative;
+    padding-top:5px;
+    right:0.2em;
+    top:0.2em;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight:bold;
+    float:right;
+    cursor: pointer;
+    alignment-adjust:central;
+}
+
+/* Títulos das janelas */
+h3 {
+    color: black;
+    height: 60px;
+    position:relative;
+    left:8em;
+    top:-0.5em;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight:bold;
+    float:left;
+    alignment-adjust:central;
+}
+
+/* Bloqueador de fundo */
+#blocker {
+    background-color: black;
+    position: absolute;
+    width: 100em;
+    height: 50em;
+    top: 0em;
+    left: 0em;
+    opacity: 0.5;
+    visibility: hidden;
+    z-index: 4;
+}
+
+.window td {
+    float: left;
+    position: relative;
+    left: 2em;
+    top: -4em;
+}
+
+input[type="text"], input[type="password"] {
+    width:583px;
+    height:30px;
+    font-size:24px;
+}
+
+label.btn {
+    font-size:16px;
+    height: 25px;
+    width: 180px;
+    border: 1px black solid;
+    padding: 5px;
+    font-weight: normal;
+    text-align: left;
+    margin-right: 5px;
+}
+
+.btn .disabler {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.4;
+}
+
+.submit {
+    position:relative;
+    bottom:1.7em;
+    margin-left:220px;
+    border:1px black solid;
+    height:30px;
+    padding-top:10px;
+}

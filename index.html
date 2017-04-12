@@ -9,6 +9,7 @@
 <script src="changing.js"></script>
 <link type="text/css" rel="stylesheet" href="style.css">
 <link type="text/css" rel="stylesheet" href="interface.css">
+<link type="text/css" rel="stylesheet" href="windows.css">
 <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 </head>
 
@@ -83,12 +84,12 @@
 				<div class="box" id="boxcontautilizador" >
 					<br />
 					<!--Botão Entrar-->
-					<div class="box btn" id="entrarbtn" onclick="openWindow('login')">
+					<div class="box btn" id="entrarbtn" onclick="openWindow('login-window')">
 						ENTRAR
 					</div>
 					<br /><br /><br /><br /><br /><br />
 					<!--Botão Registar-->
-					<div class="box btn" id="registobtn" onclick="openWindow('registar')">
+					<div class="box btn" id="registobtn" onclick="openWindow('reg-window')">
 						REGISTAR
 					</div>
 				</div>
@@ -104,7 +105,7 @@
 	<div id="blocker"></div>
 
 	<!--Janela Login-->
-	<div class="window" id="login">
+	<div class="window" id="login-window">
 		<h3>ENTRAR</h3>
 		<div class="closeWindow" onclick="closeLoginWindow()">
 			X
@@ -114,23 +115,23 @@
 			<form>
 				<table>
 					<tr>
-						<td class="login-field">
+						<td>
 							<label for="email-txtbx">Nome de Utilizador:</label>
 						</td>
 					</tr>
 					<tr>
-						<td class="login-field">
+						<td>
 							<input type="text" name="e-mail" id="email-txtbx"><br>
 							</td>
 					</tr>
 					<tr>
-						<td class="login-field">
+						<td>
 							<br /><br /><br />
 							<label for="password-txtbx">Palavra-Passe:</label>
 						</td>
 					</tr>
 					<tr>
-						<td class="login-field"><input type="password" name="password" id="password-txtbx"><br></td>
+						<td><input type="password" name="password" id="password-txtbx"><br></td>
 					</tr>
 					</table>
 						<p id="invalid-data">Palavra-passe ou Nome de Utilizador inválidos</p>
@@ -143,7 +144,7 @@
 	</div>
 
 	<!--Janela Registar-->
-	<div class="window" id="registar">
+	<div class="window" id="reg-window">
 		<h3>REGISTAR</h3>
 		<div class="closeWindow" onclick="closeRegistarWindow()">
 			X
@@ -154,60 +155,60 @@
 				<table>
 					<!--Nome-->
 					<tr>
-						<td class="login-field">
+						<td>
 							<label for="email-txtbx">Nome: *</label>
 						</td>
 					</tr>
 					<tr>
-						<td class="login-field">
+						<td>
 							<input type="text" name="e-mail" id="reg-email-txtbx" onkeyup="check_text_field('reg-email-txtbx');"><br>
 							</td>
 					</tr>
 					<!--Nome de Utilizador-->
 					<tr>
-						<td class="login-field">
+						<td>
 							<br />
 							<label for="email-txtbx">Nome de Utilizador: *</label>
 						</td>
 					</tr>
 					<tr>
-						<td class="login-field">
+						<td>
 							<input type="text" name="e-mail" id="reg-email-txtbx" onkeyup="check_text_field('reg-email-txtbx');"><br>
 							</td>
 					</tr>
 					<!--Password-->
 					<tr>
-						<td class="login-field">
+						<td>
 							<br />
 							<label for="password-txtbx">Palavra-Passe: *</label>
 						</td>
 					</tr>
 					<tr>
-						<td class="login-field">
+						<td>
 							<input type="password" name="password" id="reg-password-txtbx" onkeyup="check_text_field('reg-password-txtbx');"><br />
 							</td>
 					</tr>
 					<!--NIF-->
 					<tr>
-						<td class="login-field">
+						<td>
 							<br />
 							<label for="email-txtbx">Número de Contribuinte: *</label>
 						</td>
 					</tr>
 					<tr>
-						<td class="login-field">
+						<td>
 							<input type="text" name="e-mail" id="reg-email-txtbx" onkeyup="check_text_field('reg-email-txtbx');"><br>
 							</td>
 					</tr>
 					<!--Nr Telemóvel-->
 					<tr>
-						<td class="login-field">
+						<td>
 							<br />
 							<label for="email-txtbx">Número de Telemóvel: *</label>
 						</td>
 					</tr>
 					<tr>
-						<td class="login-field">
+						<td>
 							<input type="text" name="e-mail" id="reg-email-txtbx" onkeyup="check_text_field('reg-email-txtbx');"><br>
 							</td>
 					</tr>
