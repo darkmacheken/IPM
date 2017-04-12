@@ -291,8 +291,50 @@
 #boxHistoricoVoltarbtn{
   font-size: 15px;
   padding: inherit;
-  width: 200px;
+  width: 250px;
   text-align: center;
   position: absolute;
-  bottom: 5px;
+  bottom: 0px;
+  left:0px;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+#boxHistoricoPedidobtn{
+  font-size: 15px;
+  padding: inherit;
+  width: 120px;
+  height: 40px;
+  text-align: left;
+  position: absolute;
+  top: 0px;
+  left:0px;
+  border-top: none;
+  border-left: none;
+}
+
+#boxHistoricoRepetirPedidobtn{
+  font-size: 15px;
+  padding: inherit;
+  width: 130px;
+  height: 40px;
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left:120px;
+  border-top: none;
+  line-height: 40px;
+}
+#boxHistoricoXbtn{
+  font-size: 15px;
+  padding: inherit;
+  width: 37px;
+  height: 40px;
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left:250px;
+  border-top: none;
+  line-height: 40px;
 }
