@@ -4,9 +4,12 @@
 <meta charset="UTF-8">
 <title>Com.ISTo</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script src="jstorage.js"></script>
-<script src="activatablesFunctions.js"></script>
-<script src="changing.js"></script>
+<script src="js/jstorage.js"></script>
+<script src="js/accounts.js"></script>
+<script src="js/mainFunctions.js"></script>
+<script src="js/visibility.js"></script>
+<script src="js/windows.js"></script>
+<script src="js/clock.js"></script>
 <link type="text/css" rel="stylesheet" href="style.css">
 <link type="text/css" rel="stylesheet" href="interface.css">
 <link type="text/css" rel="stylesheet" href="windows.css">
@@ -84,12 +87,12 @@
 				<div class="box" id="boxcontautilizador" >
 					<br />
 					<!--Botão Entrar-->
-					<div class="box btn" id="entrarbtn" onclick="openWindow('login-window')">
+					<div class="box btn" id="entrarbtn" onclick="openLogin()">
 						ENTRAR
 					</div>
 					<br /><br /><br /><br /><br /><br />
 					<!--Botão Registar-->
-					<div class="box btn" id="registobtn" onclick="openWindow('reg-window')">
+					<div class="box btn" id="registobtn" onclick="openReg()">
 						REGISTAR
 					</div>
 				</div>
@@ -130,29 +133,29 @@
 				<table>
 					<tr>
 						<td>
-							<label for="email-txtbx">Nome de Utilizador:</label>
+							<label for="login-uname-txtbx">Nome de Utilizador:</label>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<input type="text" name="e-mail" id="email-txtbx"><br>
+							<input type="text" name="login-uname" id="login-uname-txtbx" onkeyup="checkField(this);"><br>
 							</td>
 					</tr>
 					<tr>
 						<td>
 							<br /><br /><br />
-							<label for="password-txtbx">Palavra-Passe:</label>
+							<label for="login-pword-txtbx">Palavra-Passe:</label>
 						</td>
 					</tr>
 					<tr>
-						<td><input type="password" name="password" id="password-txtbx"><br></td>
+						<td><input type="password" name="login-pword" id="login-pword-txtbx" onkeyup="checkField(this);"><br></td>
 					</tr>
 					</table>
 						<p id="invalid-data">Palavra-passe ou Nome de Utilizador inválidos</p>
 			</form>
 		</div>
 
-		<div class="box btn submit" onclick="checkLogin()">
+		<div class="box btn submit" onclick="submitLogin()">
 			ENTRAR
 		</div>
 	</div>
@@ -170,60 +173,60 @@
 					<!--Nome-->
 					<tr>
 						<td>
-							<label for="email-txtbx">Nome: *</label>
+							<label for="reg-name-txtbx">Nome: *</label>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<input type="text" name="e-mail" id="reg-email-txtbx" onkeyup="check_text_field('reg-email-txtbx');"><br>
+							<input type="text" name="reg-name" id="reg-name-txtbx" onkeyup="checkField(this);"><br>
 							</td>
 					</tr>
 					<!--Nome de Utilizador-->
 					<tr>
 						<td>
 							<br />
-							<label for="email-txtbx">Nome de Utilizador: *</label>
+							<label for="reg-uname-txtbx">Nome de Utilizador: *</label>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<input type="text" name="e-mail" id="reg-email-txtbx" onkeyup="check_text_field('reg-email-txtbx');"><br>
+							<input type="text" name="reg-uname" id="reg-uname-txtbx" onkeyup="checkField(this);"><br>
 							</td>
 					</tr>
 					<!--Password-->
 					<tr>
 						<td>
 							<br />
-							<label for="password-txtbx">Palavra-Passe: *</label>
+							<label for="reg-pword-txtbx">Palavra-Passe: *</label>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<input type="password" name="password" id="reg-password-txtbx" onkeyup="check_text_field('reg-password-txtbx');"><br />
+							<input type="password" name="reg-pword" id="reg-pword-txtbx" onkeyup="checkField(this);"><br />
 							</td>
 					</tr>
 					<!--NIF-->
 					<tr>
 						<td>
 							<br />
-							<label for="email-txtbx">Número de Contribuinte: *</label>
+							<label for="reg-nif-numbx">Número de Contribuinte: *</label>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<input type="text" name="e-mail" id="reg-email-txtbx" onkeyup="check_text_field('reg-email-txtbx');"><br>
+							<input type="text" name="reg-nif" id="reg-nif-numbx" onkeyup="checkField(this);"><br>
 							</td>
 					</tr>
 					<!--Nr Telemóvel-->
 					<tr>
 						<td>
 							<br />
-							<label for="email-txtbx">Número de Telemóvel: *</label>
+							<label for="reg-tel-numbx">Número de Telemóvel: *</label>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<input type="text" name="e-mail" id="reg-email-txtbx" onkeyup="check_text_field('reg-email-txtbx');"><br>
+							<input type="text" name="reg-tel" id="reg-tel-numbx" onkeyup="checkField(this);"><br>
 							</td>
 					</tr>
 					<tr>
@@ -235,7 +238,7 @@
 			</form>
 		</div>
 
-		<div class="box btn submit" onclick="registar()">
+		<div class="box btn submit" onclick="submitReg()">
 			REGISTAR
 			<div class="disabler" id="reg-submit-disabler"></div>
 		</div>
