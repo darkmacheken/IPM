@@ -100,7 +100,6 @@
 				<div class="box" id="boxcontautilizadorlogged">
 						<div id="textContaUtilizador">
 							Nome de Utilizador: <br/>
-							Nome: <br/>
 							NIF:<br/>
 							Nº Telemóvel:
 						</div>
@@ -115,7 +114,7 @@
 						</div>
 				</div>
 				<!--Histórico-->
-				<div>
+				<div id="Historico">
 				<div class="title" id="historicoTittle" >
 					HISTÓRICO
 				</div>
@@ -138,6 +137,71 @@
 					</div>
 				</div>
 			</div>
+			<!--Definicoes de Conta-->
+			<div id="DefinicoesConta">
+			<div class="title" id="historicoTittle" >
+				Definicoes de  Conta
+			</div>
+			<div class="box" id="boxHistorico">
+				<div class="form">
+					<form id="reg-form">
+						<table>
+							<!--Nome de Utilizador-->
+							<tr>
+								<td>
+									<label class="labelDef" for="reg-uname-txtbx">Nome de Utilizador: *</label>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="text" class="inputDef" name="reg-uname" id="reg-uname-txtbx" onkeyup="checkField(this);"><br>
+									</td>
+							</tr>
+							<!--Password-->
+							<tr>
+								<td>
+									<label class="labelDef" for="reg-pword-txtbx">Palavra-Passe: *</label>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="password" class="inputDef" name="reg-pword" id="reg-pword-txtbx" onkeyup="checkField(this);"><br />
+									</td>
+							</tr>
+							<!--NIF-->
+							<tr>
+								<td>
+									<label class="labelDef" for="reg-nif-numbx">Número de Contribuinte (NIF):</label>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="text" class="inputDef" name="reg-nif" id="reg-nif-numbx" maxlength="9"><br>
+									</td>
+							</tr>
+							<!--Nr Telemóvel-->
+							<tr>
+								<td>
+									<label class="labelDef" for="reg-tel-numbx">Número de Telemóvel: *</label>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="text" class="inputDef" name="reg-tel" id="reg-tel-numbx" maxlength="9" onkeyup="checkField(this);"><br>
+									</td>
+							</tr>
+							</table>
+					</form>
+				</div>
+
+				<div class="box btn" id="boxDefinicoesVoltarbtn">
+					Voltar
+				</div>
+				<div class="box btn" id="boxDefinicoesGuardarbtn">
+					Guardar
+				</div>
+			</div>
+		</div>
 			</td>
 		</tr>
 	</table>
@@ -157,22 +221,22 @@
 				<table>
 					<tr>
 						<td>
-							<label for="login-uname-txtbx">Nome de Utilizador:</label>
+							<label class="labelReg" for="login-uname-txtbx">Nome de Utilizador:</label>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<input type="text" name="login-uname" id="login-uname-txtbx" onkeyup="checkField(this);"><br>
+							<input type="text" class="inputReg" name="login-uname" id="login-uname-txtbx" onkeyup="checkField(this);"><br>
 							</td>
 					</tr>
 					<tr>
 						<td>
 							<br /><br /><br />
-							<label for="login-pword-txtbx">Palavra-Passe:</label>
+							<label class="labelReg" for="login-pword-txtbx">Palavra-Passe:</label>
 						</td>
 					</tr>
 					<tr>
-						<td><input type="password" name="login-pword" id="login-pword-txtbx" onkeyup="checkField(this);"><br></td>
+						<td><input type="password" class="inputReg" name="login-pword" id="login-pword-txtbx" onkeyup="checkField(this);"><br></td>
 					</tr>
 					</table>
 						<p id="invalid-data">Palavra-passe ou Nome de Utilizador inválidos</p>
@@ -203,7 +267,7 @@
 					</tr>
 					<tr>
 						<td>
-							<input type="text" name="reg-uname" id="reg-uname-txtbx" onkeyup="checkField(this);"><br>
+							<input type="text"  class="inputReg" name="reg-uname" id="reg-uname-txtbx" onkeyup="checkField(this);"><br>
 							</td>
 					</tr>
 					<!--Password-->
@@ -215,7 +279,7 @@
 					</tr>
 					<tr>
 						<td>
-							<input type="password" name="reg-pword" id="reg-pword-txtbx" onkeyup="checkField(this);"><br />
+							<input type="password"  class="inputReg" name="reg-pword" id="reg-pword-txtbx" onkeyup="checkField(this);"><br />
 							</td>
 					</tr>
 					<!--NIF-->
@@ -227,7 +291,7 @@
 					</tr>
 					<tr>
 						<td>
-							<input type="text" name="reg-nif" id="reg-nif-numbx" maxlength="9"><br>
+							<input type="text"  class="inputReg" name="reg-nif" id="reg-nif-numbx" maxlength="9"><br>
 							</td>
 					</tr>
 					<!--Nr Telemóvel-->
@@ -239,7 +303,7 @@
 					</tr>
 					<tr>
 						<td>
-							<input type="text" name="reg-tel" id="reg-tel-numbx" maxlength="9" onkeyup="checkField(this);"><br>
+							<input type="text" class="inputReg" name="reg-tel" id="reg-tel-numbx" maxlength="9" onkeyup="checkField(this);"><br>
 							</td>
 					</tr>
 					<tr>
