@@ -1,11 +1,10 @@
 $(document).ready(function() {
     /* Esconder janelas inicialmente */
-    $(".window, #blocker, #boxcontautilizadorlogged, #Historico, #DefinicoesConta, #callwaitbtn, #second-screen").hide();
-
+    $(".window, #blocker, #boxcontautilizadorlogged, #Historico, #DefinicoesConta, #callwaitbtn, #second-screen, #screen2-logged-box").hide();
 
     /*********************************** JANELA DE LOGIN ***********************************/
     /* Função chamada quando é clicado botão de log-in no ecrã principal. */
-    $("#login-btn").click(function() {
+    $("#login-btn, #screen2-login-btn").click(function() {
         $("form#login-form .calmText").removeClass("calmText").addClass("attentionText");
         openWindow("login-window");
         $("#invalid-data").hide();
@@ -35,7 +34,7 @@ $(document).ready(function() {
 
     /*********************************** JANELA DE REGISTO ***********************************/
     /* Função chamada quando é clicado botão de registar no ecrã principal. */
-    $("#reg-btn").click(function() {
+    $("#reg-btn, #screen2-reg-btn").click(function() {
         $("form#reg-form .calmText").removeClass("calmText").addClass("attentionText");
         openWindow("reg-window");
         $("#reg-uname-exists").hide();
@@ -169,6 +168,17 @@ $(document).ready(function() {
             $("#callwaittime").text("0");
             $("#callbtn").show();
             $("#callwaitbtn").hide();
+        });
+    });
+
+    /*********************************** SEGUNDA JANELA ***********************************/
+    $("#orderfoodbtn").click(function () {
+        $("#second-screen").show();
+    });
+
+    $("#menuPrincipalbtn").click(function () {
+        confirmYesNo("Tem a certeza que pretende sair?<br />O seu pedido será eliminado.", function () {
+            $("#second-screen").hide();
         });
     });
 

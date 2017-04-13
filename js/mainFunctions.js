@@ -37,12 +37,18 @@ function callTimer() {
 }
 
 function updateLoginData() {
-    $("#logged-uname").text(getUname());
+    $("#logged-uname, #screen2-logged-uname").text(getUname());
     if (contas[loggedIn]._nif === "")
-        $("#logged-nif").addClass("attentionText").text("Não fornecido.");
+        $("#logged-nif, #screen2-logged-nif").addClass("attentionText").text("Não fornecido.");
     else
-        $("#logged-nif").text(getNif());
-    $("#logged-tel").text(getTel());
+        $("#logged-nif, #screen2-logged-nif").text(getNif());
+    $("#logged-tel, #screen2-logged-tel").text(getTel());
+}
+
+function deleteLoginData() {
+    $("#logged-uname").text("");
+    $("#logged-nif").removeClass().text("");
+    $("#logged-tel").text("");
 }
 
 function closeDefs() {

@@ -63,6 +63,7 @@ function login(uname) {
     /* Mostrar caixa de utilizador autenticado: */
     $("#boxcontautilizadorlogged").show();
     //$("#boxcontautilizador").hide();
+    $("#screen2-logged-box").show();
 }
 
 function logout() {
@@ -71,9 +72,8 @@ function logout() {
     /* Mostrar caixa de utilizador autenticado: */
     //$("#boxcontautilizador").show();
     $("#boxcontautilizadorlogged").hide();
+    $("#screen2-logged-box").hide();
 
     /* Apagar dados da página: */
-    $("#logged-uname").text("");
-    $("#logged-nif").removeClass().text("");
-    $("#logged-tel").text("");
+    deleteLoginData();
 }
