@@ -2,6 +2,9 @@ $(document).ready(function() {
     /* Esconder janelas inicialmente */
     $(".window, #blocker, #boxcontautilizadorlogged, #Historico, #DefinicoesConta, #callwaitbtn, #second-screen").hide();
 
+    $("#orderfoodbtn").click(function () {
+        $("#second-screen").show();
+    });
 
     /*********************************** JANELA DE LOGIN ***********************************/
     /* Função chamada quando é clicado botão de log-in no ecrã principal. */

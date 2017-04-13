@@ -45,6 +45,12 @@ function updateLoginData() {
     $("#logged-tel").text(getTel());
 }
 
+function deleteLoginData() {
+    $("#logged-uname").text("");
+    $("#logged-nif").removeClass().text("");
+    $("#logged-tel").text("");
+}
+
 function closeDefs() {
     $("#DefinicoesConta").hide();
     $("form#reg-form").trigger("reset");

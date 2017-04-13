@@ -73,7 +73,5 @@ function logout() {
     $("#boxcontautilizadorlogged").hide();
 
     /* Apagar dados da página: */
-    $("#logged-uname").text("");
-    $("#logged-nif").removeClass().text("");
-    $("#logged-tel").text("");
+    deleteLoginData();
 }
