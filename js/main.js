@@ -1,6 +1,6 @@
 $(document).ready(function() {
     /* Esconder janelas inicialmente */
-    $(".window, #blocker, #boxcontautilizadorlogged, #Historico, #DefinicoesConta, #callwaitbtn").hide();
+    $(".window, #blocker, #boxcontautilizadorlogged, #Historico, #DefinicoesConta, #callwaitbtn, #second-screen").hide();
 
 
     /*********************************** JANELA DE LOGIN ***********************************/
@@ -144,17 +144,14 @@ $(document).ready(function() {
 
     /*********************************** OVERLAY DE DEFINIÇÕES DE CONTA ***********************************/
     $("#boxDefinicoesVoltarbtn").click(function () {
-        $("#DefinicoesConta").hide();
-        $("#def-uname-txtbx").text("");
-        $("#def-nif-numbx").val("");
-        $("#def-tel-numbx").val("");
+        if (defsChanged())
+            confirmYesNo("Tem a certeza que pretende descartar as alterações?", closeDefs);
+        else
+            closeDefs();
     });
 
     $("#boxDefinicoesGuardarbtn").click(function () {
-        $("#DefinicoesConta").hide();
-        $("#def-uname-txtbx").text("");
-        $("#def-nif-numbx").val("");
-        $("#def-tel-numbx").val("");
+        confirmYesNo("Tem a certeza que pretende guardar as alterações?", saveDefs);
     });
 
     /*********************************** CHAMAR EMPREGADO ***********************************/
@@ -169,6 +166,7 @@ $(document).ready(function() {
 
     $("#cancelcallbtn").click(function () {
         confirmYesNo("Tem a certeza que pretende cancelar?", function () {
+            $("#callwaittime").text("0");
             $("#callbtn").show();
             $("#callwaitbtn").hide();
         });

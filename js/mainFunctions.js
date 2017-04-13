@@ -35,3 +35,32 @@ function callTimer() {
         $("#callwaitbtn").hide();
     }
 }
+
+function updateLoginData() {
+    $("#logged-uname").text(getUname());
+    if (contas[loggedIn]._nif === "")
+        $("#logged-nif").addClass("attentionText").text("Não fornecido.");
+    else
+        $("#logged-nif").text(getNif());
+    $("#logged-tel").text(getTel());
+}
+
+function closeDefs() {
+    $("#DefinicoesConta").hide();
+    $("form#reg-form").trigger("reset");
+}
+
+function defsChanged() {
+    return $("input#def-pword-txtbx").val() !== "" ||
+            $("input#def-nif-numbx").val() !== getNif() ||
+            $("input#def-tel-numbx").val() !== getTel();
+}
+
+function saveDefs() {
+    if ($("input#def-pword-txtbx").val() !== "")
+        setPword($("input#def-pword-txtbx").val());
+    setNif($("input#def-nif-numbx").val());
+    setTel($("input#def-tel-numbx").val());
+    updateLoginData();
+    closeDefs();
+}
