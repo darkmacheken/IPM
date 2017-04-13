@@ -494,7 +494,7 @@
     right: 10px;
 }
 
-#logginBox{
+#screen2-login-box{
   position: absolute;
   top:-80px;
   right: 10px;
@@ -502,7 +502,15 @@
   width: 236px;
 }
 
-#entrarbtn{
+#screen2-logged-box{
+  position: absolute;
+  top:-80px;
+  right: 10px;
+  height: 28px;
+  width: 236px;
+}
+
+#screen2-login-btn{
   position: absolute;
   top: 15px;
   left: 15px;
@@ -511,7 +519,7 @@
   width: 110px;
   height: 28px;
 }
-#registarbtn{
+#screen2-reg-btn{
   position: absolute;
   top: 15px;
   right: 15px;
