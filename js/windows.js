@@ -32,13 +32,13 @@ function closeRegistarWindow() {
 
 function confirmYesNo(text, yes, no) {
     $("#confirmYesNo .confirmText").html(text);
-    $("#confirmacaoSimbtn").click(function () {
+    $("#confirmYesbtn").click(function () {
         closeWindow("confirmYesNo");
         if(typeof yes === "function") {
             yes();
         }
     });
-    $("#confirmacaoNaobtn").click(function () {
+    $("#confirmNobtn").click(function () {
         closeWindow("confirmYesNo");
         if(typeof no === "function") {
             no();
@@ -50,7 +50,7 @@ function confirmYesNo(text, yes, no) {
 
 function confirmOk(text, ok) {
     $("#confirmOk .confirmText").html(text);
-    $("#confirmacaoOkbtn").click(function () {
+    $("#confirmOkbtn").click(function () {
         closeWindow("confirmOk");
         if(typeof ok === "function") {
             ok();
