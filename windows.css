@@ -135,3 +135,13 @@ label.btn {
 .calmText {
   color: black;
 }
+
+#second-screen{
+  background-color: white;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 100em;
+  height: 50em;
+  visibility: visible;
+}
