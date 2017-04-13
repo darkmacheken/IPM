@@ -160,7 +160,8 @@ $(document).ready(function() {
     /*********************************** CHAMAR EMPREGADO ***********************************/
     $("#callbtn").click(function () {
         confirmYesNo("Tem a certeza que pretende chamar um empregado?", function () {
-            $("#callwaittime").text("5 minutos");
+            $("#callwaittime").text("40");
+            setTimeout(callTimer, 1000);
             $("#callwaitbtn").show();
             $("#callbtn").hide();
         });

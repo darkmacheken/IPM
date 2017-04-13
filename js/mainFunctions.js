@@ -24,3 +24,14 @@ function checkForm(form) {
 
     return reqReady && pconfReady;
 }
+
+function callTimer() {
+    var time = $("#callwaittime").text() - 1;
+    $("#callwaittime").text(time);
+    if (time > 0)
+        setTimeout(callTimer, 1000);
+    else {
+        $("#callbtn").show();
+        $("#callwaitbtn").hide();
+    }
+}
