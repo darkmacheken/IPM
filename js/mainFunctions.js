@@ -1,11 +1,13 @@
 /* Função chamada quando é clicado botão de log-in no ecrã principal. */
 function openLogin() {
     openWindow('login-window');
+    $("input#login-uname-txtbx").focus();
 }
 
 /* Função chamada quando é clicado botão de registar no ecrã principal. */
 function openReg() {
     openWindow('reg-window');
+    $("input#reg-uname-txtbx").focus();
 }
 
 /* Função chamada quando é clicado botão de log-in na janela de log-in. */
@@ -21,10 +23,15 @@ function submitLogin() {
 
 /* Função chamada quando é clicado botão de registar na janela de registar. */
 function submitReg() {
-    if ($.trim($(".req-field").val()) === "") {
-        // Prevenir que o botao seja clicado acidentalmente quando desativado
+    // Prevenir que o botao seja clicado acidentalmente quando desativado
+    var formReady = true;
+    $("form#reg-form input.req-field").each(function() {
+        if ($.trim($(this).val()) === "")
+            formReady = false;
+    });
+    if (!formReady)
         return;
-    }
+
 	var username = document.getElementById("reg-email-txtbx").value;
 	var password = document.getElementById("reg-password-txtbx").value;
 	var vegetarian = document.getElementById("reg-ra-veg").checked;
