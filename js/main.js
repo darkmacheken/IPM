@@ -177,7 +177,9 @@ $(document).ready(function() {
     });
 
     $("#menuPrincipalbtn").click(function () {
-        $("#second-screen").hide();
+        confirmYesNo("Tem a certeza que pretende sair?<br />O seu pedido será eliminado.", function () {
+            $("#second-screen").hide();
+        });
     });
 
     /*********************************** FIM DO LOADING ***********************************/
