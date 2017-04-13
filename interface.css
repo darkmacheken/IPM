@@ -331,37 +331,62 @@
 }
 
 #DefinicoesConta {
-    position: relative;
-    top:-310px;
+  position: relative;
+  left: 43px;
+  top: -118px;
+}
+#definicoesTittle{
+  float:right;
+  height: 10px;
+  width: 250px;
+  font-size: 15px;
+  padding: 10px 20px;
+  line-height: 10px;
+  background-color: white;
+  position: absolute;
+  top:118px;
+  border-bottom: none;
+}
+
+#boxDefContas{
+  float: left;
+  font-size: 16px;
+  width: 226px;
+  height: 228px;
+  text-align: left;
+  position: absolute;
+  top: 150px;
 }
 
 #boxDefinicoesVoltarbtn {
     font-size: 15px;
-    padding: inherit;
-    width: 105px;
+    padding: 5px;
+    width: 134px;
+    height: 20px;
     text-align: center;
     position: absolute;
     bottom: 0px;
     left:0px;
     border-bottom: none;
-    border-left: none;
     border-right: none;
+    border-left: none;
 }
 
 #boxDefinicoesGuardarbtn {
     font-size: 15px;
-    padding: inherit;
-    width: 102px;
+    padding: 5px;;
+    width: 134px;
+    height: 20px;
     text-align: center;
     position: absolute;
     bottom: 0px;
-    left:145px;
+    left:144px;
     border-bottom: none;
     border-right: none;
 }
 
 .inputDef {
-    width:240px;
+    width:250px;
     height:20px;
     font-size:16px;
 }
