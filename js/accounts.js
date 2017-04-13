@@ -30,16 +30,35 @@ function createAccount(uname, pword, nif, tel) {
     login(uname);
 }
 
+function getUname() {
+    return contas[loggedIn]._uname;
+}
+
+function setPword(pword) {
+    contas[loggedIn]._pword = pword;
+}
+
+function getNif() {
+    return contas[loggedIn]._nif;
+}
+
+function setNif(nif) {
+    contas[loggedIn]._nif = nif;
+}
+
+function getTel() {
+    return contas[loggedIn]._tel;
+}
+
+function setTel(tel) {
+    contas[loggedIn]._tel = tel;
+}
+
 function login(uname) {
     loggedIn = uname;
 
     /* Atualizar dados na página: */
-    $("#logged-uname").text(contas[loggedIn]._uname);
-    if (contas[loggedIn]._nif === "")
-        $("#logged-nif").addClass("attentionText").text("Não fornecido.");
-    else
-        $("#logged-nif").text(contas[loggedIn]._nif);
-    $("#logged-tel").text(contas[loggedIn]._tel);
+    updateLoginData();
 
     /* Mostrar caixa de utilizador autenticado: */
     $("#boxcontautilizadorlogged").show();
