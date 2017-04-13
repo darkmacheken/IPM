@@ -7,7 +7,6 @@
 <script src="js/jstorage.js"></script>
 <script src="js/accounts.js"></script>
 <script src="js/mainFunctions.js"></script>
-<script src="js/visibility.js"></script>
 <script src="js/windows.js"></script>
 <script src="js/clock.js"></script>
 <link type="text/css" rel="stylesheet" href="style.css">
@@ -99,9 +98,9 @@
 				<!--Caixa Login quando o utilizador entrou na conta-->
 				<div class="box" id="boxcontautilizadorlogged">
 						<div id="textContaUtilizador">
-							Nome de Utilizador: <br/>
-							NIF:<br/>
-							Nº Telemóvel:
+							Nome de Utilizador: <span id="logged-uname"></span><br/>
+							NIF: <span id="logged-nif"></span><br/>
+							Nº Telemóvel: <span id="logged-tel"></span>
 						</div>
 						<div class="box btn" id="historicobtn">
 							Histórico
@@ -149,46 +148,46 @@
 							<!--Nome de Utilizador-->
 							<tr>
 								<td>
-									<label class="labelDef" for="reg-uname-txtbx">Nome de Utilizador:</label>
+									<label class="labelDef" for="def-uname-txtbx">Nome de Utilizador:</label>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<input type="text" class="inputDef" name="reg-uname" id="reg-uname-txtbx" onkeyup="checkField(this);"><br>
+									<input type="text" class="inputDef" name="def-uname" id="def-uname-txtbx"><br>
 									</td>
 							</tr>
 							<!--Password-->
 							<tr>
 								<td>
-									<label class="labelDef" for="reg-pword-txtbx">Palavra-Passe:</label>
+									<label class="labelDef" for="def-pword-txtbx">Palavra-Passe:</label>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<input type="password" class="inputDef" name="reg-pword" id="reg-pword-txtbx" onkeyup="checkField(this);"><br />
+									<input type="password" class="inputDef" name="def-pword" id="def-pword-txtbx"><br />
 									</td>
 							</tr>
 							<!--NIF-->
 							<tr>
 								<td>
-									<label class="labelDef" for="reg-nif-numbx">Número de Contribuinte (NIF):</label>
+									<label class="labelDef" for="def-nif-numbx">Número de Contribuinte (NIF):</label>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<input type="text" class="inputDef" name="reg-nif" id="reg-nif-numbx" maxlength="9"><br>
+									<input type="text" class="inputDef" name="def-nif" id="def-nif-numbx" maxlength="9"><br>
 									</td>
 							</tr>
 							<!--Nr Telemóvel-->
 							<tr>
 								<td>
-									<label class="labelDef" for="reg-tel-numbx">Número de Telemóvel:</label>
+									<label class="labelDef" for="def-tel-numbx">Número de Telemóvel:</label>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<input type="text" class="inputDef" name="reg-tel" id="reg-tel-numbx" maxlength="9" onkeyup="checkField(this);"><br>
-									</td>
+									<input type="text" class="inputDef" name="def-tel" id="def-tel-numbx" maxlength="9"><br>
+								</td>
 							</tr>
 							</table>
 					</form>
@@ -215,7 +214,7 @@
 	<!--Janela Login-->
 	<div class="window" id="login-window">
 		<h3>ENTRAR</h3>
-		<div class="closeWindow" onclick="closeLoginWindow()">
+		<div class="closeWindow" id="login-close-btn">
 			X
 		</div>
 
@@ -255,7 +254,7 @@
 
 		</div>
 
-		<div class="box btn submit">
+		<div class="box btn submit" id="login-submit">
 			ENTRAR
             <div class="disabler" id="login-submit-disabler"></div>
 		</div>
@@ -265,7 +264,7 @@
 	<!--Janela Registar-->
 	<div class="window" id="reg-window">
 		<h3>REGISTAR</h3>
-		<div class="closeWindow" onclick="closeRegistarWindow()">
+		<div class="closeWindow" id="reg-close-btn">
 			X
 		</div>
 

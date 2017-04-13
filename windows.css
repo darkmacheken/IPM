@@ -74,6 +74,9 @@ h3 {
     top: 0em;
     left: 0em;
     z-index: 20;
+    background-image: url(loading.gif);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .window td {

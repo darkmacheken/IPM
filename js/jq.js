@@ -2,6 +2,8 @@ $(document).ready(function() {
     /* Esconder janelas inicialmente */
     $(".window, #blocker, #boxcontautilizadorlogged, #Historico, #DefinicoesConta").hide();
 
+
+    /*********************************** JANELA DE LOGIN ***********************************/
     /* Função chamada quando é clicado botão de log-in no ecrã principal. */
     $("#login-btn").click(function() {
         openWindow("login-window");
@@ -10,6 +12,25 @@ $(document).ready(function() {
         $("input#login-uname-txtbx").focus();
     });
 
+    /* Função chamada quando é clicado botão X na janela de log-in. */
+    $("#login-close-btn").click(function() {
+        closeLoginWindow();
+    });
+
+    /* Função chamada quando é clicado botão de log-in na janela de log-in. */
+    $("#login-submit").click(function() {
+        var uname = $("input#login-uname-txtbx").val();
+    	var pword = $("input#login-pword-txtbx").val();
+    	if (isLoginValid(uname, pword)) {
+            login(uname);
+            closeLoginWindow();
+    	} else {
+    		$("#invalid-data").show();
+    	}
+    });
+
+
+    /*********************************** JANELA DE REGISTO ***********************************/
     /* Função chamada quando é clicado botão de registar no ecrã principal. */
     $("#reg-btn").click(function() {
         openWindow("reg-window");
@@ -17,15 +38,9 @@ $(document).ready(function() {
         $("input#reg-uname-txtbx").focus();
     });
 
-    /* Função chamada quando é clicado botão de log-in na janela de log-in. */
-    $("#login-submit").click(function() {
-        var username = $("input#email-txtbx").val();
-    	var password = $("input#password-txtbx").val();
-    	if (isLoginValid(username, password)) {
-            closeLoginWindow();
-    	} else {
-    		$("#invalid-data").show();
-    	}
+    /* Função chamada quando é clicado botão X na janela de log-in. */
+    $("#reg-close-btn").click(function() {
+        closeRegistarWindow();
     });
 
     /* Função chamada quando é clicado botão de registar na janela de registar. */
@@ -39,17 +54,16 @@ $(document).ready(function() {
         if (!formReady)
             return;
 
-    	var username = document.getElementById("reg-email-txtbx").value;
-    	var password = document.getElementById("reg-password-txtbx").value;
-    	var vegetarian = document.getElementById("reg-ra-veg").checked;
-    	var intlact = document.getElementById("reg-ra-intlact").checked;
-    	var intglut = document.getElementById("reg-ra-gluten").checked;
-    	if (is_hidden("reg-submit-disabler")) {
-    		createAccount(username, password);
-    		closeRegistarWindow();
-    	}
+    	var uname = $("#reg-uname-txtbx").val();
+    	var pword = $("#reg-pword-txtbx").val();
+        var nif = $("#reg-nif-numbx").val();
+        var tel = $("#reg-tel-numbx").val();
+
+    	createAccount(uname, pword, nif, tel);
+    	closeRegistarWindow();
     });
 
+    /*********************************** TODAS AS JANELAS ***********************************/
     /* Janelas log-in e registo: Colocar asteriscos a vermelho caso campo não esteja preenchido */
     $("input.req-field").keyup(function() {
         if( $(this).val().length === 0 ) {
@@ -59,6 +73,7 @@ $(document).ready(function() {
         }
         checkForm($(this).parents("form").attr("id"));
     });
+
 
     /* So deixar colocar numeros no telemovel e no nif */
     $("input#reg-nif-numbx, input#reg-tel-numbx").keydown(function (e) {
@@ -77,6 +92,20 @@ $(document).ready(function() {
         }
     });
 
+    /*********************************** OVERLAY DE SESSÃO INICIADA ***********************************/
+    $("#historicobtn").click(function () {
+        ;
+    });
+
+    $("#definicoesContabtn").click(function () {
+        ;
+    });
+
+    $("#sairSessaobtn").click(function () {
+        logout();
+    });
+
+    /*********************************** FIM DO LOADING ***********************************/
     /* Página carregada */
     $("#loader").hide();
 });
