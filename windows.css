@@ -16,12 +16,13 @@
 
 /* Janela de entrar */
 #login-window {
-    ;
+    height: 25em;;
 }
 
 /* Janela de registar */
 #reg-window {
-    ;
+    height: 38em;
+    top: 7em;
 }
 
 /* Botão de fechar janelas */
@@ -119,9 +120,9 @@ label.btn {
 }
 
 .submit {
-    position:relative;
-    bottom:1.7em;
-    margin-left:220px;
+    position:absolute;
+    bottom:10px;
+    left: 220px;
     border:1px black solid;
     height:30px;
     padding-top:10px;

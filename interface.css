@@ -206,6 +206,8 @@
 
 #invalid-data {
     color: red;
+    position: relative;
+    bottom: 60px;
 }
 
 #boxcontautilizadorlogged {
