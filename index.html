@@ -87,12 +87,12 @@
 				<div class="box" id="boxcontautilizador" >
 					<br />
 					<!--Botão Entrar-->
-					<div class="box btn" id="entrarbtn" onclick="openLogin()">
+					<div class="box btn" id="login-btn">
 						ENTRAR
 					</div>
 					<br /><br /><br /><br /><br /><br />
 					<!--Botão Registar-->
-					<div class="box btn" id="registobtn" onclick="openReg()">
+					<div class="box btn" id="reg-btn">
 						REGISTAR
 					</div>
 				</div>
@@ -209,6 +209,9 @@
 	<!--Blocker, div preta com opacidade-->
 	<div id="blocker"></div>
 
+    <!--Loader, div branca mostrada enquanto a página está a carregar-->
+	<div id="loader"></div>
+
 	<!--Janela Login-->
 	<div class="window" id="login-window">
 		<h3>ENTRAR</h3>
@@ -252,7 +255,7 @@
 
 		</div>
 
-		<div class="box btn submit" onclick="submitLogin()">
+		<div class="box btn submit">
 			ENTRAR
             <div class="disabler" id="login-submit-disabler"></div>
 		</div>
@@ -328,7 +331,7 @@
 
 		</div>
 
-		<div class="box btn submit" id="reg-submit" onclick="submitReg()">
+		<div class="box btn submit" id="reg-submit">
 			REGISTAR
 			<div class="disabler" id="reg-submit-disabler"></div>
 		</div>

@@ -7,7 +7,6 @@
     height: 35em;
     top: 9em;
     left: 29em;
-    visibility: hidden;
     z-index:4;
 }
 
@@ -63,8 +62,18 @@ h3 {
     top: 0em;
     left: 0em;
     opacity: 0.5;
-    visibility: hidden;
     z-index: 4;
+}
+
+/* Bloqueador de fundo enquanto a página carrega */
+#loader {
+    background-color: white;
+    position: absolute;
+    width: 100em;
+    height: 50em;
+    top: 0em;
+    left: 0em;
+    z-index: 20;
 }
 
 .window td {
