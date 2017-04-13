@@ -393,8 +393,8 @@
 
 #confirmYesNo {
     position: absolute;
-    top: 150px;
-    left: 0px;
+    top: 250px;
+    left: 450px;
     font-size: 30px;
     font-weight: bold;
     padding: inherit;
@@ -435,8 +435,8 @@
 
 #confirmOk {
     position: absolute;
-    top: 150px;
-    left: 0px;
+    top: 250px;
+    left: 450px;
     font-size: 30px;
     font-weight: bold;
     padding: inherit;
