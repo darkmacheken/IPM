@@ -62,6 +62,26 @@
     top: 10px;
 }
 
+#call2btn{
+  width: 251px;
+  height: 71px;
+  font-size: 16px;
+  text-align: left;
+  padding: inherit;
+  position: absolute;
+  top: 20px;
+  left: 117px;
+}
+
+#cancel{
+  padding: inherit;
+  font-size: 16px;
+  padding: 2%;
+  position: absolute;
+  bottom: 5px;
+  left: 80px;
+}
+
 /* Logótipo */
 #logotipo {
     width: 600px;
