@@ -19,6 +19,7 @@
 
 /* Títulos das diversas caixas */
 .title { /* game music contautilizador */
+  background-color: white;
     border: 3px solid black;
     color: black;
     padding: 15px 32px;
@@ -49,6 +50,7 @@
     font-size: 86px;
     margin-right: 10px;
     line-height: 100px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 /* Botão de chamar o empregado */
@@ -60,6 +62,7 @@
     line-height: 70px;
     position: relative;
     top: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #callwaitbtn{
@@ -70,6 +73,7 @@
   padding: inherit;
   top: 10px;
   position: relative;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #cancelcallbtn{
@@ -102,9 +106,11 @@
     float: right;
     line-height: 60px;
     padding: inherit;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #orderfoodbtn {
+  background-color: white;
     display:block;
     height: 500px;
     width: 500px;
@@ -120,6 +126,7 @@
     left: 0.5em;
     bottom: -1em;
     cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #contautilizador {
@@ -129,6 +136,7 @@
     font-size: 15px;
     padding: 10px 20px;
     line-height: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 #boxcontautilizador {
     float:right;
@@ -137,6 +145,7 @@
     font-size: 15px;
     padding: 10px 20px;
     border-top:none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 #login-btn {
     position: relative;
@@ -174,6 +183,7 @@
     position: relative;
     bottom: -14em;
     line-height: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 #boxmusic {
     float: left;
@@ -186,6 +196,7 @@
     position: relative;
     left: 0em;
     bottom: -10.5em;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 #votemusic {
     float:left;
@@ -197,6 +208,7 @@
     bottom: -10.5em;
     padding: 10px 20px;
     line-height: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 /* Capa da música a ser reproduzida */
 #cover {
@@ -217,6 +229,7 @@
     font-size: 15px;
     padding: 10px 20px;
     line-height: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 #games {
     float:left;
@@ -227,6 +240,7 @@
     border-top:none;
     font-size: 30px;
     line-height: 50px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #invalid-data {
@@ -246,6 +260,7 @@
     border-top:none;
     background-color:white;
     text-align: left;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #textContaUtilizador {
@@ -428,6 +443,7 @@
     width: 600px;
     height: 150px;
     padding:10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #confirmacaoSimbtn {
@@ -443,6 +459,8 @@
     display: inline-block;
     font-size: 24px;
     font-weight:bold;
+    background-color: #4CAF50; /* Green */
+    color: white;
 }
 
 #confirmacaoNaobtn {
@@ -458,6 +476,8 @@
     display: inline-block;
     font-size: 24px;
     font-weight:bold;
+    background-color: #B22222; /* red */
+    color: white;
 }
 
 #confirmOk {
@@ -485,6 +505,8 @@
     display: inline-block;
     font-size: 24px;
     font-weight:bold;
+    background-color: #4CAF50; /* Green */
+    color: white;
 }
 
 #contautilizadorSecondScreen {
@@ -498,6 +520,7 @@
     position: absolute;
     top:-112px;
     right: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #screen2-login-box{
@@ -506,6 +529,7 @@
   right: 10px;
   height: 28px;
   width: 236px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #screen2-logged-box{
@@ -540,6 +564,7 @@
   left: 30px;
   height: 480px;
   width: 1100px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .opcao{
@@ -597,6 +622,7 @@
   right:10px;
   height: 480px;
   width: 236px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .compra{
@@ -693,6 +719,11 @@
   width: 236px;
   font-size: 27px;
   line-height: 10px;
+  background-color: #B22222; /* red */
+  color: white;
+  border: none;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
 }
 
 #Confirmarbtn{
@@ -703,6 +734,10 @@
   width: 236px;
   font-size: 27px;
   line-height: 10px;
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border: none;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .menuEmenta{
