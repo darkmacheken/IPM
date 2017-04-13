@@ -137,11 +137,11 @@ label.btn {
 }
 
 #second-screen{
-  background-color: white;
+  background-color: black;
   position: absolute;
-  top: 8px;
-  left: 8px;
-  width: 100em;
-  height: 50em;
+  top: 130px;
+  left: 0px;
+  width: 1536px;
+  height: 630px;
   visibility: visible;
 }
