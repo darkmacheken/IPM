@@ -366,7 +366,7 @@
     font-size:16px;
 }
 
-#confirmacaoSimNao {
+#confirmYesNo {
     position: absolute;
     top: 150px;
     left: 0px;
@@ -408,7 +408,7 @@
     font-weight:bold;
 }
 
-#confirmacaoOk {
+#confirmOk {
     position: absolute;
     top: 150px;
     left: 0px;
@@ -420,7 +420,7 @@
     padding:10px;
 }
 
-#confirmacaoOkbtn {
+#confirmOkbtn {
     position: absolute;
     left:220px;
     bottom: 5px;

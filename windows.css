@@ -7,7 +7,11 @@
     height: 35em;
     top: 9em;
     left: 29em;
-    z-index:4;
+    z-index: 4;
+}
+
+.confirm {
+    z-index: 6;
 }
 
 /* Janela de entrar */

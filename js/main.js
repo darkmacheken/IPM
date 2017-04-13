@@ -19,8 +19,12 @@ $(document).ready(function() {
 
     /* Função chamada quando é clicado botão de log-in na janela de log-in. */
     $("#login-submit").click(function() {
-        var uname = $("input#login-uname-txtbx").val();
-    	var pword = $("input#login-pword-txtbx").val();
+        // Prevenir que o botao seja clicado acidentalmente quando desativado
+        if (!checkForm("login-form"))
+            return;
+            
+        var uname = $.trim($("input#login-uname-txtbx").val());
+    	var pword = $.trim($("input#login-pword-txtbx").val());
     	if (isLoginValid(uname, pword)) {
             login(uname);
             closeLoginWindow();
@@ -46,21 +50,26 @@ $(document).ready(function() {
     /* Função chamada quando é clicado botão de registar na janela de registar. */
     $("#reg-submit").click(function() {
         // Prevenir que o botao seja clicado acidentalmente quando desativado
-        var formReady = true;
-        $("form#reg-form input.req-field").each(function() {
-            if ($.trim($(this).val()) === "")
-                formReady = false;
-        });
-        if (!formReady)
+        if (!checkForm("reg-form"))
             return;
 
-    	var uname = $("#reg-uname-txtbx").val();
-    	var pword = $("#reg-pword-txtbx").val();
+    	var uname = $.trim($("#reg-uname-txtbx").val());
+    	var pword = $.trim($("#reg-pword-txtbx").val());
         var nif = $("#reg-nif-numbx").val();
         var tel = $("#reg-tel-numbx").val();
 
-    	createAccount(uname, pword, nif, tel);
-    	closeRegistarWindow();
+        var niff = nif;
+        if (nif == "")
+            niff = "<span class=\"attentionText\">Não fornecido.</span>"
+
+        confirmYesNo("Tem a certeza que pretende criar uma conta com os seguintes dados?<br /><ul><li>Username: " + uname + "</li><li>NIF: " + niff + "</li><li>Telemóvel: " + tel + "</li></ul>",
+        function () {
+            createAccount(uname, pword, nif, tel);
+            closeRegistarWindow();
+        },
+        function () {
+            callblock();
+        });
     });
 
     /*********************************** TODAS AS JANELAS ***********************************/
@@ -102,7 +111,7 @@ $(document).ready(function() {
     });
 
     $("#sairSessaobtn").click(function () {
-        logout();
+        confirmYesNo("Tem a certeza que pretende saír da sessão?", logout);
     });
 
     /*********************************** FIM DO LOADING ***********************************/

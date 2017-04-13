@@ -13,4 +13,6 @@ function checkForm(form) {
 		$("form#" + form + " div.disabler").show();
         $("form#" + form + " span.att-warning").removeClass().addClass("att-warning").addClass("attentionText");
 	}
+
+    return formReady;
 }

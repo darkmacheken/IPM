@@ -1,20 +1,16 @@
-var log_req_fields = {};
-var reg_req_fields = {};
-
-function callblock() {
-	$("#blocker").css("z-index", '1').show();
-    /*toggle_visibility('blocker');
-	document.getElementById('blocker').zIndex = '1';*/
+function callblock(zindex) {
+    if(typeof zindex === "undefined") {
+        zindex = '1';
+    }
+	$("#blocker").css("z-index", zindex).show();
 }
 
 function turnoffblock() {
     $("#blocker").css("z-index", '0').hide();
-	/*toggle_visibility('blocker');
-	document.getElementById('blocker').zIndex = '0';*/
 }
 
-function openWindow(id) {
-	callblock();
+function openWindow(id, zindex) {
+	callblock(zindex);
 	$("#" + id).show();
 }
 
@@ -30,9 +26,36 @@ function closeLoginWindow() {
 }
 
 function closeRegistarWindow() {
-	//checkField(document.getElementById('reg-uname-txtbx'));
-	//checkField(document.getElementById('reg-pword-txtbx'));
 	closeWindow("reg-window");
     $("#reg-form").trigger("reset");
-	//toggle_inherit("reg-submit-disabler");
+}
+
+function confirmYesNo(text, yes, no) {
+    $("#confirmYesNo .confirmText").html(text);
+    $("#confirmacaoSimbtn").click(function () {
+        closeWindow("confirmYesNo");
+        if(typeof yes === "function") {
+            yes();
+        }
+    });
+    $("#confirmacaoNaobtn").click(function () {
+        closeWindow("confirmYesNo");
+        if(typeof no === "function") {
+            no();
+        }
+    });
+    /* zindex = 1 para colocar blocker à frente das janelas de login e registo */
+    openWindow("confirmYesNo", '5');
+}
+
+function confirmOk(text, ok) {
+    $("#confirmOk .confirmText").html(text);
+    $("#confirmacaoOkbtn").click(function () {
+        closeWindow("confirmOk");
+        if(typeof ok === "function") {
+            ok();
+        }
+    });
+    /* zindex = 1 para colocar blocker à frente das janelas de login e registo */
+    openWindow("confirmOk", '5');
 }
