@@ -1,6 +1,6 @@
 $(document).ready(function() {
     /* Esconder janelas inicialmente */
-    $(".window, #blocker, #boxcontautilizadorlogged, #Historico, #DefinicoesConta").hide();
+    $(".window, #blocker, #boxcontautilizadorlogged, #Historico, #DefinicoesConta, #callwaitbtn").hide();
 
 
     /*********************************** JANELA DE LOGIN ***********************************/
@@ -102,7 +102,7 @@ $(document).ready(function() {
     });
 
     /* So deixar colocar numeros no telemovel e no nif */
-    $("input#reg-nif-numbx, input#reg-tel-numbx").keydown(function (e) {
+    $("input.numOnly").keydown(function (e) {
         // Allow: backspace, delete, tab, escape, enter and .
         if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
              // Allow: Ctrl+A, Command+A
@@ -122,13 +122,14 @@ $(document).ready(function() {
     /* Função chamada quando é clicado botão de Histórico. */
     $("#historicobtn").click(function () {
         $("#Historico").show();
-        //$("#boxcontautilizadorlogged").hide();
     });
 
     /* Função chamada quando é clicado botão de Definições de Conta. */
     $("#definicoesContabtn").click(function () {
+        $("#def-uname-txtbx").val(contas[loggedIn]._uname);
+        $("#def-nif-numbx").val(contas[loggedIn]._nif);
+        $("#def-tel-numbx").val(contas[loggedIn]._tel);
         $("#DefinicoesConta").show();
-        //$("#boxcontautilizadorlogged").hide();
     });
 
     /* Função chamada quando é clicado botão de Sair Sessão. */
@@ -138,19 +139,38 @@ $(document).ready(function() {
 
     /*********************************** OVERLAY DE HISTÓRICO ***********************************/
     $("#boxHistoricoVoltarbtn").click(function () {
-        //$("#boxcontautilizadorlogged").show();
         $("#Historico").hide();
     });
 
     /*********************************** OVERLAY DE DEFINIÇÕES DE CONTA ***********************************/
     $("#boxDefinicoesVoltarbtn").click(function () {
-        //$("#boxcontautilizadorlogged").show();
         $("#DefinicoesConta").hide();
+        $("#def-uname-txtbx").text("");
+        $("#def-nif-numbx").val("");
+        $("#def-tel-numbx").val("");
     });
 
     $("#boxDefinicoesGuardarbtn").click(function () {
-        //$("#boxcontautilizadorlogged").show();
         $("#DefinicoesConta").hide();
+        $("#def-uname-txtbx").text("");
+        $("#def-nif-numbx").val("");
+        $("#def-tel-numbx").val("");
+    });
+
+    /*********************************** CHAMAR EMPREGADO ***********************************/
+    $("#callbtn").click(function () {
+        confirmYesNo("Tem a certeza que pretende chamar um empregado?", function () {
+            $("#callwaittime").text("5 minutos");
+            $("#callwaitbtn").show();
+            $("#callbtn").hide();
+        });
+    });
+
+    $("#cancelcallbtn").click(function () {
+        confirmYesNo("Tem a certeza que pretende cancelar?", function () {
+            $("#callbtn").show();
+            $("#callwaitbtn").hide();
+        });
     });
 
     /*********************************** FIM DO LOADING ***********************************/

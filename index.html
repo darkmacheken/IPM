@@ -29,9 +29,9 @@
                 <div class="box btn" id="callbtn">
                     Chamar Empregado
                 </div>
-                <div class="box btn" id="call2btn">
-                    O empregado vem em:
-                    <div class="box btn" id="cancel">
+                <div class="box btn" id="callwaitbtn">
+                    O empregado vem em: <span id="callwaittime"></span>
+                    <div class="box btn" id="cancelcallbtn">
                         Cancelar
                     </div>
                 </div>
@@ -158,12 +158,16 @@
                                             Nome de Utilizador:
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" class="inputDef" name="def-uname" id="def-uname-txtbx" disabled><br />
+                                        </td>
+                                    </tr>
 
                                     <!--Password-->
                                     <tr>
                                         <td>
-                                          <br \>
-                                            Palavra-Passe:
+                                            <label for="def-pword-txtbx">Palavra-Passe:</label>
                                         </td>
                                     </tr>
                                     <tr>
@@ -171,26 +175,28 @@
                                             <input type="password" class="inputDef" name="def-pword" id="def-pword-txtbx"><br />
                                         </td>
                                     </tr>
+
                                     <!--NIF-->
                                     <tr>
                                         <td>
-                                            Número de Contribuinte (NIF):
+                                            <label for="def-nif-numbx">Número de Contribuinte (NIF):</label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input type="text" class="inputDef" name="def-nif" id="def-nif-numbx" maxlength="9"><br>
+                                            <input type="text" class="inputDef numOnly" name="def-nif" id="def-nif-numbx" maxlength="9"><br>
                                         </td>
                                     </tr>
+
                                     <!--Nr Telemóvel-->
                                     <tr>
                                         <td>
-                                            Número de Telemóvel:
+                                            <label for="def-tel-numbx">Número de Telemóvel:</label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input type="text" class="inputDef" name="def-tel" id="def-tel-numbx" maxlength="9"><br>
+                                            <input type="text" class="inputDef numOnly" name="def-tel" id="def-tel-numbx" maxlength="9"><br>
                                         </td>
                                     </tr>
                                 </table>
@@ -325,7 +331,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <input type="text" name="reg-nif" id="reg-nif-numbx" maxlength="9"><br>
+                            <input type="text" class="numOnly" name="reg-nif" id="reg-nif-numbx" maxlength="9"><br>
                         </td>
                     </tr>
                     <!--Nr Telemóvel-->
@@ -337,7 +343,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <input type="text" class="req-field" name="reg-tel" id="reg-tel-numbx" maxlength="9"><br>
+                            <input type="text" class="req-field numOnly" name="reg-tel" id="reg-tel-numbx" maxlength="9"><br>
                         </td>
                     </tr>
                     <tr>

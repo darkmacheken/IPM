@@ -62,18 +62,17 @@
     top: 10px;
 }
 
-#call2btn{
-  width: 251px;
-  height: 71px;
+#callwaitbtn{
+  width: 250px;
+  height: 70px;
   font-size: 16px;
   text-align: left;
   padding: inherit;
-  position: absolute;
-  top: 20px;
-  left: 117px;
+  top: 10px;
+  position: relative;
 }
 
-#cancel{
+#cancelcallbtn{
   padding: inherit;
   font-size: 16px;
   padding: 2%;
