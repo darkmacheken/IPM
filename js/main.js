@@ -38,6 +38,7 @@ $(document).ready(function() {
     $("#reg-btn").click(function() {
         $("form#reg-form .calmText").removeClass("calmText").addClass("attentionText");
         openWindow("reg-window");
+        $("#reg-cpword-diff").hide();
         $("#reg-submit-disabler").show();
         $("input#reg-uname-txtbx").focus();
     });
@@ -72,7 +73,9 @@ $(document).ready(function() {
 
     /* Verificar se a palavra-passe e a sua confirmação correspondem. */
     $("input#reg-pword-txtbx, input#reg-cpword-txtbx").keyup(function () {
-        if ($("input#reg-pword-txtbx").val() === $("input#reg-cpword-txtbx").val())
+        if ($("input#reg-pword-txtbx").val() === $("input#reg-cpword-txtbx").val() ||
+                $("input#reg-pword-txtbx").val() === "" ||
+                $("input#reg-cpword-txtbx").val() === "")
             $("#reg-cpword-diff").hide();
         else
             $("#reg-cpword-diff").show();
