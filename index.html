@@ -1,362 +1,362 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Com.ISTo</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script src="js/jstorage.js"></script>
-<script src="js/accounts.js"></script>
-<script src="js/mainFunctions.js"></script>
-<script src="js/windows.js"></script>
-<script src="js/clock.js"></script>
-<script src="js/main.js"></script>
-<link type="text/css" rel="stylesheet" href="style.css">
-<link type="text/css" rel="stylesheet" href="interface.css">
-<link type="text/css" rel="stylesheet" href="windows.css">
-<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <title>Com.ISTo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="js/jstorage.js"></script>
+    <script src="js/accounts.js"></script>
+    <script src="js/mainFunctions.js"></script>
+    <script src="js/windows.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/main.js"></script>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="interface.css">
+    <link type="text/css" rel="stylesheet" href="windows.css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 </head>
 
 <body onload="startTime()">
 
-	<table id="screen">
-		<tr>
-			<td height="126" colspan="2">
-				<!--Botão Help-->
-				<div class="box btn" id="helpbtn">
-					?
-				</div>
-				<!--Botão Chamar Empregado-->
-				<div class="box btn" id="callbtn">
-					Chamar Empregado
-				</div>
-				<!--Logotipo-->
-				<div class="box" id="logotipo">
-					Logótipo
-				</div>
-			</td>
+    <table id="screen">
+        <tr>
+            <td height="126" colspan="2">
+                <!--Botão Help-->
+                <div class="box btn" id="helpbtn">
+                    ?
+                </div>
+                <!--Botão Chamar Empregado-->
+                <div class="box btn" id="callbtn">
+                    Chamar Empregado
+                </div>
+                <!--Logotipo-->
+                <div class="box" id="logotipo">
+                    Logótipo
+                </div>
+            </td>
 
-			<td width="258" height="126">
-				<!--Relógio-->
-				<span class="box" id="clock">
-				</span>
-			</td>
-		</tr>
+            <td width="258" height="126">
+                <!--Relógio-->
+                <span class="box" id="clock">
+                </span>
+            </td>
+        </tr>
 
-		<tr>
-			<td width="400" height="60%" valign="top">
-				<!--Menu Jogos-->
-				<div class="title" id="game">
-					JOGOS
-				</div>
-				<div class="box btn" id="games">
-					Jogo do Galo
-				</div>
-				<div class="box btn" id="games">
-					Esmurre ISTo
-				</div>
-				<div class="box btn" id="games">
-					Pong
-				</div>
-				<!--Menu Música-->
-				<div class="title" id="music">
-					M&Uacute;SICA AMBIENTE
-				</div>
-				<div class="box" id="boxmusic" >
-					<div id="cover" ></div>
-					A tocar: I'm Blue<br />
-					de: Eiffel 65
-				</div>
-				<!--Botão Votar Próxima Música-->
-				<div class="box btn" id="votemusic" >
-					Votar na pr&oacute;xima m&uacute;sica
-				</div>
-			</td>
+        <tr>
+            <td width="400" height="60%" valign="top">
+                <!--Menu Jogos-->
+                <div class="title" id="game">
+                    JOGOS
+                </div>
+                <div class="box btn" id="games">
+                    Jogo do Galo
+                </div>
+                <div class="box btn" id="games">
+                    Esmurre ISTo
+                </div>
+                <div class="box btn" id="games">
+                    Pong
+                </div>
+                <!--Menu Música-->
+                <div class="title" id="music">
+                    M&Uacute;SICA AMBIENTE
+                </div>
+                <div class="box" id="boxmusic" >
+                    <div id="cover" ></div>
+                    A tocar: I'm Blue<br />
+                    de: Eiffel 65
+                </div>
+                <!--Botão Votar Próxima Música-->
+                <div class="box btn" id="votemusic" >
+                    Votar na pr&oacute;xima m&uacute;sica
+                </div>
+            </td>
 
-			<td width="628" height="60%" align="center" valign="top">
-				<!--Botão Fazer Pedido-->
-				<div id="orderfoodbtn">
-					<br />Fazer <br />Pedido
-				</div>
-			</td>
+            <td width="628" height="60%" align="center" valign="top">
+                <!--Botão Fazer Pedido-->
+                <div id="orderfoodbtn">
+                    <br />Fazer <br />Pedido
+                </div>
+            </td>
 
-			<td height="60%" valign="top">
-				<!--Menu Conta de Utilizador-->
-				<div class="title" id="contautilizador" >
-					CONTA DE UTILIZADOR
-				</div>
-				<div class="box" id="boxcontautilizador" >
-					<br />
-					<!--Botão Entrar-->
-					<div class="box btn" id="login-btn">
-						ENTRAR
-					</div>
-					<br /><br /><br /><br /><br /><br />
-					<!--Botão Registar-->
-					<div class="box btn" id="reg-btn">
-						REGISTAR
-					</div>
-				</div>
-				<!--Caixa Login quando o utilizador entrou na conta-->
-				<div class="box" id="boxcontautilizadorlogged">
-						<div id="textContaUtilizador">
-							Nome de Utilizador: <span id="logged-uname"></span><br/>
-							NIF: <span id="logged-nif"></span><br/>
-							Nº Telemóvel: <span id="logged-tel"></span>
-						</div>
-						<div class="box btn" id="historicobtn">
-							Histórico
-						</div>
-						<div class="box btn" id="definicoesContabtn">
-							Definições de Conta
-						</div>
-						<div class="box btn" id="sairSessaobtn">
-							Sair da Sessão
-						</div>
-				</div>
-				<!--Histórico-->
-				<div id="Historico">
-				<div class="title" id="historicoTittle" >
-					HISTÓRICO
-				</div>
-				<div class="box" id="boxHistorico">
-					<div>
-						<div class="box btn" id="boxHistoricoPedidobtn">
-							12/04/2017  19:38 <br/>
-							Pedido 1
-						</div>
-						<div class="box btn" id="boxHistoricoRepetirPedidobtn">
-							Repetir Pedido
-						</div>
-						<div class="box btn" id="boxHistoricoXbtn">
-							X
-						</div>
-					</div>
+            <td height="60%" valign="top">
+                <!--Menu Conta de Utilizador-->
+                <div class="title" id="contautilizador" >
+                    CONTA DE UTILIZADOR
+                </div>
+                <div class="box" id="boxcontautilizador" >
+                    <br />
+                    <!--Botão Entrar-->
+                    <div class="box btn" id="login-btn">
+                        ENTRAR
+                    </div>
+                    <br /><br /><br /><br /><br /><br />
+                    <!--Botão Registar-->
+                    <div class="box btn" id="reg-btn">
+                        REGISTAR
+                    </div>
+                </div>
+                <!--Caixa Login quando o utilizador entrou na conta-->
+                <div class="box" id="boxcontautilizadorlogged">
+                    <div id="textContaUtilizador">
+                        Nome de Utilizador: <span id="logged-uname"></span><br/>
+                        NIF: <span id="logged-nif"></span><br/>
+                        Nº Telemóvel: <span id="logged-tel"></span>
+                    </div>
+                    <div class="box btn" id="historicobtn">
+                        Histórico
+                    </div>
+                    <div class="box btn" id="definicoesContabtn">
+                        Definições de Conta
+                    </div>
+                    <div class="box btn" id="sairSessaobtn">
+                        Sair da Sessão
+                    </div>
+                </div>
+                <!--Histórico-->
+                <div id="Historico">
+                    <div class="title" id="historicoTittle" >
+                        HISTÓRICO
+                    </div>
+                    <div class="box" id="boxHistorico">
+                        <div>
+                            <div class="box btn" id="boxHistoricoPedidobtn">
+                                12/04/2017  19:38 <br/>
+                                Pedido 1
+                            </div>
+                            <div class="box btn" id="boxHistoricoRepetirPedidobtn">
+                                Repetir Pedido
+                            </div>
+                            <div class="box btn" id="boxHistoricoXbtn">
+                                X
+                            </div>
+                        </div>
 
-					<div class="box btn" id="boxHistoricoVoltarbtn">
-						Voltar
-					</div>
-				</div>
-			</div>
-			<!--Definicoes de Conta-->
-			<div id="DefinicoesConta">
-			<div class="title" id="historicoTittle" >
-				Definicoes de Conta
-			</div>
-			<div class="box" id="boxHistorico">
-				<div class="form">
-					<form id="def-form">
-						<table>
-							<!--Nome de Utilizador-->
-							<tr>
-								<td>
-									<label class="labelDef" for="def-uname-txtbx">Nome de Utilizador:</label>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<input type="text" class="inputDef" name="def-uname" id="def-uname-txtbx"><br>
-									</td>
-							</tr>
-							<!--Password-->
-							<tr>
-								<td>
-									<label class="labelDef" for="def-pword-txtbx">Palavra-Passe:</label>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<input type="password" class="inputDef" name="def-pword" id="def-pword-txtbx"><br />
-									</td>
-							</tr>
-							<!--NIF-->
-							<tr>
-								<td>
-									<label class="labelDef" for="def-nif-numbx">Número de Contribuinte (NIF):</label>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<input type="text" class="inputDef" name="def-nif" id="def-nif-numbx" maxlength="9"><br>
-									</td>
-							</tr>
-							<!--Nr Telemóvel-->
-							<tr>
-								<td>
-									<label class="labelDef" for="def-tel-numbx">Número de Telemóvel:</label>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<input type="text" class="inputDef" name="def-tel" id="def-tel-numbx" maxlength="9"><br>
-								</td>
-							</tr>
-							</table>
-					</form>
-				</div>
+                        <div class="box btn" id="boxHistoricoVoltarbtn">
+                            Voltar
+                        </div>
+                    </div>
+                </div>
+                <!--Definicoes de Conta-->
+                <div id="DefinicoesConta">
+                    <div class="title" id="historicoTittle" >
+                        Definicoes de Conta
+                    </div>
+                    <div class="box" id="boxDefContas">
+                        <div class="form">
+                            <form id="def-form">
+                                <table>
+                                    <!--Nome de Utilizador-->
+                                    <tr>
+                                        <td>
+                                            <label class="labelDef" for="def-uname-txtbx">Nome de Utilizador:</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" class="inputDef" name="def-uname" id="def-uname-txtbx"><br>
+                                        </td>
+                                    </tr>
+                                    <!--Password-->
+                                    <tr>
+                                        <td>
+                                            <label class="labelDef" for="def-pword-txtbx">Palavra-Passe:</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="password" class="inputDef" name="def-pword" id="def-pword-txtbx"><br />
+                                        </td>
+                                    </tr>
+                                    <!--NIF-->
+                                    <tr>
+                                        <td>
+                                            <label class="labelDef" for="def-nif-numbx">Número de Contribuinte (NIF):</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" class="inputDef" name="def-nif" id="def-nif-numbx" maxlength="9"><br>
+                                        </td>
+                                    </tr>
+                                    <!--Nr Telemóvel-->
+                                    <tr>
+                                        <td>
+                                            <label class="labelDef" for="def-tel-numbx">Número de Telemóvel:</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" class="inputDef" name="def-tel" id="def-tel-numbx" maxlength="9"><br>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
 
-				<div class="box btn" id="boxDefinicoesVoltarbtn">
-					Voltar
-				</div>
-				<div class="box btn" id="boxDefinicoesGuardarbtn">
-					Guardar
-				</div>
-			</div>
-		</div>
-			</td>
-		</tr>
-	</table>
+                        <div class="box btn" id="boxDefinicoesVoltarbtn">
+                            Voltar
+                        </div>
+                        <div class="box btn" id="boxDefinicoesGuardarbtn">
+                            Guardar
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
 
-	<!--Blocker, div preta com opacidade-->
-	<div id="blocker"></div>
+    <!--Blocker, div preta com opacidade-->
+    <div id="blocker"></div>
 
     <!--Loader, div branca mostrada enquanto a página está a carregar-->
-	<div id="loader"></div>
+    <div id="loader"></div>
 
-	<!--Janela Login-->
-	<div class="window" id="login-window">
-		<h3>ENTRAR</h3>
-		<div class="closeWindow" id="login-close-btn">
-			X
-		</div>
+    <!--Janela Login-->
+    <div class="window" id="login-window">
+        <h3>ENTRAR</h3>
+        <div class="closeWindow" id="login-close-btn">
+            X
+        </div>
 
         <form id="login-form">
-		    <div class="form">
+            <div class="form">
 
-				<table>
-					<tr>
-						<td>
-                            <br />
-							<label for="login-uname-txtbx">Nome de Utilizador:<span id="login-uname-att" class="attentionText">*</span></label>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<input type="text" class="req-field" name="login-uname" id="login-uname-txtbx">
-                            <br />
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<br />
-							<label for="login-pword-txtbx">Palavra-Passe:<span id="login-pword-att" class="attentionText">*</span></label>
-						</td>
-					</tr>
-					<tr>
-						<td><input type="password" class="req-field" name="login-pword" id="login-pword-txtbx"><br></td>
-					</tr>
+                <table>
                     <tr>
-						<td>
+                        <td>
                             <br />
-							<span class="attentionText att-warning">* Campos de preenchimento obrigatório.</span>
-						</td>
-					</tr>
-					</table>
-						<p id="invalid-data">Palavra-passe ou Nome de Utilizador inválidos</p>
+                            <label for="login-uname-txtbx">Nome de Utilizador:<span id="login-uname-att" class="attentionText">*</span></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="req-field" name="login-uname" id="login-uname-txtbx">
+                            <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br />
+                            <label for="login-pword-txtbx">Palavra-Passe:<span id="login-pword-att" class="attentionText">*</span></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="password" class="req-field" name="login-pword" id="login-pword-txtbx"><br></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br />
+                            <span class="attentionText att-warning">* Campos de preenchimento obrigatório.</span>
+                        </td>
+                    </tr>
+                </table>
+                <p id="invalid-data">Palavra-passe ou Nome de Utilizador inválidos</p>
 
-		</div>
+            </div>
 
-		<div class="box btn submit" id="login-submit">
-			ENTRAR
-            <div class="disabler" id="login-submit-disabler"></div>
-		</div>
+            <div class="box btn submit" id="login-submit">
+                ENTRAR
+                <div class="disabler" id="login-submit-disabler"></div>
+            </div>
         </form>
-	</div>
+    </div>
 
-	<!--Janela Registar-->
-	<div class="window" id="reg-window">
-		<h3>REGISTAR</h3>
-		<div class="closeWindow" id="reg-close-btn">
-			X
-		</div>
+    <!--Janela Registar-->
+    <div class="window" id="reg-window">
+        <h3>REGISTAR</h3>
+        <div class="closeWindow" id="reg-close-btn">
+            X
+        </div>
 
         <form id="reg-form">
-		<div class="form">
+            <div class="form">
 
-				<table>
-					<!--Nome de Utilizador-->
-					<tr>
-						<td>
-							<br />
-							<label for="reg-uname-txtbx">Nome de Utilizador:<span id="reg-uname-att" class="attentionText">*</span></label>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<input type="text"  class="inputReg req-field" name="reg-uname" id="reg-uname-txtbx"><br>
-						</td>
-					</tr>
-					<!--Password-->
-					<tr>
-						<td>
-							<br />
-							<label for="reg-pword-txtbx">Palavra-Passe:<span id="reg-pword-att" class="attentionText">*</span></label>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<input type="password"  class="req-field" name="reg-pword" id="reg-pword-txtbx"><br />
-							</td>
-					</tr>
-					<!--NIF-->
-					<tr>
-						<td>
-							<br />
-							<label for="reg-nif-numbx">Número de Contribuinte (NIF):</label>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<input type="text" name="reg-nif" id="reg-nif-numbx" maxlength="9"><br>
-						</td>
-					</tr>
-					<!--Nr Telemóvel-->
-					<tr>
-						<td>
-							<br />
-							<label for="reg-tel-numbx">Número de Telemóvel:<span id="reg-tel-att" class="attentionText">*</span></label>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<input type="text" class="req-field" name="reg-tel" id="reg-tel-numbx" maxlength="9"><br>
-							</td>
-					</tr>
-					<tr>
-						<td>
+                <table>
+                    <!--Nome de Utilizador-->
+                    <tr>
+                        <td>
                             <br />
-							<span class="attentionText att-warning">* Campos de preenchimento obrigatório.</span>
-						</td>
-					</tr>
-					</table>
+                            <label for="reg-uname-txtbx">Nome de Utilizador:<span id="reg-uname-att" class="attentionText">*</span></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text"  class="inputReg req-field" name="reg-uname" id="reg-uname-txtbx"><br>
+                        </td>
+                    </tr>
+                    <!--Password-->
+                    <tr>
+                        <td>
+                            <br />
+                            <label for="reg-pword-txtbx">Palavra-Passe:<span id="reg-pword-att" class="attentionText">*</span></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="password"  class="req-field" name="reg-pword" id="reg-pword-txtbx"><br />
+                        </td>
+                    </tr>
+                    <!--NIF-->
+                    <tr>
+                        <td>
+                            <br />
+                            <label for="reg-nif-numbx">Número de Contribuinte (NIF):</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" name="reg-nif" id="reg-nif-numbx" maxlength="9"><br>
+                        </td>
+                    </tr>
+                    <!--Nr Telemóvel-->
+                    <tr>
+                        <td>
+                            <br />
+                            <label for="reg-tel-numbx">Número de Telemóvel:<span id="reg-tel-att" class="attentionText">*</span></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="req-field" name="reg-tel" id="reg-tel-numbx" maxlength="9"><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br />
+                            <span class="attentionText att-warning">* Campos de preenchimento obrigatório.</span>
+                        </td>
+                    </tr>
+                </table>
 
-		</div>
+            </div>
 
-		<div class="box btn submit" id="reg-submit">
-			REGISTAR
-			<div class="disabler" id="reg-submit-disabler"></div>
-		</div>
+            <div class="box btn submit" id="reg-submit">
+                REGISTAR
+                <div class="disabler" id="reg-submit-disabler"></div>
+            </div>
         </form>
 
-	</div>
+    </div>
 
-    		<!--Janela confirmação Sim ou Não-->
-    		<div class="window confirm" id="confirmYesNo">
-    				<span class="confirmText"></span>
-    				<div class="box btn" id="confirmacaoSimbtn">
-    					Sim
-    				</div>
-    				<div class="box btn" id="confirmacaoNaobtn">
-    					Não
-    				</div>
-    		</div>
+    <!--Janela confirmação Sim ou Não-->
+    <div class="window confirm" id="confirmYesNo">
+        <span class="confirmText"></span>
+        <div class="box btn" id="confirmacaoSimbtn">
+            Sim
+        </div>
+        <div class="box btn" id="confirmacaoNaobtn">
+            Não
+        </div>
+    </div>
 
-    		<!--Janela confirmação Ok-->
-    		<div class="window confirm" id="confirmOk">
-    				<span class="confirmText"></span>
-    				<div class="box btn" id="confirmOkbtn">
-    					Ok
-    				</div>
-    		</div>
+    <!--Janela confirmação Ok-->
+    <div class="window confirm" id="confirmOk">
+        <span class="confirmText"></span>
+        <div class="box btn" id="confirmOkbtn">
+            Ok
+        </div>
+    </div>
 
 </body>
 </html>

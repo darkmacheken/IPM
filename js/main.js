@@ -6,6 +6,7 @@ $(document).ready(function() {
     /*********************************** JANELA DE LOGIN ***********************************/
     /* Função chamada quando é clicado botão de log-in no ecrã principal. */
     $("#login-btn").click(function() {
+        $("form#login-form .calmText").removeClass("calmText").addClass("attentionText");
         openWindow("login-window");
         $("#invalid-data").hide();
         $("#login-submit-disabler").show();
@@ -13,16 +14,14 @@ $(document).ready(function() {
     });
 
     /* Função chamada quando é clicado botão X na janela de log-in. */
-    $("#login-close-btn").click(function() {
-        closeLoginWindow();
-    });
+    $("#login-close-btn").click(closeLoginWindow);
 
     /* Função chamada quando é clicado botão de log-in na janela de log-in. */
     $("#login-submit").click(function() {
         // Prevenir que o botao seja clicado acidentalmente quando desativado
         if (!checkForm("login-form"))
             return;
-            
+
         var uname = $.trim($("input#login-uname-txtbx").val());
     	var pword = $.trim($("input#login-pword-txtbx").val());
     	if (isLoginValid(uname, pword)) {
@@ -37,15 +36,14 @@ $(document).ready(function() {
     /*********************************** JANELA DE REGISTO ***********************************/
     /* Função chamada quando é clicado botão de registar no ecrã principal. */
     $("#reg-btn").click(function() {
+        $("form#reg-form .calmText").removeClass("calmText").addClass("attentionText");
         openWindow("reg-window");
         $("#reg-submit-disabler").show();
         $("input#reg-uname-txtbx").focus();
     });
 
     /* Função chamada quando é clicado botão X na janela de log-in. */
-    $("#reg-close-btn").click(function() {
-        closeRegistarWindow();
-    });
+    $("#reg-close-btn").click(closeRegistarWindow);
 
     /* Função chamada quando é clicado botão de registar na janela de registar. */
     $("#reg-submit").click(function() {
@@ -102,16 +100,38 @@ $(document).ready(function() {
     });
 
     /*********************************** OVERLAY DE SESSÃO INICIADA ***********************************/
+    /* Função chamada quando é clicado botão de Histórico. */
     $("#historicobtn").click(function () {
-        ;
+        $("#Historico").show();
+        //$("#boxcontautilizadorlogged").hide();
     });
 
+    /* Função chamada quando é clicado botão de Definições de Conta. */
     $("#definicoesContabtn").click(function () {
-        ;
+        $("#DefinicoesConta").show();
+        //$("#boxcontautilizadorlogged").hide();
     });
 
+    /* Função chamada quando é clicado botão de Saír Sessão. */
     $("#sairSessaobtn").click(function () {
         confirmYesNo("Tem a certeza que pretende saír da sessão?", logout);
+    });
+
+    /*********************************** OVERLAY DE HISTÓRICO ***********************************/
+    $("#boxHistoricoVoltarbtn").click(function () {
+        //$("#boxcontautilizadorlogged").show();
+        $("#Historico").hide();
+    });
+
+    /*********************************** OVERLAY DE DEFINIÇÕES DE CONTA ***********************************/
+    $("#boxDefinicoesVoltarbtn").click(function () {
+        //$("#boxcontautilizadorlogged").show();
+        $("#DefinicoesConta").hide();
+    });
+
+    $("#boxDefinicoesGuardarbtn").click(function () {
+        //$("#boxcontautilizadorlogged").show();
+        $("#DefinicoesConta").hide();
     });
 
     /*********************************** FIM DO LOADING ***********************************/
