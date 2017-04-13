@@ -90,9 +90,10 @@
   position: relative;
   left: 2em;
   left: 6.5em;
-  background-image: url("images/logo/comisto3.png");
+  background-image: url("images/logo/comistopng.png");
   background-repeat: no-repeat;
   background-position: 10px ;
+  background-color: transparent;
 }
 
 /* Relógio */
