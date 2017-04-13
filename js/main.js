@@ -154,10 +154,12 @@ $(document).ready(function() {
     });
 
     /*********************************** CHAMAR EMPREGADO ***********************************/
+    var timeouts = [];
     $("#callbtn").click(function () {
         confirmYesNo("Tem a certeza que pretende chamar um empregado?", function () {
-            $("#callwaittime").text("40");
-            setTimeout(callTimer, 1000);
+            var waiterTime = 30;
+            for (var i = 0; i <= waiterTime; i++)
+                timeouts.push(setTimeout(updateTimer, i*1000, waiterTime - i));
             $("#callwaitbtn").show();
             $("#callbtn").hide();
         });
@@ -165,7 +167,9 @@ $(document).ready(function() {
 
     $("#cancelcallbtn").click(function () {
         confirmYesNo("Tem a certeza que pretende cancelar?", function () {
-            $("#callwaittime").text("0");
+            for (var i = 0; i < timeouts.length; i++)
+                clearTimeout(timeouts[i]);
+            timeouts = [];
             $("#callbtn").show();
             $("#callwaitbtn").hide();
         });
