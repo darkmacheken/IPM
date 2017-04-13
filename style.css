@@ -7,6 +7,8 @@ html {
 }
 
 body {
+    background-image: url("images/background/foodEDIT.png");
+    background-repeat: repeat-x repeat-y;
     width: 95em;
     height: 10em;
     vertical-align: middle;
