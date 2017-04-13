@@ -83,10 +83,14 @@
 
 /* Logótipo */
 #logotipo {
-    width: 600px;
-    height: 60px;
+    width:270px;
+    height: 70px;
     position: relative;
-    left: 2em;
+    left: 6.5em;
+    background-image: url("images/logo/comisto3.png");
+    background-repeat: no-repeat;
+    background-position: 10px ;
+
 }
 
 /* Relógio */
