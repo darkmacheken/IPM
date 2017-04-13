@@ -25,12 +25,9 @@ function checkForm(form) {
     return reqReady && pconfReady;
 }
 
-function callTimer() {
-    var time = $("#callwaittime").text() - 1;
-    $("#callwaittime").text(time);
-    if (time > 0)
-        setTimeout(callTimer, 1000);
-    else {
+function updateTimer(timeleft) {
+    $("#callwaittime").text(timeleft);
+    if (timeleft <= 0) {
         $("#callbtn").show();
         $("#callwaitbtn").hide();
     }
