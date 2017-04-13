@@ -1,6 +1,5 @@
 (Duarte)
 - Tamanho dos dialogos yes/no
-- Dados aparecer nos inputs das DefinicoesConta
 
 (Pedro)
 - Fix stuff

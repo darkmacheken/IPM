@@ -2,10 +2,6 @@ $(document).ready(function() {
     /* Esconder janelas inicialmente */
     $(".window, #blocker, #boxcontautilizadorlogged, #Historico, #DefinicoesConta, #callwaitbtn, #second-screen").hide();
 
-    $("#orderfoodbtn").click(function () {
-        $("#second-screen").show();
-    });
-
     /*********************************** JANELA DE LOGIN ***********************************/
     /* Função chamada quando é clicado botão de log-in no ecrã principal. */
     $("#login-btn").click(function() {
@@ -173,6 +169,15 @@ $(document).ready(function() {
             $("#callbtn").show();
             $("#callwaitbtn").hide();
         });
+    });
+
+    /*********************************** SEGUNDA JANELA ***********************************/
+    $("#orderfoodbtn").click(function () {
+        $("#second-screen").show();
+    });
+
+    $("#menuPrincipalbtn").click(function () {
+        $("#second-screen").hide();
     });
 
     /*********************************** FIM DO LOADING ***********************************/
