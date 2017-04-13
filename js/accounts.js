@@ -17,6 +17,10 @@ function isLoginValid(uname, pword) {
     }
 }
 
+function existsUser(uname) {
+    return contas[uname] !== undefined;
+}
+
 function createAccount(uname, pword, nif, tel) {
     contas[uname] = { _uname: uname,
         _pword: pword,

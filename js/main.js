@@ -38,6 +38,7 @@ $(document).ready(function() {
     $("#reg-btn").click(function() {
         $("form#reg-form .calmText").removeClass("calmText").addClass("attentionText");
         openWindow("reg-window");
+        $("#reg-uname-exists").hide();
         $("#reg-cpword-diff").hide();
         $("#reg-submit-disabler").show();
         $("input#reg-uname-txtbx").focus();
@@ -69,6 +70,14 @@ $(document).ready(function() {
         function () {
             callblock();
         });
+    });
+
+    /* Verificar se o nome de utilizador já existe. */
+    $("input#reg-uname-txtbx").keyup(function () {
+        if (existsUser($("input#reg-uname-txtbx").val()))
+            $("#reg-uname-exists").show();
+        else
+            $("#reg-uname-exists").hide();
     });
 
     /* Verificar se a palavra-passe e a sua confirmação correspondem. */
@@ -122,9 +131,9 @@ $(document).ready(function() {
         //$("#boxcontautilizadorlogged").hide();
     });
 
-    /* Função chamada quando é clicado botão de Saír Sessão. */
+    /* Função chamada quando é clicado botão de Sair Sessão. */
     $("#sairSessaobtn").click(function () {
-        confirmYesNo("Tem a certeza que pretende saír da sessão?", logout);
+        confirmYesNo("Tem a certeza que pretende sair da sessão?", logout);
     });
 
     /*********************************** OVERLAY DE HISTÓRICO ***********************************/
