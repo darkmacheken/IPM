@@ -1,18 +1,24 @@
 /* Verificar se um formulario foi preenchido */
 function checkForm(form) {
-    var formReady = true;
+    var reqReady = true;
+    var pconfReady = false;
     $("form#" + form + " input.req-field").each(function() {
         if ($.trim($(this).val()) === "")
-            formReady = false;
+            reqReady = false;
     });
+    if ($("input#reg-pword-txtbx").val() === $("input#reg-cpword-txtbx").val())
+        pconfReady = true;
 
-    if (formReady) {
-		$("form#" + form + " div.disabler").hide();
+    if (reqReady) {
+        if (pconfReady)
+            $("form#" + form + " div.disabler").hide();
+        else
+            $("form#" + form + " div.disabler").show();
         $("form#" + form + " span.att-warning").removeClass().addClass("att-warning").addClass("calmText");
 	} else {
 		$("form#" + form + " div.disabler").show();
         $("form#" + form + " span.att-warning").removeClass().addClass("att-warning").addClass("attentionText");
 	}
 
-    return formReady;
+    return reqReady;
 }

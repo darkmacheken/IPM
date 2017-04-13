@@ -70,17 +70,24 @@ $(document).ready(function() {
         });
     });
 
+    /* Verificar se a palavra-passe e a sua confirmação correspondem. */
+    $("input#reg-pword-txtbx, input#reg-cpword-txtbx").keyup(function () {
+        if ($("input#reg-pword-txtbx").val() === $("input#reg-cpword-txtbx").val())
+            $("#reg-cpword-diff").hide();
+        else
+            $("#reg-cpword-diff").show();
+    });
+
     /*********************************** TODAS AS JANELAS ***********************************/
     /* Janelas log-in e registo: Colocar asteriscos a vermelho caso campo não esteja preenchido */
-    $("input.req-field").keyup(function() {
-        if( $(this).val().length === 0 ) {
+    $("input.req-field").keyup(function () {
+        if ($(this).val().length === 0) {
             $("#" + $(this).attr("name") + "-att").removeClass().addClass("attentionText");
         } else {
             $("#" + $(this).attr("name") + "-att").removeClass().addClass("calmText");
         }
         checkForm($(this).parents("form").attr("id"));
     });
-
 
     /* So deixar colocar numeros no telemovel e no nif */
     $("input#reg-nif-numbx, input#reg-tel-numbx").keydown(function (e) {

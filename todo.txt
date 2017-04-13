@@ -1,0 +1,11 @@
+(Duarte)
+- Tamanho dos dialogos yes/no
+- Dados aparecer nos inputs das DefinicoesConta
+- Verificar se username já existe
+- Confirmar pass
+
+(Pedro)
+- Fix stuff
+
+(Leo)
+- Trabalhar
