@@ -51,6 +51,8 @@ function deleteLoginData() {
 function closeDefs() {
     $("#DefinicoesConta, #screen2-definicoesConta").hide();
     $("form#def-form, form#screen2-def-form").trigger("reset");
+    $("#rightBoxTitle").text("CONTA DE UTILIZADOR");
+    $("#boxcontautilizadorlogged").show();
 }
 
 function defsChanged() {

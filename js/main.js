@@ -131,15 +131,19 @@ $(document).ready(function() {
     /*********************************** OVERLAY DE SESSÃO INICIADA ***********************************/
     /* Função chamada quando é clicado botão de Histórico. */
     $("#historicobtn, #screen2-historicobtn").click(function () {
+        $("#rightBoxTitle").text("HISTÓRICO");
+        $("#boxcontautilizadorlogged").hide();
         $("#Historico, #screen2-historico").show();
     });
 
     /* Função chamada quando é clicado botão de Definições de Conta. */
     $("#definicoesContabtn, #screen2-definicoesContabtn").click(function () {
+        $("#rightBoxTitle").text("DEFINIÇÕES DE CONTA");
         $("#def-uname-txtbx, #screen2-def-uname-txtbx").val(getUname());
         $("#def-nif-numbx, #screen2-def-nif-numbx").val(getNif());
         $("#def-tel-numbx, #screen2-def-tel-numbx").val(getTel());
         $("#def-cpword-diff, #screen2-def-cpword-diff").hide();
+        $("#boxcontautilizadorlogged").hide();
         $("#DefinicoesConta, #screen2-definicoesConta").show();
     });
 
@@ -150,7 +154,9 @@ $(document).ready(function() {
 
     /*********************************** OVERLAY DE HISTÓRICO ***********************************/
     $("#boxHistoricoVoltarbtn, #screen2-boxHistoricoFecharbtn").click(function () {
+        $("#rightBoxTitle").text("CONTA DE UTILIZADOR");
         $("#Historico, #screen2-historico").hide();
+        $("#boxcontautilizadorlogged").show();
     });
 
     /*********************************** OVERLAY DE DEFINIÇÕES DE CONTA ***********************************/

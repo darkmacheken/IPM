@@ -32,6 +32,17 @@
     alignment-adjust: central;
 }
 
+.boxright {
+    position: relative;
+    float:right;
+    height: 220px;
+    width: 250px;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-top:none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
 /* Tabela que contém o ecrã todo */
 #screen {
     width: 100%;
@@ -127,7 +138,7 @@
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-#contautilizador {
+#rightBoxTitle {
     float:right;
     height: 10px;
     width: 250px;
@@ -136,15 +147,7 @@
     line-height: 10px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-#boxcontautilizador {
-    float:right;
-    height: 220px;
-    width: 250px;
-    font-size: 15px;
-    padding: 10px 20px;
-    border-top:none;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
+
 #login-btn {
     position: relative;
     left:1.4em;
@@ -248,13 +251,7 @@
 }
 
 #boxcontautilizadorlogged {
-    position: relative;
-    bottom: 220px;
-    float: right;
-    height: 230px;
-    width: 250px;
-    font-size: 15px;
-    padding: 10px 20px;
+    padding-top: 30px;
     border-top:none;
     background-color:white;
     text-align: left;
@@ -269,7 +266,7 @@
 
 #historicobtn {
     font-size: 15px;
-    padding: inherit;
+    padding: 10px 20px;
     width: 200px;
     text-align: center;
     position: relative;
@@ -278,7 +275,7 @@
 
 #definicoesContabtn {
     font-size: 15px;
-    padding: inherit;
+    padding: 10px 20px;
     width: 200px;
     text-align: center;
     position: relative;
@@ -287,30 +284,15 @@
 
 #sairSessaobtn {
     font-size: 15px;
-    padding: inherit;
+    padding: 10px 20px;
     width: 200px;
     text-align: center;
     position: relative;
     top: 20px;
 }
 
-#historicoTittle {
-    float:right;
-    height: 10px;
-    width: 250px;
-    font-size: 15px;
-    padding: 10px 20px;
-    line-height: 10px;
-    position:relative;
-    top:-530px;
-    background-color: white;
-}
 #boxHistorico {
-    position:relative;
-    top:-530px;
-    float:right;
     height: 253px;
-    width: 250px;
     font-size: 15px;
     padding: 10px 20px;
     border-top:none;
@@ -370,32 +352,10 @@
     line-height: 40px;
 }
 
-#DefinicoesConta {
-  position: relative;
-  left: 43px;
-  top: -118px;
-}
-#definicoesTittle{
-  float:right;
-  height: 10px;
-  width: 250px;
-  font-size: 15px;
-  padding: 10px 20px;
-  line-height: 10px;
-  background-color: white;
-  position: absolute;
-  top:118px;
-  border-bottom: none;
-}
-
 #boxDefContas{
-  float: left;
   font-size: 16px;
-  width: 226px;
-  height: 270px;
+  height: 300px;
   text-align: left;
-  position: absolute;
-  top: 150px;
 }
 
 #boxDefinicoesVoltarbtn {
