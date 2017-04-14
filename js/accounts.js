@@ -4,7 +4,11 @@ var contas = {
     "admin" : { _uname: "admin",
         _pword: "root",
         _nif: "999888777",
-        _tel: "943555555" }
+        _tel: "943555555" },
+    "q" : { _uname: "q",
+        _pword: "q",
+        _nif: "",
+        _tel: "1" }
 };
 
 function isLoginValid(uname, pword) {
