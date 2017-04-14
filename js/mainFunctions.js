@@ -39,7 +39,7 @@ function updateLoginData() {
         $("#logged-nif, #screen2-logged-nif").addClass("attentionText").text("Não fornecido.");
     else
         $("#logged-nif, #screen2-logged-nif").text(getNif());
-    $("#logged-tel, #screen2-logged-tel").text(getTel());
+    $("#logged-tel").text(getTel());
 }
 
 function deleteLoginData() {
