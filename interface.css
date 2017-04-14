@@ -12,6 +12,11 @@
     background-color: white;
 }
 
+.background{
+  background-image: url("images/background/back2.png");
+  background-repeat: repeat-x repeat-y;
+}
+
 /* Todos os objetos clicáveis */
 .btn {
     cursor: pointer;
@@ -54,7 +59,6 @@
 
 /* Botão de ajuda */
 #helpbtn {
-  border: 3px solid #008ae6;
   width: 100px;
   height: 100px;
   color: white;
@@ -63,7 +67,7 @@
   font-size: 86px;
   margin-right: 10px;
   line-height: 100px;
-  background-color: #008ae6; /*azul bonito*/
+  background: -webkit-radial-gradient(center center, ellipse cover, rgb(0, 21, 255) 0%, rgb(34, 0, 128) 99%, rgb(34, 0, 128) 100%);
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -314,7 +318,7 @@
     border-bottom: none;
     border-left: none;
     border-right: none;
-    background-color: #da3e3e; /* red */
+    background-color: #B22222; /* red */
     color: white;
 }
 
@@ -375,7 +379,7 @@
     border-bottom: none;
     border-right: none;
     border-left: none;
-    background-color: #00b359; /* Green */
+    background-color: #4CAF50; /* Green */
     color: white;
 }
 
@@ -390,7 +394,7 @@
     right:0px;
     border-bottom: none;
     border-right: none;
-    background-color: #da3e3e; /* red */
+    background-color: #B22222; /* red */
     color: white;
 }
 
@@ -426,8 +430,8 @@
     display: inline-block;
     font-size: 24px;
     font-weight:bold;
-    background-color: #00b359; /* Green */
     color: white;
+    background-color: #4CAF50; /* Green */
 }
 
 #confirmNobtn {
@@ -443,7 +447,7 @@
     display: inline-block;
     font-size: 24px;
     font-weight:bold;
-    background-color: #da3e3e; /* red */
+    background-color: #B22222; /* red */
     color: white;
 }
 
@@ -472,7 +476,7 @@
     display: inline-block;
     font-size: 24px;
     font-weight:bold;
-    background-color: #00b359; /* Green */
+    background-color: #4CAF50; /* Green */
     color: white;
 }
 
@@ -686,7 +690,7 @@
   width: 236px;
   font-size: 27px;
   line-height: 10px;
-  background-color: #da3e3e; /* red */
+  background-color: #B22222; /* red */
   color: white;
   border: none;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -701,7 +705,7 @@
   width: 236px;
   font-size: 27px;
   line-height: 10px;
-  background-color: #00b359; /* Green */
+  background-color: #4CAF50; /* Green */
   color: white;
   border: none;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);

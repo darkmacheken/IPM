@@ -1,6 +1,7 @@
 /* Janelas de entrar e registar */
 .window {
-    background-color: white;
+    background-image: url("images/background/back2.png");
+    background-repeat: repeat-x repeat-y;
     border: 3px black solid;
     position: absolute;
     width: 40em;
@@ -31,7 +32,7 @@
 .closeWindow {
     border: 1px solid black;
     color: white;
-    background-color:#da3e3e;
+    background-color:#B22222;
     height: 40px;
     width:40px;
     position:relative;
