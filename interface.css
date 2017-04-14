@@ -54,14 +54,17 @@
 
 /* Botão de ajuda */
 #helpbtn {
-    width: 100px;
-    height: 100px;
-    padding: 0px;
-    border-radius: 50%;
-    font-size: 86px;
-    margin-right: 10px;
-    line-height: 100px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border: 3px solid white;
+  width: 100px;
+  height: 100px;
+  color: white;
+  padding: 0px;
+  border-radius: 50%;
+  font-size: 86px;
+  margin-right: 10px;
+  line-height: 100px;
+  background-color: #4d79ff; /*azul bonito*/
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 /* Botão de chamar o empregado */
@@ -311,7 +314,7 @@
     border-bottom: none;
     border-left: none;
     border-right: none;
-    background-color: #B22222; /* red */
+    background-color: #da3e3e; /* red */
     color: white;
 }
 
@@ -372,7 +375,7 @@
     border-bottom: none;
     border-right: none;
     border-left: none;
-    background-color: #4CAF50; /* Green */
+    background-color: #00cc66; /* Green */
     color: white;
 }
 
@@ -387,7 +390,7 @@
     right:0px;
     border-bottom: none;
     border-right: none;
-    background-color: #B22222; /* red */
+    background-color: #da3e3e; /* red */
     color: white;
 }
 
@@ -423,7 +426,7 @@
     display: inline-block;
     font-size: 24px;
     font-weight:bold;
-    background-color: #4CAF50; /* Green */
+    background-color: #00cc66; /* Green */
     color: white;
 }
 
@@ -440,7 +443,7 @@
     display: inline-block;
     font-size: 24px;
     font-weight:bold;
-    background-color: #B22222; /* red */
+    background-color: #da3e3e; /* red */
     color: white;
 }
 
@@ -469,7 +472,7 @@
     display: inline-block;
     font-size: 24px;
     font-weight:bold;
-    background-color: #4CAF50; /* Green */
+    background-color: #00cc66; /* Green */
     color: white;
 }
 
@@ -683,7 +686,7 @@
   width: 236px;
   font-size: 27px;
   line-height: 10px;
-  background-color: #B22222; /* red */
+  background-color: #da3e3e; /* red */
   color: white;
   border: none;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -698,7 +701,7 @@
   width: 236px;
   font-size: 27px;
   line-height: 10px;
-  background-color: #4CAF50; /* Green */
+  background-color: #00cc66; /* Green */
   color: white;
   border: none;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
