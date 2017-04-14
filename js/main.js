@@ -217,15 +217,7 @@ $(document).ready(function() {
     });
 
     /*********************************** SEGUNDA JANELA ***********************************/
-    $("#orderfoodbtn").click(function () {
-        $("#second-screen").show();
-    });
-
-    $("#menuPrincipalbtn").click(function () {
-        confirmYesNo("Tem a certeza que pretende sair?<br />O seu pedido será eliminado.", function () {
-            $("#second-screen").hide();
-        });
-    });
+    prepareScreen2();
 
     /*********************************** FIM DO LOADING ***********************************/
     /* Página carregada */
