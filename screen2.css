@@ -13,6 +13,7 @@
 
 #menu-entradas {
   position: absolute;
+    height: 45px;
   top: 0px;
   left: 0px;
   border-top: none;
