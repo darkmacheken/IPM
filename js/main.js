@@ -7,6 +7,11 @@ $(document).ready(function() {
         openWindow("help-window");
     });
 
+    /* Função chamada quando é clicado botão X na janela de ajuda. */
+    $("#help-window-close-btn").click(function () {
+        closeWindow("help-window");
+    });
+
     /*********************************** JANELA DE LOGIN ***********************************/
     /* Função chamada quando é clicado botão de log-in no ecrã principal. */
     $("#login-btn, #screen2-login-btn").click(function () {
