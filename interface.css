@@ -791,3 +791,131 @@
   left: 400px;
   font-size: 15px;
 }
+
+#historicoSecondScreen {
+  background-color: white;
+  float:right;
+  height: 10px;
+  width: 260px;
+  font-size: 15px;
+  padding: 10px 20px;
+  line-height: 10px;
+  position: absolute;
+  top:-112px;
+  right: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#boxHistoricoSecondScreen{
+  position: absolute;
+  top:-80px;
+  right: 10px;
+  height: 253px;
+  width: 260px;
+  font-size: 15px;
+  padding: 10px 20px;
+  background-color:white;
+  text-align: left;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#boxHistoricoPedidobtn2 {
+    font-size: 15px;
+    padding: inherit;
+    width: 120px;
+    height: 40px;
+    text-align: left;
+    position: absolute;
+    top: 0px;
+    left:0px;
+    border-top: none;
+    border-left: none;
+}
+#boxHistoricoRepetirPedidobtn2 {
+    font-size: 15px;
+    padding: inherit;
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left:120px;
+    border-top: none;
+    line-height: 40px;
+}
+#boxHistoricoXbtn2{
+    font-size: 15px;
+    padding: inherit;
+    width: 37px;
+    height: 40px;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    right:0px;
+    border-top: none;
+    border-right: none;
+    line-height: 40px;
+}
+#boxHistoricoFecharbtn {
+    font-size: 20px;
+    padding: inherit;
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left:0px;
+    line-height: 40px;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+#definicoesSecondScreen {
+  background-color: white;
+  float:right;
+  height: 10px;
+  width: 260px;
+  font-size: 15px;
+  padding: 10px 20px;
+  line-height: 10px;
+  position: absolute;
+  top:-112px;
+  right: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#boxDefinicoesSecondScreen{
+  position: absolute;
+  top:-80px;
+  right: 10px;
+  height: 253px;
+  width: 260px;
+  font-size: 15px;
+  padding: 10px 20px;
+  background-color:white;
+  text-align: left;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#boxDefinicoesFecharbtn {
+    font-size: 15px;
+    padding: 5px;
+    width: 140px;
+    height: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left:0px;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+}
+
+#boxDefinicoesGuardarbtn2 {
+    font-size: 15px;
+    padding: 5px;;
+    width: 140px;
+    height: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    right:0px;
+    border-bottom: none;
+    border-right: none;
+}

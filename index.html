@@ -405,9 +405,9 @@
         <div id="textContaUtilizador" style="text-align:left; position:absolute; top:5px; left:5px;">
             Nome de Utilizador: <span id="screen2-logged-uname"></span><br/>
             NIF: <span id="screen2-logged-nif"></span><br/>
-            Nº Telemóvel: <span id="screen2-logged-tel"></span>
         </div>
       </div>
+
 
       <div class="box" id="boxEmenta">
         <div class="box btn menuEmenta" id="entradas">
@@ -518,6 +518,95 @@
 
       <div class="box btn" id="Confirmarbtn">
           CONFIRMAR
+      </div>
+
+      <div class="title" id="historicoSecondScreen" >
+          HISTÓRICO
+      </div>
+      <div class="box" id="boxHistoricoSecondScreen">
+        <div>
+            <div class="box btn" id="boxHistoricoPedidobtn2">
+                12/04/2017  19:38 <br/>
+                Pedido 1
+            </div>
+            <div class="box btn" id="boxHistoricoRepetirPedidobtn2">
+                Repetir Pedido
+            </div>
+            <div class="box btn" id="boxHistoricoXbtn2">
+                X
+            </div>
+            <div class="box btn" id="boxHistoricoFecharbtn">
+                Fechar
+            </div>
+        </div>
+      </div>
+
+      <div class="title" id="definicoesSecondScreen" >
+          Definições de Conta
+      </div>
+      <div class="box" id="boxDefinicoesSecondScreen">
+        <form id="def-form">
+            <div class="form" style="position:absolute; top:10px; left:15px;">
+
+                <table>
+                    <!--Nome de Utilizador-->
+                    <tr>
+                        <td>
+                            Nome de Utilizador:
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="inputDef" name="def-uname" id="def-uname-txtbx" disabled><br />
+                        </td>
+                    </tr>
+
+                    <!--Password-->
+                    <tr>
+                        <td>
+                            <label for="def-pword-txtbx">Palavra-Passe:</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="password" class="inputDef" name="def-pword" id="def-pword-txtbx"><br />
+                        </td>
+                    </tr>
+
+                    <!--NIF-->
+                    <tr>
+                        <td>
+                            <label for="def-nif-numbx">Número de Contribuinte (NIF):</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="inputDef numOnly" name="def-nif" id="def-nif-numbx" maxlength="9"><br>
+                        </td>
+                    </tr>
+
+                    <!--Nr Telemóvel-->
+                    <tr>
+                        <td>
+                            <label for="def-tel-numbx">Número de Telemóvel:</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="inputDef numOnly" name="def-tel" id="def-tel-numbx" maxlength="9"><br>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="box btn" id="boxDefinicoesFecharbtn">
+                Fechar
+            </div>
+            <div class="box btn" id="boxDefinicoesGuardarbtn2">
+                Guardar
+            </div>
+        </form>
       </div>
     </div>
 </body>
