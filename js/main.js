@@ -61,10 +61,12 @@ $(document).ready(function() {
         if (nif == "")
             niff = "<span class=\"attentionText\">Não fornecido.</span>"
 
-        confirmYesNo("Tem a certeza que pretende criar uma conta com os seguintes dados?<br /><ul><li>Username: " + uname + "</li><li>NIF: " + niff + "</li><li>Telemóvel: " + tel + "</li></ul>",
+        //confirmYesNo("Tem a certeza que pretende criar uma conta com os seguintes dados?<br /><ul><li>Username: " + uname + "</li><li>NIF: " + niff + "</li><li>Telemóvel: " + tel + "</li></ul>",
+        confirmYesNo("Tem a certeza que pretende criar uma conta com os dados inseridos? Por favor verifique.",
         function () {
             createAccount(uname, pword, nif, tel);
             closeRegistarWindow();
+            confirmOk("A sua conta foi criada com sucesso!");
         },
         function () {
             callblock();
@@ -115,6 +117,12 @@ $(document).ready(function() {
         if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
             e.preventDefault();
         }
+    });
+
+    /* Submeter form com enter */
+    $("form").keydown(function (e) {
+        if(e.keyCode == 13)
+            $(this).children(".submit").click();
     });
 
     /*********************************** OVERLAY DE SESSÃO INICIADA ***********************************/
