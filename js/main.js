@@ -2,9 +2,14 @@ $(document).ready(function() {
     /* Esconder janelas inicialmente */
     $(".window, #blocker, #boxcontautilizadorlogged, #Historico, #DefinicoesConta, #callwaitbtn, #second-screen, #screen2-logged-box, #screen2-historico, #screen2-definicoesConta").hide();
 
+    /*********************************** JANELA DE AJUDA ***********************************/
+    $("#helpbtn").click(function () {
+        openWindow("help-window");
+    });
+
     /*********************************** JANELA DE LOGIN ***********************************/
     /* Função chamada quando é clicado botão de log-in no ecrã principal. */
-    $("#login-btn, #screen2-login-btn").click(function() {
+    $("#login-btn, #screen2-login-btn").click(function () {
         $("form#login-form .calmText").removeClass("calmText").addClass("attentionText");
         openWindow("login-window");
         $("#invalid-data").hide();
@@ -16,7 +21,7 @@ $(document).ready(function() {
     $("#login-close-btn").click(closeLoginWindow);
 
     /* Função chamada quando é clicado botão de log-in na janela de log-in. */
-    $("#login-submit").click(function() {
+    $("#login-submit").click(function () {
         // Prevenir que o botao seja clicado acidentalmente quando desativado
         if (!checkForm("login-form"))
             return;
@@ -34,7 +39,7 @@ $(document).ready(function() {
 
     /*********************************** JANELA DE REGISTO ***********************************/
     /* Função chamada quando é clicado botão de registar no ecrã principal. */
-    $("#reg-btn, #screen2-reg-btn").click(function() {
+    $("#reg-btn, #screen2-reg-btn").click(function () {
         $("form#reg-form .calmText").removeClass("calmText").addClass("attentionText");
         openWindow("reg-window");
         $("#reg-uname-exists").hide();
@@ -47,7 +52,7 @@ $(document).ready(function() {
     $("#reg-close-btn").click(closeRegistarWindow);
 
     /* Função chamada quando é clicado botão de registar na janela de registar. */
-    $("#reg-submit").click(function() {
+    $("#reg-submit").click(function () {
         /* Prevenir que o botao seja clicado acidentalmente quando desativado */
         if (!checkForm("reg-form"))
             return;

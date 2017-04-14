@@ -27,12 +27,13 @@ function checkForm(form) {
 
 /* Assegurar-se que o NIF, se fornecido, tem 9 numeros */
 function checkNIF(form) {
-    var niflen = $("form#" + form).find(".nifNumber").val().length;
+    var niflen = $("form#" + form + " .nifNumber").val().length;
     return niflen === 0 || niflen === 9;
 }
 
+/* Assegurar-se que o nr de telemóvel tem 9 numeros */
 function checkTel(form) {
-    return $("form#" + form).find(".cellNumber").val().length === 9;
+    return $("form#" + form + " .cellNumber").val().length === 9;
 }
 
 function updateTimer(timeleft) {
