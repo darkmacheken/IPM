@@ -919,3 +919,27 @@
     border-bottom: none;
     border-right: none;
 }
+#historicobtn2{
+  position: absolute;
+  bottom: 2px;
+  left:5px;
+  padding: 0%;
+  font-size: 11px;
+  width: 90px;
+}
+#definicoesContabtn2{
+  position: absolute;
+  bottom: 2px;
+  left:102px;
+  padding: 0%;
+  font-size: 11px;
+  width: 90px;
+}
+#terminarSessaobtn{
+  position: absolute;
+  bottom: 2px;
+  right:5px;
+  padding: 0%;
+  font-size: 11px;
+  width: 90px;
+}
