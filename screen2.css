@@ -200,6 +200,8 @@
     height: 50px;
     width: 50px;
     line-height: 50px;
+    background-color: #B22222; /* red */
+    color: white;
 }
 #totalBox {
     position: absolute;
@@ -362,7 +364,7 @@
     top: 0px;
     left: 0px;
     right: 0px;
-    height: 56px;
+    height: 52px;
     margin: 0px;
     padding: 0px;
 }
@@ -385,10 +387,10 @@
     padding: 5px;
     width: 140px;
     height: 40px;
-    text-align: center;
+    text-align: left;
     position: absolute;
     top: 0px;
-    left: 120px;
+    left: 124px;
     border-top: none;
     line-height: 40px;
 }
