@@ -36,6 +36,15 @@
   left: 155px;
 }
 
+#helpDiv{
+  position: absolute;
+  width: 397px;
+  height: 440px;
+  top:60px;
+  left: 3px;
+  text-align: justify;
+}
+
 .help-btn {
   position: absolute;
   left: 50px;
