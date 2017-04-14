@@ -139,6 +139,8 @@
     border-bottom: none;
     border-left: none;
     border-right: none;
+    background-color: #B22222; /* red */
+    color: white;
 }
 #screen2-definicoesTitle {
   background-color: white;
@@ -165,7 +167,7 @@
   text-align: left;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-#screen2-boxDefinicoesVoltarbtn {
+#screen2-boxDefinicoesGuardarbtn {
     font-size: 15px;
     padding: 5px;
     width: 140px;
@@ -175,11 +177,12 @@
     bottom: 0px;
     left:0px;
     border-bottom: none;
-    border-right: none;
     border-left: none;
+    background-color: #4CAF50; /* Green */
+    color: white;
 }
 
-#screen2-boxDefinicoesGuardarbtn {
+#screen2-boxDefinicoesVoltarbtn {
     font-size: 15px;
     padding: 5px;;
     width: 140px;
@@ -190,6 +193,8 @@
     right:0px;
     border-bottom: none;
     border-right: none;
+    background-color: #B22222; /* red */
+    color: white;
 }
 #screen2-historicobtn{
   position: absolute;

@@ -311,6 +311,8 @@
     border-bottom: none;
     border-left: none;
     border-right: none;
+    background-color: #B22222; /* red */
+    color: white;
 }
 
 #boxHistoricoPedidobtn {
@@ -358,7 +360,7 @@
   text-align: left;
 }
 
-#boxDefinicoesVoltarbtn {
+#boxDefinicoesGuardarbtn {
     font-size: 15px;
     padding: 5px;
     width: 134px;
@@ -370,9 +372,11 @@
     border-bottom: none;
     border-right: none;
     border-left: none;
+    background-color: #4CAF50; /* Green */
+    color: white;
 }
 
-#boxDefinicoesGuardarbtn {
+#boxDefinicoesVoltarbtn {
     font-size: 15px;
     padding: 5px;;
     width: 134px;
@@ -380,9 +384,11 @@
     text-align: center;
     position: absolute;
     bottom: 0px;
-    left:144px;
+    right:0px;
     border-bottom: none;
     border-right: none;
+    background-color: #B22222; /* red */
+    color: white;
 }
 
 .inputDef {
