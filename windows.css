@@ -17,12 +17,14 @@
 /* Janela de entrar */
 #login-window {
     height: 25em;;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 /* Janela de registar */
 #reg-window {
     height: 38em;
     top: 7em;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 /* Botão de fechar janelas */
@@ -138,6 +140,7 @@ label.btn {
 
 #second-screen{
   background-color: white;
+  background-image: url("images/background/back1.png");
   position: absolute;
   top: 130px;
   left: 0px;
