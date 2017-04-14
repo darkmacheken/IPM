@@ -92,6 +92,9 @@ $(document).ready(function() {
     });
 
     /*********************************** TODAS AS JANELAS ***********************************/
+    /* Tornar as janelas arrastáveis */
+    $(".window").draggable({ cancel: ".btn, input" });
+
     /* Janelas log-in e registo: Colocar asteriscos a vermelho caso campo não esteja preenchido */
     $("input.req-field").keyup(function () {
         if ($(this).val().length === 0) {
