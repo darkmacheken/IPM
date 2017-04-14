@@ -3,7 +3,7 @@ function checkForm(form) {
     var reqReady = true;
     var pconfReady = false;
     $("form#" + form + " input.req-field").each(function() {
-        if ($.trim($(this).val()) === "")
+        if (($(this).hasClass("cellNumber") && $(this).val().length !== 9) || $.trim($(this).val()).length === 0)
             reqReady = false;
     });
     if ($("input#reg-pword-txtbx").val() === $("input#reg-cpword-txtbx").val())
@@ -23,6 +23,16 @@ function checkForm(form) {
 	}
 
     return reqReady && pconfReady;
+}
+
+/* Assegurar-se que o NIF, se fornecido, tem 9 numeros */
+function checkNIF(form) {
+    var niflen = $("form#" + form).find(".nifNumber").val().length;
+    return niflen === 0 || niflen === 9;
+}
+
+function checkTel(form) {
+    return $("form#" + form).find(".cellNumber").val().length === 9;
 }
 
 function updateTimer(timeleft) {

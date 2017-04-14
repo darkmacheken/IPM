@@ -48,9 +48,15 @@ $(document).ready(function() {
 
     /* Função chamada quando é clicado botão de registar na janela de registar. */
     $("#reg-submit").click(function() {
-        // Prevenir que o botao seja clicado acidentalmente quando desativado
+        /* Prevenir que o botao seja clicado acidentalmente quando desativado */
         if (!checkForm("reg-form"))
             return;
+
+        /* Assegurar-se que o NIF, se fornecido, tem 9 numeros */
+        if (!checkNIF("reg-form")) {
+            confirmOk("Por favor verifique se introduziu corretamente o seu Número de Contribuinte (NIF).");
+            return;
+        }
 
     	var uname = $.trim($("#reg-uname-txtbx").val());
     	var pword = $.trim($("#reg-pword-txtbx").val());
@@ -97,7 +103,7 @@ $(document).ready(function() {
 
     /* Janelas log-in e registo: Colocar asteriscos a vermelho caso campo não esteja preenchido */
     $("input.req-field").keyup(function () {
-        if ($(this).val().length === 0) {
+        if (($(this).hasClass("cellNumber") && $(this).val().length !== 9) || $.trim($(this).val()).length === 0) {
             $("#" + $(this).attr("name") + "-att").removeClass().addClass("attentionText");
         } else {
             $("#" + $(this).attr("name") + "-att").removeClass().addClass("calmText");
@@ -107,8 +113,8 @@ $(document).ready(function() {
 
     /* So deixar colocar numeros no telemovel e no nif */
     $("input.numOnly").keydown(function (e) {
-        // Allow: backspace, delete, tab, escape, enter and .
-        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+        // Allow: backspace, delete, tab, escape and enter
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110]) !== -1 ||
              // Allow: Ctrl+A, Command+A
             (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) ||
              // Allow: home, end, left, right, down, up
@@ -168,6 +174,18 @@ $(document).ready(function() {
     });
 
     $("#boxDefinicoesGuardarbtn, #screen2-boxDefinicoesGuardarbtn").click(function () {
+        /* Assegurar-se que o NIF, se fornecido, tem 9 numeros */
+        if (!checkNIF("def-form")) {
+            confirmOk("Por favor verifique se introduziu corretamente o seu Número de Contribuinte (NIF).");
+            return;
+        }
+
+        /* Assegurar-se que o nr de telemóvel tem 9 numeros */
+        if (!checkTel("def-form")) {
+            confirmOk("Por favor verifique se introduziu corretamente o seu Número de Telemóvel.");
+            return;
+        }
+
         if ($("input#def-pword-txtbx").val() === $("input#def-cpword-txtbx").val())
             confirmYesNo("Tem a certeza que pretende guardar as alterações?", saveDefs);
         else
