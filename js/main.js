@@ -159,7 +159,10 @@ $(document).ready(function() {
     });
 
     $("#boxDefinicoesGuardarbtn, #screen2-boxDefinicoesGuardarbtn").click(function () {
-        confirmYesNo("Tem a certeza que pretende guardar as alterações?", saveDefs);
+        if ($("input#def-pword-txtbx").val() === $("input#def-cpword-txtbx").val())
+            confirmYesNo("Tem a certeza que pretende guardar as alterações?", saveDefs);
+        else
+            confirmOk("Por favor verifique a confirmação da palavra-passe.");
     });
 
     /* Sincronizar overlays de definições de contas: */

@@ -1,6 +1,5 @@
 (Duarte)
-- Tamanho dos dialogos yes/no
-no registo a dimensão da janela a perguntar se quer confirmar. Uma janela a dizer que o registo foi concluido
+nada
 
 (Pedro)
 - Fix stuff
