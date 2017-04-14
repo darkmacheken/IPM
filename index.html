@@ -179,12 +179,14 @@
 
                                     <tr>
                                         <td>
-                                            <label for="def-pword-txtbx">Confirmar Palavra-Passe:</label>
+                                            <label for="def-cpword-txtbx">Confirmar Palavra-Passe:
+                                                <span id="def-cpword-diff" class="attentionText">Diferente!</span>
+                                            </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input type="password" class="inputDef" name="def-pword" id="def-pword-txtbx"><br />
+                                            <input type="password" class="inputDef" name="def-cpword" id="def-cpword-txtbx"><br />
                                         </td>
                                     </tr>
 
@@ -400,246 +402,252 @@
     ############################ Segunda Janela ##############################
     ##########################################################################-->
     <div id="second-screen">
-      <div class="title" id="contautilizadorSecondScreen" >
-          CONTA DE UTILIZADOR
-      </div>
-
-      <div class="box" id="screen2-login-box">
-        <div class="box btn" id="screen2-login-btn">
-            Entrar
-        </div>
-        <div class="box btn" id="screen2-reg-btn">
-            Registar
-        </div>
-      </div>
-      <div class="box" id="screen2-logged-box">
-        <div id="textContaUtilizador" style="text-align:left; position:absolute; top:5px; left:5px;">
-            Nome de Utilizador: <span id="screen2-logged-uname"></span><br/>
-            NIF: <span id="screen2-logged-nif"></span><br/>
+        <div class="title" id="contautilizadorSecondScreen" >
+            CONTA DE UTILIZADOR
         </div>
 
-        <div class="box btn" id="historicobtn2">
-           Histórico
-        </div>
-        <div class="box btn" id="definicoesContabtn2">
-           Definições 
-        </div>
-        <div class="box btn" id="terminarSessaobtn">
-           Terminar Sessão
-        </div>
-      </div>
-
-
-      <div class="box" id="boxEmenta">
-        <div class="box btn menuEmenta" id="entradas">
-            Entradas
-        </div>
-        <div class="box btn menuEmenta" id="sopas">
-            Sopas
-        </div>
-        <div class="box btn menuEmenta" id="pratos">
-            Pratos
-        </div>
-        <div class="box btn menuEmenta" id="bebidas">
-            Bebidas
-        </div>
-        <div class="box btn menuEmenta" id="sobremesas">
-            Sobremesas
-        </div>
-        <div class="box btn menuEmenta" id="cafetaria">
-            Cafetaria
-        </div>
-
-        <div id="textOrdenacao">
-            Ordenar por: <u>Classificação</u>, <u>Recomendação Chefe</u>, <u>Preço</u>, <u>Tempo de Confecção</u>.
-        </div>
-
-        <div class="box opcao" id="firstBox">
-          <div class="titulo">
-              Bitoque
-          </div>
-
-          <div class="descricao">
-              Batata frita com arroz acompanhada com carne de porco.
-          </div>
-
-          <div class="preco">
-              6,00€
-          </div>
-
-          <div class="box btn info">
-              + informações
-          </div>
-        </div>
-
-        <div class="box opcao" id="secondBox">
-          <div class="titulo">
-              Bitoque
-          </div>
-
-          <div class="descricao">
-              Batata frita com arroz acompanhada com carne de porco.
-          </div>
-
-          <div class="preco">
-              6,00€
-          </div>
-
-          <div class="box btn info">
-              + informações
-          </div>
-        </div>
-
-        <div class="box opcao" id="thirdBox">
-          <div class="titulo">
-              Bitoque
-          </div>
-
-          <div class="descricao">
-              Batata frita com arroz acompanhada com carne de porco.
-          </div>
-
-          <div class="preco">
-              6,00€
-          </div>
-
-          <div class="box btn info">
-              + informações
-          </div>
-        </div>
-      </div>
-
-      <div class="box" id="boxCompras">
-        <div class="box compra" id="firstBuy">
-          <div class="box btn editBox">
-
-          </div>
-          <div class="tituloCompra">
-              Bitoque
-          </div>
-          <input type="text" class="qtd" disabled><br />
-          <div class="btn arrow-up"></div>
-          <div class="btn arrow-down"></div>
-          <div class="precoCompra">
-              6,00€
-          </div>
-          <div class="box btn deleteBox">
-              X
-          </div>
-        </div>
-
-          <div class="box" id="totalBox">
-              Total:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;--&nbsp;,&nbsp;--&nbsp;€
-          </div>
-      </div>
-
-      <div class="box btn" id="menuPrincipalbtn">
-          MENU PRINCIPAL
-      </div>
-
-      <div class="box btn" id="Confirmarbtn">
-          CONFIRMAR
-      </div>
-
-      <div class="title" id="historicoSecondScreen" >
-          HISTÓRICO
-      </div>
-      <div class="box" id="screen2-boxHistorico">
-        <div>
-            <div class="box btn" id="boxHistoricoPedidobtn2">
-                12/04/2017  19:38 <br/>
-                Pedido 1
+        <div class="box" id="screen2-login-box">
+            <div class="box btn" id="screen2-login-btn">
+                Entrar
             </div>
-            <div class="box btn" id="boxHistoricoRepetirPedidobtn2">
-                Repetir Pedido
-            </div>
-            <div class="box btn" id="boxHistoricoXbtn2">
-                X
-            </div>
-            <div class="box btn" id="boxHistoricoFecharbtn">
-                Fechar
+            <div class="box btn" id="screen2-reg-btn">
+                Registar
             </div>
         </div>
-      </div>
-
-      <div class="title" id="definicoesSecondScreen" >
-          Definições de Conta
-      </div>
-      <div class="box" id="screen2-boxDefinicoesConta">
-        <form id="def-form">
-            <div class="form" style="position:absolute; top:10px; left:15px;">
-
-                <table>
-                    <!--Nome de Utilizador-->
-                    <tr>
-                        <td>
-                            Nome de Utilizador:
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" class="inputDef" name="def-uname" id="def-uname-txtbx" disabled><br />
-                        </td>
-                    </tr>
-
-                    <!--Password-->
-                    <tr>
-                        <td>
-                            <label for="def-pword-txtbx">Palavra-Passe:</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="password" class="inputDef" name="def-pword" id="def-pword-txtbx"><br />
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <label for="def-pword-txtbx">Confirmar Palavra-Passe:</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="password" class="inputDef" name="def-pword" id="def-pword-txtbx"><br />
-                        </td>
-                    </tr>
-
-                    <!--NIF-->
-                    <tr>
-                        <td>
-                            <label for="def-nif-numbx">Número de Contribuinte (NIF):</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" class="inputDef numOnly" name="def-nif" id="def-nif-numbx" maxlength="9"><br>
-                        </td>
-                    </tr>
-
-                    <!--Nr Telemóvel-->
-                    <tr>
-                        <td>
-                            <label for="def-tel-numbx">Número de Telemóvel:</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" class="inputDef numOnly" name="def-tel" id="def-tel-numbx" maxlength="9"><br>
-                        </td>
-                    </tr>
-                </table>
-
+        <div class="box" id="screen2-logged-box">
+            <div id="textContaUtilizador" style="text-align:left; position:absolute; top:5px; left:5px;">
+                Nome de Utilizador: <span id="screen2-logged-uname"></span><br/>
+                NIF: <span id="screen2-logged-nif"></span><br/>
             </div>
 
-            <div class="box btn" id="boxDefinicoesFecharbtn">
-                Fechar
+            <div class="box btn" id="screen2-historicobtn">
+                Histórico
             </div>
-            <div class="box btn" id="boxDefinicoesGuardarbtn2">
-                Guardar
+            <div class="box btn" id="screen2-definicoesContabtn">
+                Definições
             </div>
-        </form>
-      </div>
+            <div class="box btn" id="screen2-sairSessaobtn">
+                Terminar Sessão
+            </div>
+        </div>
+
+
+        <div class="box" id="boxEmenta">
+            <div class="box btn menuEmenta" id="entradas">
+                Entradas
+            </div>
+            <div class="box btn menuEmenta" id="sopas">
+                Sopas
+            </div>
+            <div class="box btn menuEmenta" id="pratos">
+                Pratos
+            </div>
+            <div class="box btn menuEmenta" id="bebidas">
+                Bebidas
+            </div>
+            <div class="box btn menuEmenta" id="sobremesas">
+                Sobremesas
+            </div>
+            <div class="box btn menuEmenta" id="cafetaria">
+                Cafetaria
+            </div>
+
+            <div id="textOrdenacao">
+                Ordenar por: <u>Classificação</u>, <u>Recomendação Chefe</u>, <u>Preço</u>, <u>Tempo de Confecção</u>.
+            </div>
+
+            <div class="box opcao" id="firstBox">
+                <div class="titulo">
+                    Bitoque
+                </div>
+
+                <div class="descricao">
+                    Batata frita com arroz acompanhada com carne de porco.
+                </div>
+
+                <div class="preco">
+                    6,00€
+                </div>
+
+                <div class="box btn info">
+                    + informações
+                </div>
+            </div>
+
+            <div class="box opcao" id="secondBox">
+                <div class="titulo">
+                    Bitoque
+                </div>
+
+                <div class="descricao">
+                    Batata frita com arroz acompanhada com carne de porco.
+                </div>
+
+                <div class="preco">
+                    6,00€
+                </div>
+
+                <div class="box btn info">
+                    + informações
+                </div>
+            </div>
+
+            <div class="box opcao" id="thirdBox">
+                <div class="titulo">
+                    Bitoque
+                </div>
+
+                <div class="descricao">
+                    Batata frita com arroz acompanhada com carne de porco.
+                </div>
+
+                <div class="preco">
+                    6,00€
+                </div>
+
+                <div class="box btn info">
+                    + informações
+                </div>
+            </div>
+        </div>
+
+        <div class="box" id="boxCompras">
+            <div class="box compra" id="firstBuy">
+                <div class="box btn editBox">
+
+                </div>
+                <div class="tituloCompra">
+                    Bitoque
+                </div>
+                <input type="text" class="qtd" disabled><br />
+                <div class="btn arrow-up"></div>
+                <div class="btn arrow-down"></div>
+                <div class="precoCompra">
+                    6,00€
+                </div>
+                <div class="box btn deleteBox">
+                    X
+                </div>
+            </div>
+
+            <div class="box" id="totalBox">
+                Total:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;--&nbsp;,&nbsp;--&nbsp;€
+            </div>
+        </div>
+
+        <div class="box btn" id="menuPrincipalbtn">
+            MENU PRINCIPAL
+        </div>
+
+        <div class="box btn" id="Confirmarbtn">
+            CONFIRMAR
+        </div>
+
+        <div id="screen2-historico">
+            <div class="title" id="historicoSecondScreen" >
+                HISTÓRICO
+            </div>
+            <div class="box" id="screen2-boxHistorico">
+                <div>
+                    <div class="box btn" id="boxHistoricoPedidobtn2">
+                        12/04/2017  19:38 <br/>
+                        Pedido 1
+                    </div>
+                    <div class="box btn" id="boxHistoricoRepetirPedidobtn2">
+                        Repetir Pedido
+                    </div>
+                    <div class="box btn" id="screen2-boxHistoricoXbtn">
+                        X
+                    </div>
+                    <div class="box btn" id="screen2-boxHistoricoFecharbtn">
+                        Fechar
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="screen2-definicoesConta">
+            <div class="title" id="screen2-definicoesTitle">
+                Definições de Conta
+            </div>
+            <div class="box" id="screen2-boxDefinicoesConta">
+                <form id="screen2-def-form">
+                    <div class="form" style="position:absolute; top:10px; left:15px;">
+
+                        <table>
+                            <!--Nome de Utilizador-->
+                            <tr>
+                                <td>
+                                    Nome de Utilizador:
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="inputDef" name="def-uname" id="screen2-def-uname-txtbx" disabled><br />
+                                </td>
+                            </tr>
+
+                            <!--Password-->
+                            <tr>
+                                <td>
+                                    <label for="screen2-def-pword-txtbx">Palavra-Passe:</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="password" class="inputDef" name="def-pword" id="screen2-def-pword-txtbx"><br />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="screen2-def-cpword-txtbx">Confirmar Palavra-Passe:
+                                        <span id="screen2-def-cpword-diff" class="attentionText">Diferente!</span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="password" class="inputDef" name="def-cpword" id="screen2-def-cpword-txtbx"><br />
+                                </td>
+                            </tr>
+
+                            <!--NIF-->
+                            <tr>
+                                <td>
+                                    <label for="screen2-def-nif-numbx">Número de Contribuinte (NIF):</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="inputDef numOnly" name="def-nif" id="screen2-def-nif-numbx" maxlength="9"><br>
+                                </td>
+                            </tr>
+
+                            <!--Nr Telemóvel-->
+                            <tr>
+                                <td>
+                                    <label for="screen2-def-tel-numbx">Número de Telemóvel:</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="inputDef numOnly" name="def-tel" id="screen2-def-tel-numbx" maxlength="9"><br>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                    <div class="box btn" id="screen2-boxDefinicoesVoltarbtn">
+                        Fechar
+                    </div>
+                    <div class="box btn" id="screen2-boxDefinicoesGuardarbtn">
+                        Guardar
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 </html>

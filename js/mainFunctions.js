@@ -49,8 +49,8 @@ function deleteLoginData() {
 }
 
 function closeDefs() {
-    $("#DefinicoesConta").hide();
-    $("form#reg-form").trigger("reset");
+    $("#DefinicoesConta, #screen2-definicoesConta").hide();
+    $("form#def-form, form#screen2-def-form").trigger("reset");
 }
 
 function defsChanged() {
