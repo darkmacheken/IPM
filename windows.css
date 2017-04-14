@@ -15,6 +15,46 @@
     z-index: 6;
 }
 
+/*Janela de ajuda*/
+#help-window {
+    height: 40em;
+    width: 23.5em;
+    top: 0.85em;
+    left: 0.51em;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#text-help {
+    position: relative;
+    float: center;
+    top: 70px;
+}
+
+.help-btn {
+  position: relative;
+  left: 1.4em;
+  float: center;
+  width: 250px;
+  height: 50px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+#help-window-pedidobtn {
+  top: 50px;
+}
+#help-window-contabtn {
+  top: 70px;
+}
+#help-window-jogosbtn {
+  top: 90px;
+}
+#help-window-musicabtn {
+  top: 110px;
+}
+
+
+
 /* Janela de entrar */
 #login-window {
     height: 25em;;
