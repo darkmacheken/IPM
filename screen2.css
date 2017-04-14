@@ -1,9 +1,255 @@
+#contautilizadorSecondScreen {
+    background-color: white;
+    float:right;
+    height: 10px;
+    width: 260px;
+    font-size: 15px;
+    padding: 10px 20px;
+    line-height: 10px;
+    position: absolute;
+    top:-112px;
+    right: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#screen2-login-box{
+    position: absolute;
+    top:-80px;
+    right: 10px;
+    height: 28px;
+    width: 236px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#screen2-logged-box{
+    position: absolute;
+    top:-80px;
+    right: 10px;
+    height: 28px;
+    width: 236px;
+}
+
+#screen2-login-btn{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 2%;
+    font-size: 24px;
+    width: 110px;
+    height: 28px;
+}
+#screen2-reg-btn{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 2%;
+    font-size: 24px;
+    width: 110px;
+    height: 28px;
+}
+#boxEmenta{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    height: 480px;
+    width: 1100px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.opcao {
+    width: 300px;
+    height: 30px;
+}
+.info{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 16px;
+    padding: 1%;
+    width: 100px;
+    border-top: none;
+    border-right:none;
+}
+.titulo{
+    font-size: 24px;
+    position: absolute;
+    top: 0px;
+    left: 5px;
+}
+.descricao{
+    font-size: 12px;
+    text-align: left;
+    position: relative;
+    bottom: 0px;
+    left: -25px;
+    width: 180px;
+}
+.preco{
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    font-size: 24px;
+}
+
+#firstBox {
+    position: absolute;
+    left: 300px;
+    top: 60px;
+}
+#secondBox {
+    position: absolute;
+    left: 700px;
+    top: 60px;
+}
+#thirdBox {
+    position: absolute;
+    left: 300px;
+    top: 180px;
+}
+
+#boxCompras {
+    position: absolute;
+    padding: 0px;
+    top: 10px;
+    right: 10px;
+    height: 525px; /*480px;*/
+    width: 300px; /*236px;*/
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#boxCompras ul {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 25px;
+    margin: 0px;
+    padding: 0px;
+    overflow-y: scroll;
+}
+
+#boxCompras li {
+    list-style-type: none;
+    position: relative;
+    padding: 0%;
+    height: 50px;
+    width: 300px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.editBox {
+    padding: inherit;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    height: 50px;
+    width: 50px;
+}
+
+.tituloCompra {
+    font-size: 20px;
+    position: absolute;
+    top: 0px;
+    left: 105px;
+}
+.qtd {
+    position: absolute;
+    left: 65px;
+    top: 16px;
+    width: 20px;
+    height: 13px;
+}
+.arrow-up {
+    position: absolute;
+    top: 2px;
+    left: 64px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid gray;
+}
+.arrow-down {
+    position: absolute;
+    bottom: 2px;
+    left: 64px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid gray;
+}
+.precoCompra {
+    font-size: 16px;
+    position: absolute;
+    right: 65px;
+    bottom: 5px;
+}
+.deleteBox {
+    padding: inherit;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+}
+#totalBox {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 294px;
+    height: 25px;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    font-size: 20px;
+    padding: 1%;
+    text-align: left;
+}
+
+#menuPrincipalbtn {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    height: 25px;
+    width: 236px;
+    font-size: 27px;
+    line-height: 10px;
+    background-color: #B22222; /* red */
+    color: white;
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+
+#Confirmarbtn {
+    position: absolute;
+    bottom: 10px;
+    right:10px;
+    height: 25px;
+    width: 236px;
+    font-size: 27px;
+    line-height: 10px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
 .menuEmenta {
-  height: 42px;
-  width: 150px;
-  line-height: 25px;
-  font-size: 24px;
-  border-left: none;
+    height: 42px;
+    width: 150px;
+    line-height: 25px;
+    font-size: 24px;
+    border-left: none;
 }
 
 #boxEmenta .selected {
@@ -12,54 +258,54 @@
 }
 
 #menu-entradas {
-  position: absolute;
+    position: absolute;
     height: 45px;
-  top: 0px;
-  left: 0px;
-  border-top: none;
-  border-bottom: none;
+    top: 0px;
+    left: 0px;
+    border-top: none;
+    border-bottom: none;
 }
 
 #menu-sopas {
-  position: absolute;
-  top: 87px;
-  left: 0px;
-  border-bottom: none;
+    position: absolute;
+    top: 87px;
+    left: 0px;
+    border-bottom: none;
 }
 
 #menu-pratos {
-  position: absolute;
-  top: 174px;
-  left: 0px;
-  border-bottom: none;
+    position: absolute;
+    top: 174px;
+    left: 0px;
+    border-bottom: none;
 }
 
 #menu-bebidas {
-  position: absolute;
-  top: 261px;
-  left: 0px;
-  border-bottom: none;
+    position: absolute;
+    top: 261px;
+    left: 0px;
+    border-bottom: none;
 }
 
 #menu-sobremesas {
-  position: absolute;
-  top: 348px;
-  left: 0px;
-  border-bottom: none;
+    position: absolute;
+    top: 348px;
+    left: 0px;
+    border-bottom: none;
 }
 
 #menu-cafetaria {
-  position: absolute;
-  top: 435px;
-  left: 0px;
-  border-bottom: none;
+    position: absolute;
+    top: 435px;
+    left: 0px;
+    border-bottom: none;
 }
 
 #textOrdenacao {
-  position: absolute;
-  top:5px;
-  left: 400px;
-  font-size: 15px;
+    position: absolute;
+    top:5px;
+    left: 400px;
+    font-size: 15px;
 }
 
 #textOrdenacao span {
@@ -73,30 +319,30 @@
 }
 
 #historicoSecondScreen {
-  background-color: white;
-  float:right;
-  height: 10px;
-  width: 260px;
-  font-size: 15px;
-  padding: 10px 20px;
-  line-height: 10px;
-  position: absolute;
-  top:-112px;
-  right: 10px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: white;
+    float:right;
+    height: 10px;
+    width: 260px;
+    font-size: 15px;
+    padding: 10px 20px;
+    line-height: 10px;
+    position: absolute;
+    top:-112px;
+    right: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #screen2-boxHistorico{
-  position: absolute;
-  top:-80px;
-  right: 10px;
-  height: 253px;
-  width: 260px;
-  font-size: 15px;
-  padding: 10px 20px;
-  background-color:white;
-  text-align: left;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    position: absolute;
+    top:-80px;
+    right: 10px;
+    height: 253px;
+    width: 260px;
+    font-size: 15px;
+    padding: 10px 20px;
+    background-color:white;
+    text-align: left;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #boxHistoricoPedidobtn2 {
@@ -153,29 +399,29 @@
     color: white;
 }
 #screen2-definicoesTitle {
-  background-color: white;
-  float:right;
-  height: 10px;
-  width: 260px;
-  font-size: 15px;
-  padding: 10px 20px;
-  line-height: 10px;
-  position: absolute;
-  top:-112px;
-  right: 10px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: white;
+    float:right;
+    height: 10px;
+    width: 260px;
+    font-size: 15px;
+    padding: 10px 20px;
+    line-height: 10px;
+    position: absolute;
+    top:-112px;
+    right: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 #screen2-boxDefinicoesConta{
-  position: absolute;
-  top:-80px;
-  right: 10px;
-  height: 290px;
-  width: 260px;
-  font-size: 15px;
-  padding: 10px 20px;
-  background-color:white;
-  text-align: left;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    position: absolute;
+    top:-80px;
+    right: 10px;
+    height: 290px;
+    width: 260px;
+    font-size: 15px;
+    padding: 10px 20px;
+    background-color:white;
+    text-align: left;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 #screen2-boxDefinicoesGuardarbtn {
     font-size: 15px;
@@ -207,26 +453,26 @@
     color: white;
 }
 #screen2-historicobtn{
-  position: absolute;
-  bottom: 2px;
-  left:5px;
-  padding: 0%;
-  font-size: 11px;
-  width: 90px;
+    position: absolute;
+    bottom: 2px;
+    left:5px;
+    padding: 0%;
+    font-size: 11px;
+    width: 90px;
 }
 #screen2-definicoesContabtn{
-  position: absolute;
-  bottom: 2px;
-  left:102px;
-  padding: 0%;
-  font-size: 11px;
-  width: 90px;
+    position: absolute;
+    bottom: 2px;
+    left:102px;
+    padding: 0%;
+    font-size: 11px;
+    width: 90px;
 }
 #screen2-sairSessaobtn{
-  position: absolute;
-  bottom: 2px;
-  right:5px;
-  padding: 0%;
-  font-size: 11px;
-  width: 90px;
+    position: absolute;
+    bottom: 2px;
+    right:5px;
+    padding: 0%;
+    font-size: 11px;
+    width: 90px;
 }

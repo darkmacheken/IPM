@@ -1,5 +1,6 @@
 var currentMenuSelected = "";
 var currentOrderSelected = "";
+var ordered = [];
 
 function prepareScreen2() {
 
