@@ -70,7 +70,8 @@
   font-size: 86px;
   margin-right: 10px;
   line-height: 100px;
-  background: -webkit-radial-gradient(center center, ellipse cover, rgb(0, 21, 255) 0%, rgb(34, 0, 128) 99%, rgb(34, 0, 128) 100%);
+  background-color: #3fb6e8;
+  border: none;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
