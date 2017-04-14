@@ -1,14 +1,14 @@
-.selected {
-    border-right: none;
-    cursor: default;
-}
-
 .menuEmenta {
   height: 42px;
   width: 150px;
   line-height: 25px;
   font-size: 24px;
   border-left: none;
+}
+
+#boxEmenta .selected {
+    border-right: none;
+    cursor: default;
 }
 
 #menu-entradas {
@@ -60,6 +60,16 @@
   top:5px;
   left: 400px;
   font-size: 15px;
+}
+
+#textOrdenacao span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#textOrdenacao span.selected {
+    text-decoration: none;
+    cursor: default;
 }
 
 #historicoSecondScreen {

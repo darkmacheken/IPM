@@ -1,4 +1,5 @@
 var currentMenuSelected = "";
+var currentOrderSelected = "";
 
 function prepareScreen2() {
 
@@ -17,9 +18,26 @@ function prepareScreen2() {
     currentMenuSelected = "menu-entradas";
     $("#" + currentMenuSelected).addClass("selected");
     $(".menuEmenta").click(function () {
+        /* Selecionar botao do menu clicado */
         $("#" + currentMenuSelected).removeClass("selected");
         $(this).addClass("selected");
         currentMenuSelected = $(this).attr("id");
+
+        /* Mostrar items */
+
+    });
+
+    /**** Ordenação ****/
+    currentOrderSelected = "ord-classif";
+    $("#" + currentOrderSelected).addClass("selected");
+    $("#textOrdenacao span").click(function () {
+        /* Selecionar botao do menu clicado */
+        $("#" + currentOrderSelected).removeClass("selected");
+        $(this).addClass("selected");
+        currentOrderSelected = $(this).attr("id");
+
+        /* Mostrar items */
+
     });
 
 }
