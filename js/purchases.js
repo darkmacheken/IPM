@@ -9,12 +9,20 @@ var items = {
             _ingredients: ["Manteiga de Alho"] },
 
         { _name: "Camarões",
-            _price: 400,
+            _price: 300,
             _desc: "Prato de camarões temperados e molho cocktail.",
             _img: "camaroes.jpg",
             _classif: 5,
             _ctime: 1,
             _ingredients: ["Molho cocktail"] },
+
+        { _name: "Salada de Polvo",
+            _price: 400,
+            _desc: "Deliciosa entrada temperada com cebola, alho e um molho com pimentos.",
+            _img: "camaroes.jpg",
+            _classif: 5,
+            _ctime: 1,
+            _ingredients: ["Cebola", "Alho", "Pimentos"] },        
     ],
     sopas: [
         { _name: "Sopa de Agrião",
@@ -60,7 +68,7 @@ var items = {
 
         { _name: "Picado de Carne",
             _price: 650,
-            _desc: "Pedaços de carne de vaca, fritos, com molho de natas.",
+            _desc: "Pedaços de carne de vaca, com molho de natas.",
             _img: "picado.jpg",
             _classif: 5,
             _ctime: 8,
@@ -77,7 +85,7 @@ var items = {
 
         { _name: "Coca-Cola",
             _price: 150,
-            _desc: "O clássico refrigerante que te vai dar diabetes daqui a uns anos.",
+            _desc: "O refrigerante mais famoso do mundo!",
             _img: "cocacola.jpg",
             _classif: 4,
             _ctime: 1,
@@ -94,7 +102,7 @@ var items = {
     sobremesas: [
         { _name: "Broas de Mel",
             _price: 250,
-            _desc: "Broas tradicionais portuguesas, com canela, que a tua avó te dá no 'pão por Deus'.",
+            _desc: "Broas tradicionais portuguesas.",
             _img: "broas.jpg",
             _classif: 5,
             _ctime: 1,
