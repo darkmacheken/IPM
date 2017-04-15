@@ -6,6 +6,9 @@ function prepareScreen2() {
 
     /**** Botões Principais ****/
     $("#orderfoodbtn").click(function () {
+        closeHistorico();
+        closeDefs();
+
         currentMenuSelected = "menu-entradas";
         $("#" + currentMenuSelected).addClass("selected");
         showFoodItems();
@@ -18,6 +21,9 @@ function prepareScreen2() {
 
     $("#menuPrincipalbtn").click(function () {
         confirmYesNo("Tem a certeza que pretende sair?<br />O seu pedido será eliminado.", function () {
+            closeHistorico();
+            closeDefs();
+            
             $("#second-screen").hide();
             $("#" + currentMenuSelected).removeClass("selected");
             $("#" + currentOrderSelected).removeClass("selected");

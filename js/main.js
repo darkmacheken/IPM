@@ -189,9 +189,7 @@ $(document).ready(function() {
 
     /*********************************** OVERLAY DE HISTÓRICO ***********************************/
     $("#boxHistoricoVoltarbtn, #screen2-boxHistoricoFecharbtn").click(function () {
-        $("#rightBoxTitle").text("CONTA DE UTILIZADOR");
-        $("#Historico, #screen2-historico").hide();
-        $("#boxcontautilizadorlogged").show();
+        closeHistorico();
     });
 
     /*********************************** OVERLAY DE DEFINIÇÕES DE CONTA ***********************************/

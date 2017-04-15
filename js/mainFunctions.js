@@ -60,10 +60,12 @@ function deleteLoginData() {
 }
 
 function closeDefs() {
-    $("#DefinicoesConta, #screen2-definicoesConta").hide();
-    $("form#def-form, form#screen2-def-form").trigger("reset");
-    $("#rightBoxTitle").text("CONTA DE UTILIZADOR");
-    $("#boxcontautilizadorlogged").show();
+    if ($("#DefinicoesConta").is(":visible")) {
+        $("#DefinicoesConta, #screen2-definicoesConta").hide();
+        $("form#def-form, form#screen2-def-form").trigger("reset");
+        $("#rightBoxTitle").text("CONTA DE UTILIZADOR");
+        $("#boxcontautilizadorlogged").show();
+    }
 }
 
 function defsChanged() {
@@ -79,4 +81,12 @@ function saveDefs() {
     setTel($("input#def-tel-numbx").val());
     updateLoginData();
     closeDefs();
+}
+
+function closeHistorico() {
+    if ($("#Historico").is(":visible")) {
+        $("#rightBoxTitle").text("CONTA DE UTILIZADOR");
+        $("#Historico, #screen2-historico").hide();
+        $("#boxcontautilizadorlogged").show();
+    }
 }
