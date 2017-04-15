@@ -48,12 +48,20 @@ function prepareScreen2() {
 
 }
 
+
+
 function showFoodItems() {
+    var boxContent = "";
     for (var i = 0; i < FOOD_ITEMS[currentMenuSelected].length; i++) {
-        $("#food-option-box-" + (i+1) + " .titulo").text(FOOD_ITEMS[currentMenuSelected][i]._name);
-        $("#food-option-box-" + (i+1) + " .descricao").text(FOOD_ITEMS[currentMenuSelected][i]._desc);
-        $("#food-option-box-" + (i+1) + " .preco").text(formatPrice(FOOD_ITEMS[currentMenuSelected][i]._price));
+        boxContent += "<li class=\"box opcao\"><div class=\"titulo\">";
+        boxContent += FOOD_ITEMS[currentMenuSelected][i]._name;
+        boxContent += "</div><div class=\"descricao\">";
+        boxContent += FOOD_ITEMS[currentMenuSelected][i]._desc;
+        boxContent += "</div><div class=\"preco\">";
+        boxContent += formatPrice(FOOD_ITEMS[currentMenuSelected][i]._price);
+        boxContent += "</div><div class=\"box btn info\">+ informações</div></li>";
     }
+    $("#food-options").html(boxContent);
 }
 
 function formatPrice(price) {
