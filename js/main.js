@@ -166,17 +166,7 @@ $(document).ready(function() {
     /*********************************** OVERLAY DE SESSÃO INICIADA ***********************************/
     /* Função chamada quando é clicado botão de Histórico. */
     $("#historicobtn, #screen2-historicobtn").click(function () {
-        var boxContent = "";
-        var history = getHistory();
-        for (var i = 0; i < history.length; i++) {
-            var orderDate = getOrderDate(history[i]);
-            boxContent += "<li><div class=\"box btn boxHistoricoPedidobtn\">";
-            boxContent += orderDate.getDate() + "/" + orderDate.getMonth() + "/" + orderDate.getFullYear() + " " + orderDate.getHours() + ":" + orderDate.getMinutes();
-            boxContent += "<br/>Pedido ";
-            boxContent += getOrderNumber(history[i]);
-            boxContent += "</div><div class=\"box btn boxHistoricoRepetirPedidobtn\">Repetir Pedido</div><div class=\"box btn boxHistoricoXbtn Xbtn\">X</div></li>";
-        }
-        $("#boxHistorico ul, #screen2-boxHistorico ul").html(boxContent);
+        refreshHistorico();
         $("#rightBoxTitle").text("HISTÓRICO");
         $("#boxcontautilizadorlogged").hide();
         $("#Historico, #screen2-historico").show();
@@ -201,6 +191,12 @@ $(document).ready(function() {
     /*********************************** OVERLAY DE HISTÓRICO ***********************************/
     $("#boxHistoricoVoltarbtn, #screen2-boxHistoricoFecharbtn").click(function () {
         closeHistorico();
+    });
+
+    $(".boxHistoricoXbtn").click(function () {
+        console.log("cenas: " + $(this).parents("li").attr("class"));
+        deleteFromHistory(parseInt($(this).parents("li").attr("class")));
+        refreshHistorico();
     });
 
     /*********************************** OVERLAY DE DEFINIÇÕES DE CONTA ***********************************/

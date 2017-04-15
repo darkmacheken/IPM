@@ -90,3 +90,19 @@ function closeHistorico() {
         $("#boxcontautilizadorlogged").show();
     }
 }
+
+function refreshHistorico() {
+    var boxContent = "";
+    var history = getHistory();
+    for (var i = history.length-1; i >= 0; i--) {
+        var orderDate = getOrderDate(history[i]);
+        boxContent += "<li class=\"";
+        boxContent += String(i);
+        boxContent += "\"><div class=\"box btn boxHistoricoPedidobtn\">";
+        boxContent += orderDate.getDate() + "/" + orderDate.getMonth() + "/" + orderDate.getFullYear() + " " + orderDate.getHours() + ":" + orderDate.getMinutes();
+        boxContent += "<br/>Pedido ";
+        boxContent += getOrderNumber(history[i]);
+        boxContent += "</div><div class=\"box btn boxHistoricoRepetirPedidobtn\">Repetir Pedido</div><div class=\"box btn boxHistoricoXbtn Xbtn\">X</div></li>";
+    }
+    $("#boxHistorico ul, #screen2-boxHistorico ul").html(boxContent);
+}

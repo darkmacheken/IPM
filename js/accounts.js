@@ -56,7 +56,9 @@ function createAccount(uname, pword, nif, tel) {
     contas[uname] = { _uname: uname,
         _pword: pword,
         _nif: nif,
-        _tel: tel };
+        _tel: tel,
+        _history: []
+    };
 
     login(uname);
 }
@@ -99,6 +101,10 @@ function getOrderNumber(order) {
 
 function getOrderFoods(order) {
     return order._foods;
+}
+
+function deleteFromHistory(id) {
+    getHistory().splice(id, 1);
 }
 
 function login(uname) {
