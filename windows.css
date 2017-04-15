@@ -18,7 +18,7 @@
 /*Janela de ajuda*/
 #help-window {
   position: absolute;
-    height: 500px;
+    height: 600px;
     width: 400px;
     top: 100px;
     left: 550px;
@@ -39,16 +39,16 @@
 
 #help-window h4 {
   font-size: 24px;
-  margin: 5px;
+  margin-bottom: 5px;
 }
 
 .helpdiv{
   position: absolute;
-  width: 397px;
-  height: 440px;
+  width: 377px;
+  height: 530px;
   top: 60px;
-  left: 3px;
-  text-align: left;
+  left: 10px;
+  text-align: justify;
 }
 
 .help-btn {
