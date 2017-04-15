@@ -163,13 +163,6 @@ $(document).ready(function() {
             $(this).children(".submit").click();
     });
 
-    /* Fechar janelas com esc */
-    $(".window").keyup(function(e) {
-        if (e.keyCode == 27) {
-            closeWindow($(this).attr("id"));
-        }
-    });
-
     /*********************************** OVERLAY DE SESSÃO INICIADA ***********************************/
     /* Função chamada quando é clicado botão de Histórico. */
     $("#historicobtn, #screen2-historicobtn").click(function () {
