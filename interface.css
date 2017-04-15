@@ -47,9 +47,18 @@
     border-top:none;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-.Xbtn{
-  background-color: #B22222; /* red */
-  color: white;
+
+.Xbtn {
+    background-color: #B22222; /* red */
+    color: white;
+}
+
+.scrollbarbackground {
+    border: 3px solid black;
+    border-right: transparent;
+    display: inline-block;
+    float: left;
+    background-color: white;
 }
 /* Tabela que contém o ecrã todo */
 #screen {
@@ -324,6 +333,14 @@
     border-right: none;
     background-color: #B22222; /* red */
     color: white;
+}
+
+#scrollbar-historico {
+  width: 10px;
+  height: 227px;
+  position: absolute;
+  left: 276px;
+  bottom: 42px;
 }
 
 #boxHistorico ul {
