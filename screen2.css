@@ -104,6 +104,7 @@
 }
 
 #food-options li {
+    list-style-type: none;
     position: relative;
     top: 0px;
     left: 0px;
