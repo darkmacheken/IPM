@@ -36,13 +36,13 @@
   left: 155px;
 }
 
-#helpDiv{
+.helpdiv{
   position: absolute;
   width: 397px;
   height: 440px;
-  top:60px;
+  top: 60px;
   left: 3px;
-  text-align: justify;
+  text-align: left;
 }
 
 .help-btn {
