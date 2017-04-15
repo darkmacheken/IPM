@@ -334,7 +334,7 @@
     bottom: 30px;
     margin: 0px;
     padding: 0px;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 #boxHistorico li {
