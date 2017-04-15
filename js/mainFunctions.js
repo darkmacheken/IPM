@@ -105,4 +105,12 @@ function refreshHistorico() {
         boxContent += "</div><div class=\"box btn boxHistoricoRepetirPedidobtn\">Repetir Pedido</div><div class=\"box btn boxHistoricoXbtn Xbtn\">X</div></li>";
     }
     $("#boxHistorico ul, #screen2-boxHistorico ul").html(boxContent);
+
+    $(".boxHistoricoXbtn").click(function () {
+        var orderId = parseInt($(this).parents("li").attr("class"));
+        confirmYesNo("Tem a certeza que pretende apagar o seu pedido n.º " + getOrderNumber(getHistory()[orderId]) + "?", function () {
+            deleteFromHistory(orderId);
+            refreshHistorico();
+        });
+    });
 }

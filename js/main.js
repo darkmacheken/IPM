@@ -193,12 +193,6 @@ $(document).ready(function() {
         closeHistorico();
     });
 
-    $(".boxHistoricoXbtn").click(function () {
-        console.log("cenas: " + $(this).parents("li").attr("class"));
-        deleteFromHistory(parseInt($(this).parents("li").attr("class")));
-        refreshHistorico();
-    });
-
     /*********************************** OVERLAY DE DEFINIÇÕES DE CONTA ***********************************/
     $("#boxDefinicoesVoltarbtn, #screen2-boxDefinicoesVoltarbtn").click(function () {
         if (defsChanged())
