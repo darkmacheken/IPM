@@ -6,20 +6,25 @@ function prepareScreen2() {
 
     /**** Botões Principais ****/
     $("#orderfoodbtn").click(function () {
+        currentMenuSelected = "menu-entradas";
+        $("#" + currentMenuSelected).addClass("selected");
+        showFoodItems();
+
+        currentOrderSelected = "ord-classif";
+        $("#" + currentOrderSelected).addClass("selected");
+
         $("#second-screen").show();
     });
 
     $("#menuPrincipalbtn").click(function () {
         confirmYesNo("Tem a certeza que pretende sair?<br />O seu pedido será eliminado.", function () {
             $("#second-screen").hide();
+            $("#" + currentMenuSelected).removeClass("selected");
+            $("#" + currentOrderSelected).removeClass("selected");
         });
     });
 
     /**** Menu lateral esquerdo ****/
-    currentMenuSelected = "menu-entradas";
-    $("#" + currentMenuSelected).addClass("selected");
-    showFoodItems();
-
     $(".menuEmenta").click(function () {
         /* Selecionar botao do menu clicado */
         $("#" + currentMenuSelected).removeClass("selected");
@@ -31,8 +36,6 @@ function prepareScreen2() {
     });
 
     /**** Ordenação ****/
-    currentOrderSelected = "ord-classif";
-    $("#" + currentOrderSelected).addClass("selected");
     $("#textOrdenacao span").click(function () {
         /* Selecionar botao do menu clicado */
         $("#" + currentOrderSelected).removeClass("selected");
