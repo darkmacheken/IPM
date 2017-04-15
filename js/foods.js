@@ -1,5 +1,5 @@
 var FOOD_ITEMS = {
-    "entradas": [
+    "menu-entradas": [
         { _name: "Bolo do Caco",
             _price: 250,
             _desc: "Pão tradicional da Madeira, servido com manteiga de alho.",
@@ -24,7 +24,7 @@ var FOOD_ITEMS = {
             _ctime: 1,
             _ingredients: ["Cebola", "Alho", "Pimentos"] },
     ],
-    "sopas": [
+    "menu-sopas": [
         { _name: "Sopa de Agrião",
             _price: 250,
             _desc: "Com o agrião mais fresco da nossa região.",
@@ -49,7 +49,7 @@ var FOOD_ITEMS = {
             _ctime: 3,
             _ingredients: ["Cebola", "Alho"] },
     ],
-    "pratos": [
+    "menu-pratos": [
         { _name: "Bitoque de Porco",
             _price: 600,
             _desc: "Bitoque à portuguesa, com um ovo a cavalo.",
@@ -74,7 +74,7 @@ var FOOD_ITEMS = {
             _ctime: 8,
             _ingredients: ["Batata", "Arroz", "Salada", "Molho de natas"] },
     ],
-    "bebidas": [
+    "menu-bebidas": [
         { _name: "Cerveja Coral",
             _price: 125,
             _desc: "Gasolina da Madeira.",
@@ -99,7 +99,7 @@ var FOOD_ITEMS = {
             _ctime: 8,
             _ingredients: [] },
     ],
-    "sobremesas": [
+    "menu-sobremesas": [
         { _name: "Broas de Mel",
             _price: 250,
             _desc: "Broas tradicionais portuguesas.",
@@ -124,7 +124,7 @@ var FOOD_ITEMS = {
             _ctime: 1,
             _ingredients: [] },
     ],
-    "cafetaria": [
+    "menu-cafetaria": [
         { _name: "Carioca de Limão",
             _price: 100,
             _desc: "Infusão preparada com casca de limão.",

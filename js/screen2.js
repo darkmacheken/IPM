@@ -18,6 +18,8 @@ function prepareScreen2() {
     /**** Menu lateral esquerdo ****/
     currentMenuSelected = "menu-entradas";
     $("#" + currentMenuSelected).addClass("selected");
+    showFoodItems();
+
     $(".menuEmenta").click(function () {
         /* Selecionar botao do menu clicado */
         $("#" + currentMenuSelected).removeClass("selected");
@@ -25,7 +27,7 @@ function prepareScreen2() {
         currentMenuSelected = $(this).attr("id");
 
         /* Mostrar items */
-
+        showFoodItems();
     });
 
     /**** Ordenação ****/
@@ -38,7 +40,15 @@ function prepareScreen2() {
         currentOrderSelected = $(this).attr("id");
 
         /* Mostrar items */
-
+        showFoodItems();
     });
 
+}
+
+function showFoodItems() {
+    for (var i = 0; i < FOOD_ITEMS[currentMenuSelected].length; i++) {
+        $("#food-option-box-" + (i+1) + " .titulo").text(FOOD_ITEMS[currentMenuSelected][i]._name);
+        $("#food-option-box-" + (i+1) + " .descricao").text(FOOD_ITEMS[currentMenuSelected][i]._desc);
+        $("#food-option-box-" + (i+1) + " .preco").text(FOOD_ITEMS[currentMenuSelected][i]._price);
+    }
 }
