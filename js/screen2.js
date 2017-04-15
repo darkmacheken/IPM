@@ -49,6 +49,13 @@ function showFoodItems() {
     for (var i = 0; i < FOOD_ITEMS[currentMenuSelected].length; i++) {
         $("#food-option-box-" + (i+1) + " .titulo").text(FOOD_ITEMS[currentMenuSelected][i]._name);
         $("#food-option-box-" + (i+1) + " .descricao").text(FOOD_ITEMS[currentMenuSelected][i]._desc);
-        $("#food-option-box-" + (i+1) + " .preco").text(FOOD_ITEMS[currentMenuSelected][i]._price);
+        $("#food-option-box-" + (i+1) + " .preco").text(formatPrice(FOOD_ITEMS[currentMenuSelected][i]._price));
     }
+}
+
+function formatPrice(price) {
+    var cents = String(price % 100);
+    if (cents.length === 1)
+        cents = "0" + cents;
+    return String(Math.floor(price/100)) + "," + cents + "€";
 }
