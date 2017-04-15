@@ -380,7 +380,7 @@
     padding: 0px;
 }
 
-.boxHistoricoPedidobtn {
+#screen2-boxHistorico .boxHistoricoPedidobtn {
     font-size: 15px;
     padding: 5px;
     width: 120px;
@@ -393,7 +393,7 @@
     border-left: none;
 }
 
-.boxHistoricoRepetirPedidobtn {
+#screen2-boxHistorico .boxHistoricoRepetirPedidobtn {
     font-size: 15px;
     padding: 5px;
     width: 140px;
@@ -406,7 +406,7 @@
     line-height: 40px;
 }
 
-.boxHistoricoXbtn {
+#screen2-boxHistorico .boxHistoricoXbtn {
     font-size: 15px;
     padding: 5px;
     width: 37px;

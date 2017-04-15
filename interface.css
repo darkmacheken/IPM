@@ -348,7 +348,7 @@
     padding: 0px;
 }
 
-.boxHistoricoPedidobtn2 {
+#boxHistorico .boxHistoricoPedidobtn {
     font-size: 15px;
     padding: inherit;
     width: 120px;
@@ -361,7 +361,7 @@
     border-left: none;
 }
 
-.boxHistoricoRepetirPedidobtn2 {
+#boxHistorico .boxHistoricoRepetirPedidobtn {
     font-size: 15px;
     padding: inherit;
     width: 115px;
@@ -374,7 +374,7 @@
     line-height: 40px;
 }
 
-.boxHistoricoXbtn2 {
+#boxHistorico .boxHistoricoXbtn {
     font-size: 15px;
     padding: inherit;
     width: 37px;

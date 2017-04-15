@@ -1,14 +1,41 @@
 var loggedIn = "";
 
 var contas = {
-    "admin" : { _uname: "admin",
+    "admin" : {
+        _uname: "admin",
         _pword: "root",
         _nif: "999888777",
-        _tel: "943555555" },
-    "q" : { _uname: "q",
-        _pword: "q",
-        _nif: "",
-        _tel: "1" }
+        _tel: "943555555",
+        _history: [
+            { /* pedido 1 */
+                _date: new Date(2017, 3, 8, 19, 38),
+                _number: 1,
+                _foods: [
+                    {
+                        _name: "Salada de Polvo",
+                        _quantity: 1,
+                        _ingredients: ["Cebola", "Alho", "Pimentos"]
+                    },
+                    {
+                        _name: "Bitoque de Porco",
+                        _quantity: 1,
+                        _ingredients: ["Arroz", "Ovo", "Batatas fritas"]
+                    }
+                ]
+            },
+            { /* pedido 2 */
+                _date: new Date(2017, 4, 12, 13, 8),
+                _number: 2,
+                _foods: [
+                    {
+                        _name: "Salada de Polvo",
+                        _quantity: 2,
+                        _ingredients: ["Cebola", "Alho"]
+                    }
+                ]
+            }
+        ]
+    }
 };
 
 function isLoginValid(uname, pword) {
@@ -56,6 +83,22 @@ function getTel() {
 
 function setTel(tel) {
     contas[loggedIn]._tel = tel;
+}
+
+function getHistory() {
+    return contas[loggedIn]._history;
+}
+
+function getOrderDate(order) {
+    return order._date;
+}
+
+function getOrderNumber(order) {
+    return order._number;
+}
+
+function getOrderFoods(order) {
+    return order._foods;
 }
 
 function login(uname) {
