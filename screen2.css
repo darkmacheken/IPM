@@ -128,7 +128,7 @@
     bottom: 30px;
     margin: 0px;
     padding: 0px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 #boxCompras li {
@@ -359,7 +359,7 @@
     bottom: 30px;
     margin: 0px;
     padding: 0px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 #screen2-boxHistorico li {
