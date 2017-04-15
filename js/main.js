@@ -1,6 +1,6 @@
 $(document).ready(function() {
     /* Esconder janelas inicialmente */
-    $(".window, #blocker, #boxcontautilizadorlogged, #Historico, #DefinicoesConta, #callwaitbtn, #second-screen, #screen2-logged-box, #screen2-historico, #screen2-definicoesConta").hide();
+    $(".window, #blocker, .helpdiv, #boxcontautilizadorlogged, #Historico, #DefinicoesConta, #callwaitbtn, #second-screen, #screen2-logged-box, #screen2-historico, #screen2-definicoesConta").hide();
 
     /*********************************** JANELA DE AJUDA ***********************************/
     $("#helpbtn").click(function () {
@@ -10,6 +10,25 @@ $(document).ready(function() {
     /* Função chamada quando é clicado botão X na janela de ajuda. */
     $("#help-window-close-btn").click(function () {
         closeWindow("help-window");
+    });
+
+    /* Função chamada quando é clicado botão de voltar na janela de ajuda. */
+    $(".helpdiv .back").click(function () {
+        $(this).parents(".helpdiv").hide();
+    });
+
+    /* Funções chamada quando são clicados os botões do menu da janela de ajuda. */
+    $("#help-window-pedidobtn").click(function () {
+        $("#help-div-pedido").show();
+    });
+    $("#help-window-contabtn").click(function () {
+        $("#help-div-conta").show();
+    });
+    $("#help-window-jogosbtn").click(function () {
+        $("#help-div-jogos").show();
+    });
+    $("#help-window-musicabtn").click(function () {
+        $("#help-div-musica").show();
     });
 
     /*********************************** JANELA DE LOGIN ***********************************/

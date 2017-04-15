@@ -31,9 +31,15 @@
     top: 70px;
     left: 35px;
 }
-#help-window h3{
+
+#help-window h3 {
   position: absolute;
   left: 155px;
+}
+
+#help-window h4 {
+  font-size: 24px;
+  margin: 5px;
 }
 
 .helpdiv{
