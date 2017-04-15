@@ -176,6 +176,15 @@ label.btn {
     cursor: default;
 }
 
+.back {
+    position: absolute;
+    bottom: 10px;
+    left: 107.5px;
+    border:1px black solid;
+    height:30px;
+    padding-top:10px;
+}
+
 .submit {
     position:absolute;
     bottom:10px;
