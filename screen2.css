@@ -1,5 +1,4 @@
 #contautilizadorSecondScreen {
-    background-color: white;
     float:right;
     height: 10px;
     width: 260px;
@@ -53,8 +52,7 @@
     left: 30px;
     height: 480px;
     width: 1100px;
-    background-image: url("images/background/back2.png");
-    background-repeat: repeat-x repeat-y;
+    background-color: #f5f5f5;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -231,12 +229,16 @@
     height: 25px;
     width: 236px;
     font-size: 27px;
+    text-align: right;
     line-height: 10px;
     background-color: #B22222; /* red */
     color: white;
     border: none;
+    background-image: url("images/icons/buttons/menu-principal-white.png");
+    background-position: 7% 45%;
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-
 }
 
 #Confirmarbtn {
@@ -259,15 +261,19 @@
     line-height: 25px;
     font-size: 24px;
     border-left: none;
-    background-image: url("images/background/back3.png");
-    background-repeat: repeat-x repeat-y;
+    border-right: none;
+    border-top: 1px solid #4c4c4c;
+    border-bottom: 1px solid #202020;
+    background-color: #363636;
+    color: white;
+    text-align: left;
 }
 
 #boxEmenta .selected {
     border-right: none;
     cursor: default;
-    background-image: url("images/background/back2.png");
-    background-repeat: repeat-x repeat-y;
+    color: black;
+    background-color: #f5f5f5;
 }
 
 #menu-entradas {
@@ -276,42 +282,99 @@
     top: 0px;
     left: 0px;
     border-top: none;
-    border-bottom: none;
+    background-image: url("images/icons/food-menu/bread-white.png");
+    background-position: 10% 45%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
 }
-
+#menu-entradas.selected {
+    border-top: none;
+    background-image: url("images/icons/food-menu/bread-black.png");
+    background-position: 10% 45%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
 #menu-sopas {
     position: absolute;
     top: 87px;
     left: 0px;
-    border-bottom: none;
+    background-image: url("images/icons/food-menu/soup-white.png");
+    background-position: 10% 45%;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
 }
-
+#menu-sopas.selected {
+    background-image: url("images/icons/food-menu/soup-black.png");
+    background-position: 10% 45%;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+}
 #menu-pratos {
     position: absolute;
     top: 174px;
     left: 0px;
-    border-bottom: none;
+    background-image: url("images/icons/food-menu/plate-white.png");
+    background-position: 10% 45%;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
 }
+#menu-pratos.selected {
+    background-image: url("images/icons/food-menu/plate-black.png");
+    background-position: 10% 45%;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+}
+
 
 #menu-bebidas {
     position: absolute;
     top: 261px;
     left: 0px;
-    border-bottom: none;
+    background-image: url("images/icons/food-menu/drink-white.png");
+    background-position: 10% 45%;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+}
+
+#menu-bebidas.selected {
+    background-image: url("images/icons/food-menu/drink-black.png");
+    background-position: 10% 45%;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
 }
 
 #menu-sobremesas {
     position: absolute;
     top: 348px;
     left: 0px;
-    border-bottom: none;
+    background-image: url("images/icons/food-menu/dessert-white.png");
+    background-position: 7% 45%;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
 }
-
+#menu-sobremesas.selected {
+    background-image: url("images/icons/food-menu/dessert-black.png");
+    background-position: 7% 45%;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+}
 #menu-cafetaria {
     position: absolute;
-    top: 435px;
+    top: 437px;
     left: 0px;
     border-bottom: none;
+    background-image: url("images/icons/food-menu/coffee-white.png");
+    background-position: 10% 45%;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+}
+
+#menu-cafetaria.selected {
+    border-bottom: none;
+    background-image: url("images/icons/food-menu/coffee-black.png");
+    background-position: 10% 45%;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
 }
 
 #textOrdenacao {
