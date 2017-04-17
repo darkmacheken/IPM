@@ -558,25 +558,43 @@
 }
 #screen2-historicobtn{
     position: absolute;
-    bottom: 2px;
-    left:5px;
+    top: 0px;
+    right:2px;
     padding: 0%;
     font-size: 11px;
-    width: 90px;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-image: url("images/icons/account/history-black.png");
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-color: transparent;
 }
 #screen2-definicoesContabtn{
     position: absolute;
-    bottom: 2px;
-    left:102px;
+    top: 25px;
+    right:2px;
     padding: 0%;
     font-size: 11px;
-    width: 90px;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-image: url("images/icons/account/definicoes-black.png");
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-color: transparent;
 }
 #screen2-sairSessaobtn{
     position: absolute;
     bottom: 2px;
-    right:5px;
+    right:2px;
     padding: 0%;
     font-size: 11px;
-    width: 90px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-image: url("images/icons/account/logout-black.png");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-color: transparent;
 }

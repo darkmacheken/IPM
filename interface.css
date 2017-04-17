@@ -141,14 +141,14 @@
 }
 
 #orderfoodbtn {
-  background-color: white;
+  background-color: #009ee1;
     display:block;
     height: 500px;
     width: 500px;
     border-radius: 50%;
-    border: 3px solid black;
+    border: none;
     text-align:center;
-    color: black;
+    color: white;
     font-weight: bold;
     text-decoration: none;
     font-size: 86px;
@@ -171,8 +171,9 @@
 }
 
 #login-btn {
-    position: relative;
-    left:1.4em;
+    position: absolute;
+    left:60px;
+    top: 40px;
     float:center;
     width: 150px;
     height:40px;
@@ -182,10 +183,18 @@
     display: inline-block;
     font-size: 24px;
     font-weight:bold;
+    background-color: #009ee1;
+    color: white;
+    border: none;
+    background-image: url("images/icons/account/login-white.png");
+    background-position: 10% 45%;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
 }
 #reg-btn {
-    position: relative;
-    left:1.4em;
+    position: absolute;
+    left:60px;
+    top: 130px;
     float:center;
     width: 150px;
     height:40px;
@@ -195,6 +204,13 @@
     display: inline-block;
     font-size: 24px;
     font-weight:bold;
+    background-color: #009ee1;
+    color: white;
+    border: none;
+    background-image: url("images/icons/account/register-white.png");
+    background-position: 10% 45%;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
 }
 
 #music {
@@ -303,6 +319,13 @@
     text-align: center;
     position: relative;
     top: 0px;
+    background-color: #009ee1;
+    color: white;
+    border: none;
+    background-image: url("images/icons/account/history-white.png");
+    background-position: 7% 45%;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
 }
 
 #definicoesContabtn {
@@ -312,6 +335,13 @@
     text-align: center;
     position: relative;
     top: 10px;
+    background-color: #009ee1;
+    color: white;
+    border: none;
+    background-image: url("images/icons/account/definicoes-white.png");
+    background-position: 7% 45%;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
 }
 
 #sairSessaobtn {
@@ -321,6 +351,13 @@
     text-align: center;
     position: relative;
     top: 20px;
+    border: none;
+    background-color: #B22222; /* red */
+    color: white;
+    background-image: url("images/icons/account/logout-white.png");
+    background-position: 10% 45%;
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
 }
 
 #boxHistorico {
@@ -344,6 +381,10 @@
     border: none;
     background-color: #B22222; /* red */
     color: white;
+    background-image: url("images/icons/buttons/back-white.png");
+    background-position: 15% 50%;
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
 }
 
 #boxHistorico ul {
@@ -426,6 +467,10 @@
     border:none;
     background-color: #4CAF50; /* Green */
     color: white;
+    background-image: url("images/icons/buttons/save-white.png");
+    background-position: 15% 50%;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
 }
 
 #boxDefinicoesVoltarbtn {
@@ -440,6 +485,10 @@
     border:none;
     background-color: #B22222; /* red */
     color: white;
+    background-image: url("images/icons/buttons/back-white.png");
+    background-position: 15% 50%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
 }
 
 .inputDef {
