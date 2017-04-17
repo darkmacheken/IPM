@@ -45,12 +45,12 @@ function updateTimer(timeleft) {
 }
 
 function updateLoginData() {
-    $("#logged-uname, #screen2-logged-uname").text(getUname());
+    $(".logged-uname").text(getUname());
     if (contas[loggedIn]._nif === "")
-        $("#logged-nif, #screen2-logged-nif").addClass("attentionText").text("Não fornecido.");
+        $(".logged-nif").addClass("attentionText").text("Não fornecido.");
     else
-        $("#logged-nif, #screen2-logged-nif").text(getNif());
-    $("#logged-tel").text(getTel());
+        $(".logged-nif").text(getNif());
+    $(".logged-tel").text(getTel());
 }
 
 function deleteLoginData() {
