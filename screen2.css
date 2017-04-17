@@ -253,6 +253,11 @@
     color: white;
     border: none;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-image: url("images/icons/buttons/confirmar-white.png");
+    background-position: 13% 45%;
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .menuEmenta {
@@ -395,7 +400,6 @@
 }
 
 #historicoSecondScreen {
-    background-color: white;
     float:right;
     height: 10px;
     width: 260px;
@@ -500,7 +504,6 @@
     color: white;
 }
 #screen2-definicoesTitle {
-    background-color: white;
     float:right;
     height: 10px;
     width: 260px;
