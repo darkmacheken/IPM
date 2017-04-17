@@ -260,8 +260,9 @@
     display:block;
     border-radius: 50%;
     border: 1px solid black;
-    background-color:#FFF;
-    color: #000;
+    background: url("images/musica/blue.jpg");
+    background-size: 60px 37px;
+    background-position: center;
     float: left;
 }
 
