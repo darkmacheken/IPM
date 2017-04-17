@@ -125,6 +125,7 @@
   position: relative;
   left: 7.4em;
   background-image: url("images/logo/comisto.png");
+  background-size: 280px 113px;
   background-repeat: no-repeat;
   background-position: 10px ;
   background-color: transparent;
@@ -212,7 +213,7 @@
     color: white;
     border: none;
     background-image: url("images/icons/account/register-white.png");
-    background-position: 10% 45%;
+    background-position: 12% 52%;
     background-repeat: no-repeat;
     background-size: 30px 30px;
 }
@@ -328,7 +329,7 @@
     color: white;
     border: none;
     background-image: url("images/icons/account/history-white.png");
-    background-position: 7% 45%;
+    background-position: 8.75% 47%;
     background-repeat: no-repeat;
     background-size: 30px 30px;
 }
@@ -344,7 +345,7 @@
     color: white;
     border: none;
     background-image: url("images/icons/account/definicoes-white.png");
-    background-position: 7% 45%;
+    background-position: 8% 50%;
     background-repeat: no-repeat;
     background-size: 30px 30px;
 }
@@ -360,7 +361,7 @@
     background-color: #B22222; /* red */
     color: white;
     background-image: url("images/icons/account/logout-white.png");
-    background-position: 10% 45%;
+    background-position: 9.5% 45%;
     background-repeat: no-repeat;
     background-size: 25px 25px;
 }
