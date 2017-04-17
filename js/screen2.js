@@ -1,6 +1,6 @@
 var currentMenuSelected = "";
 var currentOrderSelected = "";
-var ordered = [];
+var currentOrder = [];
 
 function prepareScreen2() {
 
@@ -11,10 +11,11 @@ function prepareScreen2() {
 
         currentMenuSelected = "menu-entradas";
         $("#" + currentMenuSelected).addClass("selected");
-        showFoodItems();
 
         currentOrderSelected = "ord-classif";
         $("#" + currentOrderSelected).addClass("selected");
+
+        showFoodItems();
 
         $("#second-screen").show();
     });
@@ -23,7 +24,8 @@ function prepareScreen2() {
         confirmYesNo("Tem a certeza que pretende sair?<br />O seu pedido será eliminado.", function () {
             closeHistorico();
             closeDefs();
-            
+            currentOrder = [];
+
             $("#second-screen").hide();
             $("#" + currentMenuSelected).removeClass("selected");
             $("#" + currentOrderSelected).removeClass("selected");
@@ -57,6 +59,37 @@ function prepareScreen2() {
 
 
 function showFoodItems() {
+    /* Ordenação dos items */
+    switch (currentOrderSelected) {
+        case "ord-price":
+            FOOD_ITEMS[currentMenuSelected].sort(function (a, b) {
+                if (a._price !== b._price)
+                    return a._price - b._price;
+                else
+                    return a._name > b._name ? 1 : -1;
+            });
+            break;
+        case "ord-classif":
+            FOOD_ITEMS[currentMenuSelected].sort(function (a, b) {
+                if (a._classif !== b._classif)
+                    return a._classif - b._classif;
+                else
+                    return a._name > b._name ? 1 : -1;
+            });
+            break;
+        case "ord-ctime":
+            FOOD_ITEMS[currentMenuSelected].sort(function (a, b) {
+                if (a._ctime !== b._ctime)
+                    return a._ctime - b._ctime;
+                else
+                    return a._name > b._name ? 1 : -1;
+            });
+            break;
+        default:
+            console.log("Erro ao selecionar ordenação: '" + currentOrderSelected + "'");
+    }
+
+    /* Mostrar items */
     var boxContent = "";
     for (var i = 0; i < FOOD_ITEMS[currentMenuSelected].length; i++) {
         boxContent += "<li class=\"box opcao\"><div class=\"titulo\">";

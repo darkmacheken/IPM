@@ -79,7 +79,7 @@ var FOOD_ITEMS = {
             _price: 125,
             _desc: "Gasolina da Madeira.",
             _img: "images/foods/cerveja.jpg",
-            _classif: 2,
+            _classif: 3,
             _ctime: 1,
             _ingredients: [] },
 
@@ -95,7 +95,7 @@ var FOOD_ITEMS = {
             _price: 150,
             _desc: "Refrigerante de maçã tradicional da Madeira.",
             _img: "images/foods/brisa.jpg",
-            _classif: 3,
+            _classif: 5,
             _ctime: 8,
             _ingredients: [] },
     ],
@@ -150,5 +150,3 @@ var FOOD_ITEMS = {
             _ingredients: [] },
     ]
 };
-
-var CATEGORIES_IN_ORDER = ["entradas", "sopas", "pratos", "bebidas", "sobremesas", "cafetaria"];
