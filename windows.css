@@ -181,6 +181,7 @@ label.btn {
     background-color: black;
     opacity: 0.4;
     cursor: default;
+    box-shadow: none;
 }
 
 .back {
@@ -196,9 +197,12 @@ label.btn {
     position:absolute;
     bottom:10px;
     left: 220px;
-    border:1px black solid;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
     height:30px;
     padding-top:10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .attentionText {
