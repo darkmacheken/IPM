@@ -216,6 +216,7 @@ $(document).ready(function() {
 
         /* Caso as definições não tenham sido alteradas, não pedir para guardar. */
         if (!defsChanged()) {
+            closeDefs();
             return;
         }
 
