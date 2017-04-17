@@ -168,6 +168,10 @@
     line-height: 10px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     border: none;
+    background-image: url("images/icons/account/user-white.png");
+    background-position: 10% 45%;
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
 }
 
 #login-btn {
@@ -385,6 +389,52 @@
     background-position: 15% 50%;
     background-repeat: no-repeat;
     background-size: 25px 25px;
+}
+#boxHistoricoRepetirPedido {
+  position: absolute;
+    right: 2px;
+    top: 161px;
+  height: 253px;
+  font-size: 15px;
+  padding: 10px 20px;
+  border-top:none;
+  background-color:white;
+  text-align: left;
+  border: none;
+}
+#boxRepetirPedidobtn {
+    font-size: 15px;
+    padding: 5px;
+    width: 137px;
+    height: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left:0px;
+    border:none;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    background-image: url("images/icons/buttons/restart-white.png");
+    background-position: 7% 50%;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+}
+#boxHistoricoRepetirPedidoVoltarbtn {
+    font-size: 15px;
+    padding: 5px;;
+    width: 134px;
+    height: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    right:0px;
+    border:none;
+    background-color: #B22222; /* red */
+    color: white;
+    background-image: url("images/icons/buttons/back-white.png");
+    background-position: 15% 50%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
 }
 
 #boxHistorico ul {
