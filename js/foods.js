@@ -18,7 +18,7 @@ var FOOD_ITEMS = {
 
         { _name: "Salada de Polvo",
             _price: 400,
-            _desc: "Deliciosa entrada temperada com cebola, alho e um molho com pimentos.",
+            _desc: "Temperada com cebola, alho e um molho com pimentos.",
             _img: "images/foods/saladapolvo.jpg",
             _classif: 5,
             _ctime: 1,
