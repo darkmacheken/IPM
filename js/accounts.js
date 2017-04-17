@@ -13,11 +13,13 @@ var contas = {
                 _foods: [
                     {
                         _name: "Salada de Polvo",
+                        _price: 400,
                         _quantity: 1,
                         _ingredients: ["Cebola", "Alho", "Pimentos"]
                     },
                     {
                         _name: "Bitoque de Porco",
+                        _price: 600,
                         _quantity: 1,
                         _ingredients: ["Arroz", "Ovo", "Batatas fritas"]
                     }
@@ -29,6 +31,7 @@ var contas = {
                 _foods: [
                     {
                         _name: "Salada de Polvo",
+                        _price: 800,
                         _quantity: 2,
                         _ingredients: ["Cebola", "Alho"]
                     }
@@ -101,6 +104,14 @@ function getOrderNumber(order) {
 
 function getOrderFoods(order) {
     return order._foods;
+}
+
+function getOrderPrice(order) {
+    var price = 0;
+    var orderFoods = getOrderFoods(order);
+    for (var i = 0; i < orderFoods.length; i++)
+        price += orderFoods[i]._price;
+    return price;
 }
 
 function deleteFromHistory(id) {

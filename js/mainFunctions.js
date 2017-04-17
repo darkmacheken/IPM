@@ -106,6 +106,18 @@ function refreshHistorico() {
     }
     $("#boxHistorico ul, #screen2-boxHistorico ul").html(boxContent);
 
+    $(".boxHistoricoPedidobtn").click(function () {
+        var order = getHistory()[parseInt($(this).parents("li").attr("class"))];
+        $(".hist-info").text("Pedido " + getOrderNumber(order) + " - 12/04/2017 - 19:38");
+        $(".hist-total").text("Total: " + formatPrice(getOrderPrice(order)));
+        var histOrderTxt = "";
+        var orderFoods = getOrderFoods(order);
+        for (var i = 0; i < orderFoods.length; i++)
+            histOrderTxt += orderFoods[i]._quantity + "x " + orderFoods[i]._name + "<br />\n";
+        $(".hist-order").html(histOrderTxt);
+        $(".boxHistoricoRepetirPedido").show();
+    });
+
     $(".boxHistoricoXbtn").click(function () {
         var orderId = parseInt($(this).parents("li").attr("class"));
         confirmYesNo("Tem a certeza que pretende apagar o seu pedido n.º " + getOrderNumber(getHistory()[orderId]) + "?", function () {
@@ -113,4 +125,11 @@ function refreshHistorico() {
             refreshHistorico();
         });
     });
+}
+
+function formatPrice(price) {
+    var cents = String(price % 100);
+    if (cents.length === 1)
+        cents = "0" + cents;
+    return String(Math.floor(price/100)) + "," + cents + "€";
 }

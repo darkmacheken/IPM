@@ -1,6 +1,6 @@
 $(document).ready(function() {
     /* Esconder janelas inicialmente */
-    $(".window, #blocker, .helpdiv, #boxcontautilizadorlogged, #Historico, #DefinicoesConta, #callwaitbtn, #second-screen, #screen2-logged-box, #screen2-historico, #screen2-definicoesConta").hide();
+    $(".window, #blocker, .helpdiv, #boxcontautilizadorlogged, #Historico, .boxHistoricoRepetirPedido, #DefinicoesConta, #callwaitbtn, #second-screen, #screen2-logged-box, #screen2-historico, #screen2-definicoesConta").hide();
 
     /*********************************** JANELA DE AJUDA ***********************************/
     $("#helpbtn").click(function () {
@@ -191,6 +191,10 @@ $(document).ready(function() {
     /*********************************** OVERLAY DE HISTÓRICO ***********************************/
     $("#boxHistoricoVoltarbtn, #screen2-boxHistoricoFecharbtn").click(function () {
         closeHistorico();
+    });
+
+    $(".boxHistoricoRepetirPedidoVoltarbtn").click(function () {
+        $(".boxHistoricoRepetirPedido").hide();
     });
 
     /*********************************** OVERLAY DE DEFINIÇÕES DE CONTA ***********************************/

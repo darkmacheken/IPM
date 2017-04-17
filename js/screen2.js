@@ -102,10 +102,3 @@ function showFoodItems() {
     }
     $("#food-options").html(boxContent);
 }
-
-function formatPrice(price) {
-    var cents = String(price % 100);
-    if (cents.length === 1)
-        cents = "0" + cents;
-    return String(Math.floor(price/100)) + "," + cents + "€";
-}
