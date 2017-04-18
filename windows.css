@@ -233,9 +233,9 @@ label.btn {
 }
 
 #keyboard{
-  position: relative;
-  top: 53px;
-  left: 1228px;
+  position: absolute;
+  top: 580px;
+  left: 1236px;
   width: 300px;
   height: 175px;
   background-image: url("images/keyboard/keyboard.png");
