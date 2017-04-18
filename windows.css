@@ -129,10 +129,10 @@ h3 {
 #blocker {
     background-color: black;
     position: absolute;
-    width: 100em;
-    height: 50em;
-    top: 0em;
-    left: 0em;
+    width: 1536px;
+    height: 760px;
+    top: 0px;
+    left: 0px;
     opacity: 0.5;
     z-index: 4;
 }
@@ -235,7 +235,7 @@ label.btn {
 #keyboard{
   position: absolute;
   top: 540px;
-  left: 1170px;
+  left: 1172px;
   width: 300px;
   height: 175px;
   background-image: url("images/keyboard/keyboard.png");
@@ -247,7 +247,7 @@ label.btn {
 #number-pad{
   position: absolute;
   top: 540px;
-  left: 1170px;
+  left: 1172px;
   width: 300px;
   height: 175px;
   background-image: url("images/keyboard/number-pad.png");
