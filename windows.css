@@ -233,15 +233,15 @@ label.btn {
 }
 
 #keyboard{
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
+  position: relative;
+  float: right;
   width: 300px;
   height: 175px;
   background-image: url("images/keyboard/keyboard.png");
   background-repeat: no-repeat;
   background-size: 365px 220px;
   border: none;
+  z-index: 3;
 }
 #number-pad{
   position: absolute;
@@ -253,4 +253,5 @@ label.btn {
   background-repeat: no-repeat;
   background-size: 365px 220px;
   border: none;
+  z-index:3;
 }
