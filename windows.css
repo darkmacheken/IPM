@@ -234,8 +234,8 @@ label.btn {
 
 #keyboard{
   position: absolute;
-  top: 580px;
-  left: 1236px;
+  top: 540px;
+  left: 1170px;
   width: 300px;
   height: 175px;
   background-image: url("images/keyboard/keyboard.png");
@@ -246,8 +246,8 @@ label.btn {
 }
 #number-pad{
   position: absolute;
-  right: 0px;
-  bottom: 0px;
+  top: 540px;
+  left: 1170px;
   width: 300px;
   height: 175px;
   background-image: url("images/keyboard/number-pad.png");
