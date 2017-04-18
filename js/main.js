@@ -1,6 +1,6 @@
 $(document).ready(function() {
     /* Esconder janelas inicialmente */
-    $(".window, #blocker, .helpdiv, #boxcontautilizadorlogged, #Historico, .boxHistoricoRepetirPedido, #DefinicoesConta, #callwaitbtn, #second-screen, #screen2-logged-box, #screen2-historico, #screen2-definicoesConta").hide();
+    $(".window, #blocker, #keyboard, #number-pad, .helpdiv, #boxcontautilizadorlogged, #Historico, .boxHistoricoRepetirPedido, #DefinicoesConta, #callwaitbtn, #second-screen, #screen2-logged-box, #screen2-historico, #screen2-definicoesConta").hide();
 
     /*********************************** JANELA DE AJUDA ***********************************/
     $("#helpbtn").click(function () {
@@ -270,6 +270,19 @@ $(document).ready(function() {
             $("#callbtn").show();
             $("#callwaitbtn").hide();
         });
+    });
+
+    /*********************************** TECLADOS E KEYPADS ***********************************/
+    $("input[type=text], input[type=password]").not(".numOnly").focus(function () {
+        $("#keyboard").show();
+    }).blur(function () {
+        $("#keyboard").hide();
+    });
+
+    $("input[type=text].numOnly").focus(function () {
+        $("#number-pad").show();
+    }).blur(function () {
+        $("#number-pad").hide();
     });
 
     /*********************************** SEGUNDA JANELA ***********************************/
