@@ -231,3 +231,26 @@ label.btn {
   width: 1536px;
   height: 630px;
 }
+
+#keyboard{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 300px;
+  height: 175px;
+  background-image: url("images/keyboard/keyboard.png");
+  background-repeat: no-repeat;
+  background-size: 365px 220px;
+  border: none;
+}
+#number-pad{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 300px;
+  height: 175px;
+  background-image: url("images/keyboard/number-pad.png");
+  background-repeat: no-repeat;
+  background-size: 365px 220px;
+  border: none;
+}
