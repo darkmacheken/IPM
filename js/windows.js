@@ -44,8 +44,8 @@ function confirmYesNo(text, yes, no) {
             no();
         }
     });
-    /* zindex = 1 para colocar blocker à frente das janelas de login e registo */
-    openWindow("confirmYesNo", '5');
+    /* zindex = 19 para colocar blocker à frente das janelas de login e registo */
+    openWindow("confirmYesNo", '19');
 }
 
 function confirmOk(text, ok) {
@@ -56,6 +56,6 @@ function confirmOk(text, ok) {
             ok();
         }
     });
-    /* zindex = 1 para colocar blocker à frente das janelas de login e registo */
-    openWindow("confirmOk", '5');
+    /* zindex = 19 para colocar blocker à frente das janelas de login e registo */
+    openWindow("confirmOk", '19');
 }

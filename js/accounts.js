@@ -5,7 +5,7 @@ var contas = {
         _uname: "admin",
         _pword: "root",
         _nif: "999888777",
-        _tel: "943555555",
+        _tel: "912345678",
         _history: [
             { /* pedido 1 */
                 _date: new Date(2017, 3, 8, 19, 38),
@@ -114,10 +114,11 @@ function getOrderPrice(order) {
     return price;
 }
 
-function cellNumExists(cell) {
-    for (var uname in contas) {
-        ;//FAZER
-    }
+function cellNumExists(tel) {
+    for (var uname in contas)
+        if (contas[uname]._tel === String(tel))
+            return true;
+    return false;
 }
 
 function deleteFromHistory(id) {

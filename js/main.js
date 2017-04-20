@@ -61,12 +61,13 @@ $(document).ready(function() {
     });
 
     $("#forgot-password-btn").click(function () {
-        openWindow("recover-password-box", 5);
+        openWindow("recover-password-box", '5');
     });
 
     $("#recover-confirmNobtn").click(function () {
         closeWindow("recover-password-box");
         callblock();
+        $("#recover-form").trigger("reset");
     });
 
     $("#recover-confirmYesbtn").click(function () {
