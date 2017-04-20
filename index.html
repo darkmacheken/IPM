@@ -111,8 +111,6 @@
                 <div class="box boxright background" id="boxcontautilizadorlogged">
                     <div id="textContaUtilizador">
                         Nome de Utilizador: <span class="logged-uname"></span><br/>
-                        NIF: <span class="logged-nif"></span><br/>
-                        Nº Telemóvel: <span class="logged-tel"></span>
                     </div>
                     <div class="box btn" id="historicobtn">
                         Histórico
@@ -366,6 +364,9 @@
                     </tr>
                     <tr>
                         <td>
+
+                            <a style="text-align: right" href="#" id="forgot-password-btn">Esqueceu palavra-passe/nome de utilizador.</a>
+                            <br />
                             <br />
                             <span class="attentionText att-warning">* Campos de preenchimento obrigat&oacute;rio.</span>
                         </td>
@@ -468,7 +469,7 @@
             </div>
 
             <div class="box btn submit" id="reg-submit">
-                REGISTAR
+                CONFIRMAR
                 <div class="disabler" id="reg-submit-disabler"></div>
             </div>
         </form>
@@ -478,10 +479,10 @@
     <!--Janela confirmação Sim ou Não-->
     <div class="window confirm" id="confirmYesNo">
         <span class="confirmText"></span>
-        <div class="box btn" id="confirmYesbtn">
+        <div class="box btn confirmYesbtn" id="confirmYesbtn">
             Sim
         </div>
-        <div class="box btn" id="confirmNobtn">
+        <div class="box btn confirmNobtn" id="confirmNobtn">
             Não
         </div>
     </div>
@@ -489,9 +490,25 @@
     <!--Janela confirmação Ok-->
     <div class="window confirm" id="confirmOk">
         <span class="confirmText"></span>
-        <div class="box btn" id="confirmOkbtn">
+        <div class="box btn confirmOkbtn" id="confirmOkbtn">
             Ok
         </div>
+    </div>
+
+    <div class="window confirm" id="recover-password-box">
+        <form id="recover-form">
+            Insira o seu número de telemóvel.
+            <br />
+            <span class="confirmText"></span>
+            <input type="text" class="numOnly req-field cellNumber" name="recover-tel" id="recover-tel-numbx" maxlength="9">
+            <div class="box btn confirmYesbtn" id="recover-confirmYesbtn">
+                Ok
+                <div class="disabler" id="reg-submit-disabler"></div>
+            </div>
+            <div class="box btn confirmNobtn" id="recover-confirmNobtn">
+                Cancelar
+            </div>
+        </form>
     </div>
 
     <!--######################################################################
@@ -513,8 +530,6 @@
         <div class="box background" id="screen2-logged-box">
             <div id="textContaUtilizador" style="text-align:left; position:absolute; top:5px; left:5px;">
                 Nome de Utilizador: <span class="logged-uname"></span><br/>
-                NIF: <span class="logged-nif"></span><br/>
-                Nº Telemóvel: <span class="logged-tel"></span>
             </div>
 
             <div class="box btn" id="screen2-historicobtn"></div>

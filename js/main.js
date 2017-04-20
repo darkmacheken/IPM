@@ -60,6 +60,30 @@ $(document).ready(function() {
     	}
     });
 
+    $("#forgot-password-btn").click(function () {
+        openWindow("recover-password-box", 5);
+    });
+
+    $("#recover-confirmNobtn").click(function () {
+        closeWindow("recover-password-box");
+        callblock();
+    });
+
+    $("#recover-confirmYesbtn").click(function () {
+        // Prevenir que o botao seja clicado acidentalmente quando desativado
+        //if (!checkForm("login-form"))
+        //    return;
+
+        if (cellNumExists($("#recover-tel-numbx").val())) {
+            closeWindow("recover-password-box");
+            $("#recover-form").trigger("reset");
+            confirmOk("Os seus dados foram enviados para o seu número de telemóvel.", callblock);
+        }
+        else {
+            confirmOk("O número inserido é desconhecido.", callblock);
+        }
+    });
+
 
     /*********************************** JANELA DE REGISTO ***********************************/
     /* Função chamada quando é clicado botão de registar no ecrã principal. */
@@ -243,7 +267,6 @@ $(document).ready(function() {
     /* Verificar se a palavra-passe e a sua confirmação correspondem. */
     $("input#def-pword-txtbx, input#def-cpword-txtbx, input#screen2-def-pword-txtbx, input#screen2-def-cpword-txtbx").keyup(function () {
         if ($("input#def-pword-txtbx").val() === $("input#def-cpword-txtbx").val() ||
-                $("input#def-pword-txtbx").val() === "" ||
                 $("input#def-cpword-txtbx").val() === "")
             $("#def-cpword-diff, #screen2-def-cpword-diff").hide();
         else
@@ -285,6 +308,9 @@ $(document).ready(function() {
         $("#number-pad").hide();
     });
 
+    /*$("*").not("input[type=text], input[type=password], #keyboard, #number-pad").mousedown(function () {
+        $("#keyboard, #number-pad").hide();
+    });
     /*********************************** SEGUNDA JANELA ***********************************/
     prepareScreen2();
 

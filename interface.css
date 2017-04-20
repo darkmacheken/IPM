@@ -1,3 +1,11 @@
+a {
+    font-size: 18px;
+}
+
+a:visited {
+    color: blue;
+}
+
 /* Todas as caixas da interface */
 .box {
     border: 3px solid black;
@@ -591,7 +599,7 @@
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-#confirmYesbtn {
+.confirmYesbtn {
     position: absolute;
     left:90px;
     bottom: 25px;
@@ -610,7 +618,7 @@
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-#confirmNobtn {
+.confirmNobtn {
     position: absolute;
     right:90px;
     bottom: 25px;
@@ -642,7 +650,7 @@
 
 }
 
-#confirmOkbtn {
+.confirmOkbtn {
     position: absolute;
     left:220px;
     bottom: 5px;
@@ -659,4 +667,26 @@
     color: white;
     border: none;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#recover-password-box {
+    position: absolute;
+    top: 250px;
+    left: 450px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: inherit;
+    width: 600px;
+    height: 200px;
+    padding:10px;
+
+}
+
+#recover-tel-numbx {
+     position: absolute;
+    top: 60px;
+    left: 230px;
+    width: 150px;
+
+
 }

@@ -82,7 +82,7 @@
 
 /* Janela de entrar */
 #login-window {
-    height: 25em;;
+    height: 26em;;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -242,7 +242,7 @@ label.btn {
   background-repeat: no-repeat;
   background-size: 365px 220px;
   border: none;
-  z-index: 3;
+  z-index: 30;
 }
 #number-pad{
   position: absolute;
@@ -254,5 +254,5 @@ label.btn {
   background-repeat: no-repeat;
   background-size: 365px 220px;
   border: none;
-  z-index:3;
+  z-index:30;
 }

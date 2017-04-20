@@ -46,17 +46,10 @@ function updateTimer(timeleft) {
 
 function updateLoginData() {
     $(".logged-uname").text(getUname());
-    if (contas[loggedIn]._nif === "")
-        $(".logged-nif").addClass("attentionText").text("Não fornecido.");
-    else
-        $(".logged-nif").text(getNif());
-    $(".logged-tel").text(getTel());
 }
 
 function deleteLoginData() {
-    $("#logged-uname").text("");
-    $("#logged-nif").removeClass().text("");
-    $("#logged-tel").text("");
+    $(".logged-uname").text("");
 }
 
 function closeDefs() {
@@ -70,6 +63,7 @@ function closeDefs() {
 
 function defsChanged() {
     return $("input#def-pword-txtbx").val() !== "" ||
+            $("input#def-cpword-txtbx").val() !== "" ||
             $("input#def-nif-numbx").val() !== getNif() ||
             $("input#def-tel-numbx").val() !== getTel();
 }

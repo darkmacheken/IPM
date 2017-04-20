@@ -114,6 +114,12 @@ function getOrderPrice(order) {
     return price;
 }
 
+function cellNumExists(cell) {
+    for (var uname in contas) {
+        ;//FAZER
+    }
+}
+
 function deleteFromHistory(id) {
     getHistory().splice(id, 1);
 }
