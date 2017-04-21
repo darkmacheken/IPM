@@ -38,6 +38,13 @@ var contas = {
                 ]
             }
         ]
+    },
+    "enrabadelas69" : {
+        _uname: "enrabadelas69",
+        _pword: "soubelo",
+        _nif: "",
+        _tel: "9677tiratirametemete",
+        _history: []
     }
 };
 
