@@ -62,13 +62,16 @@ function closeDefs() {
 }
 
 function defsChanged() {
-    return $("input#def-pword-txtbx").val() !== "" ||
+    return $("input#def-uname-txtbx").val() !== getUname() ||
+            $("input#def-pword-txtbx").val() !== "" ||
             $("input#def-cpword-txtbx").val() !== "" ||
             $("input#def-nif-numbx").val() !== getNif() ||
             $("input#def-tel-numbx").val() !== getTel();
 }
 
 function saveDefs() {
+    if ($("input#def-uname-txtbx").val() !== getUname())
+        setUname($("input#def-uname-txtbx").val());
     if ($("input#def-pword-txtbx").val() !== "")
         setPword($("input#def-pword-txtbx").val());
     setNif($("input#def-nif-numbx").val());

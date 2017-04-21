@@ -122,7 +122,7 @@ $(document).ready(function() {
             niff = "<span class=\"attentionText\">Não fornecido.</span>"
 
         //confirmYesNo("Tem a certeza que pretende criar uma conta com os seguintes dados?<br /><ul><li>Username: " + uname + "</li><li>NIF: " + niff + "</li><li>Telemóvel: " + tel + "</li></ul>",
-        confirmYesNo("Tem a certeza que pretende criar uma conta com os dados inseridos? Por favor verifique.",
+        confirmYesNo("Tem a certeza que pretende criar uma conta com os dados inseridos?",
         function () {
             createAccount(uname, pword, nif, tel);
             closeRegistarWindow();
@@ -203,6 +203,7 @@ $(document).ready(function() {
         $("#def-uname-txtbx, #screen2-def-uname-txtbx").val(getUname());
         $("#def-nif-numbx, #screen2-def-nif-numbx").val(getNif());
         $("#def-tel-numbx, #screen2-def-tel-numbx").val(getTel());
+        $("#def-uname-exists, #screen2-def-uname-exists").hide();
         $("#def-cpword-diff, #screen2-def-cpword-diff").hide();
         $("#boxcontautilizadorlogged").hide();
         $("#DefinicoesConta, #screen2-definicoesConta").show();
@@ -231,6 +232,12 @@ $(document).ready(function() {
     });
 
     $("#boxDefinicoesGuardarbtn, #screen2-boxDefinicoesGuardarbtn").click(function () {
+        /* Assegurar-se que o username, se alterado, nao existe */
+        if (existsUser($.trim($("#def-uname-txtbx").val()))) {
+            confirmOk("O nome de utilizador inserido já existe. Por favor escolha outro.");
+            return;
+        }
+
         /* Assegurar-se que o NIF, se fornecido, tem 9 numeros */
         if (!checkNIF("def-form")) {
             confirmOk("Por favor verifique se introduziu corretamente o seu Número de Contribuinte (NIF).");
@@ -264,6 +271,14 @@ $(document).ready(function() {
     $("#screen2-def-cpword-txtbx").keyup(function () { $("#def-cpword-txtbx").val($(this).val()); });
     $("#screen2-def-nif-numbx").keyup(function () { $("#def-nif-numbx").val($(this).val()); });
     $("#screen2-def-tel-numbx").keyup(function () { $("#def-tel-numbx").val($(this).val()); });
+
+    /* Verificar se o nome de utilizador já existe. */
+    $("input#def-uname-txtbx, input#screen2-def-uname-txtbx").keyup(function () {
+        if (existsUser($.trim($("#def-uname-txtbx").val())))
+            $("#def-uname-exists, #screen2-uname-exists").show();
+        else
+            $("#def-uname-exists, #screen2-uname-exists").hide();
+    });
 
     /* Verificar se a palavra-passe e a sua confirmação correspondem. */
     $("input#def-pword-txtbx, input#def-cpword-txtbx, input#screen2-def-pword-txtbx, input#screen2-def-cpword-txtbx").keyup(function () {

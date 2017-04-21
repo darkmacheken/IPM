@@ -52,7 +52,7 @@ function isLoginValid(uname, pword) {
 }
 
 function existsUser(uname) {
-    return contas[uname] !== undefined;
+    return uname !== loggedIn && contas[uname] !== undefined;
 }
 
 function createAccount(uname, pword, nif, tel) {
@@ -68,6 +68,13 @@ function createAccount(uname, pword, nif, tel) {
 
 function getUname() {
     return contas[loggedIn]._uname;
+}
+
+function setUname(uname) {
+    contas[loggedIn]._uname = uname;
+    contas[uname] = contas[loggedIn];
+    delete contas[loggedIn];
+    loggedIn = uname;
 }
 
 function setPword(pword) {
@@ -138,7 +145,7 @@ function login(uname) {
 }
 
 function logout() {
-    loggedIn = null;
+    loggedIn = "";
 
     /* Mostrar caixa de utilizador autenticado: */
     $("#boxcontautilizador").show();
