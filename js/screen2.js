@@ -144,8 +144,7 @@ function showCurrentOrder() {
         $("#Confirmarbtn .disabler").hide();
 
     $(".deleteBox").click(function () {
-        currentOrder.splice(getIndexNumber(this), 1);
-        showCurrentOrder();
+        deleteFromOrder(getIndexNumber(this));
     });
 
     $(".arrow-up").click(function () {
@@ -155,11 +154,13 @@ function showCurrentOrder() {
 
     $(".arrow-down").click(function () {
         var id = getIndexNumber(this);
-        if (currentOrder[id]._quantity > 1)
+        if (currentOrder[id]._quantity > 1) {
             currentOrder[id]._quantity--;
-        else
-            currentOrder.splice(id, 1);
-        showCurrentOrder();
+            showCurrentOrder();
+        }
+        else {
+            deleteFromOrder(id);
+        }
     });
 }
 
@@ -171,6 +172,13 @@ function addFoodToOrder(food) {
         _ingredients: food._ingredients
     });
     showCurrentOrder();
+}
+
+function deleteFromOrder(foodId) {
+    confirmYesNo("Tem a certeza que pretende eliminar \"" + currentOrder[foodId]._name + "\" do seu pedido?", function () {
+        currentOrder.splice(foodId, 1);
+        showCurrentOrder();
+    });
 }
 
 function getIndexNumber(obj) {
