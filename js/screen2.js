@@ -165,6 +165,14 @@ function showCurrentOrder() {
 }
 
 function addFoodToOrder(food) {
+    for (var i = 0; i < currentOrder.length; i++) {
+        if (currentOrder[i]._name === food._name &&
+            currentOrder[i]._ingredients.length === food._ingredients.length) {
+                currentOrder[i]._quantity++;
+                showCurrentOrder();
+                return;
+            }
+    }
     currentOrder.push({
         _name: food._name,
         _price: food._price,
