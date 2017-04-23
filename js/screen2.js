@@ -28,6 +28,13 @@ function prepareScreen2() {
             confirmYesNo("Tem a certeza que pretende sair?<br />O seu pedido será eliminado.", exitScreen2);
     });
 
+    $("#Confirmarbtn").click(function () {
+        if (currentOrder.length === 0)
+            return;
+
+        confirmYesNo("Tem a certeza que pretende fazer o pedido?", exitScreen2)
+    });
+
     /**** Menu lateral esquerdo ****/
     $(".menuEmenta").click(function () {
         /* Selecionar botao do menu clicado */
@@ -130,6 +137,11 @@ function showCurrentOrder() {
     }
     $("#boxCompras ul").html(orderHtml);
     $("#totalBox span").text(formatPrice(total));
+
+    if (currentOrder.length === 0)
+        $("#Confirmarbtn .disabler").show();
+    else
+        $("#Confirmarbtn .disabler").hide();
 
     $(".deleteBox").click(function () {
         currentOrder.splice(getIndexNumber(this), 1);
