@@ -231,6 +231,7 @@
     background-color: #B22222; /* red */
     color: white;
 }
+
 #totalBox {
     position: absolute;
     bottom: 0px;
@@ -243,6 +244,11 @@
     font-size: 20px;
     padding: 1%;
     text-align: left;
+}
+
+#totalBox span {
+    position: absolute;
+    right: 5px;
 }
 
 #menuPrincipalbtn {

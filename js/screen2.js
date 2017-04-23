@@ -16,20 +16,16 @@ function prepareScreen2() {
         $("#" + currentOrderSelected).addClass("selected");
 
         showFoodItems();
+        showCurrentOrder();
 
         $("#second-screen").show();
     });
 
     $("#menuPrincipalbtn").click(function () {
-        confirmYesNo("Tem a certeza que pretende sair?<br />O seu pedido será eliminado.", function () {
-            closeHistorico();
-            closeDefs();
-            currentOrder = [];
-
-            $("#second-screen").hide();
-            $("#" + currentMenuSelected).removeClass("selected");
-            $("#" + currentOrderSelected).removeClass("selected");
-        });
+        if (currentOrder.length === 0)
+            exitScreen2();
+        else
+            confirmYesNo("Tem a certeza que pretende sair?<br />O seu pedido será eliminado.", exitScreen2);
     });
 
     /**** Menu lateral esquerdo ****/
@@ -56,7 +52,15 @@ function prepareScreen2() {
 
 }
 
+function exitScreen2() {
+    closeHistorico();
+    closeDefs();
+    currentOrder = [];
 
+    $("#second-screen").hide();
+    $("#" + currentMenuSelected).removeClass("selected");
+    $("#" + currentOrderSelected).removeClass("selected");
+}
 
 function showFoodItems() {
     /* Ordenação dos items */
@@ -92,7 +96,9 @@ function showFoodItems() {
     /* Mostrar items */
     var boxContent = "";
     for (var i = 0; i < FOOD_ITEMS[currentMenuSelected].length; i++) {
-        boxContent += "<li class=\"box opcao\"><div class=\"titulo\">";
+        boxContent += "<li class=\"box btn opcao\" id=\"food-op-";
+        boxContent += String(i + 1);
+        boxContent += "-btn\"><div class=\"titulo\">";
         boxContent += FOOD_ITEMS[currentMenuSelected][i]._name;
         boxContent += "</div><div class=\"descricao\">";
         boxContent += FOOD_ITEMS[currentMenuSelected][i]._desc;
@@ -101,4 +107,66 @@ function showFoodItems() {
         boxContent += "</div><div class=\"box btn info\">+ informações</div></li>";
     }
     $("#food-options").html(boxContent);
+    $(".opcao").click(function () {
+        addFoodToOrder(FOOD_ITEMS[currentMenuSelected][getIndexNumber(this)]);
+    });
+}
+
+function showCurrentOrder() {
+    var orderHtml = "";
+    var total = 0;
+    for (var i = 0; i < currentOrder.length; i++) {
+        var price = currentOrder[i]._price * currentOrder[i]._quantity;
+        orderHtml += "<li class=\"box\" id=\"current-order-";
+        orderHtml += String(i + 1);
+        orderHtml += "\"><div class=\"box btn editBox\"></div><div class=\"tituloCompra\">";
+        orderHtml += currentOrder[i]._name;
+        orderHtml += "</div><input type=\"text\" class=\"qtd\" value=\"";
+        orderHtml += currentOrder[i]._quantity;
+        orderHtml += "\" disabled>\n<br />\n<div class=\"btn arrow-up\"></div><div class=\"btn arrow-down\"></div><div class=\"precoCompra\">";
+        orderHtml += formatPrice(price);
+        orderHtml += "</div><div class=\"box btn deleteBox\">X</div></li>";
+        total += price;
+    }
+    $("#boxCompras ul").html(orderHtml);
+    $("#totalBox span").text(formatPrice(total));
+
+    $(".deleteBox").click(function () {
+        currentOrder.splice(getIndexNumber(this), 1);
+        showCurrentOrder();
+    });
+
+    $(".arrow-up").click(function () {
+        currentOrder[getIndexNumber(this)]._quantity++;
+        showCurrentOrder();
+    });
+
+    $(".arrow-down").click(function () {
+        var id = getIndexNumber(this);
+        if (currentOrder[id]._quantity > 1)
+            currentOrder[id]._quantity--;
+        else
+            currentOrder.splice(id, 1);
+        showCurrentOrder();
+    });
+}
+
+function addFoodToOrder(food) {
+    currentOrder.push({
+        _name: food._name,
+        _price: food._price,
+        _quantity: 1,
+        _ingredients: food._ingredients
+    });
+    showCurrentOrder();
+}
+
+function getIndexNumber(obj) {
+    if ($.contains($("#food-options")[0], obj)) {
+        var id = $(obj).attr("id");
+        return parseInt(id.substring(8, id.length - 4)) - 1;
+    }
+    if ($.contains($("#boxCompras")[0], obj)) {
+        return parseInt($(obj).parent().attr("id").substring(14)) - 1;
+    }
 }

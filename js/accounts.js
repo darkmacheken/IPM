@@ -31,7 +31,7 @@ var contas = {
                 _foods: [
                     {
                         _name: "Salada de Polvo",
-                        _price: 800,
+                        _price: 400,
                         _quantity: 2,
                         _ingredients: ["Cebola", "Alho"]
                     }
@@ -124,7 +124,7 @@ function getOrderPrice(order) {
     var price = 0;
     var orderFoods = getOrderFoods(order);
     for (var i = 0; i < orderFoods.length; i++)
-        price += orderFoods[i]._price;
+        price += orderFoods[i]._price * orderFoods[i]._quantity;
     return price;
 }
 
