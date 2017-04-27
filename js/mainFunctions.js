@@ -84,6 +84,7 @@ function closeHistorico() {
     if ($("#Historico").is(":visible")) {
         $("#rightBoxTitle").text("CONTA DE UTILIZADOR");
         $("#Historico, #screen2-historico").hide();
+        $(".boxHistoricoRepetirPedido").hide();
         $("#boxcontautilizadorlogged").show();
     }
 }
@@ -97,7 +98,7 @@ function refreshHistorico() {
         boxContent += String(i);
         boxContent += "\"><div class=\"box btn boxHistoricoPedidobtn\">";
         boxContent += orderDate.getDate() + "/" + orderDate.getMonth() + "/" + orderDate.getFullYear() + " " + orderDate.getHours() + ":" + orderDate.getMinutes();
-        boxContent += "<br/>Pedido ";
+        boxContent += "<br/>Ver pedido ";
         boxContent += getOrderNumber(history[i]);
         boxContent += "</div><div class=\"box btn boxHistoricoRepetirPedidobtn\">Repetir Pedido</div><div class=\"box btn boxHistoricoXbtn Xbtn\">X</div></li>";
     }
