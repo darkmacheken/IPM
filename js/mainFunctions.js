@@ -109,8 +109,23 @@ function refreshHistorico() {
         $(".hist-total").text("Total: " + formatPrice(getOrderPrice(order)));
         var histOrderTxt = "";
         var orderFoods = getOrderFoods(order);
-        for (var i = 0; i < orderFoods.length; i++)
-            histOrderTxt += orderFoods[i]._quantity + "x " + orderFoods[i]._name + "<br />\n";
+        for (var i = 0; i < orderFoods.length; i++) {
+            histOrderTxt += orderFoods[i]._quantity + "x " + orderFoods[i]._name;
+            let ofilen = orderFoods[i]._ingredients.length;
+            if (ofilen !== 0) {
+                histOrderTxt += " s/ ";
+                for (var j = 0; j < ofilen; j++) {
+                    histOrderTxt += orderFoods[i]._ingredients[j];
+                    if (j === ofilen - 1)
+                        histOrderTxt += ".";
+                    else if (j === ofilen - 2)
+                        histOrderTxt += " e ";
+                    else
+                        histOrderTxt += ", ";
+                }
+            }
+            histOrderTxt += "<br />\n";
+        }
         $(".hist-order").html(histOrderTxt);
         $(".boxHistoricoRepetirPedido").show();
     });

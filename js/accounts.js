@@ -15,13 +15,13 @@ var contas = {
                         _name: "Salada de Polvo",
                         _price: 400,
                         _quantity: 1,
-                        _ingredients: ["Cebola", "Alho", "Pimentos"]
+                        _ingredients: []
                     },
                     {
                         _name: "Bitoque de Porco",
                         _price: 600,
                         _quantity: 1,
-                        _ingredients: ["Arroz", "Ovo", "Batatas fritas"]
+                        _ingredients: ["Salada"]
                     }
                 ]
             },
@@ -33,7 +33,7 @@ var contas = {
                         _name: "Salada de Polvo",
                         _price: 400,
                         _quantity: 2,
-                        _ingredients: ["Cebola", "Alho"]
+                        _ingredients: ["Pimentos"]
                     }
                 ]
             }
