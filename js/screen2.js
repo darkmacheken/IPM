@@ -88,7 +88,7 @@ function showFoodItems() {
         case "ord-classif":
             FOOD_ITEMS[currentMenuSelected].sort(function (a, b) {
                 if (a._classif !== b._classif)
-                    return a._classif - b._classif;
+                    return b._classif - a._classif; // decrescente
                 else
                     return a._name > b._name ? 1 : -1;
             });
@@ -99,6 +99,11 @@ function showFoodItems() {
                     return a._ctime - b._ctime;
                 else
                     return a._name > b._name ? 1 : -1;
+            });
+            break;
+        case "ord-alfa":
+            FOOD_ITEMS[currentMenuSelected].sort(function (a, b) {
+                return a._name > b._name ? 1 : -1;
             });
             break;
         default:
