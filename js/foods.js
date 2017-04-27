@@ -8,7 +8,7 @@ var FOOD_ITEMS = {
             _ctime: 2,
             _ingredients: ["Manteiga de Alho"] },
 
-        { _name: "Camarões",
+        { _name: "Camarão",
             _price: 300,
             _desc: "Prato de camarões temperados e molho cocktail.",
             _img: "images/foods/camaroes.jpg",
