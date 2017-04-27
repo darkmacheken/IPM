@@ -57,6 +57,11 @@ function prepareScreen2() {
         showFoodItems();
     });
 
+    /**** Informacoes da comida ****/
+    $("#moreInfo .Xbtn").click(function () {
+        closeWindow("moreInfo");
+    });
+
 }
 
 function exitScreen2() {
@@ -117,6 +122,10 @@ function showFoodItems() {
     $(".opcao").click(function () {
         addFoodToOrder(FOOD_ITEMS[currentMenuSelected][getIndexNumber(this)]);
     });
+    $(".info").click(function (e) {
+        e.stopPropagation();
+        showInfo(FOOD_ITEMS[currentMenuSelected][getIndexNumber(this)]);
+    });
 }
 
 function showCurrentOrder() {
@@ -153,7 +162,7 @@ function showCurrentOrder() {
     });
 
     $(".arrow-down").click(function () {
-        var id = getIndexNumber(this);
+        let id = getIndexNumber(this);
         if (currentOrder[id]._quantity > 1) {
             currentOrder[id]._quantity--;
             showCurrentOrder();
@@ -165,14 +174,14 @@ function showCurrentOrder() {
 }
 
 function addFoodToOrder(food) {
-    for (var i = 0; i < currentOrder.length; i++) {
+    /*for (var i = 0; i < currentOrder.length; i++) {
         if (currentOrder[i]._name === food._name &&
             currentOrder[i]._ingredients.length === food._ingredients.length) {
                 currentOrder[i]._quantity++;
                 showCurrentOrder();
                 return;
             }
-    }
+    }*/
     currentOrder.push({
         _name: food._name,
         _price: food._price,
@@ -180,6 +189,43 @@ function addFoodToOrder(food) {
         _ingredients: food._ingredients
     });
     showCurrentOrder();
+}
+
+function showInfo(food) {
+    $("#moreInfo .foodImage").css("background-image", "url(" + food._img + ")");
+    $("#moreInfo .foodTitle").text(food._name);
+    let bgPos = "46% ";
+    switch (food._classif) {
+        case 0:
+            bgPos += "70%";
+            break;
+        case 1:
+            bgPos += "60%";
+            break;
+        case 2:
+            bgPos += "50%";
+            break;
+        case 3:
+            bgPos += "43%";
+            break;
+        case 4:
+            bgPos += "30%"
+            break;
+        case 5:
+            bgPos += "17%"
+            break;
+        default:
+            // Não pode acontecer.
+            ;
+    }
+    $("#moreInfo .classificacao").css("background-position", bgPos);
+    $("#moreInfo .precoTitle span").text(formatPrice(food._price));
+    $("#moreInfo #moreInfo-desc").text(food._desc);
+    let ingred = "";
+    for (var i = 0; i < food._ingredients.length; i++)
+        ingred += food._ingredients[i] + ", ";
+    $("#moreInfo #moreInfo-ingredients").text(ingred.substring(0, ingred.length - 2) + ".");
+    openWindow("moreInfo");
 }
 
 function deleteFromOrder(foodId) {
@@ -192,6 +238,8 @@ function deleteFromOrder(foodId) {
 function getIndexNumber(obj) {
     if ($.contains($("#food-options")[0], obj)) {
         var id = $(obj).attr("id");
+        if (typeof id === "undefined")
+            id = $(obj).parent().attr("id");
         return parseInt(id.substring(8, id.length - 4)) - 1;
     }
     if ($.contains($("#boxCompras")[0], obj)) {
