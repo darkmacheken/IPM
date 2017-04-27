@@ -708,11 +708,15 @@
 }
 
 .foodImage{
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 100px;
-  height: 100px;
+  padding: inherit;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 150px;
+      height: 150px;
+      background-repeat: no-repeat;
+      background-size: 150px 150px;
+      background-position: 100% 100%;
 }
 
 .foodTitle{
@@ -758,4 +762,5 @@
       left: 20px;
       top: 180px;
       font-size: 20px;
+      text-align: left;
 }
