@@ -149,6 +149,7 @@
     position: absolute;
     top: 0px;
     left: 0px;
+    width: 300px;
     bottom: 30px;
     margin: 0px;
     padding: 0px;
@@ -179,7 +180,8 @@
 }
 
 .tituloCompra {
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: bold;
     position: absolute;
     top: 0px;
     left: 105px;
@@ -199,7 +201,7 @@
     height: 0;
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
-    border-bottom: 12px solid gray;
+    border-bottom: 12px solid black;
 }
 .arrow-down {
     position: absolute;
@@ -209,7 +211,7 @@
     height: 0;
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
-    border-top: 12px solid gray;
+    border-top: 12px solid black;
 }
 .precoCompra {
     font-size: 16px;
@@ -497,7 +499,7 @@
 }
 
 #screen2-boxHistorico .boxHistoricoRepetirPedidobtn {
-    font-size: 15px;
+    font-size: 14px;
     padding: 5px;
     width: 106px;
     height: 32px;
@@ -515,7 +517,7 @@
     background-color: #4CAF50; /* Green */
     color: white;
     background-image: url("images/icons/buttons/restart-white.png");
-    background-position: 2% 50%;
+    background-position: 4% 50%;
     background-repeat: no-repeat;
     background-size: 13px 13px;
 }
@@ -660,43 +662,100 @@
 }
 #screen2-historicobtn{
     position: absolute;
-    top: 0px;
-    right:2px;
+    bottom: 5px;
+    left: 40px;
     padding: 0%;
     font-size: 11px;
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     border: none;
     background-image: url("images/icons/account/history-black.png");
     background-repeat: no-repeat;
-    background-size: 25px 25px;
+    background-size: 40px 40px;
     background-color: transparent;
 }
 #screen2-definicoesContabtn{
     position: absolute;
-    top: 25px;
-    right:2px;
+    bottom: 5px;
+    left: 125px;
     padding: 0%;
     font-size: 11px;
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     border: none;
     background-image: url("images/icons/account/definicoes-black.png");
     background-repeat: no-repeat;
-    background-size: 25px 25px;
+    background-size: 40px 40px;
     background-color: transparent;
 }
 #screen2-sairSessaobtn{
     position: absolute;
-    bottom: 2px;
-    right:2px;
+    bottom: 5px;
+    left: 225px;
     padding: 0%;
     font-size: 11px;
-    width: 20px;
-    height: 20px;
+    width: 35px;
+    height: 35px;
     border: none;
     background-image: url("images/icons/account/logout-black.png");
     background-repeat: no-repeat;
-    background-size: 20px 20px;
+    background-size: 35px 35px;
     background-color: transparent;
+}
+
+.moreInfo{
+    height: 350px;
+}
+
+.foodImage{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+}
+
+.foodTitle{
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  left: 220px;
+  top: 20px;
+}
+
+.classificacaoTitle{
+  position: absolute;
+  left: 220px;
+  top: 80px;
+  font-size: 20px;
+}
+
+.classificacao{
+    padding: inherit;
+    position: absolute;
+    height: 24px;
+    width: 220px;
+    top: 80px;
+    left: 340px;
+    border: none;
+    background-color: transparent;
+    background-image: url("images/rate/stars.png");
+    background-repeat: no-repeat;
+    background-size: 333px 333px;
+    background-color: transparent;
+    background-position: 46% 43%;
+}
+
+.precoTitle{
+  position: absolute;
+  left: 220px;
+  top: 130px;
+  font-size: 20px;
+}
+
+.descricaoTitle{
+  position: absolute;
+      left: 20px;
+      top: 180px;
+      font-size: 20px;
 }

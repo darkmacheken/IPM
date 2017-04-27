@@ -26,7 +26,7 @@ var contas = {
                 ]
             },
             { /* pedido 2 */
-                _date: new Date(2017, 4, 12, 13, 8),
+                _date: new Date(2017, 4, 12, 13, 38),
                 _number: 2,
                 _foods: [
                     {
@@ -39,13 +39,6 @@ var contas = {
             }
         ]
     },
-    "enrabadelas69" : {
-        _uname: "enrabadelas69",
-        _pword: "soubelo",
-        _nif: "",
-        _tel: "9677tiratirametemete",
-        _history: []
-    }
 };
 
 function isLoginValid(uname, pword) {
