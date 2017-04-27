@@ -134,7 +134,7 @@ h3 {
     top: 0px;
     left: 0px;
     opacity: 0.5;
-    z-index: 4;
+    z-index: 100;
 }
 
 /* Bloqueador de fundo enquanto a página carrega */

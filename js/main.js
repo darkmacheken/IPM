@@ -237,6 +237,10 @@ $(document).ready(function() {
             confirmOk("O nome de utilizador inserido já existe. Por favor escolha outro.");
             return;
         }
+        else if ($.trim($("#def-uname-txtbx").val()).length === 0) {
+            confirmOk("Por favor insira um nome de utilizador válido.");
+            return;
+        }
 
         /* Assegurar-se que o NIF, se fornecido, tem 9 numeros */
         if (!checkNIF("def-form")) {
