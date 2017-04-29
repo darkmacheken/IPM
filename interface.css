@@ -20,7 +20,7 @@ a:visited {
     background-color: white;
 }
 
-.background{
+.background {
   background-image: url("images/background/back2.png");
   background-repeat: repeat-x repeat-y;
 }
@@ -55,7 +55,7 @@ a:visited {
     border-top:none;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-.Xbtn{
+.Xbtn {
   background-color: #B22222; /* red */
   color: white;
 }
@@ -107,7 +107,7 @@ a:visited {
     background-size: 50px 50px;
 }
 
-#callwaitbtn{
+#callwaitbtn {
   width: 250px;
   height: 70px;
   font-size: 16px;
@@ -121,7 +121,7 @@ a:visited {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-#cancelcallbtn{
+#cancelcallbtn {
   padding: inherit;
   font-size: 16px;
   padding: 2%;
