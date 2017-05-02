@@ -11,15 +11,33 @@
 
 #order-again-btn {
   bottom: -30px;
-  left: 2px;
+  left: 1px;
   background-color: #009ee1;
   color: white;
 }
 
 #box-order-again {
   position: absolute;
+  border: none;
+  width: 226px;
+  height: 324px;
+  left: 1px;
 }
 
-.menu-order-again {
+#order-again-title {
   position: absolute;
+  left: 0px;
+  top: 0px;
+  box-shadow: none;
+}
+
+
+
+.menu-order-again {
+  position: relative;
+  padding: 0px;
+  height: 50px;
+  width: 250px;
+  border-bottom: none;
+  font-size: 24px;
 }
