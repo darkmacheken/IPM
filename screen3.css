@@ -14,6 +14,10 @@
   left: 1px;
   background-color: #009ee1;
   color: white;
+  background-image: url("images/icons/buttons/slideup-white.png");
+  background-position: 7% 50%;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
 }
 
 #box-order-again {
