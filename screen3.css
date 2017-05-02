@@ -9,9 +9,17 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-#order-food-again-btn {
+#order-again-btn {
   bottom: -30px;
   left: 2px;
   background-color: #009ee1;
   color: white;
+}
+
+#box-order-again {
+  position: absolute;
+}
+
+.menu-order-again {
+  position: absolute;
 }

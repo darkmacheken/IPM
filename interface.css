@@ -34,15 +34,20 @@ a:visited {
 .title { /* game music contautilizador */
     background-color: #363636;
     color: white;
-    border: 3px solid black;
     padding: 15px 32px;
     padding-top: 30px;
     text-decoration: none;
     display: inline-block;
-    font-size: 30px;
     font-weight: bold;
     float: left;
     alignment-adjust: central;
+    height: 10px;
+    width: 250px;
+    font-size: 15px;
+    padding: 10px 20px;
+    line-height: 10px;
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .boxright {
@@ -258,7 +263,9 @@ a:visited {
     width: 250px;
     font-size: 15px;
     padding: 10px 20px;
-    border-top:none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
     font-size: 20px;
     position: relative;
     left: 0em;
@@ -271,6 +278,9 @@ a:visited {
     width: 250px;
     font-size: 20px;
     border-top:none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
     position: relative;
     bottom: -10.5em;
     padding: 10px 20px;
