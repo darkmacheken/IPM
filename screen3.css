@@ -1,0 +1,17 @@
+.slideup {
+  height: 20px;
+  width: 250px;
+  font-size: 20px;
+  border: none;
+  position: absolute;
+  padding: 10px 20px;
+  line-height: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#order-food-again-btn {
+  bottom: -30px;
+  left: 2px;
+  background-color: #009ee1;
+  color: white;
+}
