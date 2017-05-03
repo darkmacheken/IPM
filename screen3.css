@@ -113,6 +113,17 @@
   text-align: left;
 }
 
+.ordermenu{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: inherit;
+  width: 290px;
+  height: 369px;
+  border: none;
+  overflow-y: scroll;
+}
+
 #pay-btn {
   position: absolute;
   top: 90px;
