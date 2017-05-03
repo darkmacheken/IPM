@@ -121,6 +121,28 @@
   width: 290px;
   height: 369px;
   border: none;
+}
+
+#order-menu-back{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: inherit;
+  height: 45px;
+  width: 290px;
+  border: none;
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+#order-menu-div{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: inherit;
+  height: 324px;
+  width: 290px;
+  border: none;
   overflow-y: scroll;
 }
 
