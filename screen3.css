@@ -10,8 +10,9 @@
 }
 
 #order-again-btn {
-  bottom: -30px;
-  left: 1px;
+  position: absolute;
+  top: 530px;
+  left: 10px;
   background-color: #009ee1;
   color: white;
   background-image: url("images/icons/buttons/slideup-white.png");
@@ -21,8 +22,9 @@
 }
 
 #order-again-hide-btn {
-  bottom: -30px;
-  left: 1px;
+  position: absolute;
+  top: 530px;
+  left: 10px;
   background-color: #009ee1;
   color: white;
   background-image: url("images/icons/buttons/hide-white.png");
@@ -32,27 +34,36 @@
 }
 
 #box-order-again {
+  padding: inherit;
   position: absolute;
+  top: 161px;
+  left: 10px;
   border: none;
-  width: 226px;
-  height: 326px;
-  left: 1px;
+  width: 290px;
+  height: 369px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #order-again-title {
   position: absolute;
   left: 0px;
-  top: 0px;
+  top: -30px;
   box-shadow: none;
 }
 
 .menu-order-again {
   position: relative;
-  padding: 0px;
-  height: 50px;
-  width: 250px;
-  border-bottom: none;
+  padding: inherit;
+  height: 60px;
+  width: 290px;
+  border: none;
   font-size: 24px;
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid #4c4c4c;
+  border-bottom: 1px solid #202020;
+  line-height: 62px;
+  text-align: left;
 }
 
 #view-order-pay-box {
