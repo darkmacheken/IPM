@@ -20,13 +20,26 @@
   background-size: 30px 30px;
 }
 
+#order-again-hide-btn {
+  bottom: -30px;
+  left: 1px;
+  background-color: #009ee1;
+  color: white;
+  background-image: url("images/icons/buttons/hide-white.png");
+  background-position: 7% 60%;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+}
+
 #box-order-again {
   position: absolute;
   border: none;
   width: 226px;
-  height: 324px;
+  height: 326px;
   left: 1px;
 }
+
+
 
 #order-again-title {
   position: absolute;
