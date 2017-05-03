@@ -132,6 +132,7 @@
   border: none;
   background-color: #4CAF50; /* Green */
   color: white;
+  border-bottom: 1px solid black;
 }
 
 #box-order-menu ul{
@@ -157,7 +158,7 @@
 }
 
 .titulo3ecran{
-    font-size: 24px;
+    font-size: 21px;
     position: absolute;
     top: 0px;
     left: 5px;
