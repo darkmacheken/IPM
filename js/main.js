@@ -334,7 +334,10 @@ $(document).ready(function() {
         $("#keyboard, #number-pad").hide();
     });
     /*********************************** SEGUNDA JANELA ***********************************/
-    $("#orderfoodbtn").click(enterScreen2);
+    $("#orderfoodbtn").click(function () {
+        if (screen === 1)
+            enterScreen2();
+    });
     prepareScreen2();
 
     /*********************************** TERCEIRA JANELA ***********************************/

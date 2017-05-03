@@ -69,6 +69,8 @@ function exitScreen2() {
     $("#" + currentMenuSelected).removeClass("selected");
     $("#" + currentOrderSelected).removeClass("selected");
     $("#food-options").html("");
+
+    screen = 1;
 }
 
 function showFoodItems() {
@@ -153,6 +155,10 @@ function showCurrentOrder() {
         $("#Confirmarbtn .disabler").show();
     else
         $("#Confirmarbtn .disabler").hide();
+
+    $(".editBox").click(function () {
+        ;
+    });
 
     $(".deleteBox").click(function () {
         deleteFromOrder(getIndexNumber(this));
