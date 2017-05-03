@@ -71,7 +71,7 @@
   border: none;
   width: 290px;
   height: 145px;
-  top: 587px;
+  top: 583px;
   left: 1236px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
@@ -187,6 +187,39 @@
     border-top: none;
     border-right:none;
 }
+
+#order-again-items-box {
+  position: absolute;
+  padding: 0px;
+  top: 57px;
+  right: 172px;
+  height: 525px;
+  width: 300px;
+  border: none;
+}
+
+#order-again-items-box ul {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  bottom: 30px;
+  margin: 0px;
+  padding: 0px;
+  overflow-y: scroll;
+}
+
+#order-again-items-box li {
+    list-style-type: none;
+    position: relative;
+    padding: 0px;
+    height: 50px;
+    width: 286px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
 #pay-btn {
   position: absolute;
   top: 90px;
@@ -211,7 +244,7 @@
   padding: inherit;
   border: none;
   width: 290px;
-  height: 270px;
+  height: 266px;
   top: 463px;
   left: 1236px;
   font-size: 20px;
