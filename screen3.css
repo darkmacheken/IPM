@@ -68,12 +68,12 @@
 
 #view-order-pay-box {
   position: absolute;
-    padding: inherit;
-    border: none;
-    width: 290px;
-    height: 145px;
-    top: 570px;
-    left: 1236px;
+  padding: inherit;
+  border: none;
+  width: 290px;
+  height: 145px;
+  top: 587px;
+  left: 1236px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -141,4 +141,61 @@
   background-position: 15% 40%;
   background-repeat: no-repeat;
   background-size: 30px 30px;
+}
+
+#order-pay-box {
+  position: absolute;
+  padding: inherit;
+  border: none;
+  width: 290px;
+  height: 270px;
+  top: 463px;
+  left: 1236px;
+  font-size: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#order-pay-title {
+  box-shadow: none;
+}
+
+#order-pay-money-btn {
+  position: absolute;
+  left: 40px;
+  top: 80px;
+  width: 200px;
+  height:40px;
+  padding: 5px 5px;
+  font-size: 24px;
+  background-color: #009ee1;
+  color: white;
+  border: none;
+}
+
+#order-pay-creditcard-btn {
+  position: absolute;
+  left: 40px;
+  bottom: 80px;
+  width: 200px;
+  height:40px;
+  padding: 5px 5px;
+  font-size: 24px;
+  background-color: #009ee1;
+  color: white;
+  border: none;
+}
+
+#order-pay-cancel-btn {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: inherit;
+  height: 55px;
+  width: 290px;
+  font-size: 27px;
+  color: white;
+  text-align: center;
+  border: none;
+  line-height: 55px;
+  background-color: #B22222;
 }
