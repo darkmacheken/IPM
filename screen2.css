@@ -792,6 +792,7 @@
     height: 240px;
     width: 640px;
     margin: inherit;
+    font-size: 25px;
 }
 
 #editIngredients li{
@@ -799,9 +800,10 @@
   padding: inherit;
     border: none;
     position: relative;
-    height: 55px;
-    width: 320px;
-    margin: inherit;
+    height: 45px;
+    width: 210px;
+  margin: auto;
+  float: left;
 }
 #squaredThree {
   width: 20px;
