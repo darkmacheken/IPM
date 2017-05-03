@@ -150,3 +150,13 @@ var FOOD_ITEMS = {
             _ingredients: [] },
     ]
 };
+
+function getFoodByName(name) {
+    for (let menu in FOOD_ITEMS) {
+        for (let i = 0; i < FOOD_ITEMS[menu].length; i++) {
+            if (FOOD_ITEMS[menu][i]._name === name)
+                return FOOD_ITEMS[menu][i];
+        }
+    }
+    console.log("Comida \"" + name + "\" não encontrada.");
+}

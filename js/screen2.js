@@ -157,7 +157,58 @@ function showCurrentOrder() {
         $("#Confirmarbtn .disabler").hide();
 
     $(".editBox").click(function () {
-        ;
+        let food = currentOrder[getIndexNumber(this)];
+        let origFood = getFoodByName(food._name);
+        $("#editIngredients .foodImage").css("background-image", "url(" + food._img + ")");
+        $("#editIngredients .foodTitle").text(food._name);
+        let bgPos = "46% ";
+        switch (food._classif) {
+            case 0:
+                bgPos += "70%";
+                break;
+            case 1:
+                bgPos += "60%";
+                break;
+            case 2:
+                bgPos += "50%";
+                break;
+            case 3:
+                bgPos += "43%";
+                break;
+            case 4:
+                bgPos += "30%"
+                break;
+            case 5:
+                bgPos += "17%"
+                break;
+            default:
+                // Não pode acontecer.
+                ;
+        }
+        $("#editIngredients .classificacao").css("background-position", bgPos);
+        $("#editIngredients .precoTitle span").text(formatPrice(food._price));
+        $("#editIngredients #editIngredients-desc").text(food._desc);
+        //$("#editIngredients #editIngredients-ingredients").text(ingred.substring(0, ingred.length - 2) + ".");
+
+        let ingred = "";
+        for (let i = 0; i < origFood._ingredients.length; i++) {
+            ingred += "<li><input type=\"checkbox\" id=\"check-ingred-";
+            ingred += origFood._ingredients[i];
+            ingred += "\" ";
+            for (let j = 0; j < food._ingredients.length; j++) {
+                if (food._ingredients[i] === origFood._ingredients[i]) {
+                    ingred += "checked ";
+                    break;
+                }
+            }
+            ingred += "/><label class=\"textIngredient\" for=\"";
+            ingred += origFood._ingredients[i];
+            ingred += "\">";
+            ingred += origFood._ingredients[i];
+            ingred += "</label></li>";
+        }
+        $("#editIngredients ul").html(ingred);
+        openWindow("editIngredients");
     });
 
     $(".deleteBox").click(function () {
