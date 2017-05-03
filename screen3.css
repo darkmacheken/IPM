@@ -71,7 +71,7 @@
   border: none;
   width: 290px;
   height: 145px;
-  top: 583px;
+  top: 605px;
   left: 1236px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
@@ -191,10 +191,10 @@
 #order-again-items-box {
   position: absolute;
   padding: 0px;
-  top: 57px;
-  right: 172px;
-  height: 525px;
-  width: 300px;
+  top: 150px;
+  left: 1236px;
+  height: 455px;
+  width: 290px;
   border: none;
 }
 
@@ -202,8 +202,9 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 300px;
+  width: 290px;
   bottom: 30px;
+  height: 525px;
   margin: 0px;
   padding: 0px;
   overflow-y: scroll;
