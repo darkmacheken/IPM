@@ -68,11 +68,12 @@
 
 #view-order-pay-box {
   position: absolute;
-  border: none;
-  width: 226px;
-  height: 100px;
-  top: 570px;
-  right: 10px;
+    padding: inherit;
+    border: none;
+    width: 290px;
+    height: 145px;
+    top: 570px;
+    left: 1236px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -102,7 +103,7 @@
 
 #view-order-pay-box-total {
   position: absolute;
-  top: 40px;
+  top: 50px;
   left: 60px;
   width: 220px;
   height: 40px;
@@ -116,17 +117,17 @@
   position: absolute;
   top: 90px;
   left: 0px;
-  height: 35px;
-  width: 250px;
+  padding: inherit;
+  height: 55px;
+  width: 290px;
   font-size: 27px;
   color: white;
   text-align: center;
   border: none;
-  padding: 10px 20px;
-  line-height: 20px;
+  line-height: 55px;
   background-color: #4CAF50;
   background-image: url("images/icons/buttons/money-white.png");
-  background-position: 25% 30%;
+  background-position: 15% 40%;
   background-repeat: no-repeat;
   background-size: 30px 30px;
 }
