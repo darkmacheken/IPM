@@ -3,38 +3,40 @@ var sessionOrder = [];
 function prepareScreen3() {
     $("#order-again-btn").click(function () {
         $(this).hide();
+        $("#box-games").hide();
         $("#order-again-hide-btn").show();
         $("#box-order-again").show();
     });
 
     $("#order-again-hide-btn").click(function () {
         $(this).hide();
+        $("#box-games").show();
         $("#box-order-again").hide();
         $("#order-again-btn").show();
     });
 
     $("#menu-order-again-entradas").click(function () {
-        openOrderAgainMenu("menu-entradas");
+        openOrderAgainMenu("menu-entradas", "Entradas");
     });
 
     $("#menu-order-again-sopas").click(function () {
-        openOrderAgainMenu("menu-sopas");
+        openOrderAgainMenu("menu-sopas", "Sopas");
     });
 
     $("#menu-order-again-pratos").click(function () {
-        openOrderAgainMenu("menu-pratos");
+        openOrderAgainMenu("menu-pratos", "Pratos");
     });
 
     $("#menu-order-again-bebidas").click(function () {
-        openOrderAgainMenu("menu-bebidas");
+        openOrderAgainMenu("menu-bebidas", "Bebidas");
     });
 
     $("#menu-order-again-sobremesas").click(function () {
-        openOrderAgainMenu("menu-sobremesas");
+        openOrderAgainMenu("menu-sobremesas", "Sobremesas");
     });
 
     $("#menu-order-again-cafetaria").click(function () {
-        openOrderAgainMenu("menu-cafetaria");
+        openOrderAgainMenu("menu-cafetaria", "Cafetaria");
     });
 
     $("#order-menu-back").click(function () {
@@ -93,7 +95,9 @@ function totalPrice(order) {
     return price;
 }
 
-function openOrderAgainMenu(menuName) {
+function openOrderAgainMenu(menuName, menuTitle) {
+    $("#order-again-title").text(menuTitle);
+
     /* Ordenação dos items por ordem alfabetica */
     FOOD_ITEMS[menuName].sort(function (a, b) {
         return a._name > b._name ? 1 : -1;
@@ -129,4 +133,5 @@ function closeOrderAgainMenu() {
     $("#box-order-menu").hide();
     $("#order-menu-back").hide();
     $("#box-order-menu ul").html("");
+    $("#order-again-title").text("Fazer Novo Pedido");
 }
