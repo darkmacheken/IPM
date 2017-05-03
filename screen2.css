@@ -805,7 +805,7 @@
   margin: auto;
   float: left;
 }
-#squaredThree {
+#editIngredients input {
   width: 20px;
   position: absolute;
   top: 11px;

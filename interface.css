@@ -252,8 +252,9 @@ a:visited {
     width: 250px;
     font-size: 15px;
     padding: 10px 20px;
-    position: relative;
-    bottom: -14em;
+    position: absolute;
+    top: 580px;
+    left: 2px;
     line-height: 10px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
@@ -267,9 +268,9 @@ a:visited {
     border-left: none;
     border-right: none;
     font-size: 20px;
-    position: relative;
-    left: 0em;
-    bottom: -10.5em;
+    position: absolute;
+    left: 2px;
+    top: 610px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 #votemusic {
@@ -281,8 +282,9 @@ a:visited {
     border-left: none;
     border-right: none;
     border-bottom: none;
-    position: relative;
-    bottom: -10.5em;
+    position: absolute;
+    top: 673px;
+    left: 2px;
     padding: 10px 20px;
     line-height: 20px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
