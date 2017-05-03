@@ -157,6 +157,36 @@
   border-bottom: 3px solid black;
 }
 
+.titulo3ecran{
+    font-size: 24px;
+    position: absolute;
+    top: 0px;
+    left: 5px;
+}
+.descricao3ecran{
+    font-size: 12px;
+    text-align: left;
+    position: relative;
+    top: 28px;
+    left: 6px;
+    width: 180px;
+}
+.preco3ecran{
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    font-size: 24px;
+}
+.info3ecran {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 16px;
+    padding: 1%;
+    width: 100px;
+    border-top: none;
+    border-right:none;
+}
 #pay-btn {
   position: absolute;
   top: 90px;
