@@ -192,6 +192,7 @@
     top: 16px;
     width: 20px;
     height: 13px;
+    text-align: center;
 }
 .arrow-up {
     position: absolute;
@@ -233,7 +234,6 @@
     background-color: #B22222; /* red */
     color: white;
 }
-
 #totalBox {
     position: absolute;
     bottom: 0px;
@@ -704,7 +704,9 @@
 }
 
 #moreInfo{
-    height: 350px;
+  height: 250px;
+  position: absolute;
+  top: 240px;
 }
 
 .foodImage{
@@ -763,4 +765,54 @@
       top: 180px;
       font-size: 20px;
       text-align: left;
+}
+
+#editIngredientes{
+  height: 300px;
+  position: absolute;
+  top: 190px;
+}
+#ingredientsDiv{
+  padding: inherit;
+    border: none;
+    background: green;
+    position: absolute;
+    left: 0px;
+    top: 250px;
+    height: 240px;
+    width: 640px;
+}
+
+#editIngredients ul{
+  padding: inherit;
+    border: none;
+    position: absolute;
+    left: 0px;
+    top: 250px;
+    height: 240px;
+    width: 640px;
+    margin: inherit;
+}
+
+#editIngredients li{
+  list-style-type: none;
+  padding: inherit;
+    border: none;
+    position: relative;
+    height: 55px;
+    width: 320px;
+    margin: inherit;
+}
+#squaredThree {
+  width: 20px;
+  position: absolute;
+  top: 11px;
+  left: 30px;
+}
+#textIngredient{
+  text-align: left;
+  position: absolute;
+  left: 70px;
+  top: 11px;
+  font-size: 25px;
 }

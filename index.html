@@ -593,45 +593,11 @@
         <div class="box" id="boxCompras">
             <ul>
                 <li class="box">
+                    <div class="box" id="opcoes-ingredientes"></div>
                     <div class="box btn editBox">
-
                     </div>
                     <div class="tituloCompra">
                         Batoque
-                    </div>
-                    <input type="text" class="qtd" disabled><br />
-                    <div class="btn arrow-up"></div>
-                    <div class="btn arrow-down"></div>
-                    <div class="precoCompra">
-                        6,00€
-                    </div>
-                    <div class="box btn deleteBox">
-                        X
-                    </div>
-                </li>
-                <li class="box">
-                    <div class="box btn editBox">
-
-                    </div>
-                    <div class="tituloCompra">
-                        Betoque
-                    </div>
-                    <input type="text" class="qtd" disabled><br />
-                    <div class="btn arrow-up"></div>
-                    <div class="btn arrow-down"></div>
-                    <div class="precoCompra">
-                        6,00€
-                    </div>
-                    <div class="box btn deleteBox">
-                        X
-                    </div>
-                </li>
-                <li class="box">
-                    <div class="box btn editBox">
-
-                    </div>
-                    <div class="tituloCompra">
-                        Bitoque
                     </div>
                     <input type="text" class="qtd" disabled><br />
                     <div class="btn arrow-up"></div>
@@ -801,6 +767,27 @@
         <b>Ingredientes:</b> <span id="moreInfo-ingredients">Arroz, Batatas Fritas, Ovo etc...</span>
 
       </div>
+
+    </div>
+    <div class="window" id="editIngredients">
+      <div class="box foodImage">  </div>
+      <div class="foodTitle">Bitoque</div>
+      <div class="classificacaoTitle">Classificação:</div>
+      <div class="box classificacao">  </div>
+      <div class="precoTitle">Preço: <span>6,00€</span></div>
+      <div class="descricaoTitle">
+        <b>Descrição:</b> <span id="moreInfo-desc">Bitoque à portuguesa com ovo escalfado</span> <br>
+        <b>Ingredientes:</b> <span id="moreInfo-ingredients">Arroz, Batatas Fritas, Ovo etc...</span>
+      </div>
+
+        <ul>
+            <li>
+                 <input type="checkbox" value="None" id="squaredThree" name="check" checked />
+                 <div id="textIngredient">Arroz</div>
+            </li>
+        </ul>
+
+      <div class="box btn submit" style="left:240px;">Guardar</div>
     </div>
     <!--######################################################################
     ############################ Terceira Janela ##############################
