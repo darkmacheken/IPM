@@ -39,16 +39,12 @@
   left: 1px;
 }
 
-
-
 #order-again-title {
   position: absolute;
   left: 0px;
   top: 0px;
   box-shadow: none;
 }
-
-
 
 .menu-order-again {
   position: relative;
@@ -57,4 +53,38 @@
   width: 250px;
   border-bottom: none;
   font-size: 24px;
+}
+
+#view-order-pay-box {
+  position: absolute;
+  border: none;
+  width: 226px;
+  height: 100px;
+  top: 570px;
+  right: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#view-order-btn {
+  top: 0px;
+  left: 0px;
+  background-color: #009ee1;
+  color: white;
+  background-image: url("images/icons/buttons/slideup-white.png");
+  background-position: 7% 50%;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  box-shadow: none;
+}
+
+#view-order-hide-btn {
+  top: 0px;
+  left: 0px;
+  background-color: #009ee1;
+  color: white;
+  background-image: url("images/icons/buttons/hide-white.png");
+  background-position: 7% 50%;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  box-shadow: none;
 }
