@@ -88,3 +88,34 @@
   background-size: 30px 30px;
   box-shadow: none;
 }
+
+#view-order-pay-box-total {
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  width: 220px;
+  height: 40px;
+  font-size: 24px;
+  padding: 0%;
+  border: none;
+  text-align: left;
+}
+
+#pay-btn {
+  position: absolute;
+  top: 90px;
+  left: 0px;
+  height: 35px;
+  width: 250px;
+  font-size: 27px;
+  color: white;
+  text-align: center;
+  border: none;
+  padding: 10px 20px;
+  line-height: 20px;
+  background-color: #4CAF50;
+  background-image: url("images/icons/buttons/money-white.png");
+  background-position: 25% 30%;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+}
