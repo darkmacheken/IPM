@@ -5,22 +5,6 @@ var currentOrder = [];
 function prepareScreen2() {
 
     /**** Botões Principais ****/
-    $("#orderfoodbtn").click(function () {
-        closeHistorico();
-        closeDefs();
-
-        currentMenuSelected = "menu-entradas";
-        $("#" + currentMenuSelected).addClass("selected");
-
-        currentOrderSelected = "ord-classif";
-        $("#" + currentOrderSelected).addClass("selected");
-
-        showFoodItems();
-        showCurrentOrder();
-
-        $("#second-screen").show();
-    });
-
     $("#menuPrincipalbtn").click(function () {
         if (currentOrder.length === 0)
             exitScreen2();
@@ -28,12 +12,7 @@ function prepareScreen2() {
             confirmYesNo("Tem a certeza que pretende sair?<br />O seu pedido será eliminado.", exitScreen2);
     });
 
-    $("#Confirmarbtn").click(function () {
-        if (currentOrder.length === 0)
-            return;
-
-        confirmYesNo("Tem a certeza que pretende fazer o pedido?", exitScreen2)
-    });
+    $("#Confirmarbtn").click(enterScreen3);
 
     /**** Menu lateral esquerdo ****/
     $(".menuEmenta").click(function () {
@@ -64,10 +43,27 @@ function prepareScreen2() {
 
 }
 
+function enterScreen2() {
+    closeHistorico();
+    closeDefs();
+
+    currentMenuSelected = "menu-entradas";
+    $("#" + currentMenuSelected).addClass("selected");
+
+    currentOrderSelected = "ord-classif";
+    $("#" + currentOrderSelected).addClass("selected");
+
+    showFoodItems();
+    showCurrentOrder();
+
+    $("#second-screen").show();
+
+    screen = 2;
+}
+
 function exitScreen2() {
     closeHistorico();
     closeDefs();
-    currentOrder = [];
 
     $("#second-screen").hide();
     $("#" + currentMenuSelected).removeClass("selected");

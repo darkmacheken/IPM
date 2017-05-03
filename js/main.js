@@ -1,6 +1,8 @@
+var screen = 1;
+
 $(document).ready(function() {
     /* Esconder janelas inicialmente */
-    $(".window, #blocker, #keyboard, #number-pad, .helpdiv, #boxcontautilizadorlogged, #Historico, .boxHistoricoRepetirPedido, #DefinicoesConta, #callwaitbtn, #second-screen, #screen2-logged-box, #screen2-historico, #screen2-definicoesConta").hide();
+    $(".window, #blocker, #keyboard, #number-pad, .helpdiv, #boxcontautilizadorlogged, #Historico, .boxHistoricoRepetirPedido, #DefinicoesConta, #callwaitbtn, #second-screen, #screen2-logged-box, #screen2-historico, #screen2-definicoesConta, .screen3").hide();
 
     /*********************************** JANELA DE AJUDA ***********************************/
     $("#helpbtn").click(function () {
@@ -332,7 +334,11 @@ $(document).ready(function() {
         $("#keyboard, #number-pad").hide();
     });
     /*********************************** SEGUNDA JANELA ***********************************/
+    $("#orderfoodbtn").click(enterScreen2);
     prepareScreen2();
+
+    /*********************************** TERCEIRA JANELA ***********************************/
+    prepareScreen3();
 
     /*********************************** FIM DO LOADING ***********************************/
     /* Página carregada */
