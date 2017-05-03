@@ -68,6 +68,7 @@ function exitScreen2() {
     $("#second-screen").hide();
     $("#" + currentMenuSelected).removeClass("selected");
     $("#" + currentOrderSelected).removeClass("selected");
+    $("#food-options").html("");
 }
 
 function showFoodItems() {
@@ -237,13 +238,13 @@ function deleteFromOrder(foodId) {
 }
 
 function getIndexNumber(obj) {
-    if ($.contains($("#food-options")[0], obj)) {
+    if ($.contains($("#food-options")[0], obj) || $.contains($("#box-order-menu ul")[0], obj)) {
         var id = $(obj).attr("id");
         if (typeof id === "undefined")
             id = $(obj).parent().attr("id");
         return parseInt(id.substring(8, id.length - 4)) - 1;
     }
-    if ($.contains($("#boxCompras")[0], obj)) {
+    else if ($.contains($("#boxCompras")[0], obj)) {
         return parseInt($(obj).parent().attr("id").substring(14)) - 1;
     }
 }
