@@ -128,19 +128,15 @@ function refreshHistorico() {
             histOrderTxt += "<br />\n";
         }
         $(".hist-order").html(histOrderTxt);
+        $(".boxRepetirPedidobtn").off("click").click(function () {
+            repeatOrder(order);
+        })
         $(".boxHistoricoRepetirPedido").show();
     });
 
     $(".boxHistoricoRepetirPedidobtn").click(function () {
         var order = getHistory()[parseInt($(this).parents("li").attr("class"))];
-        var orderFoods = getOrderFoods(order);
-        confirmYesNo("Tem a certeza que pretende repetir o pedido " + getOrderNumber(order) + "?", function () {
-            $("#orderfoodbtn").click();
-            for (let i = 0; i < orderFoods.length; i++) {
-                addFoodToOrder(getFoodByName(orderFoods[i]._name), orderFoods[i]._quantity, orderFoods[i]._ingredients);
-            }
-            closeHistorico();
-        });
+        repeatOrder(order);
     });
 
     $(".boxHistoricoXbtn").click(function () {
@@ -149,6 +145,17 @@ function refreshHistorico() {
             deleteFromHistory(orderId);
             refreshHistorico();
         });
+    });
+}
+
+function repeatOrder(order) {
+    var orderFoods = getOrderFoods(order);
+    confirmYesNo("Tem a certeza que pretende repetir o pedido " + getOrderNumber(order) + "?", function () {
+        $("#orderfoodbtn").click();
+        for (let i = 0; i < orderFoods.length; i++) {
+            addFoodToOrder(getFoodByName(orderFoods[i]._name), orderFoods[i]._quantity, orderFoods[i]._ingredients);
+        }
+        closeHistorico();
     });
 }
 

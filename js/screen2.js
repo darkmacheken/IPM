@@ -47,7 +47,7 @@ function prepareScreen2() {
         closeWindow("editIngredients");
         var newIngredients = [];
         $("input[type=checkbox]").each(function () {
-            if (this.checked) {
+            if (!this.checked) {
                 newIngredients.push(this.id.substring(13));
             }
         });
@@ -219,12 +219,15 @@ function showCurrentOrder() {
             ingred += "<li><input type=\"checkbox\" id=\"check-ingred-";
             ingred += origFood._ingredients[i];
             ingred += "\" ";
+            let checked = true;
             for (let j = 0; j < food._ingredients.length; j++) {
                 if (food._ingredients[j] === origFood._ingredients[i]) {
-                    ingred += "checked ";
+                    checked = false;
                     break;
                 }
             }
+            if (checked)
+                ingred += "checked ";
             ingred += "/><label class=\"textIngredient\" for=\"check-ingred-";
             ingred += origFood._ingredients[i];
             ingred += "\">";
@@ -266,7 +269,7 @@ function addFoodToOrder(food, quantity, ingredients) {
             }
     }*/
     let q = 1;
-    let ing = food._ingredients;
+    let ing = [];
     if (typeof quantity === "number")
         q = quantity;
     if (typeof ingredients === "object")
@@ -337,5 +340,6 @@ function getIndexNumber(obj) {
 }
 
 function isCostumized(food) {
-    return getFoodByName(food._name)._ingredients.length !== food._ingredients.length;
+    //return getFoodByName(food._name)._ingredients.length !== food._ingredients.length;
+    return food._ingredients.length !== 0;
 }
