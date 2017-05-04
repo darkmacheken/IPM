@@ -451,13 +451,13 @@ border-bottom: 1px solid #202020;
 #timeleft-box {
   position: absolute;
   left: 605px;
-  top: 132px;
+  top: 690px;
   width: 300px;
   height: 70px;
   padding: inherit;
   text-decoration: none;
   display: inline-block;
-  font-size: 18px;
+  font-size: 25px;
   font-weight:bold;
   background: none;
   color: black;
