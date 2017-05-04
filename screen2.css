@@ -293,12 +293,12 @@
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-#Confirmarbtn {
+.confirmarbtn {
     position: absolute;
     bottom: 10px;
     right:10px;
     height: 25px;
-    width: 236px;
+    width: 241px;
     font-size: 27px;
     line-height: 10px;
     background-color: #4CAF50; /* Green */
