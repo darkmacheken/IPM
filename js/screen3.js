@@ -99,6 +99,7 @@ function prepareScreen3() {
             $("#view-order-hide-btn").click();
             sessionOrder = sessionOrder.concat(currentOrder);
             sessionOrder = compactOrder(sessionOrder);
+            timer_addOrder(currentOrder);
             currentOrder = [];
             //$("#view-order-pay-box-total span").text(formatPrice(totalPrice(sessionOrder)));
             showCurrentOrder();
@@ -156,6 +157,7 @@ function enterScreen3() {
         $("#view-order-pay-box-total span").text(formatPrice(totalPrice(sessionOrder)));
         $("#order-again-btn").show();
         $("#view-order-pay-box").show();
+        timer_init();
     });
 }
 

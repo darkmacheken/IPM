@@ -1,5 +1,5 @@
 (Duarte)
-
+- mudar janelas do editar e more info pras do pedro
 
 (Pedro)
 - Fix stuff
