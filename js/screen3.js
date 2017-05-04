@@ -73,6 +73,8 @@ function prepareScreen3() {
     });
 
     $("#pay-btn").click(function () {
+        if (totalPrice(sessionOrder) === 0)
+            return;
         $("#view-order-hide-btn").click();
         currScreen = 1;
         openWindow("order-pay-box");
@@ -96,7 +98,8 @@ function prepareScreen3() {
             sessionOrder = sessionOrder.concat(currentOrder);
             sessionOrder = compactOrder(sessionOrder);
             currentOrder = [];
-            $("#view-order-pay-box-total span").text(formatPrice(totalPrice(sessionOrder)));
+            //$("#view-order-pay-box-total span").text(formatPrice(totalPrice(sessionOrder)));
+            showCurrentOrder();
         });
     });
 
@@ -131,7 +134,7 @@ function prepareScreen3() {
         }, 5000);
     });
 
-    $("#order-pay-cancel-btn .disabler").hide();
+    $("#order-pay-cancel-btn .disabler, #pay-btn .disabler").hide();
 
 }
 

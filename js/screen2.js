@@ -176,6 +176,10 @@ function showCurrentOrder() {
         $("#view-order-pay-box-total span").text(formatPrice(totalPrice(sessionOrder)));
         if (total !== 0)
             $("#view-order-pay-box-total span").append(" <span class=\"attentionText\">+ " + formatPrice(total) + "</span>");
+        if (totalPrice(sessionOrder) === 0)
+            $("#pay-btn .disabler").show();
+        else
+            $("#pay-btn .disabler").hide();
     }
     else {
         $("#boxCompras ul").html(orderHtml);
