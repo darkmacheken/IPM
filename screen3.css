@@ -208,6 +208,12 @@
   border: none;
 }
 
+#view-all-orders-table td {
+  width: 200px;
+  font-size: 20px;
+  text-align: left;
+}
+
 #view-items-current-order {
   position: absolute;
   height: 40px;
