@@ -61,6 +61,7 @@ function prepareScreen3() {
             $("#view-items-current-order").click();
         $("#box-conta-utilizador-all").hide();
         $(this).hide();
+        $("#view-order-items-box-wrapper").show();
     });
 
     $("#view-order-hide-btn").click(function () {
@@ -70,6 +71,7 @@ function prepareScreen3() {
         $("#view-all-orders-items-box").hide();
         $("#box-conta-utilizador-all").show();
         $(this).hide();
+        $("#view-order-items-box-wrapper").hide();
     });
 
     $("#pay-btn").click(function () {
@@ -107,12 +109,16 @@ function prepareScreen3() {
         showCurrentOrder();
         $("#view-order-items-box").show();
         $("#view-all-orders-items-box").hide();
+        $(this).addClass("selected");
+        $("#view-items-all-orders").removeClass("selected");
     });
 
     $("#view-items-all-orders").click(function () {
         showAllOrders();
         $("#view-all-orders-items-box").show();
         $("#view-order-items-box").hide();
+        $(this).addClass("selected");
+        $("#view-items-current-order").removeClass("selected");
     });
 
     $("#order-pay-money-btn, #order-pay-creditcard-btn").click(function () {
