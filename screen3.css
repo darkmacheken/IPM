@@ -364,6 +364,7 @@
   line-height: 55px;
   background-color: #B22222;
 }
+
 #transacao{
   position: absolute;
   top: 30px;
@@ -371,6 +372,44 @@
   width: 290px;
   height: 181px;
 }
+
+#timeleft-circle {
+  background-color: #009ee1;
+  display:block;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  border: none;
+  text-align:center;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 40px;
+  position: absolute;
+  left: 500px;
+  top: 200px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-image: url("images/background/back2.png");
+  background-repeat: repeat-x repeat-y;
+  line-height: 300px;
+}
+
+#timeleft-box {
+  position: absolute;
+  left: 605px;
+  top: 132px;
+  width: 300px;
+  height: 70px;
+  padding: inherit;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight:bold;
+  background: none;
+  color: black;
+  border: none;
+}
+
 #login-window-thirdScreen{
   position: absolute;
 width: 350px;
