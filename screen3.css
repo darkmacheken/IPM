@@ -25,7 +25,7 @@
   position: absolute;
   top: 530px;
   left: 10px;
-  background-color: #009ee1;
+  background-color: #B22222;
   color: white;
   background-image: url("images/icons/buttons/hide-white.png");
   background-position: 7% 60%;
@@ -91,7 +91,7 @@
 #view-order-hide-btn {
   top: 0px;
   left: 0px;
-  background-color: #009ee1;
+  background-color: #B22222;
   color: white;
   background-image: url("images/icons/buttons/hide-white.png");
   background-position: 7% 50%;
