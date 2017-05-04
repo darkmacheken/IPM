@@ -1,7 +1,5 @@
 (Duarte)
-- Repetir pedido ta trocado
-- Falta mais um botao de repetir pedido
-- Janelas login e registo 3
+
 
 (Pedro)
 - Fix stuff

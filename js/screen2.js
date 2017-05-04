@@ -171,13 +171,19 @@ function showCurrentOrder() {
         orderHtml += "</div><div class=\"box btn deleteBox\">X</div></li>";
         total += price;
     }
-    $("#boxCompras ul").html(orderHtml);
-    $("#totalBox span").text(formatPrice(total));
+    if (currScreen === 3) {
+        $("#view-order-items-box ul").html(orderHtml);
+        $("#view-order-pay-box-total span").text(formatPrice(total+totalPrice(sessionOrder)));
+    }
+    else {
+        $("#boxCompras ul").html(orderHtml);
+        $("#totalBox span").text(formatPrice(total));
+    }
 
     if (currentOrder.length === 0)
-        $("#Confirmarbtn .disabler").show();
+        $(".confirmarbtn .disabler").show();
     else
-        $("#Confirmarbtn .disabler").hide();
+        $(".confirmarbtn .disabler").hide();
 
     $(".editBox").click(function () {
         editingIndex = getIndexNumber(this);
@@ -334,7 +340,7 @@ function getIndexNumber(obj) {
             id = $(obj).parent().attr("id");
         return parseInt(id.substring(8, id.length - 4)) - 1;
     }
-    else if ($.contains($("#boxCompras")[0], obj)) {
+    else if ($.contains($("#boxCompras")[0], obj) || $.contains($("#view-order-items-box")[0], obj)) {
         return parseInt($(obj).parent().attr("id").substring(14)) - 1;
     }
 }

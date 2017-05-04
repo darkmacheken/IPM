@@ -53,6 +53,7 @@ function prepareScreen3() {
 
     $("#view-order-btn").click(function () {
         whoOpenedViewOrder = 1;
+        showCurrentOrder();
         $("#view-order-hide-btn").show();
         $("#view-order-items-box").show();
         $(this).hide();
@@ -74,6 +75,15 @@ function prepareScreen3() {
     $("#order-pay-cancel-btn").click(function () {
         $("#order-pay-box").hide();
         $("#view-order-pay-box").show();
+    });
+
+    $("#view-order-confirmarbtn").click(function () {
+        confirmYesNo("Tem a certeza que pretende fazer o pedido?", function () {
+            $("#view-order-hide-btn").click();
+            sessionOrder = sessionOrder.concat(compactOrder(currentOrder));
+            currentOrder = [];
+            //$("#view-order-pay-box-total span").text(formatPrice(totalPrice(sessionOrder)));
+        });
     });
 }
 
@@ -153,7 +163,7 @@ function openOrderAgainMenu(menuName, menuTitle) {
     }
     $("#box-order-menu ul").html(boxContent);
     $("#box-order-menu ul li").click(function () {
-        //addFoodToOrder(FOOD_ITEMS[menuName][getIndexNumber(this)]);
+        addFoodToOrder(FOOD_ITEMS[menuName][getIndexNumber(this)]);
     });
     $(".info3ecran").click(function (e) {
         e.stopPropagation();
