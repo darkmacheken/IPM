@@ -1,6 +1,7 @@
 var currentMenuSelected = "";
 var currentOrderSelected = "";
 var currentOrder = [];
+var editingIndex = -1;
 
 function prepareScreen2() {
 
@@ -41,11 +42,29 @@ function prepareScreen2() {
         closeWindow("moreInfo");
     });
 
+    /**** Editar ingredientes ****/
+    $("#ingred-edit-save-btn").click(function () {
+        closeWindow("editIngredients");
+        var newIngredients = [];
+        $("input[type=checkbox]").each(function () {
+            if (this.checked) {
+                newIngredients.push(this.id.substring(13));
+            }
+        });
+        currentOrder[editingIndex]._ingredients = newIngredients;
+    });
+
+    $("#ingred-edit-cancel-btn").click(function () {
+        closeWindow("editIngredients");
+    });
+
 }
 
 function enterScreen2() {
     closeHistorico();
     closeDefs();
+
+    currentOrder = []
 
     currentMenuSelected = "menu-entradas";
     $("#" + currentMenuSelected).addClass("selected");
@@ -157,7 +176,8 @@ function showCurrentOrder() {
         $("#Confirmarbtn .disabler").hide();
 
     $(".editBox").click(function () {
-        let food = currentOrder[getIndexNumber(this)];
+        editingIndex = getIndexNumber(this);
+        let food = currentOrder[editingIndex];
         let origFood = getFoodByName(food._name);
         $("#editIngredients .foodImage").css("background-image", "url(" + food._img + ")");
         $("#editIngredients .foodTitle").text(food._name);
@@ -196,12 +216,12 @@ function showCurrentOrder() {
             ingred += origFood._ingredients[i];
             ingred += "\" ";
             for (let j = 0; j < food._ingredients.length; j++) {
-                if (food._ingredients[i] === origFood._ingredients[i]) {
+                if (food._ingredients[j] === origFood._ingredients[i]) {
                     ingred += "checked ";
                     break;
                 }
             }
-            ingred += "/><label class=\"textIngredient\" for=\"";
+            ingred += "/><label class=\"textIngredient\" for=\"check-ingred-";
             ingred += origFood._ingredients[i];
             ingred += "\">";
             ingred += origFood._ingredients[i];
