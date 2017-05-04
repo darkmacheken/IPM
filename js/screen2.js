@@ -52,6 +52,7 @@ function prepareScreen2() {
             }
         });
         currentOrder[editingIndex]._ingredients = newIngredients;
+        showCurrentOrder();
     });
 
     $("#ingred-edit-cancel-btn").click(function () {
@@ -154,12 +155,17 @@ function showFoodItems() {
 function showCurrentOrder() {
     var orderHtml = "";
     var total = 0;
+    let iscostm = false;
     for (var i = 0; i < currentOrder.length; i++) {
         var price = currentOrder[i]._price * currentOrder[i]._quantity;
         orderHtml += "<li class=\"box\" id=\"current-order-";
         orderHtml += String(i + 1);
         orderHtml += "\"><div class=\"background-li-box-compras\"> </div><div class=\"box btn editBox\"></div><div class=\"tituloCompra\">";
         orderHtml += currentOrder[i]._name;
+        if (isCostumized(currentOrder[i])) {
+            iscostm = true;
+            orderHtml += "<span class=\"attentionText\">*</span>";
+        }
         orderHtml += "</div><input type=\"text\" class=\"qtd\" value=\"";
         orderHtml += currentOrder[i]._quantity;
         orderHtml += "\" disabled>\n<br />\n<div class=\"btn arrow-up\"></div><div class=\"btn arrow-down\"></div><div class=\"precoCompra\">";
@@ -169,6 +175,10 @@ function showCurrentOrder() {
     }
     $("#boxCompras ul").html(orderHtml);
     $("#totalBox span").text(formatPrice(total));
+    if (iscostm)
+        $("#costumized-warning").show();
+    else
+        $("#costumized-warning").hide();
 
     if (currentOrder.length === 0)
         $("#Confirmarbtn .disabler").show();
@@ -207,8 +217,8 @@ function showCurrentOrder() {
         }
         $("#editIngredients .classificacao").css("background-position", bgPos);
         $("#editIngredients .precoTitle span").text(formatPrice(food._price));
-        $("#editIngredients #editIngredients-desc").text(food._desc);
-        //$("#editIngredients #editIngredients-ingredients").text(ingred.substring(0, ingred.length - 2) + ".");
+        $("#editIngredients #editIngredients-desc").text(origFood._desc);
+        $("#editIngredients #editIngredients-ingredients").text(origFood._ingredientsString);
 
         let ingred = "";
         for (let i = 0; i < origFood._ingredients.length; i++) {
@@ -324,4 +334,8 @@ function getIndexNumber(obj) {
     else if ($.contains($("#boxCompras")[0], obj)) {
         return parseInt($(obj).parent().attr("id").substring(14)) - 1;
     }
+}
+
+function isCostumized(food) {
+    return getFoodByName(food._name)._ingredients.length !== food._ingredients.length;
 }

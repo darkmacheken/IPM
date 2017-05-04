@@ -847,3 +847,10 @@
   top: 11px;
   font-size: 25px;
 }
+
+#costumized-warning {
+     position: absolute;
+     bottom: 33px;
+     left: 3px;
+     font-size: 15px;
+}
