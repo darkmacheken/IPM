@@ -188,19 +188,50 @@
     border-right:none;
 }
 
-#order-again-items-box {
+#view-order-items-box {
   position: absolute;
   padding: 0px;
-  top: 150px;
+  top: 135px;
   left: 1236px;
   height: 455px;
   width: 290px;
   border: none;
 }
 
-#order-again-items-box ul {
+#view-order-items-title {
+  box-shadow: none;
+}
+
+#view-items-current-order {
   position: absolute;
-  top: 0px;
+  height: 40px;
+  width:145px;
+  padding: 0%;
+  font-size: 20px;
+  text-align: center;
+  border-left: none;
+  border-top: none;
+  left: 0%;
+  top: 30px;
+}
+
+#view-items-all-orders {
+  position: absolute;
+  height: 40px;
+  width:145px;
+  padding: 0%;
+  font-size: 20px;
+  text-align: center;
+  border-right: none;
+  border-top: none;
+  right: 0%;
+  top: 30px;
+
+}
+
+#view-order-items-box ul {
+  position: absolute;
+  top: 73px;
   left: 0px;
   width: 290px;
   bottom: 30px;
@@ -210,7 +241,7 @@
   overflow-y: scroll;
 }
 
-#order-again-items-box li {
+#view-order-items-box li {
     list-style-type: none;
     position: relative;
     padding: 0px;
