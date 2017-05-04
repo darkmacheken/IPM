@@ -103,13 +103,14 @@
 #view-order-pay-box-total {
   position: absolute;
   top: 50px;
-  left: 60px;
-  width: 220px;
+  left: 20px;
+  width: 260px;
   height: 40px;
   font-size: 24px;
   padding: 0%;
   border: none;
   text-align: left;
+  overflow-x: auto;
 }
 
 .ordermenu{

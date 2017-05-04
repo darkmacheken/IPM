@@ -173,7 +173,9 @@ function showCurrentOrder() {
     }
     if (currScreen === 3) {
         $("#view-order-items-box ul").html(orderHtml);
-        $("#view-order-pay-box-total span").text(formatPrice(total+totalPrice(sessionOrder)));
+        $("#view-order-pay-box-total span").text(formatPrice(totalPrice(sessionOrder)));
+        if (total !== 0)
+            $("#view-order-pay-box-total span").append(" <span class=\"attentionText\">+ " + formatPrice(total) + "</span>");
     }
     else {
         $("#boxCompras ul").html(orderHtml);

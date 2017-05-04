@@ -93,9 +93,10 @@ function prepareScreen3() {
 
         confirmYesNo("Tem a certeza que pretende fazer o pedido?", function () {
             $("#view-order-hide-btn").click();
-            sessionOrder = sessionOrder.concat(compactOrder(currentOrder));
+            sessionOrder = sessionOrder.concat(currentOrder);
+            sessionOrder = compactOrder(sessionOrder);
             currentOrder = [];
-            //$("#view-order-pay-box-total span").text(formatPrice(totalPrice(sessionOrder)));
+            $("#view-order-pay-box-total span").text(formatPrice(totalPrice(sessionOrder)));
         });
     });
 
