@@ -42,6 +42,26 @@ function prepareScreen3() {
     $("#order-menu-back").click(function () {
         closeOrderAgainMenu();
     });
+
+    $("#view-order-btn").click(function () {
+        $("#view-order-hide-btn").show();
+        $(this).hide();
+    });
+
+    $("#view-order-hide-btn").click(function () {
+        $("#view-order-btn").show();
+        $(this).hide();
+    });
+
+    $("#pay-btn").click(function () {
+        $("#order-pay-box").show();
+        $("#view-order-pay-box").hide();
+    });
+
+    $("#order-pay-cancel-btn").click(function () {
+        $("#order-pay-box").hide();
+        $("#view-order-pay-box").show();
+    });
 }
 
 function enterScreen3() {
@@ -62,7 +82,7 @@ function enterScreen3() {
 }
 
 function exitScreen3() {
-    ;
+    $(".screen3").hide();
 }
 
 function compactOrder(order) {

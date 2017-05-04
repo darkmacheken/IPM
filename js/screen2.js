@@ -179,10 +179,10 @@ function showCurrentOrder() {
         editingIndex = getIndexNumber(this);
         let food = currentOrder[editingIndex];
         let origFood = getFoodByName(food._name);
-        $("#editIngredients .foodImage").css("background-image", "url(" + food._img + ")");
+        $("#editIngredients .foodImage").css("background-image", "url(" + origFood._img + ")");
         $("#editIngredients .foodTitle").text(food._name);
         let bgPos = "46% ";
-        switch (food._classif) {
+        switch (origFood._classif) {
             case 0:
                 bgPos += "70%";
                 break;
