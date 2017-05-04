@@ -121,12 +121,13 @@ function prepareScreen3() {
                 ;
             }
             sessionOrder = [];
-            $("#view-order-pay-box-total span").text(formatPrice(0));
+            //$("#view-order-pay-box-total span").text(formatPrice(0));
             $("#transacao").hide();
             closeWindow("order-pay-box");
             $("#view-order-pay-box").show();
             paying = false;
             $("#order-pay-cancel-btn .disabler").hide();
+            showCurrentOrder();
         }, 5000);
     });
 
