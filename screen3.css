@@ -121,8 +121,44 @@
   width: 290px;
   height: 369px;
   border: none;
+  background-color: #f5f5f5;
 }
-
+#menu-order-again-entradas{
+background-image: url("images/icons/food-menu/bread-black.png");
+background-position: 14% 47%;
+background-repeat: no-repeat;
+background-size: 20px 20px;
+}
+#menu-order-again-sopas{
+background-image: url("images/icons/food-menu/soup-black.png");
+background-position: 10% 45%;
+background-repeat: no-repeat;
+background-size: 30px 30px;
+}
+#menu-order-again-pratos{
+background-image: url("images/icons/food-menu/plate-black.png");
+background-position: 10% 50%;
+background-repeat: no-repeat;
+background-size: 30px 30px;
+}
+#menu-order-again-bebidas{
+background-image: url("images/icons/food-menu/drink-black.png");
+background-position: 10% 45%;
+background-repeat: no-repeat;
+background-size: 30px 30px;
+}
+#menu-order-again-sobremesas{
+background-image: url("images/icons/food-menu/dessert-black.png");
+background-position: 7% 49%;
+background-repeat: no-repeat;
+background-size: 40px 40px;
+}
+#menu-order-again-cafetaria{
+background-image: url("images/icons/food-menu/coffee-black.png");
+background-position: 10% 48%;
+background-repeat: no-repeat;
+background-size: 30px 30px;
+}
 #order-menu-back{
   position: absolute;
   bottom: 0px;
