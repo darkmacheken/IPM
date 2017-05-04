@@ -216,6 +216,10 @@ label.btn {
 
 .attentionText {
   color: red;
+    font-size: 12px;
+    position: absolute;
+    left: 105px;
+    top: 26px;
 }
 
 .calmText {
