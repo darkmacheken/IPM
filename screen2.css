@@ -788,8 +788,8 @@
     border: none;
     position: absolute;
     left: 0px;
-    top: 250px;
-    height: 240px;
+    top: 270px;
+    height: 220px;
     width: 640px;
     margin: inherit;
     font-size: 25px;
@@ -801,7 +801,7 @@
     border: none;
     position: relative;
     height: 45px;
-    width: 210px;
+    width: 320px;
   margin: auto;
   float: left;
 }
@@ -809,7 +809,18 @@
   width: 20px;
   position: absolute;
   top: 11px;
-  left: 30px;
+  left: 10px;
+}
+#editIngredients label {
+  position: absolute;
+  left: 45px;
+  top: 11px;
+}
+#textChooseIngredients{
+  font-size: 24px;
+  position: absolute;
+  left: 20px;
+  top: 240px;
 }
 #textIngredient{
   text-align: left;
