@@ -45,11 +45,13 @@ function prepareScreen3() {
 
     $("#view-order-btn").click(function () {
         $("#view-order-hide-btn").show();
+        $("#view-order-items-box").show();
         $(this).hide();
     });
 
     $("#view-order-hide-btn").click(function () {
         $("#view-order-btn").show();
+        $("#view-order-items-box").hide();
         $(this).hide();
     });
 
@@ -71,6 +73,7 @@ function enterScreen3() {
     //var ordered = compactOrder(currentOrder);
 
     confirmYesNo("Tem a certeza que pretende fazer o pedido?", function () {
+        $("#orderfoodbtn").hide();
         exitScreen2();
         sessionOrder = sessionOrder.concat(compactOrder(currentOrder));
         currentOrder = [];
@@ -83,6 +86,7 @@ function enterScreen3() {
 
 function exitScreen3() {
     $(".screen3").hide();
+    $("#orderfoodbtn").show();
 }
 
 function compactOrder(order) {

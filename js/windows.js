@@ -11,7 +11,7 @@ function turnoffblock() {
 
 function openWindow(id, zindex) {
 	callblock(zindex);
-	$("#" + id).show();
+	$("#" + id).css("left","30px").css("top","30px").show();
 }
 
 function closeWindow(id) {
