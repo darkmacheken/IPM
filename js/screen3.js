@@ -120,11 +120,8 @@ function prepareScreen3() {
         paying = true;
         $("#order-pay-cancel-btn .disabler").show();
         setTimeout(function () {
-            if (loggedIn.length !== 0) {
-                ;
-            }
+            addToHistory(sessionOrder);
             sessionOrder = [];
-            //$("#view-order-pay-box-total span").text(formatPrice(0));
             $("#transacao").hide();
             closeWindow("order-pay-box");
             $("#view-order-pay-box").show();

@@ -6,6 +6,7 @@ var contas = {
         _pword: "root",
         _nif: "999888777",
         _tel: "912345678",
+        _ammountOrders: 2,
         _history: [
             { /* pedido 1 */
                 _date: new Date(2017, 3, 8, 19, 38),
@@ -60,6 +61,7 @@ function createAccount(uname, pword, nif, tel) {
         _pword: pword,
         _nif: nif,
         _tel: tel,
+        _ammountOrders: 0,
         _history: []
     };
 
@@ -126,6 +128,17 @@ function cellNumExists(tel) {
         if (contas[uname]._tel === String(tel))
             return true;
     return false;
+}
+
+function addToHistory(order) {
+    if (loggedIn.length === 0)
+        return;
+    contas[loggedIn]._ammountOrders++;
+    getHistory().push({ /* pedido 1 */
+        _date: new Date(),
+        _number: contas[loggedIn]._ammountOrders,
+        _foods: order
+    });
 }
 
 function deleteFromHistory(id) {

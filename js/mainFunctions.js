@@ -156,6 +156,10 @@ function repeatOrder(order) {
             addFoodToOrder(getFoodByName(orderFoods[i]._name), orderFoods[i]._quantity, orderFoods[i]._ingredients);
         }
         closeHistorico();
+        if (currScreen === 3) {
+            $("#view-order-btn").click();
+            $("#view-items-current-order").click();
+        }
     });
 }
 
