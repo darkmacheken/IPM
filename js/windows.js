@@ -12,7 +12,7 @@ function turnoffblock() {
 function openWindow(id, zindex) {
 	callblock(zindex);
     if (currScreen === 3)
-        $("#" + id).css("left","30px").css("top","30px");
+        $("#" + id).css("left","880px").css("top","30px");
 	$("#" + id).show();
 }
 
