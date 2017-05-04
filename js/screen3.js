@@ -6,6 +6,7 @@ function prepareScreen3() {
         $("#box-games").hide();
         $("#order-again-hide-btn").show();
         $("#box-order-again").show();
+        $("#view-order-btn").click();
     });
 
     $("#order-again-hide-btn").click(function () {
@@ -13,6 +14,7 @@ function prepareScreen3() {
         $("#box-games").show();
         $("#box-order-again").hide();
         $("#order-again-btn").show();
+        $("#view-order-hide-btn").click();
     });
 
     $("#menu-order-again-entradas").click(function () {
