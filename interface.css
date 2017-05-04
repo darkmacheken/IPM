@@ -156,11 +156,16 @@ a:visited {
 
 /* Relógio */
 #clock {
-    width: 150px;
-    height: 60px;
+    border: none;
+
+    width: 153px;
+    height: 63px;
     float: right;
     line-height: 60px;
     padding: inherit;
+    background-image: url("images/background/back2.png");
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
