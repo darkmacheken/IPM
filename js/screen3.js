@@ -240,7 +240,7 @@ function closeOrderAgainMenu() {
 function showAllOrders() {
     let allOrderTxt = ""
     for (var i = 0; i < sessionOrder.length; i++) {
-        allOrderTxt += "<tr><td>";
+        allOrderTxt += "<tr><td style=\"width: 50px;\">";
         allOrderTxt += sessionOrder[i]._quantity + "x</td><td>" + sessionOrder[i]._name;
         let ofilen = sessionOrder[i]._ingredients.length;
         if (ofilen !== 0) {
@@ -255,7 +255,7 @@ function showAllOrders() {
                     allOrderTxt += ", ";
             }
         }
-        allOrderTxt += "</td><td>";
+        allOrderTxt += "</td><td style=\"width: 70px;text-align: right;\">";
         allOrderTxt += formatPrice(sessionOrder[i]._price * sessionOrder[i]._quantity);
         allOrderTxt += "</td></tr>";
     }
