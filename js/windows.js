@@ -11,7 +11,7 @@ function turnoffblock() {
 
 function openWindow(id, zindex) {
 	callblock(zindex);
-    if (screen === 3)
+    if (currScreen === 3)
         $("#" + id).css("left","30px").css("top","30px");
 	$("#" + id).show();
 }
@@ -22,14 +22,27 @@ function closeWindow(id) {
 }
 
 function closeLoginWindow() {
-	closeWindow("login-window");
-	$("#invalid-data").hide();
-    $("#login-form").trigger("reset");
+    if (currScreen === 3) {
+        closeWindow("login-window-thirdScreen");
+    	$("#invalid-data-thirdScreen").hide();
+        $("#login-form-thirdScreen").trigger("reset");
+    }
+    else {
+        closeWindow("login-window");
+    	$("#invalid-data").hide();
+        $("#login-form").trigger("reset");
+    }
 }
 
 function closeRegistarWindow() {
-	closeWindow("reg-window");
-    $("#reg-form").trigger("reset");
+    if (currScreen === 3) {
+        closeWindow("reg-window-thirdScreen");
+        $("#reg-form-thirdScreen").trigger("reset");
+    }
+    else {
+        closeWindow("reg-window");
+        $("#reg-form").trigger("reset");
+    }
 }
 
 function confirmYesNo(text, yes, no) {

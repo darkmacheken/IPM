@@ -1,4 +1,4 @@
-var screen = 1;
+var currScreen = 1;
 
 $(document).ready(function() {
     /* Esconder janelas inicialmente */
@@ -36,33 +36,60 @@ $(document).ready(function() {
     /*********************************** JANELA DE LOGIN ***********************************/
     /* Função chamada quando é clicado botão de log-in no ecrã principal. */
     $("#login-btn, #screen2-login-btn").click(function () {
-        $("form#login-form .calmText").removeClass("calmText").addClass("attentionText");
-        openWindow("login-window");
-        $("#invalid-data").hide();
-        $("#login-submit-disabler").show();
-        $("input#login-uname-txtbx").focus();
+        if (currScreen === 3) {
+            $("form#login-form-thirdScreen .calmText").removeClass("calmText").addClass("attentionText");
+            currScreen = 1;
+            openWindow("login-window-thirdScreen");
+            currScreen = 3;
+            $("#invalid-data-thirdScreen").hide();
+            $("#login-submit-disabler-thirdScreen").show();
+            $("input#login-uname-txtbx-thirdScreen").focus();
+        }
+        else {
+            $("form#login-form .calmText").removeClass("calmText").addClass("attentionText");
+            openWindow("login-window");
+            $("#invalid-data").hide();
+            $("#login-submit-disabler").show();
+            $("input#login-uname-txtbx").focus();
+        }
     });
 
     /* Função chamada quando é clicado botão X na janela de log-in. */
-    $("#login-close-btn").click(closeLoginWindow);
+    $("#login-close-btn, #login-close-btn-thirdScreen").click(closeLoginWindow);
 
     /* Função chamada quando é clicado botão de log-in na janela de log-in. */
-    $("#login-submit").click(function () {
-        // Prevenir que o botao seja clicado acidentalmente quando desativado
-        if (!checkForm("login-form"))
-            return;
+    $("#login-submit, #login-submit-thirdScreen").click(function () {
+        if (currScreen === 3) {
+            // Prevenir que o botao seja clicado acidentalmente quando desativado
+            if (!checkForm("login-form-thirdScreen"))
+                return;
 
-        var uname = $.trim($("input#login-uname-txtbx").val());
-    	var pword = $.trim($("input#login-pword-txtbx").val());
-    	if (isLoginValid(uname, pword)) {
-            login(uname);
-            closeLoginWindow();
-    	} else {
-    		$("#invalid-data").show();
-    	}
+            var uname = $.trim($("input#login-uname-txtbx-thirdScreen").val());
+        	var pword = $.trim($("input#login-pword-txtbx-thirdScreen").val());
+        	if (isLoginValid(uname, pword)) {
+                login(uname);
+                closeLoginWindow();
+        	} else {
+        		$("#invalid-data-thirdScreen").show();
+        	}
+        }
+        else {
+            // Prevenir que o botao seja clicado acidentalmente quando desativado
+            if (!checkForm("login-form"))
+                return;
+
+            var uname = $.trim($("input#login-uname-txtbx").val());
+        	var pword = $.trim($("input#login-pword-txtbx").val());
+        	if (isLoginValid(uname, pword)) {
+                login(uname);
+                closeLoginWindow();
+        	} else {
+        		$("#invalid-data").show();
+        	}
+        }
     });
 
-    $("#forgot-password-btn").click(function () {
+    $("#forgot-password-btn, #forgot-password-btn-thirdScreen").click(function () {
         openWindow("recover-password-box", '5');
     });
 
@@ -91,37 +118,71 @@ $(document).ready(function() {
     /*********************************** JANELA DE REGISTO ***********************************/
     /* Função chamada quando é clicado botão de registar no ecrã principal. */
     $("#reg-btn, #screen2-reg-btn").click(function () {
-        $("form#reg-form .calmText").removeClass("calmText").addClass("attentionText");
-        openWindow("reg-window");
-        $("#reg-uname-exists").hide();
-        $("#reg-cpword-diff").hide();
-        $("#reg-submit-disabler").show();
-        $("input#reg-uname-txtbx").focus();
+        if (currScreen === 3) {
+            $("form#reg-form-thirdScreen .calmText").removeClass("calmText").addClass("attentionText");
+            currScreen = 1;
+            openWindow("reg-window-thirdScreen");
+            currScreen = 3;
+            $("#reg-uname-exists-thirdScreen").hide();
+            $("#reg-cpword-diff-thirdScreen").hide();
+            $("#reg-submit-disabler-thirdScreen").show();
+            $("input#reg-uname-txtbx-thirdScreen").focus();
+        }
+        else {
+            $("form#reg-form .calmText").removeClass("calmText").addClass("attentionText");
+            openWindow("reg-window");
+            $("#reg-uname-exists").hide();
+            $("#reg-cpword-diff").hide();
+            $("#reg-submit-disabler").show();
+            $("input#reg-uname-txtbx").focus();
+        }
     });
 
     /* Função chamada quando é clicado botão X na janela de log-in. */
-    $("#reg-close-btn").click(closeRegistarWindow);
+    $("#reg-close-btn, #reg-close-btn-thirdScreen").click(closeRegistarWindow);
 
     /* Função chamada quando é clicado botão de registar na janela de registar. */
-    $("#reg-submit").click(function () {
-        /* Prevenir que o botao seja clicado acidentalmente quando desativado */
-        if (!checkForm("reg-form"))
-            return;
+    $("#reg-submit, #reg-submit-thirdScreen").click(function () {
+        var uname = "";
+        var pword = "";
+        var nif = "";
+        var tel = "";
+        if (currScreen === 3) {
+            /* Prevenir que o botao seja clicado acidentalmente quando desativado */
+            if (!checkForm("reg-form-thirdScreen"))
+                return;
 
-        /* Assegurar-se que o NIF, se fornecido, tem 9 numeros */
-        if (!checkNIF("reg-form")) {
-            confirmOk("Por favor verifique se introduziu corretamente o seu Número de Contribuinte (NIF).");
-            return;
+            /* Assegurar-se que o NIF, se fornecido, tem 9 numeros */
+            if (!checkNIF("reg-form-thirdScreen")) {
+                confirmOk("Por favor verifique se introduziu corretamente o seu Número de Contribuinte (NIF).");
+                return;
+            }
+
+        	uname = $.trim($("#reg-uname-txtbx-thirdScreen").val());
+        	pword = $.trim($("#reg-pword-txtbx-thirdScreen").val());
+            nif = $("#reg-nif-numbx-thirdScreen").val();
+            tel = $("#reg-tel-numbx-thirdScreen").val();
+        }
+        else {
+            /* Prevenir que o botao seja clicado acidentalmente quando desativado */
+            if (!checkForm("reg-form"))
+                return;
+
+            /* Assegurar-se que o NIF, se fornecido, tem 9 numeros */
+            if (!checkNIF("reg-form")) {
+                confirmOk("Por favor verifique se introduziu corretamente o seu Número de Contribuinte (NIF).");
+                return;
+            }
+
+        	uname = $.trim($("#reg-uname-txtbx").val());
+        	pword = $.trim($("#reg-pword-txtbx").val());
+            nif = $("#reg-nif-numbx").val();
+            tel = $("#reg-tel-numbx").val();
         }
 
-    	var uname = $.trim($("#reg-uname-txtbx").val());
-    	var pword = $.trim($("#reg-pword-txtbx").val());
-        var nif = $("#reg-nif-numbx").val();
-        var tel = $("#reg-tel-numbx").val();
-
-        var niff = nif;
-        if (nif == "")
-            niff = "<span class=\"attentionText\">Não fornecido.</span>"
+        //var niff = nif;
+        //if (nif == "")
+        //    niff = "<span class=\"attentionText\">Não fornecido.</span>";
 
         //confirmYesNo("Tem a certeza que pretende criar uma conta com os seguintes dados?<br /><ul><li>Username: " + uname + "</li><li>NIF: " + niff + "</li><li>Telemóvel: " + tel + "</li></ul>",
         confirmYesNo("Tem a certeza que pretende criar uma conta com os dados inseridos?",
@@ -160,9 +221,9 @@ $(document).ready(function() {
     /* Janelas log-in e registo: Colocar asteriscos a vermelho caso campo não esteja preenchido */
     $("input.req-field").keyup(function () {
         if (($(this).hasClass("cellNumber") && $(this).val().length !== 9) || $.trim($(this).val()).length === 0) {
-            $("#" + $(this).attr("name") + "-att").removeClass().addClass("attentionText");
+            $("#" + $(this).attr("name") + "-att, #" + $(this).attr("name") + "-att-thirdScreen").removeClass().addClass("attentionText");
         } else {
-            $("#" + $(this).attr("name") + "-att").removeClass().addClass("calmText");
+            $("#" + $(this).attr("name") + "-att, #" + $(this).attr("name") + "-att-thirdScreen").removeClass().addClass("calmText");
         }
         checkForm($(this).parents("form").attr("id"));
     });
@@ -335,7 +396,7 @@ $(document).ready(function() {
     });
     /*********************************** SEGUNDA JANELA ***********************************/
     $("#orderfoodbtn").click(function () {
-        if (screen === 1)
+        if (currScreen === 1)
             enterScreen2();
     });
     prepareScreen2();

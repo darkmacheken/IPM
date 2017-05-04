@@ -88,7 +88,7 @@ function enterScreen3() {
         exitScreen2();
         sessionOrder = sessionOrder.concat(compactOrder(currentOrder));
         currentOrder = [];
-        screen = 3;
+        currScreen = 3;
         $("#view-order-pay-box-total span").text(formatPrice(totalPrice(sessionOrder)));
         $("#order-again-btn").show();
         $("#view-order-pay-box").show();

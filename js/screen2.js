@@ -78,7 +78,7 @@ function enterScreen2() {
 
     $("#second-screen").show();
 
-    screen = 2;
+    currScreen = 2;
 }
 
 function exitScreen2() {
@@ -90,7 +90,7 @@ function exitScreen2() {
     $("#" + currentOrderSelected).removeClass("selected");
     $("#food-options").html("");
 
-    screen = 1;
+    currScreen = 1;
 }
 
 function showFoodItems() {
