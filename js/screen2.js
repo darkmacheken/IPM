@@ -155,18 +155,16 @@ function showFoodItems() {
 function showCurrentOrder() {
     var orderHtml = "";
     var total = 0;
-    let iscostm = false;
     for (var i = 0; i < currentOrder.length; i++) {
         var price = currentOrder[i]._price * currentOrder[i]._quantity;
         orderHtml += "<li class=\"box\" id=\"current-order-";
         orderHtml += String(i + 1);
         orderHtml += "\"><div class=\"background-li-box-compras\"> </div><div class=\"box btn editBox\"></div><div class=\"tituloCompra\">";
         orderHtml += currentOrder[i]._name;
-        if (isCostumized(currentOrder[i])) {
-            iscostm = true;
-            orderHtml += "<span class=\"attentionText\">*</span>";
-        }
-        orderHtml += "</div><input type=\"text\" class=\"qtd\" value=\"";
+        orderHtml += "</div>";
+        if (isCostumized(currentOrder[i]))
+            orderHtml += "<div class=\"attentionText costumizedWarning\">Personalizado</div>";
+        orderHtml += "<input type=\"text\" class=\"qtd\" value=\"";
         orderHtml += currentOrder[i]._quantity;
         orderHtml += "\" disabled>\n<br />\n<div class=\"btn arrow-up\"></div><div class=\"btn arrow-down\"></div><div class=\"precoCompra\">";
         orderHtml += formatPrice(price);
@@ -175,10 +173,6 @@ function showCurrentOrder() {
     }
     $("#boxCompras ul").html(orderHtml);
     $("#totalBox span").text(formatPrice(total));
-    if (iscostm)
-        $("#costumized-warning").show();
-    else
-        $("#costumized-warning").hide();
 
     if (currentOrder.length === 0)
         $("#Confirmarbtn .disabler").show();
