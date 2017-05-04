@@ -65,6 +65,7 @@ function prepareScreen3() {
     });
 
     $("#pay-btn").click(function () {
+        $("#view-order-hide-btn").click();
         $("#order-pay-box").show();
         $("#view-order-pay-box").hide();
     });
