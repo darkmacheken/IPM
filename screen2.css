@@ -258,9 +258,12 @@
     left: 0px;
     width: 294px;
     height: 25px;
-    border-right: none;
     border-left: none;
+    border-right: none;
     border-bottom: none;
+    border-top: 1px solid #4c4c4c;
+    background-color: #363636;
+    color: white;
     font-size: 20px;
     padding: 1%;
     text-align: left;
