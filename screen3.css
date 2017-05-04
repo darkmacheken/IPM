@@ -190,8 +190,8 @@ background-size: 30px 30px;
   padding: inherit;
   width: 277px;
   height: 65px;
-  border: none;
-  border-bottom: 3px solid black;
+  border-left: none;
+  border-right: none;
 }
 
 .titulo3ecran{
@@ -221,8 +221,13 @@ background-size: 30px 30px;
     font-size: 16px;
     padding: 1%;
     width: 100px;
-    border-top: none;
-    border-right:none;
+    border: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.opcao3ecran{
+  border-top: 1px solid #4c4c4c;
+border-bottom: 1px solid #202020;
 }
 
 #view-order-items-box {

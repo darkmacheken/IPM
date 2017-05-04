@@ -207,7 +207,7 @@ function openOrderAgainMenu(menuName, menuTitle) {
     /* Mostrar items */
     var boxContent = "";
     for (var i = 0; i < FOOD_ITEMS[menuName].length; i++) {
-        boxContent += "<li class=\"box btn\" id=\"food-op-";
+        boxContent += "<li class=\"box btn opcao opcao3ecran\" id=\"food-op-";
         boxContent += String(i + 1);
         boxContent += "-btn\"><div class=\"titulo3ecran\">";
         boxContent += FOOD_ITEMS[menuName][i]._name;
