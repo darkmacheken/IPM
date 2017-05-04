@@ -387,3 +387,35 @@ left: 1172px;
 bottom: 90px;
 left: 15px;
 }
+#reg-window-thirdScreen{
+  position: absolute;
+width: 350px;
+height: 610px;
+top: 10px;
+left: 1172px;
+}
+#reg-window-thirdScreen h3{
+  position: absolute;
+  left: 100px;
+  top: -30px;
+}
+#reg-window-thirdScreen .form{
+  position: absolute;
+      top: 90px;
+      left: -25px;
+}
+#reg-window-thirdScreen input{
+  width: 325px;
+}
+#reg-window-thirdScreen table{
+  width: 300px;
+  text-align: left;
+}
+#reg-window-thirdScreen label{
+  width: 400px;
+}
+#reg-window-thirdScreen .submit{
+  position: absolute;
+  bottom: 10px;
+  left: 70px;
+}
