@@ -923,6 +923,152 @@
           Cancelar
       </div>
     </div>
+
+    <!--Janela Login-->
+    <div class="window" id="login-window-thirdScreen">
+        <h3>ENTRAR</h3>
+        <div class="closeWindow btn Xbtn" id="login-close-btn-thirdScreen">
+            X
+        </div>
+
+        <form id="login-form-thirdScreen">
+            <div class="form">
+
+                <table>
+                    <tr>
+                        <td>
+                            <br />
+                            <label for="login-uname-txtbx">Nome de Utilizador:<span id="login-uname-att-thirdScreen" class="attentionText">*</span></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="req-field" name="login-uname" id="login-uname-txtbx-thirdScreen">
+                            <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br />
+                            <label for="login-pword-txtbx">Palavra-Passe:<span id="login-pword-att-thirdScreen" class="attentionText">*</span></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="password" class="req-field" name="login-pword" id="login-pword-txtbx-thirdScreen"><br></td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                            <a style="text-align: right" href="#" id="forgot-password-btn-thirdScreen">Esqueceu palavra-passe/nome de utilizador.</a>
+                            <br />
+                            <br />
+                            <span class="attentionText att-warning">* Campos de preenchimento obrigat&oacute;rio.</span>
+                        </td>
+                    </tr>
+                </table>
+                <p id="invalid-data">Palavra-passe ou Nome de Utilizador inv&aacute;lidos</p>
+
+            </div>
+
+            <div class="box btn submit" id="login-submit-thirdScreen">
+                ENTRAR
+                <div class="disabler" id="login-submit-disabler"></div>
+            </div>
+        </form>
+    </div>
+
+    <!--Janela Registar-->
+    <div class="window" id="reg-window">
+        <h3>REGISTAR</h3>
+        <div class="closeWindow btn Xbtn" id="reg-close-btn">
+            X
+        </div>
+
+        <form id="reg-form">
+            <div class="form" style="position:absolute; top:110px;">
+
+                <table>
+                    <!--Nome de Utilizador-->
+                    <tr>
+                        <td>
+                            <br />
+                            <label for="reg-uname-txtbx">Nome de Utilizador:<span id="reg-uname-att" class="attentionText">*</span>
+                                <span id="reg-uname-exists" class="attentionText">O nome de utilizador escolhido j&aacute; existe.</span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text"  class="inputReg req-field" name="reg-uname" id="reg-uname-txtbx"><br>
+                        </td>
+                    </tr>
+                    <!--Password-->
+                    <tr>
+                        <td>
+                            <br />
+                            <label for="reg-pword-txtbx">Palavra-Passe:<span id="reg-pword-att" class="attentionText">*</span></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="password"  class="req-field" name="reg-pword" id="reg-pword-txtbx"><br />
+                        </td>
+                    </tr>
+                    <!--Confirmar Password-->
+                    <tr>
+                        <td>
+                            <br />
+                            <label for="reg-cpword-txtbx">Confirmar Palavra-Passe:<span id="reg-cpword-att" class="attentionText">*</span>
+                                <span id="reg-cpword-diff" class="attentionText">A palavra-passe inserida &eacute; diferente &agrave; anterior.</span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="password"  class="req-field" name="reg-cpword" id="reg-cpword-txtbx"><br />
+                        </td>
+                    </tr>
+                    <!--NIF-->
+                    <tr>
+                        <td>
+                            <br />
+                            <label for="reg-nif-numbx">N&uacute;mero de Contribuinte (NIF):</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="numOnly nifNumber" name="reg-nif" id="reg-nif-numbx" maxlength="9"><br>
+                        </td>
+                    </tr>
+                    <!--Nr Telemóvel-->
+                    <tr>
+                        <td>
+                            <br />
+                            <label for="reg-tel-numbx">N&uacute;mero de Telem&oacute;vel:<span id="reg-tel-att" class="attentionText">*</span></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="req-field numOnly cellNumber" name="reg-tel" id="reg-tel-numbx" maxlength="9"><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br />
+                            <span class="attentionText att-warning">* Campos de preenchimento obrigat&oacute;rio.</span>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="box btn submit" id="reg-submit">
+                CONFIRMAR
+                <div class="disabler" id="reg-submit-disabler"></div>
+            </div>
+        </form>
+
+    </div>
     <!--######################################################################
     ################################ Comuns ##################################
     ##########################################################################-->

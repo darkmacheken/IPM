@@ -354,3 +354,36 @@
   line-height: 55px;
   background-color: #B22222;
 }
+
+#login-window-thirdScreen{
+  position: absolute;
+width: 350px;
+height: 410px;
+top: 110px;
+left: 1172px;
+}
+#login-window-thirdScreen h3{
+  position: absolute;
+  left: 100px;
+  top: -30px;
+}
+#login-window-thirdScreen table{
+  position: absolute;
+  left: -25px;
+  bottom: 80px;
+  width: 450px;
+}
+
+#login-window-thirdScreen input{
+  width: 325px;
+}
+#login-window-thirdScreen .submit{
+  position: absolute;
+  bottom: 10px;
+  left: 90px;
+}
+#login-window-thirdScreen p{
+  position: absolute;
+bottom: 90px;
+left: 15px;
+}
