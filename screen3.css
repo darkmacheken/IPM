@@ -219,6 +219,7 @@
 #view-items-current-order.selected {
   background-image: url("images/background/back2.png");
   background-repeat: repeat-x repeat-y;
+  color: black;
 }
 
 #view-items-all-orders {
@@ -242,6 +243,7 @@
 #view-items-all-orders.selected {
   background-image: url("images/background/back2.png");
   background-repeat: repeat-x repeat-y;
+  color: black;
 }
 
 #view-order-items-box ul {
