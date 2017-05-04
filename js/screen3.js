@@ -7,6 +7,7 @@ function prepareScreen3() {
         $("#box-games").hide();
         $("#order-again-hide-btn").show();
         $("#box-order-again").show();
+        $("#order-pay-cancel-btn").click();
         if (whoOpenedViewOrder === 0) {
             $("#view-order-btn").click();
             whoOpenedViewOrder = 2;
