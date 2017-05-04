@@ -256,7 +256,7 @@ function showCurrentOrder() {
     });
 }
 
-function addFoodToOrder(food) {
+function addFoodToOrder(food, quantity, ingredients) {
     /*for (var i = 0; i < currentOrder.length; i++) {
         if (currentOrder[i]._name === food._name &&
             currentOrder[i]._ingredients.length === food._ingredients.length) {
@@ -265,11 +265,17 @@ function addFoodToOrder(food) {
                 return;
             }
     }*/
+    let q = 1;
+    let ing = food._ingredients;
+    if (typeof quantity === "number")
+        q = quantity;
+    if (typeof ingredients === "object")
+        ing = ingredients;
     currentOrder.push({
         _name: food._name,
         _price: food._price,
-        _quantity: 1,
-        _ingredients: food._ingredients
+        _quantity: q,
+        _ingredients: ing
     });
     showCurrentOrder();
 }
