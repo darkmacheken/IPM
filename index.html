@@ -92,143 +92,145 @@
             </td>
 
             <td height="60%" valign="top">
-                <!--Menu Conta de Utilizador-->
-                <div class="title" id="rightBoxTitle" >
-                    CONTA DE UTILIZADOR
-                </div>
-                <div class="box boxright background" id="boxcontautilizador" >
-                    <br />
-                    <!--Botão Entrar-->
-                    <div class="box btn" id="login-btn">
-                        &emsp;ENTRAR
+                <div id="box-conta-utilizador-all">
+                    <!--Menu Conta de Utilizador-->
+                    <div class="title" id="rightBoxTitle" >
+                        CONTA DE UTILIZADOR
                     </div>
-                    <br /><br /><br /><br /><br /><br />
-                    <!--Botão Registar-->
-                    <div class="box btn" id="reg-btn">
-                        &emsp;&emsp;REGISTAR
-                    </div>
-                </div>
-                <!--Caixa Login quando o utilizador entrou na conta-->
-                <div class="box boxright background" id="boxcontautilizadorlogged">
-                    <div id="textContaUtilizador">
-                        Seja bem-vindo, <span class="logged-uname"></span>!<br/>
-                    </div>
-                    <div class="box btn" id="historicobtn">
-                        Histórico
-                    </div>
-                    <div class="box btn" id="definicoesContabtn">
-                        Definições de Conta
-                    </div>
-                    <div class="box btn" id="sairSessaobtn">
-                        Terminar Sessão
-                    </div>
-                </div>
-                <!--Histórico-->
-                <div id="Historico">
-                    <div class="box boxright background" id="boxHistorico">
-                          <ul>
-                          </ul>
-                        <div class="box btn" id="boxHistoricoVoltarbtn">
-                            Voltar
+                    <div class="box boxright background" id="boxcontautilizador" >
+                        <br />
+                        <!--Botão Entrar-->
+                        <div class="box btn" id="login-btn">
+                            &emsp;ENTRAR
+                        </div>
+                        <br /><br /><br /><br /><br /><br />
+                        <!--Botão Registar-->
+                        <div class="box btn" id="reg-btn">
+                            &emsp;&emsp;REGISTAR
                         </div>
                     </div>
-                    <div class="box boxright background boxHistoricoRepetirPedido" id="boxHistoricoRepetirPedido">
-                      <span style="font-size: 4; font-weight: bold; text-decoration: underline" class="hist-info">Pedido 1 - 12/04/2017 - 19:38</span><br />
-                      <span style="font-size: 4" class="hist-total">Total: 13,25€</span><br /><br />
-                      <span class="hist-order">
-                          1x Caldo Verde<br />
-                          1x Cerveja Coral<br />
-                          1x Bitoque<br />
-                          1x Serradura
-                      </span>
-                      <div class="box btn boxRepetirPedidobtn" id="boxRepetirPedidobtn">
-                          &emsp;Repetir Pedido
-                      </div>
-                      <div class="box btn boxHistoricoRepetirPedidoVoltarbtn" id="boxHistoricoRepetirPedidoVoltarbtn">
-                          Voltar
-                      </div>
+                    <!--Caixa Login quando o utilizador entrou na conta-->
+                    <div class="box boxright background" id="boxcontautilizadorlogged">
+                        <div id="textContaUtilizador">
+                            Seja bem-vindo, <span class="logged-uname"></span>!<br/>
+                        </div>
+                        <div class="box btn" id="historicobtn">
+                            Histórico
+                        </div>
+                        <div class="box btn" id="definicoesContabtn">
+                            Definições de Conta
+                        </div>
+                        <div class="box btn" id="sairSessaobtn">
+                            Terminar Sessão
+                        </div>
                     </div>
-                </div>
-                <!--Definicoes de Conta-->
-                <div id="DefinicoesConta">
-                    <div class="box boxright background" id="boxDefContas">
-                        <form id="def-form">
-                            <div class="form" style="position:absolute; top:10px; left:15px;">
-
-                                <table>
-                                    <!--Nome de Utilizador-->
-                                    <tr>
-                                        <td>
-                                            <label for="def-uname-txtbx">Nome de Utilizador:
-                                                <span id="def-uname-exists" class="attentionText">J&aacute; existe!</span>
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="text" class="inputDef req-field" name="def-uname" id="def-uname-txtbx"><br />
-                                        </td>
-                                    </tr>
-
-                                    <!--Password-->
-                                    <tr>
-                                        <td>
-                                            <label for="def-pword-txtbx">Palavra-Passe:</label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="password" class="inputDef" name="def-pword" id="def-pword-txtbx"><br />
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <label for="def-cpword-txtbx">Confirmar Palavra-Passe:
-                                                <span id="def-cpword-diff" class="attentionText">Diferente!</span>
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="password" class="inputDef" name="def-cpword" id="def-cpword-txtbx"><br />
-                                        </td>
-                                    </tr>
-
-                                    <!--NIF-->
-                                    <tr>
-                                        <td>
-                                            <label for="def-nif-numbx">Número de Contribuinte (NIF):</label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="text" class="inputDef numOnly nifNumber" name="def-nif" id="def-nif-numbx" maxlength="9"><br>
-                                        </td>
-                                    </tr>
-
-                                    <!--Nr Telemóvel-->
-                                    <tr>
-                                        <td>
-                                            <label for="def-tel-numbx">Número de Telemóvel:</label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="text" class="inputDef numOnly cellNumber" name="def-tel" id="def-tel-numbx" maxlength="9"><br>
-                                        </td>
-                                    </tr>
-                                </table>
-
-                            </div>
-
-                            <div class="box btn" id="boxDefinicoesVoltarbtn">
+                    <!--Histórico-->
+                    <div id="Historico">
+                        <div class="box boxright background" id="boxHistorico">
+                              <ul>
+                              </ul>
+                            <div class="box btn" id="boxHistoricoVoltarbtn">
                                 Voltar
                             </div>
-                            <div class="box btn" id="boxDefinicoesGuardarbtn">
-                                Guardar
-                            </div>
-                        </form>
+                        </div>
+                        <div class="box boxright background boxHistoricoRepetirPedido" id="boxHistoricoRepetirPedido">
+                          <span style="font-size: 4; font-weight: bold; text-decoration: underline" class="hist-info">Pedido 1 - 12/04/2017 - 19:38</span><br />
+                          <span style="font-size: 4" class="hist-total">Total: 13,25€</span><br /><br />
+                          <span class="hist-order">
+                              1x Caldo Verde<br />
+                              1x Cerveja Coral<br />
+                              1x Bitoque<br />
+                              1x Serradura
+                          </span>
+                          <div class="box btn boxRepetirPedidobtn" id="boxRepetirPedidobtn">
+                              &emsp;Repetir Pedido
+                          </div>
+                          <div class="box btn boxHistoricoRepetirPedidoVoltarbtn" id="boxHistoricoRepetirPedidoVoltarbtn">
+                              Voltar
+                          </div>
+                        </div>
+                    </div>
+                    <!--Definicoes de Conta-->
+                    <div id="DefinicoesConta">
+                        <div class="box boxright background" id="boxDefContas">
+                            <form id="def-form">
+                                <div class="form" style="position:absolute; top:10px; left:15px;">
+
+                                    <table>
+                                        <!--Nome de Utilizador-->
+                                        <tr>
+                                            <td>
+                                                <label for="def-uname-txtbx">Nome de Utilizador:
+                                                    <span id="def-uname-exists" class="attentionText">J&aacute; existe!</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="text" class="inputDef req-field" name="def-uname" id="def-uname-txtbx"><br />
+                                            </td>
+                                        </tr>
+
+                                        <!--Password-->
+                                        <tr>
+                                            <td>
+                                                <label for="def-pword-txtbx">Palavra-Passe:</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="password" class="inputDef" name="def-pword" id="def-pword-txtbx"><br />
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <label for="def-cpword-txtbx">Confirmar Palavra-Passe:
+                                                    <span id="def-cpword-diff" class="attentionText">Diferente!</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="password" class="inputDef" name="def-cpword" id="def-cpword-txtbx"><br />
+                                            </td>
+                                        </tr>
+
+                                        <!--NIF-->
+                                        <tr>
+                                            <td>
+                                                <label for="def-nif-numbx">Número de Contribuinte (NIF):</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="text" class="inputDef numOnly nifNumber" name="def-nif" id="def-nif-numbx" maxlength="9"><br>
+                                            </td>
+                                        </tr>
+
+                                        <!--Nr Telemóvel-->
+                                        <tr>
+                                            <td>
+                                                <label for="def-tel-numbx">Número de Telemóvel:</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="text" class="inputDef numOnly cellNumber" name="def-tel" id="def-tel-numbx" maxlength="9"><br>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                </div>
+
+                                <div class="box btn" id="boxDefinicoesVoltarbtn">
+                                    Voltar
+                                </div>
+                                <div class="box btn" id="boxDefinicoesGuardarbtn">
+                                    Guardar
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </td>
@@ -923,7 +925,7 @@
     </div>
 
     <!-- Pagamento -->
-    <div class="box screen3" id="order-pay-box">
+    <div class="box screen3 window" id="order-pay-box">
       <div class="title" id="order-pay-title">
           Pagamento
       </div>
@@ -937,6 +939,7 @@
       </div>
       <div class="box btn" id="order-pay-cancel-btn">
           Cancelar
+          <div class="disabler"></div>
       </div>
       <div class="background screen3" id="transacao">
           Pagamento em processamento

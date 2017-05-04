@@ -1,5 +1,6 @@
 var sessionOrder = [];
 var whoOpenedViewOrder = 0;
+var paying = false;
 
 function prepareScreen3() {
     $("#order-again-btn").click(function () {
@@ -58,6 +59,7 @@ function prepareScreen3() {
             $("#view-items-all-orders").click();
         else
             $("#view-items-current-order").click();
+        $("#box-conta-utilizador-all").hide();
         $(this).hide();
     });
 
@@ -66,17 +68,22 @@ function prepareScreen3() {
         $("#view-order-btn").show();
         $("#view-order-items-box").hide();
         $("#view-all-orders-items-box").hide();
+        $("#box-conta-utilizador-all").show();
         $(this).hide();
     });
 
     $("#pay-btn").click(function () {
         $("#view-order-hide-btn").click();
-        $("#order-pay-box").show();
+        currScreen = 1;
+        openWindow("order-pay-box");
+        currScreen = 3;
         $("#view-order-pay-box").hide();
     });
 
     $("#order-pay-cancel-btn").click(function () {
-        $("#order-pay-box").hide();
+        if (paying)
+            return;
+        closeWindow("order-pay-box");
         $("#view-order-pay-box").show();
     });
 
@@ -106,6 +113,8 @@ function prepareScreen3() {
 
     $("#order-pay-money-btn, #order-pay-creditcard-btn").click(function () {
         $("#transacao").show();
+        paying = true;
+        $("#order-pay-cancel-btn .disabler").show();
         setTimeout(function () {
             if (loggedIn.length !== 0) {
                 ;
@@ -113,10 +122,14 @@ function prepareScreen3() {
             sessionOrder = [];
             $("#view-order-pay-box-total span").text(formatPrice(0));
             $("#transacao").hide();
-            $("#order-pay-box").hide();
+            closeWindow("order-pay-box");
             $("#view-order-pay-box").show();
+            paying = false;
+            $("#order-pay-cancel-btn .disabler").hide();
         }, 5000);
     });
+
+    $("#order-pay-cancel-btn .disabler").hide();
 
 }
 
