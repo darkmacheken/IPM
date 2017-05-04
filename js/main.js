@@ -110,7 +110,10 @@ $(document).ready(function() {
             confirmOk("Os seus dados foram enviados para o seu número de telemóvel.", callblock);
         }
         else {
-            confirmOk("O número inserido é desconhecido.", callblock);
+            confirmOk("O número inserido é desconhecido.", function () {
+                closeWindow("recover-password-box");
+                openWindow("recover-password-box", '5');
+            });
         }
     });
 
