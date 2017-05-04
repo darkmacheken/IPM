@@ -53,9 +53,11 @@ function prepareScreen3() {
 
     $("#view-order-btn").click(function () {
         whoOpenedViewOrder = 1;
-        showCurrentOrder();
         $("#view-order-hide-btn").show();
-        $("#view-order-items-box").show();
+        if (currentOrder.length === 0)
+            $("#view-items-all-orders").click();
+        else
+            $("#view-items-current-order").click();
         $(this).hide();
     });
 
@@ -63,6 +65,7 @@ function prepareScreen3() {
         whoOpenedViewOrder = 0;
         $("#view-order-btn").show();
         $("#view-order-items-box").hide();
+        $("#view-all-orders-items-box").hide();
         $(this).hide();
     });
 
@@ -78,6 +81,9 @@ function prepareScreen3() {
     });
 
     $("#view-order-confirmarbtn").click(function () {
+        if (currentOrder.length === 0)
+            return;
+
         confirmYesNo("Tem a certeza que pretende fazer o pedido?", function () {
             $("#view-order-hide-btn").click();
             sessionOrder = sessionOrder.concat(compactOrder(currentOrder));
@@ -85,6 +91,33 @@ function prepareScreen3() {
             //$("#view-order-pay-box-total span").text(formatPrice(totalPrice(sessionOrder)));
         });
     });
+
+    $("#view-items-current-order").click(function () {
+        showCurrentOrder();
+        $("#view-order-items-box").show();
+        $("#view-all-orders-items-box").hide();
+    });
+
+    $("#view-items-all-orders").click(function () {
+        showAllOrders();
+        $("#view-all-orders-items-box").show();
+        $("#view-order-items-box").hide();
+    });
+
+    $("#order-pay-money-btn, #order-pay-creditcard-btn").click(function () {
+        $("#transacao").show();
+        setTimeout(function () {
+            if (loggedIn.length !== 0) {
+                ;
+            }
+            sessionOrder = [];
+            $("#view-order-pay-box-total span").text(formatPrice(0));
+            $("#transacao").hide();
+            $("#order-pay-box").hide();
+            $("#view-order-pay-box").show();
+        }, 5000);
+    });
+
 }
 
 function enterScreen3() {
@@ -163,6 +196,8 @@ function openOrderAgainMenu(menuName, menuTitle) {
     }
     $("#box-order-menu ul").html(boxContent);
     $("#box-order-menu ul li").click(function () {
+        $("#view-order-btn").click();
+        $("#view-items-current-order").click();
         addFoodToOrder(FOOD_ITEMS[menuName][getIndexNumber(this)]);
     });
     $(".info3ecran").click(function (e) {
@@ -179,4 +214,29 @@ function closeOrderAgainMenu() {
     $("#order-menu-back").hide();
     $("#box-order-menu ul").html("");
     $("#order-again-title").text("Fazer Novo Pedido");
+}
+
+function showAllOrders() {
+    let allOrderTxt = ""
+    for (var i = 0; i < sessionOrder.length; i++) {
+        allOrderTxt += "<tr><td>";
+        allOrderTxt += sessionOrder[i]._quantity + "x</td><td>" + sessionOrder[i]._name;
+        let ofilen = sessionOrder[i]._ingredients.length;
+        if (ofilen !== 0) {
+            allOrderTxt += " s/ ";
+            for (var j = 0; j < ofilen; j++) {
+                allOrderTxt += sessionOrder[i]._ingredients[j];
+                if (j === ofilen - 1)
+                    allOrderTxt += ".";
+                else if (j === ofilen - 2)
+                    allOrderTxt += " e ";
+                else
+                    allOrderTxt += ", ";
+            }
+        }
+        allOrderTxt += "</td><td>";
+        allOrderTxt += formatPrice(sessionOrder[i]._price * sessionOrder[i]._quantity);
+        allOrderTxt += "</td></tr>";
+    }
+    $("#view-all-orders-table").html(allOrderTxt);
 }
