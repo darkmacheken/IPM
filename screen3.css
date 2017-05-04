@@ -269,16 +269,6 @@
     border-right: none;
 }
 
-#view-order-confirmarbtn {
-  padding: 0%;
-  height: 55px;
-  width: 290px;
-  bottom: 0%;
-  left: 0%;
-  font-size: 27px;
-  line-height: 53px;
-}
-
 #pay-btn {
   position: absolute;
   top: 90px;
