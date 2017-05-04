@@ -486,25 +486,91 @@ left: 1172px;
   width: 300px;
   height: 460px;
 }
-#food-image-thirdScreen{
+.food-image-thirdScreen{
   left: 73px;
 }
-#food-tittle-thirdScreen{
+.food-tittle-thirdScreen{
   top: 180px;
   left: 0px;
   width: 300px;
 }
-#classificacao-thirdScreen{
+.classificacao-thirdScreen{
   left: 35px;
   top: 240px;
 }
-#preco-thirdScreen{
+.preco-thirdScreen{
   font-size: 24px;
   left: 0px;
   top: 280px;
   width: 300px;
 }
-#descricao-thirdScreen{
+.descricao-thirdScreen{
   left: 5px;
   top: 320px;
+}
+#ingredients-thirdScreen{
+  position: absolute;
+  left: 1221px;
+  top: 40px;
+  width: 300px;
+  height: 540px;
+}
+
+#chooseIngredients{
+  width: 300px;
+    height: 230px;
+    position: absolute;
+    top: 250px;
+}
+#chooseIngredientsTittle{
+  width: 300px;
+  position: absolute;
+  top: 235px;
+  text-align: center;
+  font-size: 15px;
+}
+#chooseIngredients ul{
+  width: 300px;
+  height: 230px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: auto;
+}
+#chooseIngredients li{
+  list-style-type: none;
+  height: 40px;
+  width: 290px;
+  position: relative;
+  left: 0px;
+}
+#chooseIngredients input {
+  width: 20px;
+  position: absolute;
+  top: 11px;
+  left: 10px;
+}
+#textIngredient-thirdScreen{
+  text-align: left;
+  font-size: 20px;
+  position: absolute;
+  top: 15px;
+  left: 50px;
+}
+#ingred-edit-save-btn-thirdScreen{
+  padding: inherit;
+  height: 40px;
+  width: 110px;
+  line-height: 40px;
+  left: 10px;
+  font-size: 20px;
+}
+#ingred-edit-cancel-btn-thirdScreen{
+  padding: inherit;
+  height: 40px;
+  width: 120px;
+  line-height: 40px;
+    left: 160px;
+  font-size: 20px;
+  background-color: #B22222;
 }
