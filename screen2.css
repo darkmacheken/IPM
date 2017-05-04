@@ -857,3 +857,9 @@
      left: 3px;
      font-size: 15px;
 }
+.costumizedWarning{
+  font-size: 12px;
+  position: absolute;
+  left: 105px;
+  top: 26px;
+}
