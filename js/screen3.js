@@ -1,4 +1,5 @@
 var sessionOrder = [];
+var whoOpenedViewOrder = 0;
 
 function prepareScreen3() {
     $("#order-again-btn").click(function () {
@@ -6,7 +7,10 @@ function prepareScreen3() {
         $("#box-games").hide();
         $("#order-again-hide-btn").show();
         $("#box-order-again").show();
-        $("#view-order-btn").click();
+        if (whoOpenedViewOrder === 0) {
+            $("#view-order-btn").click();
+            whoOpenedViewOrder = 2;
+        }
     });
 
     $("#order-again-hide-btn").click(function () {
@@ -14,7 +18,8 @@ function prepareScreen3() {
         $("#box-games").show();
         $("#box-order-again").hide();
         $("#order-again-btn").show();
-        $("#view-order-hide-btn").click();
+        if (whoOpenedViewOrder === 2)
+            $("#view-order-hide-btn").click();
     });
 
     $("#menu-order-again-entradas").click(function () {
@@ -46,12 +51,14 @@ function prepareScreen3() {
     });
 
     $("#view-order-btn").click(function () {
+        whoOpenedViewOrder = 1;
         $("#view-order-hide-btn").show();
         $("#view-order-items-box").show();
         $(this).hide();
     });
 
     $("#view-order-hide-btn").click(function () {
+        whoOpenedViewOrder = 0;
         $("#view-order-btn").show();
         $("#view-order-items-box").hide();
         $(this).hide();
