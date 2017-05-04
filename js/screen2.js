@@ -139,7 +139,7 @@ function showCurrentOrder() {
         var price = currentOrder[i]._price * currentOrder[i]._quantity;
         orderHtml += "<li class=\"box\" id=\"current-order-";
         orderHtml += String(i + 1);
-        orderHtml += "\"><div class=\"box btn editBox\"></div><div class=\"tituloCompra\">";
+        orderHtml += "\"><div class=\"background-li-box-compras\"> </div><div class=\"box btn editBox\"></div><div class=\"tituloCompra\">";
         orderHtml += currentOrder[i]._name;
         orderHtml += "</div><input type=\"text\" class=\"qtd\" value=\"";
         orderHtml += currentOrder[i]._quantity;
