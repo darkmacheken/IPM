@@ -354,7 +354,13 @@
   line-height: 55px;
   background-color: #B22222;
 }
-
+#transacao{
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  width: 290px;
+  height: 181px;
+}
 #login-window-thirdScreen{
   position: absolute;
 width: 350px;
