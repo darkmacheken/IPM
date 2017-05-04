@@ -125,7 +125,7 @@
 }
 #menu-order-again-entradas{
 background-image: url("images/icons/food-menu/bread-black.png");
-background-position: 14% 47%;
+background-position: 14% 53%;
 background-repeat: no-repeat;
 background-size: 20px 20px;
 }
@@ -137,7 +137,7 @@ background-size: 30px 30px;
 }
 #menu-order-again-pratos{
 background-image: url("images/icons/food-menu/plate-black.png");
-background-position: 10% 50%;
+background-position: 11% 57%;
 background-repeat: no-repeat;
 background-size: 30px 30px;
 }
@@ -149,13 +149,13 @@ background-size: 30px 30px;
 }
 #menu-order-again-sobremesas{
 background-image: url("images/icons/food-menu/dessert-black.png");
-background-position: 7% 49%;
+background-position: 9% 60%;
 background-repeat: no-repeat;
 background-size: 40px 40px;
 }
 #menu-order-again-cafetaria{
 background-image: url("images/icons/food-menu/coffee-black.png");
-background-position: 10% 48%;
+background-position: 11% 48%;
 background-repeat: no-repeat;
 background-size: 30px 30px;
 }
@@ -170,6 +170,10 @@ background-size: 30px 30px;
   background-color: #4CAF50; /* Green */
   color: white;
   border-bottom: 1px solid black;
+  background-image: url("images/icons/buttons/back-white.png");
+  background-position: 8% 40%;
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
 }
 
 #box-order-menu ul{
@@ -353,7 +357,7 @@ border-bottom: 1px solid #202020;
   line-height: 55px;
   background-color: #DAA520;
   background-image: url("images/icons/buttons/money-white.png");
-  background-position: 15% 40%;
+  background-position: 23% 60%;
   background-repeat: no-repeat;
   background-size: 30px 30px;
 }
