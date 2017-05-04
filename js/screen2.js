@@ -43,10 +43,13 @@ function prepareScreen2() {
     });
 
     /**** Editar ingredientes ****/
-    $("#ingred-edit-save-btn").click(function () {
-        closeWindow("editIngredients");
+    $("#ingred-edit-save-btn, #ingred-edit-save-btn-thirdScreen").click(function () {
+        let ingredscreen = "editIngredients";
+        if (currScreen === 3)
+            ingredscreen = "ingredients-thirdScreen";
+        closeWindow(ingredscreen);
         var newIngredients = [];
-        $("input[type=checkbox]").each(function () {
+        $("#" + ingredscreen + " input[type=checkbox]").each(function () {
             if (!this.checked) {
                 newIngredients.push(this.id.substring(13));
             }
@@ -55,8 +58,11 @@ function prepareScreen2() {
         showCurrentOrder();
     });
 
-    $("#ingred-edit-cancel-btn").click(function () {
-        closeWindow("editIngredients");
+    $("#ingred-edit-cancel-btn, #ingred-edit-cancel-btn-thirdScreen").click(function () {
+        if (currScreen === 3)
+            closeWindow("ingredients-thirdScreen");
+        else
+            closeWindow("editIngredients");
     });
 
 }
@@ -195,8 +201,11 @@ function showCurrentOrder() {
         editingIndex = getIndexNumber(this);
         let food = currentOrder[editingIndex];
         let origFood = getFoodByName(food._name);
-        $("#editIngredients .foodImage").css("background-image", "url(" + origFood._img + ")");
-        $("#editIngredients .foodTitle").text(food._name);
+        let ingredWindow = "#editIngredients";
+        if (currScreen === 3)
+            ingredWindow = "#ingredients-thirdScreen";
+        $(ingredWindow + " .foodImage").css("background-image", "url(" + origFood._img + ")");
+        $(ingredWindow + " .foodTitle").text(food._name);
         let bgPos = "46% ";
         switch (origFood._classif) {
             case 0:
@@ -221,10 +230,10 @@ function showCurrentOrder() {
                 // Não pode acontecer.
                 ;
         }
-        $("#editIngredients .classificacao").css("background-position", bgPos);
-        $("#editIngredients .precoTitle span").text(formatPrice(food._price));
-        $("#editIngredients #editIngredients-desc").text(origFood._desc);
-        $("#editIngredients #editIngredients-ingredients").text(origFood._ingredientsString);
+        $(ingredWindow + " .classificacao").css("background-position", bgPos);
+        $(ingredWindow + " .precoTitle span").text(formatPrice(food._price));
+        $(ingredWindow + " #editIngredients-desc").text(origFood._desc);
+        $(ingredWindow + " #editIngredients-ingredients").text(origFood._ingredientsString);
 
         let ingred = "";
         for (let i = 0; i < origFood._ingredients.length; i++) {
@@ -240,14 +249,20 @@ function showCurrentOrder() {
             }
             if (checked)
                 ingred += "checked ";
-            ingred += "/><label class=\"textIngredient\" for=\"check-ingred-";
+            ingred += "/><div class=\"textIngredient";
+            if (currScreen === 3)
+                ingred += "-thirdScreen";
+            ingred += "\"><label for=\"check-ingred-";
             ingred += origFood._ingredients[i];
             ingred += "\">";
             ingred += origFood._ingredients[i];
-            ingred += "</label></li>";
+            ingred += "</label></div></li>";
         }
-        $("#editIngredients ul").html(ingred);
-        openWindow("editIngredients");
+        $(ingredWindow + " ul").html(ingred);
+        let oleScreen = currScreen;
+        currScreen = 1;
+        openWindow(ingredWindow.substring(1));
+        currScreen = oleScreen;
     });
 
     $(".deleteBox").click(function () {

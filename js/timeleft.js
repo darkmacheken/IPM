@@ -12,6 +12,7 @@ function timer_init() {
             timer_firstDish = ct;
     }
     timer_global *= 60;
+    timer_firstDish *= 60;
     setTimeout(timer_tick, 1000);
     timer_update();
     $("#timeleft-circle").show();
