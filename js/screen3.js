@@ -123,19 +123,22 @@ function prepareScreen3() {
     });
 
     $("#order-pay-money-btn, #order-pay-creditcard-btn").click(function () {
-        $("#transacao").show();
-        paying = true;
-        $("#order-pay-cancel-btn .disabler").show();
-        setTimeout(function () {
-            addToHistory(sessionOrder);
-            sessionOrder = [];
-            $("#transacao").hide();
-            closeWindow("order-pay-box");
-            $("#view-order-pay-box").show();
-            paying = false;
-            $("#order-pay-cancel-btn .disabler").hide();
-            showCurrentOrder();
-        }, 5000);
+        confirmYesNo("Tem a certeza que pretende pagar?", function () {
+            callblock();
+            $("#transacao").show();
+            paying = true;
+            $("#order-pay-cancel-btn .disabler").show();
+            setTimeout(function () {
+                addToHistory(sessionOrder);
+                sessionOrder = [];
+                $("#transacao").hide();
+                closeWindow("order-pay-box");
+                $("#view-order-pay-box").show();
+                paying = false;
+                $("#order-pay-cancel-btn .disabler").hide();
+                showCurrentOrder();
+            }, 5000);
+        });
     });
 
     $("#order-pay-cancel-btn .disabler, #pay-btn .disabler").hide();
