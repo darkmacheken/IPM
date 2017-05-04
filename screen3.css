@@ -198,6 +198,16 @@
   border: none;
 }
 
+#view-all-orders-items-box {
+  position: absolute;
+  padding: 0px;
+  top: 135px;
+  left: 1236px;
+  height: 443px;
+  width: 290px;
+  border: none;
+}
+
 #view-items-current-order {
   position: absolute;
   height: 40px;
