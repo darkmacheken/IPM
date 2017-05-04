@@ -42,6 +42,10 @@ function prepareScreen2() {
         closeWindow("moreInfo");
     });
 
+    $("#moreInfo-thirdScreen .Xbtn").click(function () {
+        closeWindow("moreInfo-thirdScreen");
+    });
+
     /**** Editar ingredientes ****/
     $("#ingred-edit-save-btn, #ingred-edit-save-btn-thirdScreen").click(function () {
         let ingredscreen = "editIngredients";
@@ -311,8 +315,11 @@ function addFoodToOrder(food, quantity, ingredients) {
 }
 
 function showInfo(food) {
-    $("#moreInfo .foodImage").css("background-image", "url(" + food._img + ")");
-    $("#moreInfo .foodTitle").text(food._name);
+    let thirdScreen = "";
+    if (currScreen === 3)
+        thirdScreen = "-thirdScreen";
+    $("#moreInfo" + thirdScreen + " .foodImage").css("background-image", "url(" + food._img + ")");
+    $("#moreInfo" + thirdScreen + " .foodTitle").text(food._name);
     let bgPos = "46% ";
     switch (food._classif) {
         case 0:
@@ -337,14 +344,15 @@ function showInfo(food) {
             // Não pode acontecer.
             ;
     }
-    $("#moreInfo .classificacao").css("background-position", bgPos);
-    $("#moreInfo .precoTitle span").text(formatPrice(food._price));
-    $("#moreInfo #moreInfo-desc").text(food._desc);
-    let ingred = "";
-    for (var i = 0; i < food._ingredients.length; i++)
-        ingred += food._ingredients[i] + ", ";
-    $("#moreInfo #moreInfo-ingredients").text(ingred.substring(0, ingred.length - 2) + ".");
-    openWindow("moreInfo");
+    $("#moreInfo" + thirdScreen + " .classificacao").css("background-position", bgPos);
+    $("#moreInfo" + thirdScreen + " .precoTitle span").text(formatPrice(food._price));
+    $("#moreInfo" + thirdScreen + " #moreInfo-desc" + thirdScreen).text(food._desc);
+    $("#moreInfo" + thirdScreen + " #moreInfo-ingredients" + thirdScreen).text(food._ingredientsString);
+
+    let oleScreen = currScreen;
+    currScreen = 1;
+    openWindow("moreInfo" + thirdScreen);
+    currScreen = oleScreen;
 }
 
 function deleteFromOrder(foodId) {
