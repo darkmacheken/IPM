@@ -198,10 +198,6 @@
   border: none;
 }
 
-#view-order-items-title {
-  box-shadow: none;
-}
-
 #view-items-current-order {
   position: absolute;
   height: 40px;
@@ -211,8 +207,13 @@
   text-align: center;
   border-left: none;
   border-top: none;
+  border-bottom: none;
   left: 0%;
-  top: 30px;
+  top: 0px;
+}
+
+#view-items-current-order.selected {
+  
 }
 
 #view-items-all-orders {
@@ -224,14 +225,18 @@
   text-align: center;
   border-right: none;
   border-top: none;
+  border-bottom: none;
   right: 0%;
-  top: 30px;
+  top: 0px;
+}
+
+#view-items-all-orders.selected {
 
 }
 
 #view-order-items-box ul {
   position: absolute;
-  top: 73px;
+  top: 40px;
   left: 0px;
   width: 290px;
   bottom: 30px;
