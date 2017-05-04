@@ -177,6 +177,10 @@
     border-bottom: none;
     height: 50px;
     width: 50px;
+    background-image: url("images/icons/buttons/edit-black.png");
+    background-position: 50% 47%;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
 }
 
 .tituloCompra {
