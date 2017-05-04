@@ -296,7 +296,7 @@
 }
 
 .menuEmenta {
-    height: 42px;
+    height: 41px;
     width: 150px;
     line-height: 25px;
     font-size: 24px;
@@ -318,7 +318,6 @@
 
 #menu-entradas {
     position: absolute;
-    height: 45px;
     top: 0px;
     left: 0px;
     border-top: none;
@@ -368,7 +367,7 @@
 
 #menu-bebidas {
     position: absolute;
-    top: 261px;
+    top: 261.5px;
     left: 0px;
     background-image: url("images/icons/food-menu/drink-white.png");
     background-position: 10% 45%;
@@ -385,7 +384,7 @@
 
 #menu-sobremesas {
     position: absolute;
-    top: 348px;
+    top: 349px;
     left: 0px;
     background-image: url("images/icons/food-menu/dessert-white.png");
     background-position: 7% 49%;
@@ -402,6 +401,7 @@
     position: absolute;
     top: 437px;
     left: 0px;
+    height: 42px;
     border-bottom: none;
     background-image: url("images/icons/food-menu/coffee-white.png");
     background-position: 10% 48%;
