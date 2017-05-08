@@ -78,9 +78,7 @@ function prepareScreen3() {
         if (totalPrice(sessionOrder) === 0)
             return;
         $("#view-order-hide-btn").click();
-        currScreen = 1;
-        openWindow("order-pay-box");
-        currScreen = 3;
+        openWindow("order-pay-box", windowPosition.DEFAULT);
         $("#view-order-pay-box").hide();
     });
 
@@ -95,7 +93,9 @@ function prepareScreen3() {
         if (currentOrder.length === 0)
             return;
 
-        confirmYesNo("Tem a certeza que pretende fazer o pedido?", function () {
+        confirmYesNo("Tem a certeza que pretende fazer o pedido?",
+        windowPosition.BOTTOM_RIGHT,
+        function () {
             $("#view-order-hide-btn").click();
             sessionOrder = sessionOrder.concat(currentOrder);
             sessionOrder = compactOrder(sessionOrder);
@@ -123,7 +123,9 @@ function prepareScreen3() {
     });
 
     $("#order-pay-money-btn, #order-pay-creditcard-btn").click(function () {
-        confirmYesNo("Tem a certeza que pretende pagar?", function () {
+        confirmYesNo("Tem a certeza que pretende pagar?",
+        windowPosition.BOTTOM_RIGHT,
+        function () {
             callblock();
             $("#transacao").show();
             paying = true;
@@ -151,7 +153,9 @@ function enterScreen3() {
 
     //var ordered = compactOrder(currentOrder);
 
-    confirmYesNo("Tem a certeza que pretende fazer o pedido?", function () {
+    confirmYesNo("Tem a certeza que pretende fazer o pedido?",
+    windowPosition.BOTTOM_RIGHT,
+    function () {
         $("#orderfoodbtn").hide();
         exitScreen2();
         sessionOrder = sessionOrder.concat(compactOrder(currentOrder));

@@ -141,7 +141,9 @@ function refreshHistorico() {
 
     $(".boxHistoricoXbtn").click(function () {
         var orderId = parseInt($(this).parents("li").attr("class"));
-        confirmYesNo("Tem a certeza que pretende apagar o seu pedido n.º " + getOrderNumber(getHistory()[orderId]) + "?", function () {
+        confirmYesNo("Tem a certeza que pretende apagar o seu pedido n.º " + getOrderNumber(getHistory()[orderId]) + "?",
+        windowPosition.TOP_RIGHT,
+        function () {
             deleteFromHistory(orderId);
             refreshHistorico();
         });
@@ -150,7 +152,9 @@ function refreshHistorico() {
 
 function repeatOrder(order) {
     var orderFoods = getOrderFoods(order);
-    confirmYesNo("Tem a certeza que pretende repetir o pedido " + getOrderNumber(order) + "?", function () {
+    confirmYesNo("Tem a certeza que pretende repetir o pedido " + getOrderNumber(order) + "?",
+    windowPosition.TOP_RIGHT,
+    function () {
         $("#orderfoodbtn").click();
         for (let i = 0; i < orderFoods.length; i++) {
             addFoodToOrder(getFoodByName(orderFoods[i]._name), orderFoods[i]._quantity, orderFoods[i]._ingredients);

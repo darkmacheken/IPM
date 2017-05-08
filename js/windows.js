@@ -1,3 +1,12 @@
+windowPosition = {
+    DEFAULT : -1,
+    TOP_LEFT : 100,
+    TOP_RIGHT : 200,
+    BOTTOM_LEFT : 300,
+    BOTTOM_RIGHT : 400,
+    MIDDLE : 500,
+}
+
 function callblock(zindex) {
     if(typeof zindex === "undefined") {
         zindex = '1';
@@ -9,10 +18,30 @@ function turnoffblock() {
     $("#blocker").css("z-index", '0').hide();
 }
 
-function openWindow(id, zindex) {
-	callblock(zindex);
-    if (currScreen === 3)
-        $("#" + id).css("left","880px").css("top","30px");
+function openWindow(id, pos, zindex) {
+    callblock(zindex);
+    switch (pos) {
+        case windowPosition.DEFAULT:
+            break;
+        case windowPosition.TOP_LEFT:
+            $("#" + id).css("left","30px").css("right","auto").css("top","30px").css("bottom","auto");
+            break;
+        case windowPosition.TOP_RIGHT:
+            $("#" + id).css("left","auto").css("right","30px").css("top","30px").css("bottom","auto");
+            break;
+        case windowPosition.BOTTOM_LEFT:
+            $("#" + id).css("left","30px").css("right","auto").css("top","auto").css("bottom","30px");
+            break;
+        case windowPosition.BOTTOM_RIGHT:
+            $("#" + id).css("left","auto").css("right","30px").css("top","auto").css("bottom","30px");
+            break;
+        case windowPosition.MIDDLE:
+            $("#" + id).css("left","auto").css("right","auto").css("top","auto").css("bottom","auto").css("margin", "0 auto");
+            // FIXME nao sei centrar
+            break;
+        default:
+            console.log("Erro ao definir posição da janela.");
+    }
 	$("#" + id).show();
 }
 
@@ -45,7 +74,7 @@ function closeRegistarWindow() {
     }
 }
 
-function confirmYesNo(text, yes, no) {
+function confirmYesNo(text, pos, yes, no) {
     $("#confirmYesNo .confirmText").html(text);
     $("#confirmYesbtn").off("click").click(function () {
         closeWindow("confirmYesNo");
@@ -60,10 +89,10 @@ function confirmYesNo(text, yes, no) {
         }
     });
     /* zindex = 19 para colocar blocker à frente das janelas de login e registo */
-    openWindow("confirmYesNo", '19');
+    openWindow("confirmYesNo", pos, '19');
 }
 
-function confirmOk(text, ok) {
+function confirmOk(text, pos, ok) {
     $("#confirmOk .confirmText").html(text);
     $("#confirmOkbtn").off("click").click(function () {
         closeWindow("confirmOk");
@@ -72,5 +101,5 @@ function confirmOk(text, ok) {
         }
     });
     /* zindex = 19 para colocar blocker à frente das janelas de login e registo */
-    openWindow("confirmOk", '19');
+    openWindow("confirmOk", pos, '19');
 }

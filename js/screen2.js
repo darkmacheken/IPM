@@ -10,7 +10,7 @@ function prepareScreen2() {
         if (currentOrder.length === 0)
             exitScreen2();
         else
-            confirmYesNo("Tem a certeza que pretende sair?<br />O seu pedido será eliminado.", exitScreen2);
+            confirmYesNo("Tem a certeza que pretende sair?<br />O seu pedido será eliminado.", windowPosition.BOTTOM_LEFT, exitScreen2);
     });
 
     $("#Confirmarbtn").click(enterScreen3);
@@ -263,10 +263,7 @@ function showCurrentOrder() {
             ingred += "</label></div></li>";
         }
         $(ingredWindow + " ul").html(ingred);
-        let oleScreen = currScreen;
-        currScreen = 1;
-        openWindow(ingredWindow.substring(1));
-        currScreen = oleScreen;
+        openWindow(ingredWindow.substring(1), windowPosition.DEFAULT);
     });
 
     $(".deleteBox").click(function () {
@@ -350,13 +347,13 @@ function showInfo(food) {
     $("#moreInfo" + thirdScreen + " #moreInfo-ingredients" + thirdScreen).text(food._ingredientsString);
 
     let oleScreen = currScreen;
-    currScreen = 1;
-    openWindow("moreInfo" + thirdScreen);
-    currScreen = oleScreen;
+    openWindow("moreInfo" + thirdScreen, windowPosition.DEFAULT);
 }
 
 function deleteFromOrder(foodId) {
-    confirmYesNo("Tem a certeza que pretende eliminar \"" + currentOrder[foodId]._name + "\" do seu pedido?", function () {
+    confirmYesNo("Tem a certeza que pretende eliminar \"" + currentOrder[foodId]._name + "\" do seu pedido?",
+    windowPosition.TOP_RIGHT,
+    function () {
         currentOrder.splice(foodId, 1);
         showCurrentOrder();
     });

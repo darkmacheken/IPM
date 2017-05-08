@@ -6,7 +6,7 @@ $(document).ready(function() {
 
     /*********************************** JANELA DE AJUDA ***********************************/
     $("#helpbtn").click(function () {
-        openWindow("help-window");
+        openWindow("help-window", windowPosition.TOP_LEFT);
     });
 
     /* Função chamada quando é clicado botão X na janela de ajuda. */
@@ -38,16 +38,14 @@ $(document).ready(function() {
     $("#login-btn, #screen2-login-btn").click(function () {
         if (currScreen === 3) {
             $("form#login-form-thirdScreen .calmText").removeClass("calmText").addClass("attentionText");
-            currScreen = 1;
-            openWindow("login-window-thirdScreen");
-            currScreen = 3;
+            openWindow("login-window-thirdScreen", windowPosition.DEFAULT);
             $("#invalid-data-thirdScreen").hide();
             $("#login-submit-disabler-thirdScreen").show();
             $("input#login-uname-txtbx-thirdScreen").focus();
         }
         else {
             $("form#login-form .calmText").removeClass("calmText").addClass("attentionText");
-            openWindow("login-window");
+            openWindow("login-window", windowPosition.DEFAULT);
             $("#invalid-data").hide();
             $("#login-submit-disabler").show();
             $("input#login-uname-txtbx").focus();
@@ -90,7 +88,7 @@ $(document).ready(function() {
     });
 
     $("#forgot-password-btn, #forgot-password-btn-thirdScreen").click(function () {
-        openWindow("recover-password-box", '5');
+        openWindow("recover-password-box", windowPosition.DEFAULT, '5');
     });
 
     $("#recover-confirmNobtn").click(function () {
@@ -107,12 +105,12 @@ $(document).ready(function() {
         if (cellNumExists($("#recover-tel-numbx").val())) {
             closeWindow("recover-password-box");
             $("#recover-form").trigger("reset");
-            confirmOk("Os seus dados foram enviados para o seu número de telemóvel.", callblock);
+            confirmOk("Os seus dados foram enviados para o seu número de telemóvel.", windowPosition.MIDDLE, callblock);
         }
         else {
-            confirmOk("O número inserido é desconhecido.", function () {
+            confirmOk("O número inserido é desconhecido.", windowPosition.MIDDLE, function () {
                 closeWindow("recover-password-box");
-                openWindow("recover-password-box", '5');
+                openWindow("recover-password-box", windowPosition.DEFAULT, '5');
             });
         }
     });
@@ -123,9 +121,7 @@ $(document).ready(function() {
     $("#reg-btn, #screen2-reg-btn").click(function () {
         if (currScreen === 3) {
             $("form#reg-form-thirdScreen .calmText").removeClass("calmText").addClass("attentionText");
-            currScreen = 1;
-            openWindow("reg-window-thirdScreen");
-            currScreen = 3;
+            openWindow("reg-window-thirdScreen", windowPosition.DEFAULT);
             $("#reg-uname-exists-thirdScreen").hide();
             $("#reg-cpword-diff-thirdScreen").hide();
             $("#reg-submit-disabler-thirdScreen").show();
@@ -133,7 +129,7 @@ $(document).ready(function() {
         }
         else {
             $("form#reg-form .calmText").removeClass("calmText").addClass("attentionText");
-            openWindow("reg-window");
+            openWindow("reg-window", windowPosition.DEFAULT);
             $("#reg-uname-exists").hide();
             $("#reg-cpword-diff").hide();
             $("#reg-submit-disabler").show();
@@ -157,7 +153,7 @@ $(document).ready(function() {
 
             /* Assegurar-se que o NIF, se fornecido, tem 9 numeros */
             if (!checkNIF("reg-form-thirdScreen")) {
-                confirmOk("Por favor verifique se introduziu corretamente o seu Número de Contribuinte (NIF).");
+                confirmOk("Por favor verifique se introduziu corretamente o seu Número de Contribuinte (NIF).", windowPosition.TOP_RIGHT);
                 return;
             }
 
@@ -173,7 +169,7 @@ $(document).ready(function() {
 
             /* Assegurar-se que o NIF, se fornecido, tem 9 numeros */
             if (!checkNIF("reg-form")) {
-                confirmOk("Por favor verifique se introduziu corretamente o seu Número de Contribuinte (NIF).");
+                confirmOk("Por favor verifique se introduziu corretamente o seu Número de Contribuinte (NIF).", windowPosition.MIDDLE);
                 return;
             }
 
@@ -188,11 +184,14 @@ $(document).ready(function() {
         //    niff = "<span class=\"attentionText\">Não fornecido.</span>";
 
         //confirmYesNo("Tem a certeza que pretende criar uma conta com os seguintes dados?<br /><ul><li>Username: " + uname + "</li><li>NIF: " + niff + "</li><li>Telemóvel: " + tel + "</li></ul>",
-        confirmYesNo("Tem a certeza que pretende criar uma conta com os dados inseridos?",
+        let pos = windowPosition.MIDDLE;
+        if (currScreen === 3)
+            pos = windowPosition.TOP_RIGHT;
+        confirmYesNo("Tem a certeza que pretende criar uma conta com os dados inseridos?", pos,
         function () {
             createAccount(uname, pword, nif, tel);
             closeRegistarWindow();
-            confirmOk("A sua conta foi criada com sucesso!");
+            confirmOk("A sua conta foi criada com sucesso!", pos);
         },
         function () {
             callblock();
@@ -277,7 +276,7 @@ $(document).ready(function() {
 
     /* Função chamada quando é clicado botão de Sair Sessão. */
     $("#sairSessaobtn, #screen2-sairSessaobtn").click(function () {
-        confirmYesNo("Tem a certeza que pretende sair da sessão?", logout);
+        confirmYesNo("Tem a certeza que pretende sair da sessão?", windowPosition.TOP_RIGHT, logout);
     });
 
     /*********************************** OVERLAY DE HISTÓRICO ***********************************/
@@ -292,7 +291,7 @@ $(document).ready(function() {
     /*********************************** OVERLAY DE DEFINIÇÕES DE CONTA ***********************************/
     $("#boxDefinicoesVoltarbtn, #screen2-boxDefinicoesVoltarbtn").click(function () {
         if (defsChanged())
-            confirmYesNo("Tem a certeza que pretende descartar as alterações?", closeDefs);
+            confirmYesNo("Tem a certeza que pretende descartar as alterações?", windowPosition.TOP_RIGHT, closeDefs);
         else
             closeDefs();
     });
@@ -300,23 +299,23 @@ $(document).ready(function() {
     $("#boxDefinicoesGuardarbtn, #screen2-boxDefinicoesGuardarbtn").click(function () {
         /* Assegurar-se que o username, se alterado, nao existe */
         if (existsUser($.trim($("#def-uname-txtbx").val()))) {
-            confirmOk("O nome de utilizador inserido já existe. Por favor escolha outro.");
+            confirmOk("O nome de utilizador inserido já existe. Por favor escolha outro.", windowPosition.TOP_RIGHT);
             return;
         }
         else if ($.trim($("#def-uname-txtbx").val()).length === 0) {
-            confirmOk("Por favor insira um nome de utilizador válido.");
+            confirmOk("Por favor insira um nome de utilizador válido.", windowPosition.TOP_RIGHT);
             return;
         }
 
         /* Assegurar-se que o NIF, se fornecido, tem 9 numeros */
         if (!checkNIF("def-form")) {
-            confirmOk("Por favor verifique se introduziu corretamente o seu Número de Contribuinte (NIF).");
+            confirmOk("Por favor verifique se introduziu corretamente o seu Número de Contribuinte (NIF).", windowPosition.TOP_RIGHT);
             return;
         }
 
         /* Assegurar-se que o nr de telemóvel tem 9 numeros */
         if (!checkTel("def-form")) {
-            confirmOk("Por favor verifique se introduziu corretamente o seu Número de Telemóvel.");
+            confirmOk("Por favor verifique se introduziu corretamente o seu Número de Telemóvel.", windowPosition.TOP_RIGHT);
             return;
         }
 
@@ -327,9 +326,9 @@ $(document).ready(function() {
         }
 
         if ($("input#def-pword-txtbx").val() === $("input#def-cpword-txtbx").val())
-            confirmYesNo("Tem a certeza que pretende guardar as alterações?", saveDefs);
+            confirmYesNo("Tem a certeza que pretende guardar as alterações?", windowPosition.TOP_RIGHT, saveDefs);
         else
-            confirmOk("Por favor verifique a confirmação da palavra-passe.");
+            confirmOk("Por favor verifique a confirmação da palavra-passe.", windowPosition.TOP_RIGHT);
     });
 
     /* Sincronizar overlays de definições de contas: */
@@ -362,7 +361,7 @@ $(document).ready(function() {
     /*********************************** CHAMAR EMPREGADO ***********************************/
     var timeouts = [];
     $("#callbtn").click(function () {
-        confirmYesNo("Tem a certeza que pretende chamar um empregado?", function () {
+        confirmYesNo("Tem a certeza que pretende chamar um empregado?", windowPosition.TOP_LEFT, function () {
             var waiterTime = 30;
             for (var i = 0; i <= waiterTime; i++)
                 timeouts.push(setTimeout(updateTimer, i*1000, waiterTime - i));
@@ -372,7 +371,7 @@ $(document).ready(function() {
     });
 
     $("#cancelcallbtn").click(function () {
-        confirmYesNo("Tem a certeza que pretende cancelar?", function () {
+        confirmYesNo("Tem a certeza que pretende cancelar?", windowPosition.TOP_LEFT, function () {
             for (var i = 0; i < timeouts.length; i++)
                 clearTimeout(timeouts[i]);
             timeouts = [];
