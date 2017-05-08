@@ -28,7 +28,7 @@
   background-color: #B22222;
   color: white;
   background-image: url("images/icons/buttons/hide-white.png");
-  background-position: 7% 60%;
+  background-position: 50% 60%;
   background-repeat: no-repeat;
   background-size: 30px 30px;
 }
@@ -94,7 +94,7 @@
   background-color: #B22222;
   color: white;
   background-image: url("images/icons/buttons/hide-white.png");
-  background-position: 7% 50%;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: 30px 30px;
   box-shadow: none;

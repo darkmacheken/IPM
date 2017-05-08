@@ -10,7 +10,6 @@
 
 informações -> i
 border maior entre os items seleccionados
-tirar "esconder", manter só seta
 separar VOLTAR de Esconder (border)
 Historico: separação entre botoes (border)
 tempo previsto: para cada item, por ordem
