@@ -169,7 +169,7 @@ background-size: 30px 30px;
   border: none;
   background-color: #4CAF50; /* Green */
   color: white;
-  border-bottom: 1px solid black;
+  border-bottom: 3px solid black;
   background-image: url("images/icons/buttons/back-white.png");
   background-position: 8% 40%;
   background-repeat: no-repeat;
