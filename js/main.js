@@ -2,7 +2,7 @@ var currScreen = 1;
 
 $(document).ready(function() {
     /* Esconder janelas inicialmente */
-    $(".window, #blocker, #keyboard, #number-pad, .helpdiv, #boxcontautilizadorlogged, #Historico, .boxHistoricoRepetirPedido, #DefinicoesConta, #callwaitbtn, #second-screen, #screen2-logged-box, #screen2-historico, #screen2-definicoesConta, .screen3").hide();
+    $(".window, #blocker, #keyboard, #number-pad, .helpdiv, #boxcontautilizadorlogged, #Historico, .boxHistoricoRepetirPedido, #DefinicoesConta, #callwaitbtn, #second-screen, #screen2-logged-box, #screen2-historico, #screen2-definicoesConta, .screen3, #music-vote-next-hide, #box-music-vote-next").hide();
 
     /*********************************** JANELA DE AJUDA ***********************************/
     $("#helpbtn").click(function () {
@@ -378,6 +378,21 @@ $(document).ready(function() {
             $("#callbtn").show();
             $("#callwaitbtn").hide();
         });
+    });
+
+    /*********************************** VOTAR EM MUSICA ***********************************/
+    $("#votemusic").click(function () {
+        $(this).hide();
+        $("#box-games").hide();
+        $("#box-music-vote-next").show();
+        $("#music-vote-next-hide").show();
+    });
+
+    $("#music-vote-next-hide").click(function () {
+        $(this).hide();
+        $("#box-music-vote-next").hide();
+        $("#votemusic").show();
+        $("#box-games").show();
     });
 
     /*********************************** TECLADOS E KEYPADS ***********************************/

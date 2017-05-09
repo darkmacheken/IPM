@@ -1,5 +1,5 @@
 (Duarte)
-- mudar janelas do editar e more info pras do pedro
+- 3o ecra registar nao verifica se user ja existe
 
 (Pedro)
 - Fix stuff
