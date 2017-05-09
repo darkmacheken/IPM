@@ -269,34 +269,34 @@ a:visited {
 }
 #boxmusic {
     float: left;
-    height: 40px;
+    height: 43px;
     width: 250px;
     font-size: 15px;
     padding: 10px 20px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    border: none;
     font-size: 20px;
     position: absolute;
     left: 2px;
     top: 610px;
+    background-image: url("images/background/back2.png");
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 #votemusic {
     float:left;
     height: 20px;
     width: 250px;
-    font-size: 20px;
-    border-top:none;
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
+    border: none;
     position: absolute;
     top: 673px;
     left: 2px;
-    padding: 10px 20px;
-    line-height: 20px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: #009ee1;
+    color: white;
+    background-image: url("images/icons/buttons/slideup-white.png");
+    background-position: 3% 50%;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
 }
 /* Capa da música a ser reproduzida */
 #cover {
@@ -723,11 +723,11 @@ a:visited {
 #box-music-vote-next {
   padding: inherit;
   position: absolute;
-  bottom: 106px;
+  top: 165px;
   left: 10px;
   border: none;
   width: 290px;
-  height: 555px;
+  height: 516px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -742,7 +742,7 @@ a:visited {
   top: 0px;
   left: 0px;
   padding: inherit;
-  height: 555px;
+  height: 516px;
   width: 290px;
   border: none;
   margin: inherit;
@@ -786,4 +786,16 @@ a:visited {
   background-position: center;
   top: 10%;
   left: 5%;
+}
+
+#music-vote-next-hide {
+  position: absolute;
+  top: 681px;
+  left: 10px;
+  background-color: #B22222;
+  color: white;
+  background-image: url("images/icons/buttons/hide-white.png");
+  background-position: 50% 60%;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
 }
