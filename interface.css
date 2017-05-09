@@ -747,6 +747,9 @@ a:visited {
   border: none;
   margin: inherit;
   overflow-y: scroll;
+  background-image: url("images/background/back2.png");
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
 }
 
 #box-music-vote-next li{
@@ -757,6 +760,7 @@ a:visited {
   height: 65px;
   border-left: none;
   border-right: none;
+  border-top: none;
 }
 
 .musictitle {
