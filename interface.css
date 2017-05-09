@@ -261,6 +261,10 @@ a:visited {
     top: 580px;
     left: 2px;
     line-height: 10px;
+    background-image: url("images/icons/music/music-white.png");
+    background-position: 16% 45%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 #boxmusic {
@@ -710,8 +714,76 @@ a:visited {
 }
 
 #recover-tel-numbx {
-     position: absolute;
+    position: absolute;
     top: 60px;
     left: 230px;
     width: 150px;
+}
+
+#box-music-vote-next {
+  padding: inherit;
+  position: absolute;
+  bottom: 106px;
+  left: 10px;
+  border: none;
+  width: 290px;
+  height: 555px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#box-music-vote-next-title {
+  position: absolute;
+  left: 0px;
+  top: -30px;
+}
+
+#box-music-vote-next ul{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: inherit;
+  height: 555px;
+  width: 290px;
+  border: none;
+  margin: inherit;
+  overflow-y: scroll;
+}
+
+#box-music-vote-next li{
+  list-style-type: none;
+  position: relative;
+  padding: inherit;
+  width: 277px;
+  height: 65px;
+  border-left: none;
+  border-right: none;
+}
+
+.musictitle {
+  font-size: 24px;
+  position: absolute;
+  top: 0px;
+  left: 80px;
+}
+
+.musicartist {
+  font-size: 18px;
+  position: absolute;
+  bottom: 10px;
+  left: 80px;
+}
+
+.musiccover {
+  position: absolute;
+  padding: 1%;
+  width: 40px;
+  height: 40px;
+  display:block;
+  border-radius: 50%;
+  border: 1px solid black;
+  background: url("images/musica/chuck-berry.jpg");
+  background-size: 50px 50px;
+  background-position: center;
+  top: 10%;
+  left: 5%;
 }

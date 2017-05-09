@@ -8,10 +8,10 @@
 - Trabalhar
 
 
-informações -> i
-border maior entre os items seleccionados
-[FEITO] separar VOLTAR de Esconder (border)
-separar Confiarmar de esconder (border)
+Informações -> i
+Border maior entre os items seleccionados
+[FEITO] Separar VOLTAR de Esconder (border)
+Separar Confirmar de esconder (border)
 Historico: separação entre botoes (border)
-tempo previsto: para cada item, por ordem
-ao fazer novo pedido, quando se adicionam itens, mostrar total do valor em vez de X + Y
+Tempo previsto: para cada item, por ordem
+Ao fazer novo pedido, quando se adicionam itens, mostrar total do valor em vez de X + Y
