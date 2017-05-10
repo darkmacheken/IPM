@@ -583,6 +583,10 @@
     border-left: none;
     border-right: none;
     background-color: #B22222; /* red */
+    background-image: url("images/icons/buttons/close-white.png");
+    background-position: 32% 50%;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
     color: white;
     border: none;
 }
@@ -694,6 +698,10 @@
     background-color: #B22222; /* red */
     color: white;
     border: none;
+    background-image: url("images/icons/buttons/close-white.png");
+    background-position: 17% 50%;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
 }
 #screen2-historicobtn{
     position: absolute;
