@@ -361,7 +361,10 @@ $(document).ready(function() {
     /*********************************** CHAMAR EMPREGADO ***********************************/
     var timeouts = [];
     $("#callbtn").click(function () {
-        confirmYesNo("Tem a certeza que pretende chamar um empregado?", windowPosition.TOP_LEFT, function () {
+        let pos = windowPosition.MIDDLE;
+        if (currScreen === 3)
+            pos = windowPosition.TOP_LEFT;
+        confirmYesNo("Tem a certeza que pretende chamar um empregado?", pos, function () {
             var waiterTime = 30;
             for (var i = 0; i <= waiterTime; i++)
                 timeouts.push(setTimeout(updateTimer, i*1000, waiterTime - i));
@@ -371,7 +374,10 @@ $(document).ready(function() {
     });
 
     $("#cancelcallbtn").click(function () {
-        confirmYesNo("Tem a certeza que pretende cancelar?", windowPosition.TOP_LEFT, function () {
+        let pos = windowPosition.MIDDLE;
+        if (currScreen === 3)
+            pos = windowPosition.TOP_LEFT;
+        confirmYesNo("Tem a certeza que pretende cancelar?", pos, function () {
             for (var i = 0; i < timeouts.length; i++)
                 clearTimeout(timeouts[i]);
             timeouts = [];

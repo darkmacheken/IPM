@@ -20,8 +20,10 @@ function turnoffblock() {
 
 function openWindow(id, pos, zindex) {
     callblock(zindex);
-    let totalWidth = $("#blocker").css("width");
-    let totalHeight = $("#blocker").css("height");
+    let totalWidth = $("#blocker").width();
+    let totalHeight = $("#blocker").height();
+    let wWidth = $("#" + id).width();
+    let wHeight = $("#" + id).height();
     switch (pos) {
         case windowPosition.DEFAULT:
             break;
@@ -29,16 +31,16 @@ function openWindow(id, pos, zindex) {
             $("#" + id).css("left","30px").css("top","30px");
             break;
         case windowPosition.TOP_RIGHT:
-            $("#" + id).css("left", totalWidth - 30).css("top","30px");
+            $("#" + id).css("left", totalWidth - wWidth - 30 + "px").css("top","30px");
             break;
         case windowPosition.BOTTOM_LEFT:
-            $("#" + id).css("left","30px").css("top", totalHeight - 30);
+            $("#" + id).css("left","30px").css("top", totalHeight - wHeight - 30 + "px");
             break;
         case windowPosition.BOTTOM_RIGHT:
-            $("#" + id).css("left", totalWidth - 30).css("top", totalHeight - 30);
+            $("#" + id).css("left", totalWidth - wWidth - 30 + "px").css("top", totalHeight - wHeight - 30 + "px");
             break;
         case windowPosition.MIDDLE:
-            $("#" + id).css("left", (totalWidth - $("#" + id).css("width")) / 2).css("top", (totalHeight - $("#" + id).css("height")) / 2);
+            $("#" + id).css("left", ((totalWidth - wWidth) / 2) + "px").css("top", ((totalHeight - wHeight) / 2) + "px");
             break;
         default:
             console.log("Erro ao definir posição da janela.");
