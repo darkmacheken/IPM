@@ -1,0 +1,133 @@
+.tic-tac-toe{
+  width: 650px;
+  height: 650px;
+}
+#tic-tac-toe-game{
+  top: 65px;
+}
+#tic-tac-toe-game-div{
+  background-image: url("images/games/tic-tac-toe-black.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 70% 70%;
+  font-size: 18px;
+}
+
+.score {
+  position: absolute;
+  text-align: left;
+  width: 50%;
+  height: 9%;
+  left: 1%;
+  font-size: 250%;
+}
+
+#tic-tac-toe-user-score{
+  bottom: 1%;
+}
+
+.hitbox{
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  background-image: url("images/games/tic-tac-toe-x-blue.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 70% 70%;
+}
+
+#hitbox-1{
+  top: 17%;
+  left: 17%;
+}
+#hitbox-2{
+  top: 17%;
+  left: 40%;
+}
+#hitbox-3{
+  top: 17%;
+  left: 64%;
+}
+#hitbox-4{
+  top: 41%;
+  left: 17%;
+}
+#hitbox-5{
+  top: 41%;
+  left: 40%;
+}
+#hitbox-6{
+  top: 41%;
+  left: 64%;
+}
+#hitbox-7{
+  top: 64%;
+  left: 17%;
+}
+#hitbox-8{
+  top: 64%;
+  left: 40%;
+}
+#hitbox-9{
+  top: 64%;
+  left: 64%;
+}
+.reset{
+  position: absolute;
+      right: 1%;
+      bottom: 1%;
+      width: 30%;
+      height: 10%;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 250%;
+      line-height: 139%;
+}
+.retaHorizontal{
+  width: 70%;
+  height: 30%;
+  position: absolute;
+  left: 17%;
+  background-image: url(images/games/reta-horizontal-yellow.png);
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#reta-horizontal{
+    top: 13%;
+}
+.retaVertical{
+  height: 70%;
+  width: 30%;
+  position: absolute;
+  top: 17%;
+  background-image: url(images/games/reta-vertical-yellow.png);
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#reta-vertical{
+    left:11%;
+}
+.retaDiagonalPositivo{
+  height: 70%;
+  width: 70%;
+  position: absolute;
+  top: 17%;
+  left: 17%;
+  background-image: url(images/games/reta-diagonal-positivo-yellow.png);
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.retaDiagonalNegativo{
+  height: 70%;
+  width: 70%;
+  position: absolute;
+  top: 17%;
+  left: 17%;
+  background-image: url(images/games/reta-diagonal-negativo-yellow.png);
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
