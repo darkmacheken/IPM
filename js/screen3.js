@@ -154,7 +154,7 @@ function enterScreen3() {
     //var ordered = compactOrder(currentOrder);
 
     confirmYesNo("Tem a certeza que pretende fazer o pedido?",
-    windowPosition.BOTTOM_RIGHT,
+    windowPosition.MIDDLE,
     function () {
         $("#orderfoodbtn").hide();
         exitScreen2();

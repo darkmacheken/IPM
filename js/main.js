@@ -45,7 +45,7 @@ $(document).ready(function() {
         }
         else {
             $("form#login-form .calmText").removeClass("calmText").addClass("attentionText");
-            openWindow("login-window", windowPosition.DEFAULT);
+            openWindow("login-window", windowPosition.MIDDLE);
             $("#invalid-data").hide();
             $("#login-submit-disabler").show();
             $("input#login-uname-txtbx").focus();
@@ -129,7 +129,7 @@ $(document).ready(function() {
         }
         else {
             $("form#reg-form .calmText").removeClass("calmText").addClass("attentionText");
-            openWindow("reg-window", windowPosition.DEFAULT);
+            openWindow("reg-window", windowPosition.MIDDLE);
             $("#reg-uname-exists").hide();
             $("#reg-cpword-diff").hide();
             $("#reg-submit-disabler").show();

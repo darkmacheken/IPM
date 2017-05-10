@@ -20,24 +20,25 @@ function turnoffblock() {
 
 function openWindow(id, pos, zindex) {
     callblock(zindex);
+    let totalWidth = $("#blocker").css("width");
+    let totalHeight = $("#blocker").css("height");
     switch (pos) {
         case windowPosition.DEFAULT:
             break;
         case windowPosition.TOP_LEFT:
-            $("#" + id).css("left","30px").css("right","auto").css("top","30px").css("bottom","auto");
+            $("#" + id).css("left","30px").css("top","30px");
             break;
         case windowPosition.TOP_RIGHT:
-            $("#" + id).css("left","auto").css("right","30px").css("top","30px").css("bottom","auto");
+            $("#" + id).css("left", totalWidth - 30).css("top","30px");
             break;
         case windowPosition.BOTTOM_LEFT:
-            $("#" + id).css("left","30px").css("right","auto").css("top","auto").css("bottom","30px");
+            $("#" + id).css("left","30px").css("top", totalHeight - 30);
             break;
         case windowPosition.BOTTOM_RIGHT:
-            $("#" + id).css("left","auto").css("right","30px").css("top","auto").css("bottom","30px");
+            $("#" + id).css("left", totalWidth - 30).css("top", totalHeight - 30);
             break;
         case windowPosition.MIDDLE:
-            $("#" + id).css("left","auto").css("right","auto").css("top","auto").css("bottom","auto").css("margin", "0 auto");
-            // FIXME nao sei centrar
+            $("#" + id).css("left", (totalWidth - $("#" + id).css("width")) / 2).css("top", (totalHeight - $("#" + id).css("height")) / 2);
             break;
         default:
             console.log("Erro ao definir posição da janela.");
