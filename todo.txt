@@ -1,5 +1,6 @@
 (Duarte)
 - 3o ecra registar nao verifica se user ja existe
+- janelas ainda tao fdds
 
 (Pedro)
 - Fix stuff

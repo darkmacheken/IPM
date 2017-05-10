@@ -415,6 +415,7 @@ $(document).ready(function() {
     $("#orderfoodbtn").click(function () {
         if (currScreen === 1)
             enterScreen2();
+        $("#music-vote-next-hide").click();
     });
     prepareScreen2();
 

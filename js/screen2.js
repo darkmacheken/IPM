@@ -363,7 +363,7 @@ function getIndexNumber(obj) {
     if ($.contains($("#food-options")[0], obj) || $.contains($("#box-order-menu ul")[0], obj)) {
         var id = $(obj).attr("id");
         if (typeof id === "undefined")
-            id = $(obj).parent().attr("id");
+            id = $(obj).parents("li").attr("id");
         return parseInt(id.substring(8, id.length - 4)) - 1;
     }
     else if ($.contains($("#boxCompras")[0], obj) || $.contains($("#view-order-items-box")[0], obj)) {
