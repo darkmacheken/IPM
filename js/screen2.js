@@ -183,6 +183,7 @@ function showCurrentOrder() {
     }
     if (currScreen === 3) {
         $("#view-order-items-box ul").html(orderHtml);
+        $("#order-pay-box-amt").text(formatPrice(totalPrice(sessionOrder)));
         $("#view-order-pay-box-total span").text(formatPrice(totalPrice(sessionOrder)));
         if (total !== 0)
             $("#view-order-pay-box-total span").append(" <span class=\"attentionText\">+ " + formatPrice(total) + "</span>");

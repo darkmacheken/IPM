@@ -1,6 +1,6 @@
 var sessionOrder = [];
 var whoOpenedViewOrder = 0;
-var paying = false;
+var paying_timeout;
 
 function prepareScreen3() {
     $("#order-again-btn").click(function () {
@@ -83,8 +83,6 @@ function prepareScreen3() {
     });
 
     $("#order-pay-cancel-btn").click(function () {
-        if (paying)
-            return;
         closeWindow("order-pay-box");
         $("#view-order-pay-box").show();
     });
@@ -101,7 +99,6 @@ function prepareScreen3() {
             sessionOrder = compactOrder(sessionOrder);
             timer_addOrder(currentOrder);
             currentOrder = [];
-            //$("#view-order-pay-box-total span").text(formatPrice(totalPrice(sessionOrder)));
             showCurrentOrder();
         });
     });
@@ -128,19 +125,20 @@ function prepareScreen3() {
         function () {
             callblock();
             $("#transacao").show();
-            paying = true;
-            $("#order-pay-cancel-btn .disabler").show();
-            setTimeout(function () {
+            paying_timeout = setTimeout(function () {
                 addToHistory(sessionOrder);
                 sessionOrder = [];
                 $("#transacao").hide();
                 closeWindow("order-pay-box");
                 $("#view-order-pay-box").show();
-                paying = false;
-                $("#order-pay-cancel-btn .disabler").hide();
                 showCurrentOrder();
             }, 5000);
         });
+    });
+
+    $("#order-pay-cancel-transaction-btn").click(function () {
+        clearTimeout(paying_timeout);
+        $("#transacao").hide();
     });
 
     $("#order-pay-cancel-btn .disabler, #pay-btn .disabler").hide();
@@ -161,7 +159,7 @@ function enterScreen3() {
         sessionOrder = sessionOrder.concat(compactOrder(currentOrder));
         currentOrder = [];
         currScreen = 3;
-        $("#view-order-pay-box-total span").text(formatPrice(totalPrice(sessionOrder)));
+        showCurrentOrder();
         $("#order-again-btn").show();
         $("#view-order-pay-box").show();
         timer_init();
