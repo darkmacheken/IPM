@@ -63,6 +63,10 @@ a:visited {
 .Xbtn {
   background-color: #B22222; /* red */
   color: white;
+  background-image: url("images/icons/buttons/close-white.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
 }
 /* Tabela que contém o ecrã todo */
 #screen {
@@ -568,6 +572,7 @@ a:visited {
     border-bottom: 1px solid #202020;
     border-left: 1px solid #4c4c4c;
     border-right: 1px solid #202020;
+    background-image: none;
 }
 
 #boxDefContas{
