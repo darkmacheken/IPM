@@ -100,7 +100,7 @@ var FOOD_ITEMS = {
             _classif: 4,
             _ctime: 1,
             _ingredientsString: "Coca-cola.",
-            _ingredients: [] },
+            _ingredients: ["Gelo","Rodela Limão"] },
 
         { _name: "Brisa-Maçã",
             _price: 150,
@@ -109,7 +109,7 @@ var FOOD_ITEMS = {
             _classif: 5,
             _ctime: 8,
             _ingredientsString: "Brisa-Maçã.",
-            _ingredients: [] },
+            _ingredients: ["Gelo"] },
     ],
     "menu-sobremesas": [
         { _name: "Broas de Mel",
@@ -119,7 +119,7 @@ var FOOD_ITEMS = {
             _classif: 5,
             _ctime: 1,
             _ingredientsString: "Mel.",
-            _ingredients: [] },
+            _ingredients: ["Doce Framboesas"] },
 
         { _name: "Arroz Doce",
             _price: 300,
@@ -128,7 +128,7 @@ var FOOD_ITEMS = {
             _classif: 4,
             _ctime: 1,
             _ingredientsString: "Arroz, leite e canela.",
-            _ingredients: [] },
+            _ingredients: ["Canela"] },
 
         { _name: "Serradura",
             _price: 300,
@@ -137,7 +137,7 @@ var FOOD_ITEMS = {
             _classif: 4,
             _ctime: 1,
             _ingredientsString: "Bolacha, natas e leite.",
-            _ingredients: [] },
+            _ingredients: ["Doce da Casa"] },
     ],
     "menu-cafetaria": [
         { _name: "Carioca de Limão",
@@ -147,7 +147,7 @@ var FOOD_ITEMS = {
             _classif: 3,
             _ctime: 1,
             _ingredientsString: "Limão.",
-            _ingredients: [] },
+            _ingredients: ["Açúcar","Rodela Limão"] },
 
         { _name: "Café",
             _price: 100,
@@ -156,7 +156,7 @@ var FOOD_ITEMS = {
             _classif: 4,
             _ctime: 1,
             _ingredientsString: "Café.",
-            _ingredients: [] },
+            _ingredients: ["Açúcar"] },
 
         { _name: "Galão",
             _price: 80,
@@ -165,7 +165,7 @@ var FOOD_ITEMS = {
             _classif: 5,
             _ctime: 1,
             _ingredientsString: "Café e leite.",
-            _ingredients: [] },
+            _ingredients: ["Açúcar"] },
     ]
 };
 
