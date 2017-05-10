@@ -5,6 +5,7 @@
 - Ao fazer novo pedido, quando se adicionam itens, mostrar total do valor em vez de X + Y
 - Tempo previsto: para cada item, por ordem e na tabela
 - 1º ecran, registo, quando altera o titulo alterar também o icon.
+- Jogo do Galo (obs podes já fazer resize do tamanho da janela, mas ao fazer resize é necessário alterar o font-size da div #tic-tac-toe-game-div)
 
 (Pedro)
 - Fix stuff
