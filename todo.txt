@@ -1,6 +1,9 @@
 (Duarte)
 - 3o ecra registar nao verifica se user ja existe
 - janelas ainda tao fdds
+- Botão cancelar funcionar no pagamento em processamento
+- Ao fazer novo pedido, quando se adicionam itens, mostrar total do valor em vez de X + Y
+- Tempo previsto: para cada item, por ordem e na tabela
 
 (Pedro)
 - Fix stuff
@@ -9,10 +12,5 @@
 - Trabalhar
 
 
-Informações -> i
 Border maior entre os items seleccionados
-[FEITO] Separar VOLTAR de Esconder (border)
 Separar Confirmar de esconder (border)
-Historico: separação entre botoes (border)
-Tempo previsto: para cada item, por ordem
-Ao fazer novo pedido, quando se adicionam itens, mostrar total do valor em vez de X + Y

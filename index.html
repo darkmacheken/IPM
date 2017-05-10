@@ -893,7 +893,8 @@
           Pagamento
       </div>
 
-         Escolha uma das opções:
+         Escolha uma das opções:<br>
+         A pagar: 20,00€
       <div class="box btn" id="order-pay-money-btn">
           Dinheiro
       </div>
@@ -907,6 +908,9 @@
       <div class="background screen3" id="transacao">
           Pagamento em processamento
           <img width="150px" src="loading.gif">
+          <div class="box btn" id="order-pay-cancel-transaction-btn">
+              Cancelar
+          </div>
       </div>
     </div>
 
@@ -916,10 +920,15 @@
     </div>
 
     <!-- Box Tempo Restante (quando ha prato) -->
-    <div class="box screen3" id="timeleft-box">
-      Tempo previsto: <span id="foodwaittime"></span>
+    <div class="box screen3 timeleftbox" id="timeleft-box">
+      Coca-Cola: <span id="foodwaittime"></span>
     </div>
-
+    <div class="box screen3 timeleftbox" id="timeleft-box-2">
+      Bitoque: <span id="foodwaittime2"></span>
+    </div>
+    <div class="box screen3 timeleftbox" id="timeleft-box-3">
+      Sopa: <span id="foodwaittime3"></span>
+    </div>
     <!--Janela Login-->
     <div class="window" id="login-window-thirdScreen">
         <h3>ENTRAR</h3>
