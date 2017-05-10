@@ -150,7 +150,7 @@ function showFoodItems() {
         boxContent += FOOD_ITEMS[currentMenuSelected][i]._desc;
         boxContent += "</div><div class=\"preco\">";
         boxContent += formatPrice(FOOD_ITEMS[currentMenuSelected][i]._price);
-        boxContent += "</div><div class=\"box btn info\">+ informações</div></li>";
+        boxContent += "</div><div class=\"box btn info\">+</div></li>";
     }
     $("#food-options").html(boxContent);
     $(".opcao").click(function () {

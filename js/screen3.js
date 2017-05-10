@@ -214,15 +214,15 @@ function openOrderAgainMenu(menuName, menuTitle) {
     /* Mostrar items */
     var boxContent = "";
     for (var i = 0; i < FOOD_ITEMS[menuName].length; i++) {
-        boxContent += "<li class=\"box btn opcao opcao3ecran\" id=\"food-op-";
+        boxContent += "<li class=\"box btn\" id=\"food-op-";
         boxContent += String(i + 1);
-        boxContent += "-btn\"><div class=\"titulo3ecran\">";
+        boxContent += "-btn\"><div class=\" opcao opcao3ecran\"><div class=\"titulo3ecran\">";
         boxContent += FOOD_ITEMS[menuName][i]._name;
         boxContent += "</div><div class=\"descricao3ecran\">";
         boxContent += FOOD_ITEMS[menuName][i]._desc;
         boxContent += "</div><div class=\"preco3ecran\">";
         boxContent += formatPrice(FOOD_ITEMS[menuName][i]._price);
-        boxContent += "</div><div class=\"box btn info3ecran\">+ informações</div></li>";
+        boxContent += "</div><div class=\"box btn info3ecran\">+</div></div></li>";
     }
     $("#box-order-menu ul").html(boxContent);
     $("#box-order-menu ul li").click(function () {

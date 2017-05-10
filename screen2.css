@@ -85,7 +85,12 @@
     right: 0px;
     font-size: 16px;
     padding: 1%;
-    width: 100px;
+    width: 30px;
+    text-align: left;
+    background-image: url(images/icons/buttons/info-white.png);
+    background-position: 75% 45%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
     border: none;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
@@ -164,7 +169,7 @@
     list-style-type: none;
     position: relative;
     padding: 0px;
-    height: 50px;
+    height: 54px;
     width: 286px;
     border-top: none;
     border-left: none;
@@ -227,7 +232,7 @@
 }
 .arrow-down {
     position: absolute;
-    bottom: 2px;
+    top: 36px;
     left: 64px;
     width: 0;
     height: 0;
@@ -500,7 +505,7 @@
     top: 0px;
     left: 0px;
     right: 0px;
-    height: 43px;
+    height: 46px;
     margin: 0px;
     padding: 0px;
 }
@@ -668,6 +673,10 @@
     background-color: #4CAF50; /* Green */
     color: white;
     border: none;
+    background-image: url(images/icons/buttons/save-white.png);
+    background-position: 15% 50%;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
 }
 
 #screen2-boxDefinicoesVoltarbtn {

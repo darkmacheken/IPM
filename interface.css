@@ -157,15 +157,13 @@ a:visited {
 /* Relógio */
 #clock {
     border: none;
-
     width: 153px;
     height: 63px;
     float: right;
     line-height: 60px;
     padding: inherit;
-    background-image: url("images/background/back2.png");
-    background-repeat: repeat-x;
-    background-repeat: repeat-y;
+    background-color: #363636;
+    color: white;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -269,18 +267,15 @@ a:visited {
 }
 #boxmusic {
     float: left;
-    height: 43px;
-    width: 250px;
+    height: 63px;
+    width: 290px;
     font-size: 15px;
-    padding: 10px 20px;
+    padding: 0%;
     border: none;
     font-size: 20px;
     position: absolute;
     left: 2px;
     top: 610px;
-    background-image: url("images/background/back2.png");
-    background-repeat: repeat-x;
-    background-repeat: repeat-y;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 #votemusic {
@@ -300,6 +295,9 @@ a:visited {
 }
 /* Capa da música a ser reproduzida */
 #cover {
+  position: absolute;
+  left: 20px;
+  top: 10px;
     width: 40px;
     height: 40px;
     display:block;
@@ -308,7 +306,11 @@ a:visited {
     background: url("images/musica/blue.jpg");
     background-size: 60px 37px;
     background-position: center;
-    float: left;
+}
+#cover-text{
+  position: absolute;
+  top: 5px;
+  left: 83px;
 }
 
 #game {
@@ -504,7 +506,7 @@ a:visited {
     top: 0px;
     left: 0px;
     right: 0px;
-    height: 41px;
+    height: 44px;
     margin: 0px;
     padding: 0px;
 }
@@ -757,10 +759,8 @@ a:visited {
   position: relative;
   padding: inherit;
   width: 277px;
-  height: 65px;
-  border-left: none;
-  border-right: none;
-  border-top: none;
+  height: 68px;
+  border: none;
 }
 
 .musictitle {
@@ -773,7 +773,7 @@ a:visited {
 .musicartist {
   font-size: 18px;
   position: absolute;
-  bottom: 10px;
+  top: 29px;
   left: 80px;
 }
 
@@ -790,6 +790,23 @@ a:visited {
   background-position: center;
   top: 10%;
   left: 5%;
+}
+.votessong{
+  position: absolute;
+  top: 32px;
+  right: 10px;
+  font-size: 17px;
+  color: #009ee1;
+}
+.background-li-box-music{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 64px;
+  width: 276px;
+  border-top: 1px solid #4c4c4c;
+  border-bottom: 1px solid #202020;
+  background-color: #f5f5f5;
 }
 
 #music-vote-next-hide {
