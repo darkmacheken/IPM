@@ -148,7 +148,7 @@ $(document).ready(function() {
         var tel = "";
         if (currScreen === 3) {
             /* Prevenir que o botao seja clicado acidentalmente quando desativado */
-            if (!checkForm("reg-form-thirdScreen"))
+            if (!checkForm("reg-form"))
                 return;
 
             /* Assegurar-se que o NIF, se fornecido, tem 9 numeros */
@@ -206,6 +206,13 @@ $(document).ready(function() {
             $("#reg-uname-exists").hide();
     });
 
+    $("input#reg-uname-txtbx-thirdScreen").keyup(function () {
+        if (existsUser($("input#reg-uname-txtbx-thirdScreen").val()))
+            $("#reg-uname-exists-thirdScreen").show();
+        else
+            $("#reg-uname-exists-thirdScreen").hide();
+    });
+
     /* Verificar se a palavra-passe e a sua confirmação correspondem. */
     $("input#reg-pword-txtbx, input#reg-cpword-txtbx").keyup(function () {
         if ($("input#reg-pword-txtbx").val() === $("input#reg-cpword-txtbx").val() ||
@@ -227,7 +234,11 @@ $(document).ready(function() {
         } else {
             $("#" + $(this).attr("name") + "-att, #" + $(this).attr("name") + "-att-thirdScreen").removeClass().addClass("calmText");
         }
-        checkForm($(this).parents("form").attr("id"));
+        let formId = $(this).parents("form").attr("id");
+        if (currScreen === 3)
+            checkForm(formId.substring(0, formId.length - 12));
+        else
+            checkForm(formId);
     });
 
     /* So deixar colocar numeros no telemovel e no nif */

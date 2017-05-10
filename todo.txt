@@ -1,6 +1,5 @@
 (Duarte)
-- 3o ecra registar nao verifica se user ja existe
-- janelas ainda tao fdds
+FEITO. PLS TESTAR - 3o ecra registar nao verifica se user ja existe
 - Botão cancelar funcionar no pagamento em processamento
 - Ao fazer novo pedido, quando se adicionam itens, mostrar total do valor em vez de X + Y
 - Tempo previsto: para cada item, por ordem e na tabela

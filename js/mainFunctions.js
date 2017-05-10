@@ -2,24 +2,29 @@
 function checkForm(form) {
     var reqReady = true;
     var pconfReady = false;
-    $("form#" + form + " input.req-field").each(function() {
+    let suffx = "";
+
+    if (currScreen === 3)
+        suffx = "-thirdScreen";
+
+    $("form#" + form + suffx + " input.req-field").each(function() {
         if (($(this).hasClass("cellNumber") && $(this).val().length !== 9) || $.trim($(this).val()).length === 0)
             reqReady = false;
     });
-    if ($("input#reg-pword-txtbx").val() === $("input#reg-cpword-txtbx").val())
+    if ($("input#reg-pword-txtbx" + suffx).val() === $("input#reg-cpword-txtbx" + suffx).val())
         pconfReady = true;
-    if (existsUser($("input#reg-uname-txtbx").val()))
+    if (existsUser($("input#reg-uname-txtbx" + suffx).val()))
         pconfReady = false;
 
     if (reqReady) {
         if (pconfReady)
-            $("form#" + form + " div.disabler").hide();
+            $("form#" + form + suffx + " div.disabler").hide();
         else
-            $("form#" + form + " div.disabler").show();
-        $("form#" + form + " span.att-warning").removeClass().addClass("att-warning").addClass("calmText");
+            $("form#" + form + suffx + " div.disabler").show();
+        $("form#" + form + suffx + " span.att-warning").removeClass().addClass("att-warning").addClass("calmText");
 	} else {
-		$("form#" + form + " div.disabler").show();
-        $("form#" + form + " span.att-warning").removeClass().addClass("att-warning").addClass("attentionText");
+		$("form#" + form + suffx + " div.disabler").show();
+        $("form#" + form + suffx + " span.att-warning").removeClass().addClass("att-warning").addClass("attentionText");
 	}
 
     return reqReady && pconfReady;
