@@ -178,3 +178,13 @@ function getFoodByName(name) {
     }
     console.log("Comida \"" + name + "\" não encontrada.");
 }
+
+function getFoodCategory(name) {
+    for (let menu in FOOD_ITEMS) {
+        for (let i = 0; i < FOOD_ITEMS[menu].length; i++) {
+            if (FOOD_ITEMS[menu][i]._name === name)
+                return menu;
+        }
+    }
+    console.log("Comida \"" + name + "\" não encontrada.");
+}
