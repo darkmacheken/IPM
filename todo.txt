@@ -1,12 +1,13 @@
 (Duarte)
 FEITO. PLS TESTAR - 3o ecra registar nao verifica se user ja existe
 FEITO. PODEM TESTAR - Botão cancelar funcionar no pagamento em processamento
-DONE, PARCIALMENTE (falta tabela) - Tempo previsto: para cada item, por ordem e na tabela
+DONE, MAS FODEU TABELA - Tempo previsto: para cada item, por ordem e na tabela
 - 1º ecran, registo, quando altera o titulo alterar também o icon.
 - Jogo do Galo (obs podes já fazer resize do tamanho da janela, mas ao fazer resize é necessário alterar o font-size da div #tic-tac-toe-game-div)
 
 (Pedro)
-- Fix stuff
+- Tempo de confecao a verde
+- Arrajar a tabela do tempo previsto
 
 (Leo)
 - Trabalhar

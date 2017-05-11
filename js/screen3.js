@@ -1,6 +1,7 @@
 var sessionOrder = [];
 var whoOpenedViewOrder = 0;
 var paying_timeout;
+var showingOrders = false;
 
 function prepareScreen3() {
     $("#order-again-btn").click(function () {
@@ -72,6 +73,7 @@ function prepareScreen3() {
         $("#box-conta-utilizador-all").show();
         $(this).hide();
         $("#view-order-items-box-wrapper").hide();
+        showingOrders = false;
     });
 
     $("#pay-btn").click(function () {
@@ -109,6 +111,7 @@ function prepareScreen3() {
         $("#view-all-orders-items-box").hide();
         $(this).addClass("selected");
         $("#view-items-all-orders").removeClass("selected");
+        showingOrders = false;
     });
 
     $("#view-items-all-orders").click(function () {
@@ -264,7 +267,12 @@ function showAllOrders() {
         }
         allOrderTxt += "</td><td style=\"width: 70px;text-align: right;\">";
         allOrderTxt += formatPrice(sessionOrder[i]._price * sessionOrder[i]._quantity);
-        allOrderTxt += "</td></tr>";
+        allOrderTxt += "</td></tr><tr class=\"vieworder-timer-row\" id=\"vieworder-timer-";
+        allOrderTxt += String(i);
+        allOrderTxt += "\"><td>&nbsp;</td><td>Tempo previsto: <span class=\"vieworder-timer\"></span></td><td>&nbsp;</td></tr>";
     }
     $("#view-all-orders-table").html(allOrderTxt);
+    $(".vieworder-timer-row").hide();
+    showingOrders = true;
+    timer_update();
 }

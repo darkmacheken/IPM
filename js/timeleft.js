@@ -11,11 +11,7 @@ var TIMER_FOODTYPE_PRIORITIES = {
 };
 
 function timer_init() {
-    timer_stopped = false;
-
     timer_addOrder(sessionOrder);
-
-    setTimeout(timer_tick, 1000);
     timer_update();
 }
 
@@ -69,6 +65,19 @@ function timer_update() {
     timer_updateBox(1);
     timer_updateBox(2);
     timer_updateBox(3);
+
+    if (showingOrders) {
+        for (let i = 0; i < sessionOrder.length; i++) {
+            qTime = timer_queueTime(sessionOrder[i]._name);
+            if (qTime > 0) {
+                $("#vieworder-timer-" + i + " .vieworder-timer").text(formatTime(qTime));
+                $("#vieworder-timer-" + i).show();
+            }
+            else {
+                $("#vieworder-timer-" + i).hide();
+            }
+        }
+    }
 }
 
 function timer_updateBox(boxnr) {
@@ -86,6 +95,13 @@ function timer_sortQueue() {
     timer_food_queue = timer_food_queue.sort(function (a, b) {
         return a._time - b._time;
     });
+}
+
+function timer_queueTime(foodname) {
+    for (let i = 0; i < timer_food_queue.length; i++)
+        if (timer_food_queue[i]._name === foodname)
+            return timer_food_queue[i]._time - timer_global;
+    return 0;
 }
 
 function formatTime(time) {
