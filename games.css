@@ -1,10 +1,10 @@
-.tic-tac-toe{
+.gamewindow{
   width: 650px;
   height: 650px;
-}
-#tic-tac-toe-game{
   top: 65px;
 }
+
+
 #tic-tac-toe-game-div{
   background-image: url("images/games/tic-tac-toe-black.png");
   background-position: 50% 50%;
@@ -13,7 +13,7 @@
   font-size: 18px;
 }
 
-.score {
+.tic-tac-toe-score {
   position: absolute;
   text-align: left;
   width: 50%;
@@ -130,4 +130,56 @@
   background-position: 0% 0%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+
+#esmurristo-game-div {
+  font-size: 18px;
+}
+
+.esmurristo-score {
+  position: absolute;
+  text-align: center;
+  width: 25%;
+  height: 11%;
+  top: 9%;
+  font-size: 150%;
+}
+
+#esmurristo-player1-score {
+}
+
+#esmurristo-player2-score {
+  left: 25%;
+}
+
+#esmurristo-player3-score {
+  left: 50%;
+}
+
+#esmurristo-player4-score {
+  left: 75%;
+}
+
+#esmurristo-count-score {
+  top: 27.5%;
+  left: 37.5%;
+}
+
+#esmurristo-btn {
+  border: 1px solid black;
+  top: 39%;
+  left: 25%;
+  width: 50%;
+  height: 30%;
+  position: absolute;
+}
+
+#esmurristo-time-left {
+  position: absolute;
+  text-align: center;
+  width: 50%;
+  height: 9%;
+  top: 75%;
+  left: 25%;
+  font-size: 125%;
 }
