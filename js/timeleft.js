@@ -55,7 +55,7 @@ function timer_addOrder(order) {
 function timer_tick() {
     timer_global++;
     if (!timer_stopped)
-        setTimeout(timer_tick, 10);
+        setTimeout(timer_tick, 1000);
     timer_update();
 }
 
