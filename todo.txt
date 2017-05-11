@@ -21,5 +21,5 @@ DONE - 1º ecran, registo, quando altera o titulo alterar também o icon.
 [DONE] Icones de conta 2o ecra
 
 (Leo)
-- Separar Confirmar de esconder (border)
-- Border maior entre os items seleccionados
+[DONE] Separar Confirmar de esconder (border)
+[DONE] Border maior entre os items seleccionados
