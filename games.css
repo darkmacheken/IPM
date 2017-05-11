@@ -30,45 +30,45 @@
   width: 20%;
   height: 20%;
   position: absolute;
-  background-image: url("images/games/tic-tac-toe-x-blue.png");
+  /*background-image: url("images/games/tic-tac-toe-x-blue.png");*/
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: 70% 70%;
 }
 
-#hitbox-1{
+#hitbox-00{
   top: 17%;
   left: 17%;
 }
-#hitbox-2{
+#hitbox-01{
   top: 17%;
   left: 40%;
 }
-#hitbox-3{
+#hitbox-02{
   top: 17%;
   left: 64%;
 }
-#hitbox-4{
+#hitbox-10{
   top: 41%;
   left: 17%;
 }
-#hitbox-5{
+#hitbox-11{
   top: 41%;
   left: 40%;
 }
-#hitbox-6{
+#hitbox-12{
   top: 41%;
   left: 64%;
 }
-#hitbox-7{
+#hitbox-20{
   top: 64%;
   left: 17%;
 }
-#hitbox-8{
+#hitbox-21{
   top: 64%;
   left: 40%;
 }
-#hitbox-9{
+#hitbox-22{
   top: 64%;
   left: 64%;
 }
@@ -270,6 +270,8 @@
   position: absolute;
   top: 0%;
   left: 0%;
+  width: 100%;
+  height: 100%;
 }
 
 .blockerWhiteText{
