@@ -1,4 +1,4 @@
-var MUSICS = {
+var SONGS = [
         { _name: "I'm Blue",
             _artist: "Eiffel 65",
             _playtime: 221,
@@ -40,4 +40,4 @@ var MUSICS = {
             _playtime: 127,
             _cover: "images/musica/ween.jpg",
             _votes: 0 },
-};
+];

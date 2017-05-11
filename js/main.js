@@ -398,19 +398,7 @@ $(document).ready(function() {
     });
 
     /*********************************** VOTAR EM MUSICA ***********************************/
-    $("#votemusic").click(function () {
-        $(this).hide();
-        $("#box-games").hide();
-        $("#box-music-vote-next").show();
-        $("#music-vote-next-hide").show();
-    });
-
-    $("#music-vote-next-hide").click(function () {
-        $(this).hide();
-        $("#box-music-vote-next").hide();
-        $("#votemusic").show();
-        $("#box-games").show();
-    });
+    prepareMusicBox();
 
     /*********************************** GAMES ***********************************/
     $("#games-tic-tac-toe-btn").click(function () {

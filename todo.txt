@@ -8,7 +8,7 @@ DONE - Ao clicar cancelar enquanto em transação deve perguntar se quer mesmo c
 - Jogo do Galo (obs podes já fazer resize do tamanho da janela, mas ao fazer resize é necessário alterar o font-size da div #tic-tac-toe-game-div)
 - Pong
 - EsmurreISTo
-- Musica funcionar. Mete o nr de votos ao inicio a random e escolhe a song a tocar random.
+PARCIAL - Musica funcionar. Mete o nr de votos ao inicio a random e escolhe a song a tocar random.
 - Resize das janelas dos jogos no 3ºecran (Não esquecer de diminuir o font-size da div dentro das janelas! Por default está a 18px, tens de escolher o melhor para o tamanho da janela em questão.)
 
 (Pedro)
