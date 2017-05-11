@@ -3,10 +3,17 @@ FEITO. PLS TESTAR - 3o ecra registar nao verifica se user ja existe
 FEITO. PODEM TESTAR - Botão cancelar funcionar no pagamento em processamento
 DONE, MAS FODEU TABELA - Tempo previsto: para cada item, por ordem e na tabela
 DONE - 1º ecran, registo, quando altera o titulo alterar também o icon.
+[ALTA PRIORIDADE]
+- Observação, quando se paga logo, desaparece a tabela logo desaparece os timers de tudo. Mantém lá tudo pelo menos até acabar o último timer.
+- Quando se escolhe por exemplo 1 salada de polvo -> confirma -> pede outra salada de polvo -> confirma; O tempo previsto na lista fica o antigo. Preferível aparecer
+ o tempo novo e o resto aparece nos 3 próximos items a chegar.
+ - Ao clicar cancelar enquanto em transação deve perguntar se quer mesmo cancelar.
+ [BAIXA PRIORIDADE]
 - Jogo do Galo (obs podes já fazer resize do tamanho da janela, mas ao fazer resize é necessário alterar o font-size da div #tic-tac-toe-game-div)
 - Pong
 - EsmurreISTo
-- Cancelar quando em transação deve perguntar se quer mesmo cancelar.
+- Musica funcionar. Mete o nr de votos ao inicio a random e escolhe a song a tocar random.
+- Resize das janelas dos jogos no 3ºecran (Não esquecer de diminuir o font-size da div dentro das janelas! Por default está a 18px, tens de escolher o melhor para o tamanho da janela em questão.)
 
 (Pedro)
 [DONE] Tempo de confecao a verde
