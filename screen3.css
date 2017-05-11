@@ -274,6 +274,14 @@ background-size: 30px 30px;
   padding: inherit;
   vertical-align:top;
 }
+#view-all-orders-table th {
+  width: 200px;
+  font-size: 15px;
+  text-align: left;
+  padding: inherit;
+  vertical-align:top;
+  color: #4CAF50;
+}
 
 #view-items-current-order {
   position: absolute;
@@ -477,7 +485,8 @@ background-size: 30px 30px;
 
 .timeleftbox {
   position: absolute;
-  width: 250px;
+  top: 650px;
+  width: 270px;
   height: 70px;
   padding: inherit;
   text-decoration: none;
@@ -487,19 +496,16 @@ background-size: 30px 30px;
   background: none;
   color: black;
   border: none;
-  text-align: left;
+  text-align: center;
 }
 #timeleft-box-1{
-  left: 405px;
-  top: 690px;
+  left: 365px;
 }
 #timeleft-box-2{
-  left: 655px;
-  top: 690px;
+  left: 635px;
 }
 #timeleft-box-3{
   left: 905px;
-  top: 690px;
 }
 #login-window-thirdScreen{
   position: absolute;

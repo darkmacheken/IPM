@@ -269,7 +269,7 @@ function showAllOrders() {
         allOrderTxt += formatPrice(sessionOrder[i]._price * sessionOrder[i]._quantity);
         allOrderTxt += "</td></tr><tr class=\"vieworder-timer-row\" id=\"vieworder-timer-";
         allOrderTxt += String(i);
-        allOrderTxt += "\"><td>&nbsp;</td><td>Tempo previsto: <span class=\"vieworder-timer\"></span></td><td>&nbsp;</td></tr>";
+        allOrderTxt += "\"><th colspan=\"3\">&emsp;&emsp;Tempo previsto: <span class=\"vieworder-timer\"></span></th></tr>";
     }
     $("#view-all-orders-table").html(allOrderTxt);
     $(".vieworder-timer-row").hide();
