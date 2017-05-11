@@ -5,6 +5,8 @@ var esmurristo_timeouts = [];
 function prepareEsmurristoGame() {
     $("#games-esmurristo-btn").click(function () {
         esmurristo_resetGame();
+        if (currScreen === 3)
+            $("#esmurristo-game").css("width", "350px").css("height", "350px");
         openWindow("esmurristo-game");
         esmurristo_startGame();
     });
@@ -43,7 +45,7 @@ function esmurristo_startGame() {
                     $("#esmurristo-game .blockerWhiteText").text("1");
                     esmurristo_timeouts.push(setTimeout(function () {
                         $("#esmurristo-game .blockerWhite").hide();
-                        setTimeout(esmurristo_timerUpdate, 100);
+                        esmurristo_timeouts.push(setTimeout(esmurristo_timerUpdate, 100));
                     }, 500));
                 }, 500));
             }, 500));
@@ -70,10 +72,10 @@ function esmurristo_endGame() {
         $("#esmurristo-game .blockerWhiteText").text("Você perdeu! :(");
     $("#esmurristo-game .blockerWhite").show();
 
-    setTimeout(function () {
+    esmurristo_timeouts.push(setTimeout(function () {
         esmurristo_resetGame();
         esmurristo_startGame();
-    }, 2000);
+    }, 2000));
 }
 
 function esmurristo_updateScreen() {
@@ -86,10 +88,12 @@ function esmurristo_updateScreen() {
 function esmurristo_timerUpdate() {
     esmurristo_timeleft--;
     if (esmurristo_timeleft > 0) {
-        setTimeout(esmurristo_timerUpdate, 100);
+        esmurristo_timeouts.push(setTimeout(esmurristo_timerUpdate, 100));
         esmurristo_simulatePlayers(0.6);
     }
     else {
+        if (esmurristo_timeleft < 0)
+            esmurristo_timeleft = 0;
         esmurristo_endGame();
     }
     esmurristo_updateScreen();
