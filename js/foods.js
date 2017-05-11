@@ -107,7 +107,7 @@ var FOOD_ITEMS = {
             _desc: "Refrigerante de maçã tradicional da Madeira.",
             _img: "images/foods/brisa.jpg",
             _classif: 5,
-            _ctime: 8,
+            _ctime: 1,
             _ingredientsString: "Brisa-Maçã.",
             _ingredients: ["Gelo"] },
     ],

@@ -26,6 +26,7 @@ function timer_addOrder(order) {
             maxTime[priority] = ct * 60;
         timer_food_queue.push({
             _name: order[i]._name,
+            _orderId: order[i]._orderId,
             _time: ct * 60,
             _priority: priority
         });
@@ -36,7 +37,8 @@ function timer_addOrder(order) {
             timer_food_queue[i]._time += maxTime[j];
         timer_food_queue[i]._time += timer_global;
         for (let j = 0; j < i; j++) {
-            if (timer_food_queue[i]._name === timer_food_queue[j]._name) {
+            if (timer_food_queue[i]._name === timer_food_queue[j]._name &&
+                timer_food_queue[i]._orderId === timer_food_queue[j]._orderId) {
                 timer_food_queue[j]._time = timer_food_queue[i]._time;
                 timer_food_queue.splice(i, 1);
                 i--;
@@ -74,7 +76,7 @@ function timer_update() {
 
     if (showingOrders) {
         for (let i = 0; i < sessionOrder.length; i++) {
-            qTime = timer_queueTime(sessionOrder[i]._name);
+            qTime = timer_queueTime(sessionOrder[i]);
             if (qTime > 0) {
                 $("#vieworder-timer-" + i + " .vieworder-timer").text(formatTime(qTime));
                 $("#vieworder-timer-" + i).show();
@@ -103,11 +105,14 @@ function timer_sortQueue() {
     });
 }
 
-function timer_queueTime(foodname) {
+function timer_queueTime(food) {
+    let time = 0
     for (let i = 0; i < timer_food_queue.length; i++)
-        if (timer_food_queue[i]._name === foodname)
-            return timer_food_queue[i]._time - timer_global;
-    return 0;
+        if (timer_food_queue[i]._name === food._name &&
+            timer_food_queue[i]._orderId === food._orderId &&
+            timer_food_queue[i]._time - timer_global > time)
+                time = timer_food_queue[i]._time - timer_global;
+    return time;
 }
 
 function formatTime(time) {

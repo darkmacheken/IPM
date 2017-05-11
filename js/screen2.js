@@ -154,7 +154,7 @@ function showFoodItems() {
     }
     $("#food-options").html(boxContent);
     $(".opcao").click(function () {
-        addFoodToOrder(FOOD_ITEMS[currentMenuSelected][getIndexNumber(this)]);
+        addFoodToOrder(FOOD_ITEMS[currentMenuSelected][getIndexNumber(this)], 0);
     });
     $(".info").click(function (e) {
         e.stopPropagation();
@@ -288,7 +288,7 @@ function showCurrentOrder() {
     });
 }
 
-function addFoodToOrder(food, quantity, ingredients) {
+function addFoodToOrder(food, orderId, quantity, ingredients) {
     /*for (var i = 0; i < currentOrder.length; i++) {
         if (currentOrder[i]._name === food._name &&
             currentOrder[i]._ingredients.length === food._ingredients.length) {
@@ -307,7 +307,8 @@ function addFoodToOrder(food, quantity, ingredients) {
         _name: food._name,
         _price: food._price,
         _quantity: q,
-        _ingredients: ing
+        _ingredients: ing,
+        _orderId: orderId
     });
     showCurrentOrder();
 }

@@ -162,8 +162,9 @@ function repeatOrder(order) {
     function () {
         $("#orderfoodbtn").click();
         for (let i = 0; i < orderFoods.length; i++) {
-            addFoodToOrder(getFoodByName(orderFoods[i]._name), orderFoods[i]._quantity, orderFoods[i]._ingredients);
+            addFoodToOrder(getFoodByName(orderFoods[i]._name), orderingId, orderFoods[i]._quantity, orderFoods[i]._ingredients);
         }
+        orderingId++;
         closeHistorico();
         if (currScreen === 3) {
             $("#view-order-btn").click();

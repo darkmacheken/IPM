@@ -3,6 +3,7 @@ var whoOpenedViewOrder = 0;
 var paying_timeout;
 var showingOrders = false;
 var lastPaidOrder = 0;
+var orderingId = 1;
 
 function prepareScreen3() {
     $("#order-again-btn").click(function () {
@@ -98,8 +99,11 @@ function prepareScreen3() {
         windowPosition.BOTTOM_RIGHT,
         function () {
             $("#view-order-hide-btn").click();
+            $("#order-menu-back").click();
+            $("#order-again-hide-btn").click();
+            orderingId++;
             sessionOrder = sessionOrder.concat(currentOrder);
-            //sessionOrder = compactOrder(sessionOrder);
+            sessionOrder = compactOrder(sessionOrder, lastPaidOrder);
             timer_addOrder(currentOrder);
             currentOrder = [];
             showCurrentOrder();
@@ -175,19 +179,27 @@ function exitScreen3() {
     $("#orderfoodbtn").show();
 }
 
-function compactOrder(order) {
+function compactOrder(order, start) {
+    if (typeof start !== "number")
+        start = 0;
     let compact = [];
     for (let i = 0; i < order.length; i++) {
-        let notfound = true;
-        for (let j = 0; j < compact.length; j++) {
-            if (sameOrder(order[i], compact[j])) {
-                compact[j]._quantity += order[i]._quantity;
-                notfound = false;
-                break;
+        if (i >= start) {
+            let notfound = true;
+            for (let j = start; j < compact.length; j++) {
+                if (sameOrder(order[i], compact[j])) {
+                    compact[j]._quantity += order[i]._quantity;
+                    compact[j]._orderId = order[i]._orderId;
+                    notfound = false;
+                    break;
+                }
             }
+            if (notfound)
+                compact.push(order[i]);
         }
-        if (notfound)
+        else {
             compact.push(order[i]);
+        }
     }
     return compact;
 }
@@ -232,7 +244,7 @@ function openOrderAgainMenu(menuName, menuTitle) {
     $("#box-order-menu ul li").click(function () {
         $("#view-order-btn").click();
         $("#view-items-current-order").click();
-        addFoodToOrder(FOOD_ITEMS[menuName][getIndexNumber(this)]);
+        addFoodToOrder(FOOD_ITEMS[menuName][getIndexNumber(this)], orderingId);
     });
     $(".info3ecran").click(function (e) {
         e.stopPropagation();
