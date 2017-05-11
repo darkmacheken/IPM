@@ -183,3 +183,58 @@
   left: 25%;
   font-size: 125%;
 }
+
+#pong-game-div {
+  font-size: 18px;
+}
+
+.pong-score {
+  position: absolute;
+  text-align: left;
+  width: 50%;
+  height: 9%;
+  left: 1%;
+  font-size: 250%;
+}
+
+#pong-user-score{
+  bottom: 1%;
+}
+
+.retaDashed{
+  background-image: url(images/games/dashed-line-black.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 6%;
+  width: 104%;
+  position: absolute;
+  top: 44.5%;
+  left: -2%;
+}
+
+.player{
+  background-color: black;
+  position: absolute;
+  width: 20%;
+  height: 2%;
+}
+
+#computer-player{
+  top: 10%;
+}
+
+#user-player{
+  bottom: 15%;
+}
+
+.ball{
+  background-color: black;
+  position: absolute;
+  width: 2%;
+  height: 2%;
+}
+
+#pong-ball{
+  left: 20%;
+  top: 20%;
+}
