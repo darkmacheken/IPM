@@ -128,12 +128,18 @@ function prepareScreen3() {
     });
 
     $("#order-pay-money-btn, #order-pay-creditcard-btn").click(function () {
+        var msg = "Por favor insira o dinheiro na ranhura.";
+        if ($(this).attr("id") === "order-pay-creditcard-btn")
+            msg = "Por favor insira o cartão no leitor e siga as instruções.";
         confirmYesNo("Tem a certeza que pretende pagar?",
         windowPosition.BOTTOM_RIGHT,
         function () {
             callblock();
             $("#transacao").show();
-            paying_timeout = setTimeout(pay_timeout, 5000);
+
+            confirmOk(msg, windowPosition.BOTTOM_RIGHT, function () {
+                paying_timeout = setTimeout(pay_timeout, 5000);
+            });
         });
     });
 
@@ -304,4 +310,5 @@ function pay_timeout() {
     closeWindow("order-pay-box");
     $("#view-order-pay-box").show();
     showCurrentOrder();
+    confirmOk("Pagamento foi concluído com sucesso.", windowPosition.BOTTOM_RIGHT);
 }

@@ -187,7 +187,7 @@ function showCurrentOrder() {
         $("#view-order-pay-box-total span").text(formatPrice(totalPrice(sessionOrder, lastPaidOrder)));
         if (total !== 0)
             $("#view-order-pay-box-total span").append(" <span class=\"attentionText\">+ " + formatPrice(total) + "</span>");
-        if (totalPrice(sessionOrder) === 0)
+        if (totalPrice(sessionOrder, lastPaidOrder) === 0)
             $("#pay-btn .disabler").show();
         else
             $("#pay-btn .disabler").hide();
