@@ -99,7 +99,7 @@ function prepareScreen3() {
         function () {
             $("#view-order-hide-btn").click();
             sessionOrder = sessionOrder.concat(currentOrder);
-            sessionOrder = compactOrder(sessionOrder);
+            //sessionOrder = compactOrder(sessionOrder);
             timer_addOrder(currentOrder);
             currentOrder = [];
             showCurrentOrder();
@@ -285,7 +285,8 @@ function showAllOrders() {
 }
 
 function pay_timeout() {
-    addToHistory(sessionOrder);
+    addToHistory(sessionOrder.slice(lastPaidOrder, sessionOrder.length));
+    sessionOrder = compactOrder(sessionOrder);
     lastPaidOrder = sessionOrder.length;
     $("#transacao").hide();
     closeWindow("order-pay-box");
