@@ -173,6 +173,7 @@
 #esmurristo-count-score {
   top: 27.5%;
   left: 37.5%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #esmurristo-btn {
@@ -186,6 +187,7 @@
   background-position: 0% 0%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #esmurristo-time-left {
@@ -196,6 +198,10 @@
   top: 75%;
   left: 25%;
   font-size: 125%;
+}
+
+#esmurristo-reset-btn {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #pong-game-div {
