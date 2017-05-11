@@ -412,6 +412,19 @@ $(document).ready(function() {
         $("#box-games").show();
     });
 
+    /*********************************** GAMES ***********************************/
+    $("#games-tic-tac-toe-btn").click(function () {
+        $("#tic-tac-toe-game").show();
+    });
+
+    $("#games-esmurristo-btn").click(function () {
+        $("#esmurristo-game").show();
+    });
+
+    $("#games-pong-btn").click(function () {
+        $("#pong-game").show();
+    });
+
     /*********************************** TECLADOS E KEYPADS ***********************************/
     $("input[type=text], input[type=password]").not(".numOnly").focus(function () {
         $("#keyboard").show();
