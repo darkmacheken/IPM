@@ -35,6 +35,13 @@ function timer_addOrder(order) {
         for (let j = timer_food_queue[i]._priority-1; j >= 0; j--)
             timer_food_queue[i]._time += maxTime[j];
         timer_food_queue[i]._time += timer_global;
+        for (let j = 0; j < i; j++) {
+            if (timer_food_queue[i]._name === timer_food_queue[j]._name) {
+                timer_food_queue[j]._time = timer_food_queue[i]._time;
+                timer_food_queue.splice(i, 1);
+                i--;
+            }
+        }
     }
 
     timer_sortQueue();
@@ -48,7 +55,7 @@ function timer_addOrder(order) {
 function timer_tick() {
     timer_global++;
     if (!timer_stopped)
-        setTimeout(timer_tick, 1000);
+        setTimeout(timer_tick, 10);
     timer_update();
 }
 
@@ -59,7 +66,6 @@ function timer_update() {
     if (timer_food_queue.length === 0) {
         $(".timeleftbox").hide();
         timer_stopped = true;
-        return;
     }
 
     timer_updateBox(1);

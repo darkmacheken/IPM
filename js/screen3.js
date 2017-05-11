@@ -2,6 +2,7 @@ var sessionOrder = [];
 var whoOpenedViewOrder = 0;
 var paying_timeout;
 var showingOrders = false;
+var lastPaidOrder = 0;
 
 function prepareScreen3() {
     $("#order-again-btn").click(function () {
@@ -77,7 +78,7 @@ function prepareScreen3() {
     });
 
     $("#pay-btn").click(function () {
-        if (totalPrice(sessionOrder) === 0)
+        if (totalPrice(sessionOrder, lastPaidOrder) === 0)
             return;
         $("#view-order-hide-btn").click();
         openWindow("order-pay-box", windowPosition.DEFAULT);
@@ -128,20 +129,20 @@ function prepareScreen3() {
         function () {
             callblock();
             $("#transacao").show();
-            paying_timeout = setTimeout(function () {
-                addToHistory(sessionOrder);
-                sessionOrder = [];
-                $("#transacao").hide();
-                closeWindow("order-pay-box");
-                $("#view-order-pay-box").show();
-                showCurrentOrder();
-            }, 5000);
+            paying_timeout = setTimeout(pay_timeout, 5000);
         });
     });
 
     $("#order-pay-cancel-transaction-btn").click(function () {
         clearTimeout(paying_timeout);
-        $("#transacao").hide();
+        confirmYesNo("Tem a certeza que pretende cancelar a transação?",
+        windowPosition.BOTTOM_RIGHT,
+        function () {
+            $("#transacao").hide();
+        },
+        function () {
+            paying_timeout = setTimeout(pay_timeout, 3000);
+        });
     });
 
     $("#order-pay-cancel-btn .disabler, #pay-btn .disabler").hide();
@@ -197,9 +198,11 @@ function sameOrder(order1, order2) {
             order1._ingredients.length === order2._ingredients.length;
 }
 
-function totalPrice(order) {
+function totalPrice(order, start) {
     let price = 0;
-    for (let i = 0; i < order.length; i++)
+    if (typeof start !== "number")
+        start = 0
+    for (let i = start; i < order.length; i++)
         price += order[i]._price * order[i]._quantity;
     return price;
 }
@@ -249,7 +252,11 @@ function closeOrderAgainMenu() {
 
 function showAllOrders() {
     let allOrderTxt = ""
+    if (lastPaidOrder > 0)
+        allOrderTxt += "<tr><td colspan=\"3\">Pago:</td></tr>";
     for (var i = 0; i < sessionOrder.length; i++) {
+        if (lastPaidOrder > 0 && lastPaidOrder === i)
+            allOrderTxt += "<tr><td colspan=\"3\">Não pago:</td></tr>";
         allOrderTxt += "<tr><td style=\"width: 50px;\">";
         allOrderTxt += sessionOrder[i]._quantity + "x</td><td>" + sessionOrder[i]._name;
         let ofilen = sessionOrder[i]._ingredients.length;
@@ -275,4 +282,13 @@ function showAllOrders() {
     $(".vieworder-timer-row").hide();
     showingOrders = true;
     timer_update();
+}
+
+function pay_timeout() {
+    addToHistory(sessionOrder);
+    lastPaidOrder = sessionOrder.length;
+    $("#transacao").hide();
+    closeWindow("order-pay-box");
+    $("#view-order-pay-box").show();
+    showCurrentOrder();
 }
