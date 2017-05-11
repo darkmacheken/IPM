@@ -4,15 +4,15 @@ FEITO. PODEM TESTAR - Botão cancelar funcionar no pagamento em processamento
 DONE, MAS FODEU TABELA - Tempo previsto: para cada item, por ordem e na tabela
 DONE - 1º ecran, registo, quando altera o titulo alterar também o icon.
 - Jogo do Galo (obs podes já fazer resize do tamanho da janela, mas ao fazer resize é necessário alterar o font-size da div #tic-tac-toe-game-div)
+- Pong
+- EsmurreISTo
+- Cancelar quando em transação deve perguntar se quer mesmo cancelar.
 
 (Pedro)
-- Tempo de confecao a verde
-- Arrajar a tabela do tempo previsto
-- Icones de conta 2o ecra
+[DONE] Tempo de confecao a verde
+[DONE] Arrajar a tabela do tempo previsto
+[DONE] Icones de conta 2o ecra
 
 (Leo)
-- Trabalhar
-
-
-Border maior entre os items seleccionados
-Separar Confirmar de esconder (border)
+- Separar Confirmar de esconder (border)
+- Border maior entre os items seleccionados
