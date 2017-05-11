@@ -11,7 +11,6 @@
     <link type="text/css" rel="stylesheet" href="screen3.css">
     <link type="text/css" rel="stylesheet" href="games.css">
     <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>-->
     <script src="js/jquery-ui/external/jquery/jquery.js"></script>
     <script src="js/jquery-ui/jquery-ui.js"></script>
     <script src="js/foods.js"></script>
@@ -23,6 +22,9 @@
     <script src="js/screen2.js"></script>
     <script src="js/screen3.js"></script>
     <script src="js/timeleft.js"></script>
+    <script src="js/games/tictactoe.js"></script>
+    <script src="js/games/esmurristo.js"></script>
+    <script src="js/games/pong.js"></script>
     <script src="js/music.js"></script>
     <script src="js/musicBox.js"></script>
 </head>
@@ -1167,13 +1169,13 @@
 
     <div class="window gamewindow" id="esmurristo-game">
       <div class="gamewindow" id="esmurristo-game-div">
-        <div class="esmurristo-score" id="esmurristo-player1-score">Jogador 1 <br> 0</div>
-        <div class="esmurristo-score" id="esmurristo-player2-score">Jogador 2 <br> 0</div>
-        <div class="esmurristo-score" id="esmurristo-player3-score">Jogador 3 <br> 0</div>
-        <div class="esmurristo-score" id="esmurristo-player4-score">Jogador 4 <br> 0</div>
-        <div class="esmurristo-score" id="esmurristo-count-score">Contagem <br> 0</div>
+        <div class="esmurristo-score" id="esmurristo-player1-score">Jogador 1 <br><span>0</span></div>
+        <div class="esmurristo-score" id="esmurristo-player2-score">Jogador 2 <br><span>0</span></div>
+        <div class="esmurristo-score" id="esmurristo-player3-score">Jogador 3 <br><span>0</span></div>
+        <div class="esmurristo-score" id="esmurristo-player4-score">Jogador 4 <br><span>0</span></div>
+        <div class="esmurristo-score" id="esmurristo-count-score">Contagem <br> <span>0</span></div>
         <div class="btn" id="esmurristo-btn"></div>
-        <div id="esmurristo-time-left">Tempo Restante: 5 segundos</div>
+        <div id="esmurristo-time-left">Tempo Restante: <span>5</span> segundos</div>
         <div class="reset btn" id="esmurristo-reset-btn">Reset</div>
         <div class="gamewindow blockerWhite">
           <div class="blockerWhiteText">À espera de jogadores...</div>

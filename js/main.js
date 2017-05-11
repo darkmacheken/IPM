@@ -401,29 +401,9 @@ $(document).ready(function() {
     prepareMusicBox();
 
     /*********************************** GAMES ***********************************/
-    $("#games-tic-tac-toe-btn").click(function () {
-        openWindow("tic-tac-toe-game");
-    });
-
-    $("#games-esmurristo-btn").click(function () {
-        openWindow("esmurristo-game");
-    });
-
-    $("#games-pong-btn").click(function () {
-        openWindow("pong-game");
-    });
-
-    $("#tic-tac-toe-game .Xbtn").click(function () {
-        closeWindow("tic-tac-toe-game");
-    });
-
-    $("#esmurristo-game .Xbtn").click(function () {
-        closeWindow("esmurristo-game");
-    });
-
-    $("#pong-game .Xbtn").click(function () {
-        closeWindow("pong-game");
-    });
+    prepareTicTacToeGame();
+    prepareEsmurristoGame();
+    preparePongGame();
 
     /*********************************** TECLADOS E KEYPADS ***********************************/
     $("input[type=text], input[type=password]").not(".numOnly").focus(function () {
