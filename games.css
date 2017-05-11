@@ -143,6 +143,8 @@
   height: 11%;
   top: 9%;
   font-size: 150%;
+  left: -0.5%;
+  border: 3px solid black;
 }
 
 #esmurristo-player1-score {
@@ -150,14 +152,22 @@
 
 #esmurristo-player2-score {
   left: 25%;
+  background-color: #363636;
+  color: white;
+  border-right: 3px solid white;
 }
 
 #esmurristo-player3-score {
   left: 50%;
+  background-color: #363636;
+  color: white;
+  border-right: 3px solid white;
 }
 
 #esmurristo-player4-score {
-  left: 75%;
+  left: 74.5%;
+  background-color: #363636;
+  color: white;
 }
 
 #esmurristo-count-score {
@@ -172,6 +182,10 @@
   width: 50%;
   height: 30%;
   position: absolute;
+  background-image: url("images/games/esmurristo2.png");
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 #esmurristo-time-left {
