@@ -414,15 +414,27 @@ $(document).ready(function() {
 
     /*********************************** GAMES ***********************************/
     $("#games-tic-tac-toe-btn").click(function () {
-        $("#tic-tac-toe-game").show();
+        openWindow("tic-tac-toe-game");
     });
 
     $("#games-esmurristo-btn").click(function () {
-        $("#esmurristo-game").show();
+        openWindow("esmurristo-game");
     });
 
     $("#games-pong-btn").click(function () {
-        $("#pong-game").show();
+        openWindow("pong-game");
+    });
+
+    $("#tic-tac-toe-game .Xbtn").click(function () {
+        closeWindow("tic-tac-toe-game");
+    });
+
+    $("#esmurristo-game .Xbtn").click(function () {
+        closeWindow("esmurristo-game");
+    });
+
+    $("#pong-game .Xbtn").click(function () {
+        closeWindow("pong-game");
     });
 
     /*********************************** TECLADOS E KEYPADS ***********************************/
