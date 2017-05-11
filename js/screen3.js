@@ -253,10 +253,10 @@ function closeOrderAgainMenu() {
 function showAllOrders() {
     let allOrderTxt = ""
     if (lastPaidOrder > 0)
-        allOrderTxt += "<tr><td colspan=\"3\">Pago:</td></tr>";
+        allOrderTxt += "<tr><td colspan=\"3\" style=\"color:#009ee1;font-weight: bold; text-align:center;\">Pago:</td></tr>";
     for (var i = 0; i < sessionOrder.length; i++) {
         if (lastPaidOrder > 0 && lastPaidOrder === i)
-            allOrderTxt += "<tr><td colspan=\"3\">Não pago:</td></tr>";
+            allOrderTxt += "<tr><td colspan=\"3\" style=\"color:#B22222;;font-weight: bold; text-align:center;\">Não pago:</td></tr>";
         allOrderTxt += "<tr><td style=\"width: 50px;\">";
         allOrderTxt += sessionOrder[i]._quantity + "x</td><td>" + sessionOrder[i]._name;
         let ofilen = sessionOrder[i]._ingredients.length;
