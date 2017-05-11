@@ -268,14 +268,14 @@ $(document).ready(function() {
     /* Função chamada quando é clicado botão de Histórico. */
     $("#historicobtn, #screen2-historicobtn").click(function () {
         refreshHistorico();
-        $("#rightBoxTitle").text("HISTÓRICO");
+        $("#rightBoxTitle").text("HISTÓRICO").css("background-image", "url(\"images/icons/account/history-white.png\")");
         $("#boxcontautilizadorlogged").hide();
         $("#Historico, #screen2-historico").show();
     });
 
     /* Função chamada quando é clicado botão de Definições de Conta. */
     $("#definicoesContabtn, #screen2-definicoesContabtn").click(function () {
-        $("#rightBoxTitle").text("DEFINIÇÕES DE CONTA");
+        $("#rightBoxTitle").text("DEFINIÇÕES DE CONTA").css("background-image", "url(\"images/icons/account/definicoes-white.png\")");
         $("#def-uname-txtbx, #screen2-def-uname-txtbx").val(getUname());
         $("#def-nif-numbx, #screen2-def-nif-numbx").val(getNif());
         $("#def-tel-numbx, #screen2-def-tel-numbx").val(getTel());

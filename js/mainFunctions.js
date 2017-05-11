@@ -61,7 +61,7 @@ function closeDefs() {
     if ($("#DefinicoesConta").is(":visible")) {
         $("#DefinicoesConta, #screen2-definicoesConta").hide();
         $("form#def-form, form#screen2-def-form").trigger("reset");
-        $("#rightBoxTitle").text("CONTA DE UTILIZADOR");
+        $("#rightBoxTitle").text("CONTA DE UTILIZADOR").css("background-image", "url(\"images/icons/account/user-white.png\")");
         $("#boxcontautilizadorlogged").show();
     }
 }
@@ -87,7 +87,7 @@ function saveDefs() {
 
 function closeHistorico() {
     if ($("#Historico").is(":visible")) {
-        $("#rightBoxTitle").text("CONTA DE UTILIZADOR");
+        $("#rightBoxTitle").text("CONTA DE UTILIZADOR").css("background-image", "url(\"images/icons/account/user-white.png\")");
         $("#Historico, #screen2-historico").hide();
         $(".boxHistoricoRepetirPedido").hide();
         $("#boxcontautilizadorlogged").show();
