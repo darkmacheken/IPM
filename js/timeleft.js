@@ -81,6 +81,11 @@ function timer_update() {
                 $("#vieworder-timer-" + i + " .vieworder-timer").text(formatTime(qTime));
                 $("#vieworder-timer-" + i).show();
             }
+            else if (i < lastPaidOrder) {
+                sessionOrder.splice(i, 1);
+                lastPaidOrder--;
+                showAllOrders();
+            }
             else {
                 $("#vieworder-timer-" + i).hide();
             }

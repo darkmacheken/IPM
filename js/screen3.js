@@ -138,7 +138,7 @@ function prepareScreen3() {
             $("#transacao").show();
 
             confirmOk(msg, windowPosition.BOTTOM_RIGHT, function () {
-                paying_timeout = setTimeout(pay_timeout, 5000);
+                paying_timeout = setTimeout(pay_timeout, 3000);
             });
         });
     });
@@ -151,7 +151,7 @@ function prepareScreen3() {
             $("#transacao").hide();
         },
         function () {
-            paying_timeout = setTimeout(pay_timeout, 3000);
+            paying_timeout = setTimeout(pay_timeout, 2000);
         });
     });
 
@@ -310,5 +310,6 @@ function pay_timeout() {
     closeWindow("order-pay-box");
     $("#view-order-pay-box").show();
     showCurrentOrder();
+    timer_update();
     confirmOk("Pagamento foi concluído com sucesso.", windowPosition.BOTTOM_RIGHT);
 }

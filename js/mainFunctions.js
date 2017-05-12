@@ -179,3 +179,13 @@ function formatPrice(price) {
         cents = "0" + cents;
     return String(Math.floor(price/100)) + "," + cents + "€";
 }
+
+function resetAllInterface() {
+    currScreen = 1;
+    sessionOrder = [];
+    whoOpenedViewOrder = 0;
+    paying_timeout;
+    showingOrders = false;
+    var lastPaidOrder = 0;
+    var orderingId = 1;
+}
