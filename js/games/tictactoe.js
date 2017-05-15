@@ -55,7 +55,7 @@ function tictactoe_resetGame() {
     tictactoe_xTurn = true;
     moveIndex = 0;
 
-    tictactoe_updateBoard();
+    tictactoe_updateScreen();
 }
 
 function tictactoe_userPlay(xPos, yPos) {
@@ -109,7 +109,7 @@ function tictactoe_checkWin() {
                 console.log("Erro ao decidir vencedor.");
         }
     }
-    tictactoe_updateBoard();
+    tictactoe_updateScreen();
 }
 
 function tictactoe_crossed() {
@@ -157,7 +157,7 @@ function tictactoe_crossed() {
     }
 }
 
-function tictactoe_updateBoard() {
+function tictactoe_updateScreen() {
     for (var i = 0; i < 3; i++) {
         for (var j = 0; j < 3; j++) {
             switch (tictactoe_board[i][j]) {

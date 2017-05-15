@@ -225,7 +225,7 @@ $(document).ready(function() {
 
     /*********************************** TODAS AS JANELAS ***********************************/
     /* Tornar as janelas arrastáveis */
-    $(".window").not("#order-pay-box").draggable({ cancel: ".btn, input", containment: "#blocker", scroll: false });
+    $(".window").not("#order-pay-box").draggable({ cancel: ".btn, input, #user-player", containment: "#blocker", scroll: false });
 
     /* Janelas log-in e registo: Colocar asteriscos a vermelho caso campo não esteja preenchido */
     $("input.req-field").keyup(function () {
