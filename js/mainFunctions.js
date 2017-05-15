@@ -184,8 +184,7 @@ function resetAllInterface() {
     currScreen = 1;
     sessionOrder = [];
     whoOpenedViewOrder = 0;
-    paying_timeout;
     showingOrders = false;
-    var lastPaidOrder = 0;
-    var orderingId = 1;
+    lastPaidOrder = 0;
+    orderingId = 1;
 }

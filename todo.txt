@@ -1,21 +1,13 @@
 (Duarte)
-[ALTA PRIORIDADE]
-DONE mas o style ta um pouco weird - Observação, quando se paga logo, desaparece a tabela logo desaparece os timers de tudo. Mantém lá tudo pelo menos até acabar o último timer.
-DONE - Quando se escolhe por exemplo 1 salada de polvo -> confirma -> pede outra salada de polvo -> confirma; O tempo previsto na lista fica o antigo. Preferível aparecer
- o tempo novo e o resto aparece nos 3 próximos items a chegar.
-DONE - Ao clicar cancelar enquanto em transação deve perguntar se quer mesmo cancelar.
- [BAIXA PRIORIDADE]
 - Jogo do Galo (obs podes já fazer resize do tamanho da janela, mas ao fazer resize é necessário alterar o font-size da div #tic-tac-toe-game-div)
 - Pong
 - EsmurreISTo
 PARCIAL - Musica funcionar. Mete o nr de votos ao inicio a random e escolhe a song a tocar random.
 - Resize das janelas dos jogos no 3ºecran (Não esquecer de diminuir o font-size da div dentro das janelas! Por default está a 18px, tens de escolher o melhor para o tamanho da janela em questão.)
+- Posição das linhas do jogo do galo
 
 (Pedro)
-[DONE] Tempo de confecao a verde
-[DONE] Arrajar a tabela do tempo previsto
-[DONE] Icones de conta 2o ecra
-- Estilo do "Pago" e "Nao pago" no ver pedido do 3o ecra
+-
 
 (Leo)
 [DONE] Separar Confirmar de esconder (border)

@@ -15,8 +15,10 @@ function prepareEsmurristoGame() {
 
     $("#esmurristo-game .Xbtn").click(function () {
         closeWindow("esmurristo-game");
-        for (let i = 0; i < esmurristo_timeouts.length; i++)
-            clearTimeout(esmurristo_timeouts[i]);
+        while (esmurristo_timeouts.length > 0) {
+            clearTimeout(esmurristo_timeouts[0]);
+            esmurristo_timeouts.splice(0, 1);
+        }
     });
 
     $("#esmurristo-btn").click(function () {
