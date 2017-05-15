@@ -14,11 +14,6 @@ PARCIAL - Musica funcionar. Mete o nr de votos ao inicio a random e escolhe a so
 -
 
 Melhorias
-- quando pedido esta pago e chegou à mesa apagar o pedido
-- no pagamento, mostrar aviso: meter dinheiro na ranhura
-DONE- pagar nao fica disabled
-- avisar que o pagamento foi efetuado com sucesso
-- introduzir pin
 - tempo restante esmurristo maior
 - IDEIA: ampulheta em vez de tempo restante esmurristo
 - contagem maior esmurristo

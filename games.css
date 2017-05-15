@@ -281,3 +281,10 @@
     top: 40%;
     font-weight: bold;
 }
+
+#pong-game-field {
+  position: absolute;
+  height: 487.5px;
+  top: 65px;
+
+}
