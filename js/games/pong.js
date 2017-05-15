@@ -3,6 +3,7 @@ var pong_gameTimeout = 0;
 var pong_ballPos = { x: 0.0, y: 0.0 };
 var pong_ballVel = { x: 0.0, y: 0.0 };
 var pong_computerPos = 0.0;
+var pong_computerVel = 1;
 var pong_userScore = 0;
 var pong_computerScore = 0;
 var PONG_MAXWIDTH = 487;//337
@@ -30,9 +31,11 @@ function preparePongGame() {
 }
 
 function pong_game() {
-    pong_ballPos.x += pong_ballVel.x * 0.002;
-    pong_ballPos.y += pong_ballVel.y * 0.002;
+    pong_ballPos.x += pong_ballVel.x * 0.004;
+    pong_ballPos.y += pong_ballVel.y * 0.004;
+    pong_computerPos += pong_computerVel * 0.008;
     pong_gameTimeout = setTimeout(pong_game, 1);
+    pong_collideComputer();
     pong_collide();
     pong_updateScreen();
 }
@@ -41,7 +44,8 @@ function pong_resetGame() {
     $("#pong-game .blockerWhiteText").text("Prepare-se!");
     $("#pong-game .blockerWhite").show();
     pong_throwBall();
-    pong_computerPos = 0.0;
+    pong_computerPos = 0.5;
+    pong_computerVel = (Math.floor(Math.random()) * 2) - 1;
     pong_updateScreen();
 }
 
@@ -62,7 +66,11 @@ function pong_startGame() {
 }
 
 function pong_updateScreen() {
-    $("#pong-ball").css("left", String(pong_ballPos.x * 100) + "%").css("top", String(pong_ballPos.y * 100) + "%");
+    let gameWidth = $("#pong-game-field").width();
+    let $pongBall = $("#pong-ball");
+    $pongBall.css("left", String(pong_ballPos.x * (gameWidth - $pongBall.width())) + "px");
+    $pongBall.css("top", String(pong_ballPos.y * 100) + "%");
+    $("#computer-player").css("left", String(pong_computerPos * (gameWidth - $("#computer-player").width())) + "px");
     $("#pong-computer-score span").text(pong_computerScore);
     $("#pong-user-score span").text(pong_userScore);
 }
@@ -79,6 +87,11 @@ function pong_throwBall() {
 
     pong_ballVel.x = Math.cos(initVDir);
     pong_ballVel.y = Math.sin(initVDir);
+}
+
+function pong_collideComputer() {
+    if (pong_computerPos <= 0 || pong_computerPos >= 1)
+        pong_computerVel = -pong_computerVel;
 }
 
 function pong_collide() {

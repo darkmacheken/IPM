@@ -298,7 +298,7 @@
 #pong-game-field {
   position: absolute;
   height: 72%;
-  width: 97%;
+  width: 100%;
   top: 10%;
 
 }
