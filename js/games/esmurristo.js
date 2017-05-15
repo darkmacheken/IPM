@@ -5,10 +5,7 @@ var esmurristo_timeouts = [];
 function prepareEsmurristoGame() {
     $("#games-esmurristo-btn").click(function () {
         esmurristo_resetGame();
-        if (currScreen === 3) {
-            $("#esmurristo-game").css("width", "350px").css("height", "350px");
-            $("#esmurristo-game-div").css("font-size","9px");
-          }
+        games_windowAdjust();
         openWindow("esmurristo-game", windowPosition.BOTTOM_RIGHT);
         esmurristo_startGame();
     });

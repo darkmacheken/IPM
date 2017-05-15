@@ -180,6 +180,12 @@ function formatPrice(price) {
     return String(Math.floor(price/100)) + "," + cents + "€";
 }
 
+function games_windowAdjust() {
+    if (currScreen === 3) {
+        $(".gamewindow").css("width", "450px").css("height", "450px").css("font-size","11px");
+    }
+}
+
 function resetAllInterface() {
     currScreen = 1;
     sessionOrder = [];

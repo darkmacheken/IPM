@@ -25,11 +25,8 @@ var tictactoe_timeouts = [];
 function prepareTicTacToeGame() {
     $("#games-tic-tac-toe-btn").click(function () {
         tictactoe_resetGame();
-        if (currScreen === 3) {
-            $("#tic-tac-toe-game").css("width", "350px").css("height", "350px");
-            $("#tic-tac-toe-game-div").css("font-size","9px");
-        }
-        openWindow("tic-tac-toe-game");
+        games_windowAdjust();
+        openWindow("tic-tac-toe-game", windowPosition.BOTTOM_RIGHT);
     });
 
     $("#tic-tac-toe-game .Xbtn").click(function () {
@@ -184,10 +181,10 @@ function tictactoe_updateBoard() {
     if (tictactoe_status._won) {
         switch (tictactoe_status._type) {
             case tictactoe_winType.ROW:
-                $('#reta-horizontal').show();
+                $('#reta-horizontal').css("top", String((tictactoe_status._pos * 22) + 13) + "%").show();
                 break;
             case tictactoe_winType.COLUMN:
-                $('#reta-vertical').show();
+                $('#reta-vertical').css("left", String((tictactoe_status._pos * 22) + 11) + "%").show();
                 break;
             case tictactoe_winType.DIAGONAL_POS:
                 $('#reta-diagonal-positivo').show();

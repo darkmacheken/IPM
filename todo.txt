@@ -7,13 +7,11 @@ PARCIAL - Musica funcionar. Mete o nr de votos ao inicio a random e escolhe a so
 - Posição das linhas do jogo do galo
 
 (Pedro)
--
+- REMATCH button
+- Ajustar o X do esmurristo
 
 (Leo)
-[DONE] Separar Confirmar de esconder (border)
-[DONE] Border maior entre os items seleccionados
-
-
+-
 
 Melhorias
 - quando pedido esta pago e chegou à mesa apagar o pedido

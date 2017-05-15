@@ -1,6 +1,7 @@
 function preparePongGame() {
     $("#games-pong-btn").click(function () {
-        openWindow("pong-game");
+        games_windowAdjust();
+        openWindow("pong-game", windowPosition.BOTTOM_RIGHT);
     });
 
     $("#pong-game .Xbtn").click(function () {
