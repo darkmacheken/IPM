@@ -210,6 +210,19 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+#esmurristo-rematch-btn {
+  position: absolute;
+  left: 35%;
+  bottom: 37%;
+  width: 30%;
+  height: 10%;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 250%;
+  line-height: 139%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
 #pong-game-div {
   font-size: 18px;
 }
