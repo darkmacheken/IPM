@@ -11,6 +11,8 @@ function preparePongGame() {
     $("#games-pong-btn").click(function () {
         pong_resetGame();
         games_windowAdjust();
+        if (currScreen === 3)
+            PONG_MAXWIDTH = 337;
         openWindow("pong-game", windowPosition.BOTTOM_RIGHT);
         pong_startGame();
     });
@@ -24,14 +26,14 @@ function preparePongGame() {
         clearTimeout(pong_gameTimeout);
     });
 
-    $("#user-player").draggable({ axis: "x", containment: "#pong-game-div" });
+    $("#user-player").draggable({ axis: "x", containment: "#pong-game-field" });
 }
 
 function pong_game() {
     pong_ballPos.x += pong_ballVel.x * 0.002;
     pong_ballPos.y += pong_ballVel.y * 0.002;
     pong_gameTimeout = setTimeout(pong_game, 1);
-    pong_wallCollide();
+    pong_collide();
     pong_updateScreen();
 }
 
@@ -68,25 +70,44 @@ function pong_updateScreen() {
 function pong_throwBall() {
     pong_ballPos.x = 0.5;
     pong_ballPos.y = 0.5;
-    /*let initVDir = Math.random() * 4.0 * Math.PI / 3.0;
-    if (initVDir > 2.0 * Math.PI / 3.0)
-        initVDir += Math.PI / 2.0;
-    else
-        initVDir += Math.PI / 6.0;*/
+
     let initVDir = Math.random() * 5.0 * Math.PI / 3.0;
     if (initVDir > 5.0 * Math.PI / 6.0)
         initVDir += Math.PI / 4.0;
     else
         initVDir += Math.PI / 12.0;
+
     pong_ballVel.x = Math.cos(initVDir);
     pong_ballVel.y = Math.sin(initVDir);
 }
 
-function pong_wallCollide() {
+function pong_collide() {
     if (pong_ballPos.x <= 0 || pong_ballPos.x >= 1)
         pong_ballVel.x = -pong_ballVel.x;
     else if (pong_ballPos.y <= 0 || pong_ballPos.y >= 1)
         pong_lost();
+    else if (pong_obstacleCollide($("#user-player")))
+        pong_ballVel.y = -Math.abs(pong_ballVel.y);
+    else if (pong_obstacleCollide($("#computer-player")))
+        pong_ballVel.y = Math.abs(pong_ballVel.y);
+}
+
+function pong_obstacleCollide($player) {
+    let ball = $("#pong-ball");
+    let x1 = ball.offset().left;
+    let y1 = ball.offset().top;
+    let h1 = ball.outerHeight(true);
+    let w1 = ball.outerWidth(true);
+    let b1 = y1 + h1;
+    let r1 = x1 + w1;
+    let x2 = $player.offset().left;
+    let y2 = $player.offset().top;
+    let h2 = $player.outerHeight(true);
+    let w2 = $player.outerWidth(true);
+    let b2 = y2 + h2;
+    let r2 = x2 + w2;
+
+    return !(b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2);
 }
 
 function pong_lost() {
