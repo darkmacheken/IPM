@@ -27,12 +27,14 @@ function preparePongGame() {
         clearTimeout(pong_gameTimeout);
     });
 
+    $("#pong-reset-btn").click(pong_throwBall);
+
     $("#user-player").draggable({ axis: "x", containment: "#pong-game-field" });
 }
 
 function pong_game() {
-    pong_ballPos.x += pong_ballVel.x * 0.004;
-    pong_ballPos.y += pong_ballVel.y * 0.004;
+    pong_ballPos.x += pong_ballVel.x * 0.008;
+    pong_ballPos.y += pong_ballVel.y * 0.006;
     pong_computerPos += pong_computerVel * 0.008;
     pong_gameTimeout = setTimeout(pong_game, 1);
     pong_collideComputer();
@@ -50,6 +52,7 @@ function pong_resetGame() {
 }
 
 function pong_startGame() {
+    pong_updateScreen();
     pong_timeouts.push(setTimeout(function () {
         $("#pong-game .blockerWhiteText").text("3");
         pong_timeouts.push(setTimeout(function () {
@@ -79,14 +82,15 @@ function pong_throwBall() {
     pong_ballPos.x = 0.5;
     pong_ballPos.y = 0.5;
 
-    let initVDir = Math.random() * 5.0 * Math.PI / 3.0;
-    if (initVDir > 5.0 * Math.PI / 6.0)
-        initVDir += Math.PI / 4.0;
+    let initVDir = Math.random() * 4.0 * Math.PI / 3.0;
+
+    if (initVDir < (2.0 * Math.PI / 3.0))
+        initVDir += Math.PI / 6.0;
     else
-        initVDir += Math.PI / 12.0;
+        initVDir += Math.PI / 2.0;
 
     pong_ballVel.x = Math.cos(initVDir);
-    pong_ballVel.y = Math.sin(initVDir);
+    pong_ballVel.y = Math.abs(Math.sin(initVDir)); // abs para mandar a bola sempre para baixo
 }
 
 function pong_collideComputer() {
@@ -99,8 +103,10 @@ function pong_collide() {
         pong_ballVel.x = -pong_ballVel.x;
     else if (pong_ballPos.y <= 0 || pong_ballPos.y >= 1)
         pong_lost();
-    else if (pong_obstacleCollide($("#user-player")))
+    else if (pong_obstacleCollide($("#user-player"))) {
         pong_ballVel.y = -Math.abs(pong_ballVel.y);
+        pong_ballVel.y -= 0.01;
+    }
     else if (pong_obstacleCollide($("#computer-player")))
         pong_ballVel.y = Math.abs(pong_ballVel.y);
 }
