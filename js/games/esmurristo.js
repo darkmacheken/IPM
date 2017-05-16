@@ -25,6 +25,11 @@ function prepareEsmurristoGame() {
             esmurristo_updateScreen();
         }
     });
+
+    $("#esmurristo-rematch-btn").click(function () {
+        esmurristo_resetGame();
+        esmurristo_startGame();
+    });
 }
 
 function esmurristo_resetGame() {
@@ -36,6 +41,7 @@ function esmurristo_resetGame() {
 }
 
 function esmurristo_startGame() {
+    $("#esmurristo-rematch-btn").hide();
     esmurristo_timeouts.push(setTimeout(function () {
         $("#esmurristo-game .blockerWhiteText").text("Prepare-se!");
         esmurristo_timeouts.push(setTimeout(function () {
@@ -73,10 +79,12 @@ function esmurristo_endGame() {
         $("#esmurristo-game .blockerWhiteText").text("Você perdeu! :(");
     $("#esmurristo-game .blockerWhite").show();
 
-    esmurristo_timeouts.push(setTimeout(function () {
+    $("#esmurristo-rematch-btn").show();
+
+    /*esmurristo_timeouts.push(setTimeout(function () {
         esmurristo_resetGame();
         esmurristo_startGame();
-    }, 2000));
+    }, 2000));*/
 }
 
 function esmurristo_updateScreen() {

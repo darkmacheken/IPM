@@ -1,17 +1,13 @@
 (Duarte)
-- Jogo do Galo (obs podes já fazer resize do tamanho da janela, mas ao fazer resize é necessário alterar o font-size da div #tic-tac-toe-game-div)
-- Pong
-- EsmurreISTo
 PARCIAL - Musica funcionar. Mete o nr de votos ao inicio a random e escolhe a song a tocar random.
-- Resize das janelas dos jogos no 3ºecran (Não esquecer de diminuir o font-size da div dentro das janelas! Por default está a 18px, tens de escolher o melhor para o tamanho da janela em questão.)
-- Posição das linhas do jogo do galo
+- Pong fica bugado no 3o ecra.
 
 (Pedro)
-- REMATCH button
-- Ajustar o X do esmurristo
+- Ajustar o X do esmurristo e do pong no 3o ecra
 
 (Leo)
--
+- Meter players do pong dentro da div do game field
+
 
 Melhorias
 - tempo restante esmurristo maior
