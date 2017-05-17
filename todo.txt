@@ -1,6 +1,7 @@
 (Duarte)
 PARCIAL - Musica funcionar. Mete o nr de votos ao inicio a random e escolhe a song a tocar random.
 - Pong fica bugado no 3o ecra.
+- Reset fazer reset score.
 
 (Pedro)
 - Ajustar o X do esmurristo e do pong no 3o ecra

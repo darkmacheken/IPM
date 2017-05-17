@@ -1,5 +1,6 @@
 var musicPlaying = 0;
 var nextMusic = 0;
+var selectedVote = -1;
 
 function prepareMusicBox() {
     $("#votemusic").click(function () {
@@ -33,30 +34,49 @@ function updateMusicBox() {
 }
 
 function updateMusicVoter() {
+    let aux_sort = [];
+    for (let i = 0; i < SONGS.length; i++)
+        aux_sort.push(i);
+    aux_sort.sort(function (a, b) { return SONGS[b]._votes - SONGS[a]._votes; });
+
     let musicHtml = "";
-    for (let i = 0; i < SONGS.length; i++) {
-        if (i === musicPlaying)
+    for (let i = 0; i < aux_sort.length; i++) {
+        if (aux_sort[i] === musicPlaying)
             continue;
-        musicHtml += "<li class=\"box btn\" id=\"music-vote-btn-";
-        musicHtml += String(i);
-        musicHtml += "\"><div class=\"background-li-box-music\"></div><div class=\"musictitle\">";
-        musicHtml += SONGS[i]._name;
+        musicHtml += "<li class=\"box";
+        if (aux_sort[i] !== selectedVote)
+            musicHtml += " btn";
+        musicHtml += "\" id=\"music-vote-btn-";
+        musicHtml += String(aux_sort[i]);
+        musicHtml += "\"><div class=\"background-li-box-music";
+        if (aux_sort[i] === selectedVote)
+            musicHtml += " selected";
+        musicHtml += "\"></div><div class=\"musictitle";
+        if (aux_sort[i] === selectedVote)
+            musicHtml += " ";//FIXME
+        musicHtml += "\">";
+        musicHtml += SONGS[aux_sort[i]]._name;
         musicHtml += "</div><div class=\"musicartist\">";
-        musicHtml += SONGS[i]._artist;
+        musicHtml += SONGS[aux_sort[i]]._artist;
         musicHtml += "</div><div class=\"votessong\">";
-        musicHtml += SONGS[i]._votes;
+        musicHtml += SONGS[aux_sort[i]]._votes;
         musicHtml += " votos</div><div class=\"box musiccover\" style=\"background-image: url('";
-        musicHtml += SONGS[i]._cover;
+        musicHtml += SONGS[aux_sort[i]]._cover;
         musicHtml += "')\"></div></li>";
     }
     $("#box-music-vote-next ul").html(musicHtml);
 
     for (let i = 0; i < SONGS.length; i++) {
-        if (i === musicPlaying)
+        if (i === musicPlaying && i === selectedVote)
             continue;
+
         $("#music-vote-btn-" + i).click(function () {
             SONGS[i]._votes++;
-            $("#music-vote-next-hide").click();
+            //$("#music-vote-next-hide").click();
+            if (selectedVote >= 0)
+                SONGS[selectedVote]._votes--;
+            selectedVote = i;
+            updateMusicVoter();
             evaluateNextSong();
         });
     }
@@ -74,5 +94,6 @@ function playSong() {
     SONGS[musicPlaying]._votes = 0;
     evaluateNextSong();
     updateMusicBox();
-    setTimeout(playSong, 1000 * SONGS[musicPlaying]._playtime)
+    setTimeout(playSong, 1000 * SONGS[musicPlaying]._playtime);
+    selectedVote = -1;
 }
