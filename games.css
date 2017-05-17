@@ -210,22 +210,36 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-#esmurristo-rematch-btn {
+.rematch-btn {
   position: absolute;
-      left: 26%;
+      left: 25%;
       text-align: right;
       bottom: 37%;
-      width: 42%;
+      width: 50%;
       height: 10%;
       color: black;
-      font-size: 159%;
+      font-size: 200%;
       line-height: 139%;
       background-image: url(images/icons/buttons/play-again-black.png);
-      background-position: 15% 22%;
+      background-position: 2% 29%;
       background-repeat: no-repeat;
-      background-size: 14% 37%;
+      background-size: 15% 46%;
 }
-
+.play-btn {
+  position: absolute;
+      left: 38%;
+      text-align: right;
+      bottom: 37%;
+      width: 19%;
+      height: 10%;
+      color: black;
+      font-size: 200%;
+      line-height: 139%;
+      background-image: url(images/icons/buttons/play-black.png);
+      background-position: -5% 18%;
+      background-repeat: no-repeat;
+      background-size: 32% 61%;
+}
 #pong-game-div {
   font-size: 18px;
 }
@@ -291,11 +305,11 @@
 }
 
 .blockerWhiteText{
-    font-size: 200%;
-    width: 100%;
-    position: absolute;
-    top: 40%;
-    font-weight: bold;
+  font-size: 200%;
+  width: 100%;
+  position: absolute;
+  top: 33%;
+  font-weight: bold;
 }
 
 #pong-game-field {
