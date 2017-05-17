@@ -4,13 +4,14 @@ function checkForm(form) {
     var pconfReady = false;
     let suffx = "";
 
-    if (currScreen === 3)
+    if (currScreen === 3 && form !== "recover-form")
         suffx = "-thirdScreen";
 
     $("form#" + form + suffx + " input.req-field").each(function() {
         if (($(this).hasClass("cellNumber") && $(this).val().length !== 9) || $.trim($(this).val()).length === 0)
             reqReady = false;
     });
+
     if ($("input#reg-pword-txtbx" + suffx).val() === $("input#reg-cpword-txtbx" + suffx).val())
         pconfReady = true;
     if (existsUser($("input#reg-uname-txtbx" + suffx).val()))

@@ -235,7 +235,7 @@ $(document).ready(function() {
             $("#" + $(this).attr("name") + "-att, #" + $(this).attr("name") + "-att-thirdScreen").removeClass().addClass("calmText");
         }
         let formId = $(this).parents("form").attr("id");
-        if (currScreen === 3)
+        if (currScreen === 3 && formId !== "recover-form")
             checkForm(formId.substring(0, formId.length - 12));
         else
             checkForm(formId);
