@@ -141,7 +141,7 @@
   text-align: center;
   width: 24.7%;
   height: 11%;
-  top: 9%;
+  top: 12%;
   font-size: 150%;
   left: 0%;
   border-left: 1px solid #4c4c4c;
@@ -151,7 +151,7 @@
 #esmurristo-player1-score {
   background-color: #f5f5f5;
   border: 1px solid #202020;
-  height: 10.8%;
+  height: 10.7%;
   left: 0.5%;
 }
 
@@ -175,7 +175,7 @@
 }
 
 #esmurristo-count-score {
-  top: 27.5%;
+  top: 30.5%;
   left: 37.5%;
   background-color: #f5f5f5;
   border: 1px solid #202020;
@@ -183,8 +183,8 @@
 }
 
 #esmurristo-btn {
-  border: 1px solid black;
-  top: 41%;
+  border: none;
+  top: 44%;
   left: 25%;
   width: 50%;
   height: 30%;
@@ -201,7 +201,7 @@
   text-align: center;
   width: 50%;
   height: 9%;
-  top: 75%;
+  top: 78%;
   left: 25%;
   font-size: 125%;
 }
@@ -212,15 +212,18 @@
 
 #esmurristo-rematch-btn {
   position: absolute;
-  left: 35%;
-  bottom: 37%;
-  width: 30%;
-  height: 10%;
-  background-color: #4CAF50;
-  color: white;
-  font-size: 250%;
-  line-height: 139%;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      left: 26%;
+      text-align: right;
+      bottom: 37%;
+      width: 42%;
+      height: 10%;
+      color: black;
+      font-size: 159%;
+      line-height: 139%;
+      background-image: url(images/icons/buttons/play-again-black.png);
+      background-position: 15% 22%;
+      background-repeat: no-repeat;
+      background-size: 14% 37%;
 }
 
 #pong-game-div {

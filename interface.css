@@ -68,6 +68,9 @@ a:visited {
   background-repeat: no-repeat;
   background-size: 30px 30px;
 }
+.Xbtn:active{
+  background-color: #8e1f1f;
+}
 /* Tabela que contém o ecrã todo */
 #screen {
     width: 100%;
@@ -94,7 +97,9 @@ a:visited {
   border: none;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-
+#helpbtn:active{
+  background-color: #026bab;
+}
 /* Botão de chamar o empregado */
 #callbtn {
     width: 250px;
@@ -114,6 +119,11 @@ a:visited {
     background-position: 5% 45%;
     background-repeat: no-repeat;
     background-size: 50px 50px;
+}
+#callbtn:active{
+  background-color: #f5f5f5;
+  color: black;
+  background-image: url("images/icons/buttons/garcon-black.png");
 }
 
 #callwaitbtn {
@@ -142,7 +152,9 @@ a:visited {
   border: none;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-
+#cancelcallbtn:active{
+  background-color: #8e1f1f;
+}
 /* Logótipo */
 #logotipo {
   border: transparent;
@@ -195,6 +207,10 @@ a:visited {
     line-height: 100px;
 }
 
+#orderfoodbtn:active{
+  background-color: #026bab;
+}
+
 #rightBoxTitle {
     float:right;
     height: 10px;
@@ -231,6 +247,10 @@ a:visited {
     background-repeat: no-repeat;
     background-size: 30px 30px;
 }
+
+#login-btn:active{
+  background-color: #026bab;
+}
 #reg-btn {
     position: absolute;
     left:60px;
@@ -251,6 +271,10 @@ a:visited {
     background-position: 12% 52%;
     background-repeat: no-repeat;
     background-size: 30px 30px;
+}
+
+#reg-btn:active{
+  background-color: #026bab;
 }
 
 #music {
@@ -296,6 +320,10 @@ a:visited {
     background-position: 3% 50%;
     background-repeat: no-repeat;
     background-size: 30px 30px;
+}
+
+#votemusic:active{
+    background-color: #026bab;
 }
 /* Capa da música a ser reproduzida */
 #cover {
@@ -344,6 +372,10 @@ a:visited {
     color: black;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+.games:active{
+  color: white;
+  background-color: #363636;
+}
 
 #invalid-data {
     color: red;
@@ -385,7 +417,9 @@ a:visited {
     background-repeat: no-repeat;
     background-size: 30px 30px;
 }
-
+#historicobtn:active{
+  background-color: #026bab;
+}
 #definicoesContabtn {
     font-size: 15px;
     padding: 10px 20px;
@@ -402,7 +436,9 @@ a:visited {
     background-repeat: no-repeat;
     background-size: 30px 30px;
 }
-
+#definicoesContabtn:active{
+  background-color: #026bab;
+}
 #sairSessaobtn {
     font-size: 15px;
     padding: 10px 20px;
@@ -419,7 +455,9 @@ a:visited {
     background-repeat: no-repeat;
     background-size: 25px 25px;
 }
-
+#sairSessaobtn:active{
+    background-color: #8e1f1f;
+}
 #boxHistorico {
     height: 253px;
     font-size: 15px;
@@ -445,6 +483,9 @@ a:visited {
     background-position: 15% 50%;
     background-repeat: no-repeat;
     background-size: 25px 25px;
+}
+#boxHistoricoVoltarbtn:active{
+  background-color: #8e1f1f;
 }
 #boxHistoricoRepetirPedido {
   position: absolute;
@@ -475,6 +516,9 @@ a:visited {
     background-repeat: no-repeat;
     background-size: 15px 15px;
 }
+#boxRepetirPedidobtn:active{
+  background-color: #306f32;
+}
 #boxHistoricoRepetirPedidoVoltarbtn {
     font-size: 15px;
     padding: 5px;;
@@ -491,6 +535,9 @@ a:visited {
     background-position: 15% 50%;
     background-repeat: no-repeat;
     background-size: 20px 20px;
+}
+#boxHistoricoRepetirPedidoVoltarbtn:active {
+  background-color: #8e1f1f;
 }
 
 #boxHistorico ul {
@@ -556,6 +603,9 @@ a:visited {
     background-repeat: no-repeat;
     background-size: 13px 13px;
 }
+.boxHistoricoRepetirPedidobtn:active{
+  background-color: #306f32;
+}
 
 #boxHistorico .boxHistoricoXbtn {
     font-size: 15px;
@@ -599,7 +649,9 @@ a:visited {
     background-repeat: no-repeat;
     background-size: 15px 15px;
 }
-
+#boxDefinicoesGuardarbtn:active{
+  background-color: #306f32;
+}
 #boxDefinicoesVoltarbtn {
     font-size: 15px;
     padding: 5px;;
@@ -617,7 +669,9 @@ a:visited {
     background-repeat: no-repeat;
     background-size: 20px 20px;
 }
-
+#boxDefinicoesVoltarbtn:active{
+  background-color: #8e1f1f;
+}
 .inputDef {
     width:250px;
     height:20px;
@@ -656,7 +710,9 @@ a:visited {
     border: none;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-
+.confirmYesbtn:active{
+  background-color: #306f32;
+}
 .confirmNobtn {
     position: absolute;
     right:90px;
@@ -674,6 +730,10 @@ a:visited {
     color: white;
     border: none;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.confirmNobtn:active{
+  background-color: #8e1f1f;
 }
 
 #confirmOk {
@@ -706,6 +766,9 @@ a:visited {
     color: white;
     border: none;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.confirmOkbtn:active{
+  background-color: #306f32;
 }
 
 #recover-password-box {
@@ -836,4 +899,8 @@ a:visited {
   background-position: 50% 60%;
   background-repeat: no-repeat;
   background-size: 30px 30px;
+}
+
+#music-vote-next-hide:active{
+    background-color: #8e1f1f;
 }

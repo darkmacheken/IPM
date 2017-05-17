@@ -65,6 +65,9 @@
   color: white;
   border: none;
 }
+.help-btn:active{
+  background-color: #026bab;
+}
 #help-window-pedidobtn {
   top: 130px;
 }
@@ -109,6 +112,10 @@
     font-weight:bold;
     float:right;
     alignment-adjust:central;
+}
+
+.closeWindow:active{
+  background-color: #8e1f1f;
 }
 
 /* Títulos das janelas */
@@ -200,6 +207,9 @@ label.btn {
     line-height: 30px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 10px 0 rgba(0,0,0,0.19);
 }
+.back:active{
+  background-color: #306f32;
+}
 
 .submit {
     position:absolute;
@@ -213,7 +223,9 @@ label.btn {
     line-height: 30px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 10px 0 rgba(0,0,0,0.19);
 }
-
+.submit:active{
+  background-color: #306f32;
+}
 .attentionText {
   color: red;
 }

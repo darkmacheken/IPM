@@ -52,6 +52,9 @@
     background-repeat: no-repeat;
     background-size: 25px 25px;
 }
+#screen2-login-btn:active{
+  background-color: #026bab;
+}
 #screen2-reg-btn{
     position: absolute;
     top: 15px;
@@ -68,6 +71,9 @@
     background-position: 7% 50%;
     background-repeat: no-repeat;
     background-size: 20px 20px;
+}
+#screen2-reg-btn:active{
+    background-color: #026bab;
 }
 #boxEmenta{
     position: absolute;
@@ -94,6 +100,11 @@
     border: none;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
+}
+.info:active{
+  background-color: white;
+  color: black;
+  background-image: url(images/icons/buttons/info-black.png);
 }
 .titulo{
     font-size: 24px;
@@ -122,6 +133,10 @@
       background-color: #009ee1;
       color: white;
       border: 2px solid black;
+}
+.opcao:active{
+  background-color: #363636;
+  color: #009ee1;
 }
 
 #food-options {
@@ -194,6 +209,9 @@
     background-repeat: no-repeat;
     background-size: 30px 30px;
 }
+.editBox:active{
+  background-color: #6b6b6b;
+}
 .background-li-box-compras{
   position: absolute;
   top: 0px;
@@ -230,6 +248,9 @@
     border-right: 12px solid transparent;
     border-bottom: 12px solid black;
 }
+.arrow-up:active{
+  border-bottom: 12px solid #6b6b6b;
+}
 .arrow-down {
     position: absolute;
     top: 36px;
@@ -239,6 +260,9 @@
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
     border-top: 12px solid black;
+}
+.arrow-down:active{
+  border-top: 12px solid #6b6b6b;
 }
 .precoCompra {
     font-size: 16px;
@@ -260,6 +284,9 @@
     line-height: 50px;
     background-color: #B22222; /* red */
     color: white;
+}
+.deleteBox:active{
+  background-color: #8e1f1f;
 }
 #totalBox {
     position: absolute;
@@ -302,6 +329,10 @@
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+#menuPrincipalbtn:active{
+  background-color: #8e1f1f;
+}
+
 .confirmarbtn {
     position: absolute;
     bottom: 10px;
@@ -320,7 +351,9 @@
     background-size: 35px 35px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-
+.confirmarbtn:active{
+  background-color: #306f32;
+}
 .menuEmenta {
     height: 41px;
     width: 150px;
@@ -488,7 +521,7 @@
     padding: 0px;
     background-color: white;
     text-align: left;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 8px 20px 20px 8px rgba(0,0,0,0.2), -20px 18px 20px 3px rgba(0,0,0,0.19);
     border: none;
 }
 
@@ -580,7 +613,7 @@
     height: 40px;
     text-align: center;
     position: absolute;
-    bottom: 0px;
+    bottom: -10px;
     left:0px;
     line-height: 40px;
     border-bottom: none;
@@ -594,11 +627,14 @@
     color: white;
     border: none;
 }
+#screen2-boxHistoricoFecharbtn:active{
+  background-color: #8e1f1f;
+}
 #screen2-boxHistoricoRepetirPedido {
     position: absolute;
     top:-82px;
     right: 10px;
-    height: 243px;
+    height: 254px;
     width: 260px;
     font-size: 15px;
     padding: 0px;
@@ -625,6 +661,9 @@
     background-repeat: no-repeat;
     background-size: 15px 15px;
 }
+#screen2-boxRepetirPedidobtn:active{
+  background-color: #306f32;
+}
 #screen2-boxHistoricoRepetirPedidoVoltarbtn {
     font-size: 15px;
     padding: 5px;;
@@ -641,6 +680,9 @@
     background-position: 15% 50%;
     background-repeat: no-repeat;
     background-size: 20px 20px;
+}
+#screen2-boxHistoricoRepetirPedidoVoltarbtn:active{
+  background-color: #8e1f1f;
 }
 #screen2-definicoesTitle {
     float:right;
@@ -691,7 +733,9 @@
     background-repeat: no-repeat;
     background-size: 15px 15px;
 }
-
+#screen2-boxDefinicoesGuardarbtn:active{
+  background-color: #306f32;
+}
 #screen2-boxDefinicoesVoltarbtn {
     font-size: 15px;
     padding: 5px;;
@@ -710,6 +754,9 @@
     background-position: 17% 50%;
     background-repeat: no-repeat;
     background-size: 15px 15px;
+}
+#screen2-boxDefinicoesVoltarbtn:active{
+  background-color: #8e1f1f;
 }
 #screen2-historicobtn{
     position: absolute;
@@ -892,4 +939,19 @@
   position: absolute;
   left: 105px;
   top: 27px;
+}
+
+#ingred-edit-cancel-btn{
+  left:325px;
+  background-color:#B22222;
+}
+#ingred-edit-cancel-btn:active{
+  background-color: #8e1f1f;
+}
+
+#ingred-edit-save-btn{
+  left:125px;
+}
+#ingred-edit-save-btn:active{
+  background-color: #306f32;
 }
