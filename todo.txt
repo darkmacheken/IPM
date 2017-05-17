@@ -7,7 +7,6 @@ PARCIAL - Musica funcionar. Mete o nr de votos ao inicio a random e escolhe a so
 - Ajustar o X do esmurristo e do pong no 3o ecra
 
 (Leo)
-- Meter players do pong dentro da div do game field
 
 
 Melhorias
