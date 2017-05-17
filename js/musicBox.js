@@ -53,14 +53,20 @@ function updateMusicVoter() {
             musicHtml += " selected";
         musicHtml += "\"></div><div class=\"musictitle";
         if (aux_sort[i] === selectedVote)
-            musicHtml += " ";//FIXME
+            musicHtml += " selectedColor";
         musicHtml += "\">";
         musicHtml += SONGS[aux_sort[i]]._name;
-        musicHtml += "</div><div class=\"musicartist\">";
+        musicHtml += "</div><div class=\"musicartist";
+        if (aux_sort[i] === selectedVote)
+            musicHtml += " selectedColor";
+        musicHtml += "\">";
         musicHtml += SONGS[aux_sort[i]]._artist;
         musicHtml += "</div><div class=\"votessong\">";
         musicHtml += SONGS[aux_sort[i]]._votes;
-        musicHtml += " votos</div><div class=\"box musiccover\" style=\"background-image: url('";
+        musicHtml += " votos</div><div class=\"box musiccover";
+        if (aux_sort[i] === selectedVote)
+            musicHtml += " selectedBorderColor";
+        musicHtml += "\" style=\"background-image: url('";
         musicHtml += SONGS[aux_sort[i]]._cover;
         musicHtml += "')\"></div></li>";
     }
