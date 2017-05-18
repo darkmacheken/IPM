@@ -234,6 +234,10 @@
       box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+.rematch-btn:active{
+    background-color: #026bab;
+}
+
 .play-btn {
   position: absolute;
       left: 37.5%;
@@ -253,6 +257,9 @@
       background-size: 20% 50%;
       box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
+}
+.play-btn:active{
+  background-color: #026bab;
 }
 #pong-game-div {
   font-size: 18px;
