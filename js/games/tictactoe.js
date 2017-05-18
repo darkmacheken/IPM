@@ -26,6 +26,12 @@ function prepareTicTacToeGame() {
     $("#games-tic-tac-toe-btn").click(function () {
         tictactoe_resetGame();
         games_windowAdjust();
+
+        $("#tic-tac-toe-game .blockerWhiteText").text("Seja o primeiro a fazer 3 marcas em linha, coluna ou diagonal.");
+        $("#tic-tac-toe-game .blockerWhite").show();
+        $("#tic-tac-toe-play-btn").show();
+        $("#tic-tac-toe-rematch-btn").hide();
+
         openWindow("tic-tac-toe-game", windowPosition.BOTTOM_RIGHT);
     });
 
@@ -44,6 +50,8 @@ function prepareTicTacToeGame() {
         let yPos = parseInt($(this).attr("id").substr(8, 1));
         tictactoe_userPlay(xPos, yPos);
     });
+
+    $("#tic-tac-toe-play-btn, #tic-tac-toe-rematch-btn").click(tictactoe_startGame);
 }
 
 function tictactoe_resetGame() {
@@ -56,6 +64,11 @@ function tictactoe_resetGame() {
     moveIndex = 0;
 
     tictactoe_updateScreen();
+}
+
+function tictactoe_startGame() {
+    tictactoe_resetGame();
+    $("#tic-tac-toe-game .blockerWhite").hide();
 }
 
 function tictactoe_userPlay(xPos, yPos) {

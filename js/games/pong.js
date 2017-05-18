@@ -20,6 +20,7 @@ function preparePongGame() {
         $("#pong-game .blockerWhite").show();
         $("#pong-play-btn").show();
         $("#pong-rematch-btn").hide();
+
         pong_throwBall();
         $("#user-player").css("left", String(($("#pong-game-field").width() - $("#computer-player").width()) / 2) + "px").css("top","100%");
         pong_updateScreen();
@@ -43,7 +44,8 @@ function preparePongGame() {
         $("#games-pong-btn").click();
     });
 
-    $("#pong-play-btn, #pong-rematch-btn").click(pong_startGame);
+    $("#pong-play-btn").click(pong_startGame);
+    $("#pong-rematch-btn").click(pong_rematchGame);
 }
 
 function pong_game() {
@@ -81,6 +83,25 @@ function pong_startGame() {
                 pong_timeouts.push(setTimeout(function () {
                     $("#pong-game .blockerWhite").hide();
                     pong_gameTimeout = setTimeout(pong_game, 1);
+                }, 500));
+            }, 500));
+        }, 500));
+    }, 1000));
+}
+
+function pong_rematchGame() {
+    pong_resetGame();
+    pong_stopBall();
+    pong_updateScreen();
+    pong_timeouts.push(setTimeout(function () {
+        $("#pong-game .blockerWhiteText").text("3");
+        pong_timeouts.push(setTimeout(function () {
+            $("#pong-game .blockerWhiteText").text("2");
+            pong_timeouts.push(setTimeout(function () {
+                $("#pong-game .blockerWhiteText").text("1");
+                pong_timeouts.push(setTimeout(function () {
+                    $("#pong-game .blockerWhite").hide();
+                    pong_throwBall();
                 }, 500));
             }, 500));
         }, 500));
