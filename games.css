@@ -276,11 +276,11 @@
 }
 
 #computer-player{
-  top: 10%;
+  top: 0%;
 }
 
 #user-player{
-  bottom: 18%;
+  bottom: 0%;
 }
 
 .ball{
