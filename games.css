@@ -280,7 +280,7 @@
 }
 
 #user-player{
-  bottom: 0%;
+  top: 100%;
 }
 
 .ball{
