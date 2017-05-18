@@ -1,8 +1,5 @@
 (Duarte)
-- Botao activable com disabler pro pedro ver
-- Dragable nos jogos
 - Progress bar fica a 100% quase 1min antes de acabar
-- Reset jogo do galo deve fazer reset ao score tal como fizeste no pong
 - Timer do esmurreisto devia de aparecer os miliseconds (eg faltam 2,090 segundos)
 - Músicas tocarem mesmo.
 
