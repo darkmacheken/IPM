@@ -85,11 +85,6 @@ function esmurristo_endGame() {
     esmurristo_timeouts.push(setTimeout(function () {
         $("#esmurristo-rematch-btn").show();
     }, 500));
-
-    /*esmurristo_timeouts.push(setTimeout(function () {
-        esmurristo_resetGame();
-        esmurristo_startGame();
-    }, 2000));*/
 }
 
 function esmurristo_updateScreen() {

@@ -96,6 +96,9 @@ function tictactoe_computerPlay() {
             }
             else if (tieCount === i) {
                 if (i >= 9) {
+                    tictactoe_status._won = true;
+                    tictactoe_status._winner = tictactoe_boardStatus.UNPLAYED;
+                    console.log(">TIE");
                     break;
                 }
                 else {
@@ -114,18 +117,30 @@ function tictactoe_checkWin() {
         switch (tictactoe_status._winner) {
             case tictactoe_boardStatus.XPLAYED:
                 tictactoe_user++;
+                $("#tic-tac-toe-game .blockerWhiteText").text("Você ganhou! :)");
                 break;
             case tictactoe_boardStatus.OPLAYED:
                 tictactoe_computer++;
+                $("#tic-tac-toe-game .blockerWhiteText").text("Você perdeu! :(");
+                break;
+            case tictactoe_boardStatus.UNPLAYED:
+                $("#tic-tac-toe-game .blockerWhiteText").text("Foi empate!");
                 break;
             default:
                 console.log("Erro ao decidir vencedor.");
         }
+        tictactoe_timeouts.push(setTimeout(function () {
+            $("#tic-tac-toe-game .blockerWhite").fadeIn(1000);
+            $("#tic-tac-toe-play-btn").hide();
+            $("#tic-tac-toe-rematch-btn").fadeIn(1000);
+        }, 100));
     }
     tictactoe_updateScreen();
 }
 
 function tictactoe_crossed() {
+    if (tictactoe_status._won)
+        return;
     // linhas
     for(let i = 0; i < 3; i++)
         if (tictactoe_board[i][0] === tictactoe_board[i][1] &&
@@ -191,7 +206,7 @@ function tictactoe_updateScreen() {
         }
     }
 
-    if (tictactoe_status._won) {
+    if (tictactoe_status._won && tictactoe_status._winner !== tictactoe_boardStatus.UNPLAYED) {
         switch (tictactoe_status._type) {
             case tictactoe_winType.ROW:
                 $('#reta-horizontal').css("top", String((tictactoe_status._pos * 22) + 13) + "%").show();
