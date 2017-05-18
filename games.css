@@ -237,10 +237,10 @@
 .play-btn {
   position: absolute;
       left: 37.5%;
-      text-align: right;
-      padding-right: 2%;
+      text-align: center;
+      padding-left: 5.5%;
       bottom: 40%;
-      width: 23.5%;
+      width: 20.5%;
       height: 10%;
       color: white;
       font-size: 250%;
