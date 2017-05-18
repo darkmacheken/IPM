@@ -214,16 +214,17 @@
   position: absolute;
       left: 25%;
       text-align: right;
+      padding-right: 1%;
       bottom: 37%;
       width: 50%;
       height: 10%;
       color: white;
       font-size: 200%;
-      line-height: 139%;
+      line-height: 160%;
       background-color: #009ee1;
       color: white;
       background-image: url(images/icons/buttons/play-again-black.png);
-      background-position: 2% 29%;
+      background-position: 2% 40%;
       background-repeat: no-repeat;
       background-size: 15% 46%;
       box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -231,10 +232,11 @@
 
 .play-btn {
   position: absolute;
-      left: 35%;
-      text-align: center;
+      left: 37.5%;
+      text-align: right;
+      padding-right: 2%;
       bottom: 40%;
-      width: 30%;
+      width: 23.5%;
       height: 10%;
       color: white;
       font-size: 250%;
@@ -242,9 +244,9 @@
       background-color: #009ee1;
       color: white;
       background-image: url(images/icons/buttons/play-black.png);
-      background-position: 5% 50%;
+      background-position: 9% 50%;
       background-repeat: no-repeat;
-      background-size: 17% 50%;
+      background-size: 20% 50%;
       box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
 }
