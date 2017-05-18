@@ -160,6 +160,7 @@ function showFoodItems() {
         e.stopPropagation();
         showInfo(FOOD_ITEMS[currentMenuSelected][getIndexNumber(this)]);
     });
+    activatables_opcao();
 }
 
 function showCurrentOrder() {

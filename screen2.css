@@ -134,7 +134,7 @@
       color: white;
       border: 2px solid black;
 }
-.opcao:active{
+.opcao.js_active {
   background-color: #363636;
   color: #009ee1;
 }

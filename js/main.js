@@ -434,6 +434,8 @@ function prepareAll(prepMusic) {
     /*********************************** TERCEIRA JANELA ***********************************/
     prepareScreen3();
 
+    prepareActivatables();
+
     /*********************************** FIM DO LOADING ***********************************/
     /* Página carregada */
     $("#loader").hide();
