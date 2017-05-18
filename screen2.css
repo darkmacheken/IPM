@@ -240,8 +240,8 @@
 }
 .arrow-up {
     position: absolute;
-    top: 2px;
-    left: 64px;
+    top: 3px;
+    left: 65px;
     width: 0;
     height: 0;
     border-left: 12px solid transparent;
@@ -254,7 +254,7 @@
 .arrow-down {
     position: absolute;
     top: 36px;
-    left: 64px;
+    left: 65px;
     width: 0;
     height: 0;
     border-left: 12px solid transparent;

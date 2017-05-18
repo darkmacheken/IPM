@@ -730,3 +730,7 @@ left: 1172px;
   font-size: 20px;
   background-color: #B22222;
 }
+
+#ingred-edit-cancel-btn-thirdScreen:active{
+  background-color: #8e1f1f;
+}
