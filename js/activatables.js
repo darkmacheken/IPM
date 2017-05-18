@@ -13,7 +13,7 @@ function activatables_opcao() {
         $(this).addClass("js_active");
     });
 
-    $(".info").mousedown(function (e) {
+    $(".info, .info3ecran").mousedown(function (e) {
         e.stopPropagation();
     });
 }

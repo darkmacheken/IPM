@@ -139,6 +139,7 @@ function prepareScreen3() {
 
             confirmOk(msg, windowPosition.BOTTOM_RIGHT, function () {
                 paying_timeout = setTimeout(pay_timeout, 3000);
+                callblock();
             });
         });
     });
@@ -256,6 +257,7 @@ function openOrderAgainMenu(menuName, menuTitle) {
         e.stopPropagation();
         showInfo(FOOD_ITEMS[menuName][getIndexNumber(this)]);
     });
+    activatables_opcao();
 
     $("#box-order-menu").show();
     $("#order-menu-back").show();

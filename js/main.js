@@ -89,7 +89,7 @@ function prepareAll(prepMusic) {
     });
 
     $("#forgot-password-btn, #forgot-password-btn-thirdScreen").click(function () {
-        openWindow("recover-password-box", windowPosition.DEFAULT, '5');
+        openWindow("recover-password-box", windowPosition.TOP_RIGHT, '5');
     });
 
     $("#recover-confirmNobtn").click(function () {
