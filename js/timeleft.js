@@ -1,6 +1,7 @@
 var timer_global = 0;
 var timer_stopped = true;
 var timer_food_queue = [];
+var timer_timeouts = [];
 var TIMER_FOODTYPE_PRIORITIES = {
     "menu-entradas": 0,
     "menu-sopas": 1,
@@ -50,14 +51,14 @@ function timer_addOrder(order) {
 
     if (timer_stopped) {
         timer_stopped = false;
-        setTimeout(timer_tick, 1000);
+        timer_timeouts.push(setTimeout(timer_tick, 1000));
     }
 }
 
 function timer_tick() {
     timer_global++;
     if (!timer_stopped)
-        setTimeout(timer_tick, 1000);
+        timer_timeouts.push(setTimeout(timer_tick, 1000));
     timer_update();
 }
 
@@ -118,6 +119,13 @@ function timer_queueTime(food) {
             timer_food_queue[i]._time - timer_global > time)
                 time = timer_food_queue[i]._time - timer_global;
     return time;
+}
+
+function timer_clearTimeouts() {
+    while (timer_timeouts.length > 0) {
+        clearTimeout(timer_timeouts[0]);
+        timer_timeouts.splice(0, 1);
+    }
 }
 
 function formatTime(time) {

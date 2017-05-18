@@ -194,4 +194,7 @@ function resetAllInterface() {
     showingOrders = false;
     lastPaidOrder = 0;
     orderingId = 1;
+    timer_clearTimeouts();
+    $("*").off();
+    prepareAll(false);
 }

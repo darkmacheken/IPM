@@ -1,6 +1,7 @@
 var musicPlaying = 0;
 var nextMusic = 0;
 var selectedVote = -1;
+var songTimeLeft = 0;
 
 function prepareMusicBox() {
     $("#votemusic").click(function () {
@@ -95,6 +96,23 @@ function playSong() {
     SONGS[musicPlaying]._votes = 0;
     evaluateNextSong();
     updateMusicBox();
-    setTimeout(playSong, 1000 * SONGS[musicPlaying]._playtime);
+    setTimeout(playingSong, 1000);
+    songTimeLeft = SONGS[musicPlaying]._playtime;
+    $("#progress-bar").width("0%");
+    $("#progress-bar").animate({width: "100%"}, 1000 * songTimeLeft, "linear");
+    updateSongTimeLeft();
     selectedVote = -1;
+}
+
+function playingSong() {
+    songTimeLeft--;
+    if (songTimeLeft <= 0)
+        setTimeout(playSong, 1000);
+    else
+        setTimeout(playingSong, 1000);
+    updateSongTimeLeft();
+}
+
+function updateSongTimeLeft() {
+    $(".musicTimeLeft").text("-" + formatTime(songTimeLeft));
 }

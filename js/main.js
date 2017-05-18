@@ -1,6 +1,11 @@
 var currScreen = 1;
+var down = {};
 
-$(document).ready(function() {
+$(document).ready(function () {
+    prepareAll(true);
+});
+
+function prepareAll(prepMusic) {
     /* Esconder janelas inicialmente */
     $(".window, #blocker, #keyboard, #number-pad, .helpdiv, #boxcontautilizadorlogged, #Historico, .boxHistoricoRepetirPedido, #DefinicoesConta, #callwaitbtn, #second-screen, #screen2-logged-box, #screen2-historico, #screen2-definicoesConta, .screen3, #music-vote-next-hide, #box-music-vote-next").hide();
 
@@ -394,7 +399,8 @@ $(document).ready(function() {
     });
 
     /*********************************** VOTAR EM MUSICA ***********************************/
-    prepareMusicBox();
+    if (typeof prepMusic !== "boolean" || prepMusic)
+        prepareMusicBox();
 
     /*********************************** GAMES ***********************************/
     prepareTicTacToeGame();
@@ -431,4 +437,13 @@ $(document).ready(function() {
     /*********************************** FIM DO LOADING ***********************************/
     /* Página carregada */
     $("#loader").hide();
+}
+
+$(document).keydown(function (e) {
+    down[e.keyCode] = true;
+}).keyup(function (e) {
+    if (down[68] && down[69] && down[86]) {
+        resetAllInterface();
+    }
+    down[e.keyCode] = false;
 });
