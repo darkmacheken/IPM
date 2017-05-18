@@ -43,8 +43,7 @@ function preparePongGame() {
         $("#games-pong-btn").click();
     });
 
-    $("#pong-play-btn").click(pong_startGame);
-    $("#pong-rematch-btn").click(pong_startGame);
+    $("#pong-play-btn, #pong-rematch-btn").click(pong_startGame);
 }
 
 function pong_game() {

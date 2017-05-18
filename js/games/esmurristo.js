@@ -7,7 +7,11 @@ function prepareEsmurristoGame() {
         esmurristo_resetGame();
         games_windowAdjust();
         openWindow("esmurristo-game", windowPosition.BOTTOM_RIGHT);
-        esmurristo_startGame();
+
+        $("#esmurristo-game .blockerWhiteText").text("Jogue contra o tempo! Clique o maior número de vezes em 5 segundos.");
+        $("#esmurristo-game .blockerWhite").show();
+        $("#esmurristo-play-btn").show();
+        $("#esmurristo-rematch-btn").hide();
     });
 
     $("#esmurristo-game .Xbtn").click(function () {
@@ -26,10 +30,7 @@ function prepareEsmurristoGame() {
         }
     });
 
-    $("#esmurristo-rematch-btn").click(function () {
-        esmurristo_resetGame();
-        esmurristo_startGame();
-    });
+    $("#esmurristo-rematch-btn, #esmurristo-play-btn").click(esmurristo_startGame);
 }
 
 function esmurristo_resetGame() {
@@ -41,6 +42,8 @@ function esmurristo_resetGame() {
 }
 
 function esmurristo_startGame() {
+    esmurristo_resetGame();
+    $("#esmurristo-play-btn").hide();
     $("#esmurristo-rematch-btn").hide();
     esmurristo_timeouts.push(setTimeout(function () {
         $("#esmurristo-game .blockerWhiteText").text("Prepare-se!");
