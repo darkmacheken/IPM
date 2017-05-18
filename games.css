@@ -83,6 +83,9 @@
       font-size: 250%;
       line-height: 139%;
 }
+.reset:active{
+  background-color: #306f32;
+}
 .retaHorizontal{
   width: 70%;
   height: 30%;

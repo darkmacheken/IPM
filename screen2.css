@@ -565,6 +565,10 @@
     border-left: none;
 }
 
+#screen2-boxHistorico:active .boxHistoricoPedidobtn:active{
+  background-color: #6b6b6b;
+}
+
 #screen2-boxHistorico .boxHistoricoRepetirPedidobtn {
     font-size: 14px;
     padding: 5px;
@@ -587,6 +591,10 @@
     background-position: 4% 50%;
     background-repeat: no-repeat;
     background-size: 13px 13px;
+}
+
+#screen2-boxHistorico:active .boxHistoricoRepetirPedidobtn:active{
+  background-color: #306f32;
 }
 
 #screen2-boxHistorico .boxHistoricoXbtn {
