@@ -745,6 +745,23 @@ a:visited {
 .confirmYesbtn:active{
   background-color: #306f32;
 }
+    position: absolute;
+    left:90px;
+    bottom: 25px;
+    float:center;
+    width: 150px;
+    height:40px;
+    padding: 10px 10px;
+    padding-top: 15px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    font-weight:bold;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
 .confirmNobtn {
     position: absolute;
     right:90px;
