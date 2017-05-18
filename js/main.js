@@ -57,11 +57,11 @@ $(document).ready(function() {
 
     /* Função chamada quando é clicado botão de log-in na janela de log-in. */
     $("#login-submit, #login-submit-thirdScreen").click(function () {
-        if (currScreen === 3) {
-            // Prevenir que o botao seja clicado acidentalmente quando desativado
-            if (!checkForm("login-form-thirdScreen"))
-                return;
+        // Prevenir que o botao seja clicado acidentalmente quando desativado
+        if (!checkForm("login-form"))
+            return;
 
+        if (currScreen === 3) {
             var uname = $.trim($("input#login-uname-txtbx-thirdScreen").val());
         	var pword = $.trim($("input#login-pword-txtbx-thirdScreen").val());
         	if (isLoginValid(uname, pword)) {
@@ -72,10 +72,6 @@ $(document).ready(function() {
         	}
         }
         else {
-            // Prevenir que o botao seja clicado acidentalmente quando desativado
-            if (!checkForm("login-form"))
-                return;
-
             var uname = $.trim($("input#login-uname-txtbx").val());
         	var pword = $.trim($("input#login-pword-txtbx").val());
         	if (isLoginValid(uname, pword)) {
@@ -99,8 +95,8 @@ $(document).ready(function() {
 
     $("#recover-confirmYesbtn").click(function () {
         // Prevenir que o botao seja clicado acidentalmente quando desativado
-        //if (!checkForm("login-form"))
-        //    return;
+        if (!checkForm("recover-form"))
+            return;
 
         if (cellNumExists($("#recover-tel-numbx").val())) {
             closeWindow("recover-password-box");

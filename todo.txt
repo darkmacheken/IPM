@@ -7,8 +7,6 @@ PARCIAL - Musica funcionar. Mete o nr de votos ao inicio a random e escolhe a so
 - Delay a mostrar rematch
 
 (Pedro)
-- Ajustar o X do esmurristo e do pong no 3o ecra
-
 (Leo)
 
 
