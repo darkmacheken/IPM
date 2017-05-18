@@ -10,7 +10,8 @@ var PONG_MAXWIDTH = 487;//337
 
 function preparePongGame() {
     $("#games-pong-btn").click(function () {
-        //pong_resetGame();
+        $("#user-player").draggable({ axis: "x", containment: "#pong-game-field" });
+
         games_windowAdjust();
         if (currScreen === 3)
             PONG_MAXWIDTH = 337;
@@ -20,13 +21,15 @@ function preparePongGame() {
         $("#pong-play-btn").show();
         $("#pong-rematch-btn").hide();
         pong_throwBall();
-        $("#user-player").css("left", String(($("#pong-game-field").width() - $("#computer-player").width()) / 2) + "px").css("bottom","0%");
+        $("#user-player").css("left", String(($("#pong-game-field").width() - $("#computer-player").width()) / 2) + "px").css("top","100%");
         pong_updateScreen();
 
         openWindow("pong-game", windowPosition.BOTTOM_RIGHT);
     });
 
     $("#pong-game .Xbtn").click(function () {
+        $("#user-player").draggable("destroy");
+
         closeWindow("pong-game");
         while (pong_timeouts.length > 0) {
             clearTimeout(pong_timeouts[0]);
@@ -39,8 +42,6 @@ function preparePongGame() {
         $("#pong-game .Xbtn").click();
         $("#games-pong-btn").click();
     });
-
-    $("#user-player").draggable({ axis: "x", containment: "#pong-game-field" });
 
     $("#pong-play-btn").click(pong_startGame);
     $("#pong-rematch-btn").click(pong_startGame);
@@ -93,7 +94,7 @@ function pong_updateScreen() {
     $pongBall.css("left", String(pong_ballPos.x * (gameWidth - $pongBall.width())) + "px");
     $pongBall.css("top", String(pong_ballPos.y * 100) + "%");
     $("#computer-player").css("left", String(pong_computerPos * (gameWidth - $("#computer-player").width())) + "px").css("top","0%");
-    $("#user-player").css("bottom","0%");
+    $("#user-player").css("top", "100%");
     $("#pong-computer-score span").text(pong_computerScore);
     $("#pong-user-score span").text(pong_userScore);
 }
@@ -159,9 +160,9 @@ function pong_lost() {
         pong_computerScore++;
 
     pong_centerBall();
-    clearTimeout(pong_gameTimeout);
 
     if (pong_userScore >= 5 || pong_computerScore >= 5) {
+        pong_stopBall();
         if (pong_userScore > pong_computerScore)
             $("#pong-game .blockerWhiteText").text("Você ganhou! :)");
         else
@@ -170,9 +171,12 @@ function pong_lost() {
         $("#pong-game .blockerWhite").show();
     }
     else {
-        pong_timeouts.push(setTimeout(function () {
-            pong_throwBall();
-            pong_gameTimeout = setTimeout(pong_game, 1);
-        },500));
+        pong_stopBall();
+        pong_timeouts.push(setTimeout(pong_throwBall,500));
     }
+}
+
+function pong_stopBall() {
+    pong_ballVel.x = 0.0;
+    pong_ballVel.y = 0.0;
 }
