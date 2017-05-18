@@ -16,6 +16,8 @@ function preparePongGame() {
         if (currScreen === 3)
             PONG_MAXWIDTH = 337;
 
+        pong_resetGame();
+
         $("#pong-game .blockerWhiteText").text("Faça passar a bola pelo adversário para ganhar o jogo!");
         $("#pong-game .blockerWhite").show();
         $("#pong-play-btn").show();
@@ -133,8 +135,9 @@ function pong_throwBall() {
     else
         initVDir += Math.PI / 2.0;
 
-    pong_ballVel.x = Math.cos(initVDir);
-    pong_ballVel.y = Math.abs(Math.sin(initVDir)); // abs para mandar a bola sempre para baixo
+    let factor = 0.5;
+    pong_ballVel.x = Math.cos(initVDir) * factor;
+    pong_ballVel.y = Math.abs(Math.sin(initVDir)) * factor; // abs para mandar a bola sempre para baixo
 }
 
 function pong_collideComputer() {

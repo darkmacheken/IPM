@@ -1,12 +1,23 @@
 (Duarte)
-- Progress bar fica a 100% quase 1min antes de acabar
-- activables working
-- Timer do esmurreisto devia de aparecer os miliseconds (eg faltam 2,090 segundos)
 - Músicas tocarem mesmo.
 
 (Pedro) e (Leo)
 
 Melhorias
+- border do historico 2o elemento: tornar mais saliente
 - tempo restante esmurristo maior
 - IDEIA: ampulheta em vez de tempo restante esmurristo
 - contagem maior esmurristo
+- jogos 3o ecra ligeiramente maiores
+- botao REMATCH
+
+Melhorias finais
+- colocar icones nas pontuações no voce e computador (em vez do texto)
+- meter os scores no esmurristo à frente quando acaba o jogo
+- icone no voce perdeu (icone user)
+- border diferente a salientar quem ganhou esmurristo
+CHECK - pong mais lento ao principio
+- nas instruções dizer que o pong vai ate aos 5 pontos
+- pong: meter um aviso quando a bola faz spawn para nao ser repentino
+- pimentos
+CHECK - pong devia estar a zeros no inicio em vez de ser so quando se clica jogar
