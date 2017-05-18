@@ -106,10 +106,10 @@ function prepareAll(prepMusic) {
         if (cellNumExists($("#recover-tel-numbx").val())) {
             closeWindow("recover-password-box");
             $("#recover-form").trigger("reset");
-            confirmOk("Os seus dados foram enviados para o seu número de telemóvel.", windowPosition.MIDDLE, callblock);
+            confirmOk("Os seus dados foram enviados para o seu número de telemóvel.", windowPosition.TOP_RIGHT, callblock);
         }
         else {
-            confirmOk("O número inserido é desconhecido.", windowPosition.MIDDLE, function () {
+            confirmOk("O número inserido é desconhecido.", windowPosition.TOP_RIGHT, function () {
                 closeWindow("recover-password-box");
                 openWindow("recover-password-box", windowPosition.DEFAULT, '5');
             });

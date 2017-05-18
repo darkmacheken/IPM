@@ -1,11 +1,12 @@
 function prepareActivatables() {
     $(document).mouseup(function () {
-        $(".opcao,.opcao3ecran,.confirmarbtn,.submit").removeClass("js_active");
+        $(".opcao,.opcao3ecran,.confirmarbtn,.confirmOk2btn,.submit,.paybtn").removeClass("js_active");
     });
     activatables_opcao3ecran();
      activatables_confirmar();
      activatables_confirmar2()
      activatables_submit();
+     activatables_paybtn();
 }
 
 function activatables_opcao() {
@@ -50,6 +51,16 @@ function activatables_confirmar2() {
 
 function activatables_submit() {
     $(".submit").mousedown(function (e) {
+        $(this).addClass("js_active");
+    });
+
+    $(".disabler").mousedown(function (e) {
+        e.stopPropagation();
+    });
+}
+
+function activatables_paybtn() {
+    $(".paybtn").mousedown(function (e) {
         $(this).addClass("js_active");
     });
 

@@ -282,7 +282,7 @@ background-image: url("images/icons/food-menu/coffee-white.png");
   border-left: none;
   border-right: none;
 }
-.opcao3ecran .js_active{
+.opcao3ecran.js_active{
   background-color: #363636;
   color: #009ee1;
 }
@@ -426,7 +426,7 @@ background-image: url("images/icons/food-menu/coffee-white.png");
   background-repeat: no-repeat;
   background-size: 30px 30px;
 }
-.paybtn .js_active{
+.paybtn.js_active{
   background-color: #b3881d;
 }
 #order-pay-box {
