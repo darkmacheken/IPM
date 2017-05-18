@@ -82,7 +82,9 @@ function esmurristo_endGame() {
         $("#esmurristo-game .blockerWhiteText").text("Você perdeu! :(");
     $("#esmurristo-game .blockerWhite").show();
 
-    $("#esmurristo-rematch-btn").show();
+    esmurristo_timeouts.push(setTimeout(function () {
+        $("#esmurristo-rematch-btn").show();
+    }, 500));
 
     /*esmurristo_timeouts.push(setTimeout(function () {
         esmurristo_resetGame();
@@ -94,7 +96,11 @@ function esmurristo_updateScreen() {
     for (let i = 0; i < esmurristo_players.length; i++)
         $("#esmurristo-player" + String(i+1) + "-score span").text(esmurristo_players[i]);
     $("#esmurristo-count-score span").text(esmurristo_players[0]);
-    $("#esmurristo-time-left span").text(Math.floor(esmurristo_timeleft / 10));
+    $("#esmurristo-time-left-time").text(Math.floor(esmurristo_timeleft / 10));
+    if (Math.floor(esmurristo_timeleft / 10) === 1)
+        $("#esmurristo-time-left-s").text("");
+    else
+        $("#esmurristo-time-left-s").text("s");
 }
 
 function esmurristo_timerUpdate() {
