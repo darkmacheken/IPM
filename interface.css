@@ -745,6 +745,7 @@ a:visited {
 .confirmYesbtn:active{
   background-color: #306f32;
 }
+.confirmOk2btn {
     position: absolute;
     left:90px;
     bottom: 25px;
