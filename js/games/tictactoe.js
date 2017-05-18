@@ -43,7 +43,12 @@ function prepareTicTacToeGame() {
         }
     });
 
-    $("#tic-tac-toe-reset-btn").click(tictactoe_resetGame);
+    $("#tic-tac-toe-reset-btn").click(function () {
+        tictactoe_user = 0;
+        tictactoe_computer = 0;
+        $("#tic-tac-toe-game .Xbtn").click();
+        $("#games-tic-tac-toe-btn").click();
+    });
 
     $("#tic-tac-toe-game .hitbox").click(function () {
         let xPos = parseInt($(this).attr("id").substr(7, 1));
