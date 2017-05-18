@@ -2,6 +2,9 @@
 PARCIAL - Musica funcionar. Mete o nr de votos ao inicio a random e escolhe a song a tocar random.
 - Pong fica bugado no 3o ecra.
 - Reset fazer reset score.
+- Respawn da bola com delay maior
+- Mostrar instruções de jogo
+- Delay a mostrar rematch
 
 (Pedro)
 - Ajustar o X do esmurristo e do pong no 3o ecra

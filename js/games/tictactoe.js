@@ -92,7 +92,7 @@ function tictactoe_computerPlay() {
         }
         tictactoe_xTurn = true;
         tictactoe_checkWin();
-    }, 500));
+    }, 50));
 }
 
 function tictactoe_checkWin() {

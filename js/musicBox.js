@@ -34,40 +34,35 @@ function updateMusicBox() {
 }
 
 function updateMusicVoter() {
-    let aux_sort = [];
-    for (let i = 0; i < SONGS.length; i++)
-        aux_sort.push(i);
-    aux_sort.sort(function (a, b) { return SONGS[b]._votes - SONGS[a]._votes; });
-
     let musicHtml = "";
-    for (let i = 0; i < aux_sort.length; i++) {
-        if (aux_sort[i] === musicPlaying)
+    for (let i = 0; i < SONGS.length; i++) {
+        if (i === musicPlaying)
             continue;
         musicHtml += "<li class=\"box";
-        if (aux_sort[i] !== selectedVote)
+        if (i !== selectedVote)
             musicHtml += " btn";
         musicHtml += "\" id=\"music-vote-btn-";
-        musicHtml += String(aux_sort[i]);
+        musicHtml += String(i);
         musicHtml += "\"><div class=\"background-li-box-music";
-        if (aux_sort[i] === selectedVote)
+        if (i === selectedVote)
             musicHtml += " selected";
         musicHtml += "\"></div><div class=\"musictitle";
-        if (aux_sort[i] === selectedVote)
+        if (i === selectedVote)
             musicHtml += " selectedColor";
         musicHtml += "\">";
-        musicHtml += SONGS[aux_sort[i]]._name;
+        musicHtml += SONGS[i]._name;
         musicHtml += "</div><div class=\"musicartist";
-        if (aux_sort[i] === selectedVote)
+        if (i === selectedVote)
             musicHtml += " selectedColor";
         musicHtml += "\">";
-        musicHtml += SONGS[aux_sort[i]]._artist;
+        musicHtml += SONGS[i]._artist;
         musicHtml += "</div><div class=\"votessong\">";
-        musicHtml += SONGS[aux_sort[i]]._votes;
+        musicHtml += SONGS[i]._votes;
         musicHtml += " votos</div><div class=\"box musiccover";
-        if (aux_sort[i] === selectedVote)
+        if (i === selectedVote)
             musicHtml += " selectedBorderColor";
         musicHtml += "\" style=\"background-image: url('";
-        musicHtml += SONGS[aux_sort[i]]._cover;
+        musicHtml += SONGS[i]._cover;
         musicHtml += "')\"></div></li>";
     }
     $("#box-music-vote-next ul").html(musicHtml);
