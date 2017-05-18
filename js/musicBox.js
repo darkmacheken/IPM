@@ -99,13 +99,15 @@ function playSong() {
     setTimeout(playingSong, 1000);
     songTimeLeft = SONGS[musicPlaying]._playtime;
     $("#progress-bar").width("0%");
-    $("#progress-bar").animate({width: "100%"}, 1000 * songTimeLeft, "linear");
+    //$("#progress-bar").animate({width: "100%"}, 1000 * songTimeLeft, "linear");
     updateSongTimeLeft();
     selectedVote = -1;
 }
 
 function playingSong() {
     songTimeLeft--;
+    var percentage = 100- Math.floor(songTimeLeft/SONGS[musicPlaying]._playtime*100);
+    $("#progress-bar").width(String(percentage) + "%");
     if (songTimeLeft <= 0)
         setTimeout(playSong, 1000);
     else
