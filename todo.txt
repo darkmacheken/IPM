@@ -1,8 +1,4 @@
 (Duarte)
-PARCIAL - Musica funcionar. Mete o nr de votos ao inicio a random e escolhe a song a tocar random.
-- Pong fica bugado no 3o ecra.
-- Reset fazer reset score.
-- Mostrar instruções de jogo
 - Botao activable com disabler pro pedro ver
 
 (Pedro) e (Leo)

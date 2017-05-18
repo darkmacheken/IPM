@@ -83,28 +83,35 @@ function tictactoe_userPlay(xPos, yPos) {
 
 function tictactoe_computerPlay() {
     tictactoe_timeouts.push(setTimeout(function () {
-        let tieCount = 0;
-        for (let i = 0; i < Number.MAX_SAFE_INTEGER; i++) {
-            let xPos = Math.floor((i % 9) / 3);
-            let yPos = i % 3;
+        let smartPlay = tictactoe_semiCrossed(tictactoe_boardStatus.OPLAYED);
+        if (smartPlay.x === -1)
+            smartPlay = tictactoe_semiCrossed(tictactoe_boardStatus.XPLAYED);
+        if (smartPlay.x === -1){
+            let tieCount = 0;
+            for (let i = 0; i < Number.MAX_SAFE_INTEGER; i++) {
+                let xPos = Math.floor((i % 9) / 3);
+                let yPos = i % 3;
 
-            if (tictactoe_board[xPos][yPos] === tictactoe_boardStatus.UNPLAYED) {
-                if (Math.random() < 0.2) {
-                    tictactoe_board[xPos][yPos] = tictactoe_boardStatus.OPLAYED;
-                    break;
+                if (tictactoe_board[xPos][yPos] === tictactoe_boardStatus.UNPLAYED) {
+                    if (Math.random() < 0.2) {
+                        tictactoe_board[xPos][yPos] = tictactoe_boardStatus.OPLAYED;
+                        break;
+                    }
+                }
+                else if (tieCount === i) {
+                    if (i >= 9) {
+                        tictactoe_status._won = true;
+                        tictactoe_status._winner = tictactoe_boardStatus.UNPLAYED;
+                        break;
+                    }
+                    else {
+                        tieCount++;
+                    }
                 }
             }
-            else if (tieCount === i) {
-                if (i >= 9) {
-                    tictactoe_status._won = true;
-                    tictactoe_status._winner = tictactoe_boardStatus.UNPLAYED;
-                    console.log(">TIE");
-                    break;
-                }
-                else {
-                    tieCount++;
-                }
-            }
+        }
+        else {
+            tictactoe_board[smartPlay.x][smartPlay.y] = tictactoe_boardStatus.OPLAYED;
         }
         tictactoe_xTurn = true;
         tictactoe_checkWin();
@@ -142,7 +149,7 @@ function tictactoe_crossed() {
     if (tictactoe_status._won)
         return;
     // linhas
-    for(let i = 0; i < 3; i++)
+    for (let i = 0; i < 3; i++)
         if (tictactoe_board[i][0] === tictactoe_board[i][1] &&
                 tictactoe_board[i][1] === tictactoe_board[i][2] &&
                 tictactoe_board[i][0] !== tictactoe_boardStatus.UNPLAYED) {
@@ -154,7 +161,7 @@ function tictactoe_crossed() {
         }
 
     // colunas
-    for(let i = 0; i < 3; i++)
+    for (let i = 0; i < 3; i++)
         if (tictactoe_board[0][i] === tictactoe_board[1][i] &&
                 tictactoe_board[1][i] === tictactoe_board[2][i] &&
                 tictactoe_board[0][i] !== tictactoe_boardStatus.UNPLAYED) {
@@ -183,6 +190,77 @@ function tictactoe_crossed() {
     else {
         tictactoe_status._won = false;
     }
+}
+
+function tictactoe_semiCrossed(crossedBy) {
+    // linhas
+    for (let i = 0; i < 3; i++) {
+        if (tictactoe_board[i][1] === tictactoe_board[i][2] &&
+                tictactoe_board[i][0] === tictactoe_boardStatus.UNPLAYED &&
+                tictactoe_board[i][1] === crossedBy) {
+            return { x: i, y: 0 };
+        }
+        else if (tictactoe_board[i][0] === tictactoe_board[i][2] &&
+                tictactoe_board[i][1] === tictactoe_boardStatus.UNPLAYED &&
+                tictactoe_board[i][0] === crossedBy) {
+            return { x: i, y: 1 };
+        }
+        else if (tictactoe_board[i][0] === tictactoe_board[i][1] &&
+                tictactoe_board[i][2] === tictactoe_boardStatus.UNPLAYED &&
+                tictactoe_board[i][0] === crossedBy) {
+            return { x: i, y: 2 };
+        }
+    }
+
+    // colunas
+    for (let i = 0; i < 3; i++) {
+        if (tictactoe_board[1][i] === tictactoe_board[2][i] &&
+                tictactoe_board[0][i] === tictactoe_boardStatus.UNPLAYED &&
+                tictactoe_board[1][i] === crossedBy) {
+            return { x: 0, y: i };
+        }
+        else if (tictactoe_board[0][i] === tictactoe_board[2][i] &&
+                tictactoe_board[1][i] === tictactoe_boardStatus.UNPLAYED &&
+                tictactoe_board[0][i] === crossedBy) {
+            return { x: 1, y: i };
+        }
+        else if (tictactoe_board[0][i] === tictactoe_board[1][i] &&
+                tictactoe_board[2][i] === tictactoe_boardStatus.UNPLAYED &&
+                tictactoe_board[0][i] === crossedBy) {
+            return { x: 2, y: i };
+        }
+    }
+
+    // diagonais
+    if (tictactoe_board[1][1] === tictactoe_board[2][2] &&
+            tictactoe_board[0][0] === tictactoe_boardStatus.UNPLAYED &&
+            tictactoe_board[1][1] === crossedBy) {
+        return { x: 0, y: 0 };
+    }
+    else if (tictactoe_board[1][1] === tictactoe_boardStatus.UNPLAYED &&
+            ((tictactoe_board[0][0] === tictactoe_board[2][2] &&
+            tictactoe_board[0][0] === crossedBy) ||
+            (tictactoe_board[0][2] === tictactoe_board[2][0] &&
+            tictactoe_board[0][2] === crossedBy))) {
+        return { x: 1, y: 1 };
+    }
+    else if (tictactoe_board[0][0] === tictactoe_board[1][1] &&
+            tictactoe_board[2][2] === tictactoe_boardStatus.UNPLAYED &&
+            tictactoe_board[0][0] === crossedBy) {
+        return { x: 2, y: 2 };
+    }
+    else if (tictactoe_board[1][1] === tictactoe_board[2][0] &&
+            tictactoe_board[0][2] === tictactoe_boardStatus.UNPLAYED &&
+            tictactoe_board[1][1] === crossedBy) {
+        return { x: 0, y: 2 };
+    }
+    else if (tictactoe_board[0][2] === tictactoe_board[1][1] &&
+            tictactoe_board[2][0] === tictactoe_boardStatus.UNPLAYED &&
+            tictactoe_board[0][2] === crossedBy) {
+        return { x: 2, y: 0 };
+    }
+
+    return { x: -1, y: -1 };
 }
 
 function tictactoe_updateScreen() {
