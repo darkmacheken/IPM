@@ -1,5 +1,6 @@
 (Duarte)
 - Progress bar fica a 100% quase 1min antes de acabar
+- activables working
 - Timer do esmurreisto devia de aparecer os miliseconds (eg faltam 2,090 segundos)
 - Músicas tocarem mesmo.
 
