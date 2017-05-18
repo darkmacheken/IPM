@@ -179,7 +179,10 @@
 
 #esmurristo-count-score {
   top: 30.5%;
-  left: 37.5%;
+  left: 32.5%;
+  width: 33.7%;
+  height: 16%;
+  font-size: 215%;
   background-color: #f5f5f5;
   border: 1px solid #202020;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -187,7 +190,7 @@
 
 #esmurristo-btn {
   border: none;
-  top: 44%;
+  top: 54%;
   left: 25%;
   width: 50%;
   height: 30%;
@@ -201,12 +204,12 @@
 
 #esmurristo-time-left {
   position: absolute;
-  text-align: center;
-  width: 50%;
+  text-align: left;
+  width: 54%;
   height: 9%;
-  top: 78%;
+  top: 88%;
   left: 25%;
-  font-size: 125%;
+  font-size: 140%;
 }
 
 #esmurristo-reset-btn {
