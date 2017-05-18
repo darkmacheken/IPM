@@ -216,10 +216,11 @@
 .rematch-btn {
   position: absolute;
       left: 25%;
-      text-align: right;
+      text-align: center;
+      padding-left: 10%;
       padding-right: 1%;
       bottom: 37%;
-      width: 50%;
+      width: 40%;
       height: 10%;
       color: white;
       font-size: 200%;
