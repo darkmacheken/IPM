@@ -217,28 +217,36 @@
       bottom: 37%;
       width: 50%;
       height: 10%;
-      color: black;
+      color: white;
       font-size: 200%;
       line-height: 139%;
+      background-color: #009ee1;
+      color: white;
       background-image: url(images/icons/buttons/play-again-black.png);
       background-position: 2% 29%;
       background-repeat: no-repeat;
       background-size: 15% 46%;
+      box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+
 .play-btn {
   position: absolute;
-      left: 38%;
-      text-align: right;
-      bottom: 37%;
-      width: 19%;
+      left: 35%;
+      text-align: center;
+      bottom: 40%;
+      width: 30%;
       height: 10%;
-      color: black;
-      font-size: 200%;
+      color: white;
+      font-size: 250%;
       line-height: 139%;
+      background-color: #009ee1;
+      color: white;
       background-image: url(images/icons/buttons/play-black.png);
-      background-position: -5% 18%;
+      background-position: 5% 50%;
       background-repeat: no-repeat;
-      background-size: 32% 61%;
+      background-size: 17% 50%;
+      box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
 }
 #pong-game-div {
   font-size: 18px;
