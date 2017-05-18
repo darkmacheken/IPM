@@ -4,11 +4,8 @@
 - Músicas tocarem mesmo.
 
 (Pedro) e (Leo)
-- Texto de whitebox precisa de padding
 
 Melhorias
 - tempo restante esmurristo maior
 - IDEIA: ampulheta em vez de tempo restante esmurristo
 - contagem maior esmurristo
-- jogos 3o ecra ligeiramente maiores
-- botao REMATCH

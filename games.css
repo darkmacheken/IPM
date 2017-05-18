@@ -327,7 +327,8 @@
 
 .blockerWhiteText{
   font-size: 200%;
-  width: 100%;
+  width: 90%;
+  left: 5%;
   position: absolute;
   top: 33%;
   font-weight: bold;
