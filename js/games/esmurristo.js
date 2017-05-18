@@ -35,7 +35,7 @@ function prepareEsmurristoGame() {
 
 function esmurristo_resetGame() {
     esmurristo_players = [0, 0, 0, 0];
-    esmurristo_timeleft = 50;
+    esmurristo_timeleft = 100;
     $("#esmurristo-game .blockerWhiteText").text("À espera de jogadores...");
     $("#esmurristo-game .blockerWhite").show();
     esmurristo_updateScreen();
@@ -91,7 +91,7 @@ function esmurristo_updateScreen() {
     for (let i = 0; i < esmurristo_players.length; i++)
         $("#esmurristo-player" + String(i+1) + "-score span").text(esmurristo_players[i]);
     $("#esmurristo-count-score span").text(esmurristo_players[0]);
-    $("#esmurristo-time-left-time").text(Math.floor(esmurristo_timeleft / 10));
+    $("#esmurristo-time-left-time").text((esmurristo_timeleft / 10).toFixed(1));
     if (Math.floor(esmurristo_timeleft / 10) === 1)
         $("#esmurristo-time-left-s").text("");
     else
