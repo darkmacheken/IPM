@@ -1,23 +1,20 @@
 (Duarte)
-- Músicas tocarem mesmo.
+    - meter os scores no esmurristo à frente quando acaba o jogo
 
 (Pedro) e (Leo)
-
-Melhorias
-- border do historico 2o elemento: tornar mais saliente
-- tempo restante esmurristo maior
-- IDEIA: ampulheta em vez de tempo restante esmurristo
-- contagem maior esmurristo
-- jogos 3o ecra ligeiramente maiores
-- botao REMATCH
+    - colocar icones nas pontuações no voce e computador (em vez do texto)
+    - meter os scores no esmurristo à frente quando acaba o jogo
+        Para isto metam uma div à volta dos scores para ser so alterar o z-index no js
+    - icone no voce perdeu (icone user)
+    - border diferente a salientar quem ganhou esmurristo
+    - pong: meter um aviso quando a bola faz spawn para nao ser repentino
 
 Melhorias finais
-- colocar icones nas pontuações no voce e computador (em vez do texto)
-- meter os scores no esmurristo à frente quando acaba o jogo
-- icone no voce perdeu (icone user)
-- border diferente a salientar quem ganhou esmurristo
-CHECK - pong mais lento ao principio
-- nas instruções dizer que o pong vai ate aos 5 pontos
-- pong: meter um aviso quando a bola faz spawn para nao ser repentino
-- pimentos
-CHECK - pong devia estar a zeros no inicio em vez de ser so quando se clica jogar
+        - colocar icones nas pontuações no voce e computador (em vez do texto)
+        - meter os scores no esmurristo à frente quando acaba o jogo
+        - icone no voce perdeu (icone user)
+        - border diferente a salientar quem ganhou esmurristo
+CHECK   - pong mais lento ao principio
+CHECK   - nas instruções dizer que o pong vai ate aos 5 pontos
+        - pong: meter um aviso quando a bola faz spawn para nao ser repentino
+CHECK   - pong devia estar a zeros no inicio em vez de ser so quando se clica jogar

@@ -18,7 +18,7 @@ function preparePongGame() {
 
         pong_resetGame();
 
-        $("#pong-game .blockerWhiteText").text("Faça passar a bola pelo adversário para ganhar o jogo!");
+        $("#pong-game .blockerWhiteText").text("Faça passar a bola pelo adversário! O primeiro a ter 5 pontos ganha.");
         $("#pong-game .blockerWhite").show();
         $("#pong-play-btn").show();
         $("#pong-rematch-btn").hide();
