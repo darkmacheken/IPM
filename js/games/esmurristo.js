@@ -38,6 +38,7 @@ function esmurristo_resetGame() {
     esmurristo_timeleft = 100;
     $("#esmurristo-game .blockerWhiteText").text("À espera de jogadores...");
     $("#esmurristo-game .blockerWhite").show();
+    esmurristo_hidePontuacao();
     esmurristo_updateScreen();
 }
 
@@ -81,6 +82,7 @@ function esmurristo_endGame() {
     else
         $("#esmurristo-game .blockerWhiteText").text("Você perdeu! :(");
     $("#esmurristo-game .blockerWhite").show();
+    esmurristo_showPontuacao();
 
     esmurristo_timeouts.push(setTimeout(function () {
         $("#esmurristo-rematch-btn").show();
@@ -102,7 +104,7 @@ function esmurristo_timerUpdate() {
     esmurristo_timeleft--;
     if (esmurristo_timeleft > 0) {
         esmurristo_timeouts.push(setTimeout(esmurristo_timerUpdate, 100));
-        esmurristo_simulatePlayers(0.6);
+        esmurristo_simulatePlayers(0.55);
     }
     else {
         if (esmurristo_timeleft < 0)
@@ -116,4 +118,12 @@ function esmurristo_simulatePlayers(chance) {
     for (let i = 1; i < esmurristo_players.length; i++)
         if (Math.random() < chance)
             esmurristo_players[i]++;
+}
+
+function esmurristo_showPontuacao() {
+    $("#esmurristo-player1-score, #esmurristo-player2-score, #esmurristo-player3-score, #esmurristo-player4-score").css("z-index", '2');
+}
+
+function esmurristo_hidePontuacao() {
+    $("#esmurristo-player1-score, #esmurristo-player2-score, #esmurristo-player3-score, #esmurristo-player4-score").css("z-index", '0');
 }

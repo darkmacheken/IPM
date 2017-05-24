@@ -1,17 +1,15 @@
 (Duarte)
-    - meter os scores no esmurristo à frente quando acaba o jogo
+    NADA. TA TUDO FEITO!!!
 
 (Pedro) e (Leo)
     - colocar icones nas pontuações no voce e computador (em vez do texto)
-    - meter os scores no esmurristo à frente quando acaba o jogo
-        Para isto metam uma div à volta dos scores para ser so alterar o z-index no js
     - icone no voce perdeu (icone user)
     - border diferente a salientar quem ganhou esmurristo
     - pong: meter um aviso quando a bola faz spawn para nao ser repentino
 
 Melhorias finais
         - colocar icones nas pontuações no voce e computador (em vez do texto)
-        - meter os scores no esmurristo à frente quando acaba o jogo
+CHECK   - meter os scores no esmurristo à frente quando acaba o jogo
         - icone no voce perdeu (icone user)
         - border diferente a salientar quem ganhou esmurristo
 CHECK   - pong mais lento ao principio

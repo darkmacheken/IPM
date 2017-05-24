@@ -73,13 +73,22 @@ function updateMusicVoter() {
             continue;
 
         $("#music-vote-btn-" + i).click(function () {
-            SONGS[i]._votes++;
-            //$("#music-vote-next-hide").click();
-            if (selectedVote >= 0)
-                SONGS[selectedVote]._votes--;
-            selectedVote = i;
-            updateMusicVoter();
-            evaluateNextSong();
+            let confirmDialogTxt = "";
+            if (selectedVote < 0)
+                confirmDialogTxt = "Tem a certeza que pretende votar em " + SONGS[i]._name + " para a próxima música?";
+            else
+                confirmDialogTxt = "Tem a certeza que pretende mudar o seu voto para " + SONGS[i]._name + "?";
+
+            confirmYesNo(confirmDialogTxt,
+                windowPosition.BOTTOM_LEFT,
+                function () {
+                    SONGS[i]._votes++;
+                    if (selectedVote >= 0)
+                        SONGS[selectedVote]._votes--;
+                    selectedVote = i;
+                    updateMusicVoter();
+                    evaluateNextSong();
+                });
         });
     }
 }
