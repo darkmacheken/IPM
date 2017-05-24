@@ -20,10 +20,18 @@
   height: 9%;
   left: 1%;
   font-size: 250%;
+  padding-left: 10%;
+  background-position: 2% 76%;
+  background-repeat: no-repeat;
+  background-size: 13% 75%;
 }
-
+#tic-tac-toe-computer-score{
+    background-image: url(images/games/computer-black.png);
+}
 #tic-tac-toe-user-score{
   bottom: 1%;
+  background-image: url(images/games/user-black.png);
+  background-position: 2% 71%;
 }
 
 .hitbox{
@@ -275,10 +283,19 @@
   height: 9%;
   left: 1%;
   font-size: 250%;
+  padding-left: 10%;
+  background-position: 2% 76%;
+  background-repeat: no-repeat;
+  background-size: 13% 75%;
 }
 
+#pong-computer-score{
+    background-image: url(images/games/computer-black.png);
+}
 #pong-user-score{
   bottom: 1%;
+  background-image: url(images/games/user-black.png);
+  background-position: 2% 71%;
 }
 
 .retaDashed{
