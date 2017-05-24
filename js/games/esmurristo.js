@@ -121,7 +121,16 @@ function esmurristo_simulatePlayers(chance) {
 }
 
 function esmurristo_showPontuacao() {
-    $("#esmurristo-player1-score, #esmurristo-player2-score, #esmurristo-player3-score, #esmurristo-player4-score").css("z-index", '2');
+    $("#esmurristo-player1-score, #esmurristo-player2-score, #esmurristo-player3-score, #esmurristo-player4-score").css("z-index", '2').removeClass("esmurristo-player-won");
+    let winners = [];
+    for (let i = 0; i < esmurristo_players.length; i++) {
+        if (winners.length === 0 || esmurristo_players[i] === esmurristo_players[winners[0]])
+            winners.push(i);
+        else if (esmurristo_players[i] > esmurristo_players[winners[0]])
+            winners = [i];
+    }
+    for (let i = 0; i < winners.length; i++)
+        $("#esmurristo-player" + String(winners[i] + 1) + "-score").addClass("esmurristo-player-won");
 }
 
 function esmurristo_hidePontuacao() {

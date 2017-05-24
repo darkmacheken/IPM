@@ -9,6 +9,8 @@ function prepareAll(prepMusic) {
     /* Esconder janelas inicialmente */
     $(".window, #blocker, #keyboard, #number-pad, .helpdiv, #boxcontautilizadorlogged, #Historico, .boxHistoricoRepetirPedido, #DefinicoesConta, #callwaitbtn, #second-screen, #screen2-logged-box, #screen2-historico, #screen2-definicoesConta, .screen3, #music-vote-next-hide, #box-music-vote-next").hide();
 
+    $("#orderfoodbtn").show();
+
     /*********************************** JANELA DE AJUDA ***********************************/
     $("#helpbtn").click(function () {
         openWindow("help-window", windowPosition.TOP_LEFT);
