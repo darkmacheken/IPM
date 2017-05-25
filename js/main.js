@@ -1,4 +1,5 @@
 var currScreen = 1;
+var num_clicks = 0;
 var down = {};
 
 $(document).ready(function () {
@@ -446,8 +447,19 @@ function prepareAll(prepMusic) {
 $(document).keydown(function (e) {
     down[e.keyCode] = true;
 }).keyup(function (e) {
-    if (down[68] && down[69] && down[86]) {
+    if (down[68] && down[69] && down[86])
         resetAllInterface();
-    }
+    else if (down[67] && down[78] && down[84])
+        confirmYesNo("N.º de cliques: " + num_clicks + ". Apagar?",
+            windowPosition.DEFAULT,
+            function () { num_clicks = -1; },
+            function () { num_clicks--; }
+        );
     down[e.keyCode] = false;
+});
+
+$(document).click(function (e) {
+    if (typeof e.detail === "number")
+        num_clicks += e.detail;
+    console.log(num_clicks);
 });
