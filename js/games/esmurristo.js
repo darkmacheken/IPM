@@ -131,9 +131,11 @@ function esmurristo_showPontuacao() {
     }
     for (let i = 0; i < winners.length; i++)
         $("#esmurristo-player" + String(winners[i] + 1) + "-score").addClass("esmurristo-player-won");
+        //$("#esmurristo-player" + String(winners[i] + 1) + "-score").css("background-color", "#009ee1").css("color", "white");
 }
 
 function esmurristo_hidePontuacao() {
     $("#esmurristo-player1-score, #esmurristo-player2-score, #esmurristo-player3-score, #esmurristo-player4-score").css("z-index", '0');
     $(".esmurristo-score").removeClass("esmurristo-player-won");
+    //$(".esmurristo-score").css("background-color", "auto").css("color", "auto");
 }

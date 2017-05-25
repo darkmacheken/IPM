@@ -225,7 +225,8 @@
 }
 
 .esmurristo-player-won {
-  border: 2px solid red;
+    background-color: #009ee1;
+    color: white;
 }
 
 .rematch-btn {
