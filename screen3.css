@@ -10,14 +10,17 @@
 }
 #order-again-btn {
   position: absolute;
-  top: 530px;
-  left: 10px;
-  background-color: #009ee1;
-  color: white;
-  background-image: url("images/icons/buttons/slideup-white.png");
-  background-position: 7% 50%;
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
+      height: 70px;
+      top: 480px;
+      line-height: 70px;
+      font-size: 25px;
+      left: 10px;
+      background-color: #009ee1;
+      color: white;
+      background-image: url(images/icons/buttons/slideup-white.png);
+      background-position: 7% 50%;
+      background-repeat: no-repeat;
+      background-size: 30px 30px;
 }
 #order-again-btn:active{
   background-color: #026bab;
