@@ -17,6 +17,7 @@ function preparePongGame() {
             PONG_MAXWIDTH = 337;
 
         pong_resetGame();
+        $("#user-player").css("z-index", "0");
 
         $("#pong-game .blockerWhiteText").text("Faça passar a bola pelo adversário! O primeiro a ter 5 pontos ganha.");
         $("#pong-game .blockerWhite").show();
@@ -38,6 +39,7 @@ function preparePongGame() {
             clearTimeout(pong_timeouts[0]);
             pong_timeouts.splice(0, 1);
         }
+        $("#user-player").css("z-index", "0");
         clearTimeout(pong_gameTimeout);
     });
 
@@ -65,6 +67,7 @@ function pong_resetGame() {
     $("#pong-game .blockerWhite").show();
     $("#pong-play-btn").hide();
     $("#pong-rematch-btn").hide();
+    $("#user-player").css("z-index", "2");
     pong_throwBall();
     pong_computerPos = 0.5;
     pong_computerVel = (Math.floor(Math.random()) * 2) - 1;
@@ -197,6 +200,8 @@ function pong_lost() {
         pong_stopBall();
         pong_timeouts.push(setTimeout(pong_throwBall,500));
     }
+
+    $("#user-player").css("z-index", "0");
 }
 
 function pong_stopBall() {
