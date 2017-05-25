@@ -135,4 +135,5 @@ function esmurristo_showPontuacao() {
 
 function esmurristo_hidePontuacao() {
     $("#esmurristo-player1-score, #esmurristo-player2-score, #esmurristo-player3-score, #esmurristo-player4-score").css("z-index", '0');
+    $(".esmurristo-score").removeClass("esmurristo-player-won");
 }
