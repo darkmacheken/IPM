@@ -159,8 +159,17 @@
   border-right: 1px solid #202020;
 }
 
+.esmurristo-user{
+    background-color: #f5f5f5;
+    background-color: black;
+}
+
+.esmurristo-others{
+  background-color: #363636;
+  color: white;
+}
+
 #esmurristo-player1-score {
-  background-color: #f5f5f5;
   border: 1px solid #202020;
   height: 10.7%;
   left: 0.5%;
@@ -168,20 +177,14 @@
 
 #esmurristo-player2-score {
   left: 25.2%;
-  background-color: #363636;
-  color: white;
 }
 
 #esmurristo-player3-score {
   left: 50.1%;
-  background-color: #363636;
-  color: white;
 }
 
 #esmurristo-player4-score {
   left: 75.1%;
-  background-color: #363636;
-  color: white;
   border-right: none;
 }
 
