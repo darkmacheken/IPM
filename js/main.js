@@ -461,5 +461,4 @@ $(document).keydown(function (e) {
 $(document).click(function (e) {
     if (typeof e.detail === "number")
         num_clicks += e.detail;
-    console.log(num_clicks);
 });
