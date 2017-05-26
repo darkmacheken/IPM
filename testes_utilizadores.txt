@@ -137,3 +137,28 @@ Tarefa 3: 18 clicks, 42.92 seg, 5, -
 8. 1
 9. 5
 10. 1
+
+
+
+Teste 7: carolina rodrigues
+idade: 20
+sexo: feminino
+profissao: estudante
+nivel de esc: 12º
+prob de visao: miopia
+tateis diariamente
+
+Tarefa 1: 19 clicks, 35.53 seg, 4, -
+Tarefa 2: (meteu um NIF errado 2 vezes), 14 clicks, 52.82 seg, 3, menos informações obrigatórias
+Tarefa 3: 20 clicks, 49.00 seg, 5, -
+
+1. 5
+2. 2
+3. 5
+4. 1
+5. 4
+6. 1
+7. 5
+8. 1
+9. 5
+10. 1
