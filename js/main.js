@@ -412,13 +412,13 @@ function prepareAll(prepMusic) {
 
     /*********************************** TECLADOS E KEYPADS ***********************************/
     $("input[type=text], input[type=password]").not(".numOnly").focus(function () {
-        $("#keyboard").show();
+        //$("#keyboard").show();
     }).blur(function () {
-        $("#keyboard").hide();
+        //$("#keyboard").hide();
     });
 
     $("input[type=text].numOnly").focus(function () {
-        $("#number-pad").show();
+        //$("#number-pad").show();
     }).blur(function () {
         $("#number-pad").hide();
     });

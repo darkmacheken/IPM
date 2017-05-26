@@ -16,3 +16,12 @@ CHECK   - pong mais lento ao principio
 CHECK   - nas instruções dizer que o pong vai ate aos 5 pontos
         - pong: meter um aviso quando a bola faz spawn para nao ser repentino - ? bué repentino
 CHECK   - pong devia estar a zeros no inicio em vez de ser so quando se clica jogar
+
+Melhorias ultra-finais
+        - Icone no fazer pedido e ver pedido em vez de seta pra cima.
+
+
+Guiao
+- Telemovel pra cronometrar no material
+- Variar ordem das tarefas
+- Fazer 931488327423897 tarefas
