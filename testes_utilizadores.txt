@@ -162,3 +162,26 @@ Tarefa 3: 20 clicks, 49.00 seg, 5, -
 8. 1
 9. 5
 10. 1
+
+Teste 8: joão lopes
+idade: 19
+sexo: masculino
+profissao: estudante
+nivel de esc: 12º
+prob de visao: -
+tateis diariamente
+
+Tarefa 1: 18 clicks, 31.47 seg, 5, quem ganha é que devia começar a jogar primeiro
+Tarefa 2: 13 clicks, 37.52 seg, 4, deviam obrigar a por a palavra-passe com pelo menos 1 letra maiuscula e 1 num; deviam certificar que o utilizador nao é um robot
+Tarefa 3: 23 clicks, 69.78 seg, 3, devia haver mais sumos
+
+1. 2
+2. 2
+3. 4
+4. 1
+5. 4
+6. 2
+7. 5
+8. 1
+9. 5
+10. 1
