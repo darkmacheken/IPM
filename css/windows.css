@@ -1,6 +1,6 @@
-/* Janelas de entrar e registar */
+﻿/* Janelas de entrar e registar */
 .window {
-    background-image: url("images/background/back2.png");
+    background-image: url("../images/background/back2.png");
     background-repeat: repeat-x repeat-y;
     border: 3px black solid;
     position: absolute;
@@ -153,7 +153,7 @@ h3 {
     top: 0em;
     left: 0em;
     z-index: 20;
-    background-image: url(loading.gif);
+    background-image: url(../images/loading.gif);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -238,7 +238,7 @@ label.btn {
 
 #second-screen{
   background-color: white;
-  background-image: url("images/background/back1.png");
+  background-image: url("../images/background/back1.png");
   position: absolute;
   top: 130px;
   left: 0px;
@@ -253,7 +253,7 @@ label.btn {
   left: 1172px;
   width: 300px;
   height: 175px;
-  background-image: url("images/keyboard/keyboard.png");
+  background-image: url("../images/keyboard/keyboard.png");
   background-repeat: no-repeat;
   background-size: 365px 220px;
   border: none;
@@ -265,7 +265,7 @@ label.btn {
   left: 1172px;
   width: 300px;
   height: 175px;
-  background-image: url("images/keyboard/number-pad.png");
+  background-image: url("../images/keyboard/number-pad.png");
   background-repeat: no-repeat;
   background-size: 365px 220px;
   border: none;

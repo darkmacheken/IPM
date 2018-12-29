@@ -1,4 +1,4 @@
-a {
+﻿a {
     font-size: 18px;
 }
 
@@ -21,7 +21,7 @@ a:visited {
 }
 
 .background {
-  background-image: url("images/background/back2.png");
+  background-image: url("../images/background/back2.png");
   background-repeat: repeat-x repeat-y;
 }
 
@@ -63,7 +63,7 @@ a:visited {
 .Xbtn {
   background-color: #B22222; /* red */
   color: white;
-  background-image: url("images/icons/buttons/close-white.png");
+  background-image: url("../images/icons/buttons/close-white.png");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: 30px 30px;
@@ -115,7 +115,7 @@ a:visited {
     text-align: center;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     border: none;
-    background-image: url("images/icons/buttons/garcon-white.png");
+    background-image: url("../images/icons/buttons/garcon-white.png");
     background-position: 5% 45%;
     background-repeat: no-repeat;
     background-size: 50px 50px;
@@ -123,7 +123,7 @@ a:visited {
 #callbtn:active{
   background-color: #f5f5f5;
   color: black;
-  background-image: url("images/icons/buttons/garcon-black.png");
+  background-image: url("../images/icons/buttons/garcon-black.png");
 }
 
 #callwaitbtn {
@@ -163,7 +163,7 @@ a:visited {
   position: absolute;
   left: 600px;
   top: 10px;
-  background-image: url("images/logo/comisto.png");
+  background-image: url("../images/logo/comisto.png");
   background-size: 280px 113px;
   background-repeat: no-repeat;
   background-position: 10px ;
@@ -200,7 +200,7 @@ a:visited {
     left: 500px;
     top: 200px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    background-image: url("images/icons/buttons/fork-knife-white.png");
+    background-image: url("../images/icons/buttons/fork-knife-white.png");
     background-position: 48.5% 85%;
     background-repeat: no-repeat;
     background-size: 150px 150px;
@@ -220,7 +220,7 @@ a:visited {
     line-height: 10px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     border: none;
-    background-image: url("images/icons/account/user-white.png");
+    background-image: url("../images/icons/account/user-white.png");
     background-position: 10% 45%;
     background-repeat: no-repeat;
     background-size: 25px 25px;
@@ -242,7 +242,7 @@ a:visited {
     background-color: #009ee1;
     color: white;
     border: none;
-    background-image: url("images/icons/account/login-white.png");
+    background-image: url("../images/icons/account/login-white.png");
     background-position: 10% 45%;
     background-repeat: no-repeat;
     background-size: 30px 30px;
@@ -267,7 +267,7 @@ a:visited {
     background-color: #009ee1;
     color: white;
     border: none;
-    background-image: url("images/icons/account/register-white.png");
+    background-image: url("../images/icons/account/register-white.png");
     background-position: 12% 52%;
     background-repeat: no-repeat;
     background-size: 30px 30px;
@@ -287,7 +287,7 @@ a:visited {
     top: 580px;
     left: 2px;
     line-height: 10px;
-    background-image: url("images/icons/music/music-white.png");
+    background-image: url("../images/icons/music/music-white.png");
     background-position: 16% 45%;
     background-repeat: no-repeat;
     background-size: 20px 20px;
@@ -316,7 +316,7 @@ a:visited {
     left: 2px;
     background-color: #009ee1;
     color: white;
-    background-image: url("images/icons/buttons/slideup-white.png");
+    background-image: url("../images/icons/buttons/slideup-white.png");
     background-position: 3% 50%;
     background-repeat: no-repeat;
     background-size: 30px 30px;
@@ -335,7 +335,7 @@ a:visited {
     display:block;
     border-radius: 50%;
     border: 1px solid black;
-    background: url("images/musica/blue.jpg");
+    background: url("../images/musica/blue.jpg");
     background-size: 100% 100%;
     background-position: center;
 }
@@ -441,7 +441,7 @@ a:visited {
     background-color: #009ee1;
     color: white;
     border: none;
-    background-image: url("images/icons/account/history-white.png");
+    background-image: url("../images/icons/account/history-white.png");
     background-position: 8.75% 47%;
     background-repeat: no-repeat;
     background-size: 30px 30px;
@@ -460,7 +460,7 @@ a:visited {
     background-color: #009ee1;
     color: white;
     border: none;
-    background-image: url("images/icons/account/definicoes-white.png");
+    background-image: url("../images/icons/account/definicoes-white.png");
     background-position: 8% 50%;
     background-repeat: no-repeat;
     background-size: 30px 30px;
@@ -479,7 +479,7 @@ a:visited {
     border: none;
     background-color: #B22222; /* red */
     color: white;
-    background-image: url("images/icons/account/logout-white.png");
+    background-image: url("../images/icons/account/logout-white.png");
     background-position: 9.5% 45%;
     background-repeat: no-repeat;
     background-size: 25px 25px;
@@ -508,7 +508,7 @@ a:visited {
     border: none;
     background-color: #B22222; /* red */
     color: white;
-    background-image: url("images/icons/buttons/back-white.png");
+    background-image: url("../images/icons/buttons/back-white.png");
     background-position: 15% 50%;
     background-repeat: no-repeat;
     background-size: 25px 25px;
@@ -540,7 +540,7 @@ a:visited {
     border:none;
     background-color: #4CAF50; /* Green */
     color: white;
-    background-image: url("images/icons/buttons/restart-white.png");
+    background-image: url("../images/icons/buttons/restart-white.png");
     background-position: 7% 50%;
     background-repeat: no-repeat;
     background-size: 15px 15px;
@@ -560,7 +560,7 @@ a:visited {
     border:none;
     background-color: #B22222; /* red */
     color: white;
-    background-image: url("images/icons/buttons/back-white.png");
+    background-image: url("../images/icons/buttons/back-white.png");
     background-position: 15% 50%;
     background-repeat: no-repeat;
     background-size: 20px 20px;
@@ -631,7 +631,7 @@ a:visited {
     border-right: 1px solid #202020;
     background-color: #4CAF50; /* Green */
     color: white;
-    background-image: url("images/icons/buttons/restart-white.png");
+    background-image: url("../images/icons/buttons/restart-white.png");
     background-position: 4% 50%;
     background-repeat: no-repeat;
     background-size: 13px 13px;
@@ -677,7 +677,7 @@ a:visited {
     border:none;
     background-color: #4CAF50; /* Green */
     color: white;
-    background-image: url("images/icons/buttons/save-white.png");
+    background-image: url("../images/icons/buttons/save-white.png");
     background-position: 15% 50%;
     background-repeat: no-repeat;
     background-size: 15px 15px;
@@ -697,7 +697,7 @@ a:visited {
     border:none;
     background-color: #B22222; /* red */
     color: white;
-    background-image: url("images/icons/buttons/back-white.png");
+    background-image: url("../images/icons/buttons/back-white.png");
     background-position: 15% 50%;
     background-repeat: no-repeat;
     background-size: 20px 20px;
@@ -871,7 +871,7 @@ a:visited {
   border: none;
   margin: inherit;
   overflow-y: scroll;
-  background-image: url("images/background/back2.png");
+  background-image: url("../images/background/back2.png");
   background-repeat: repeat-x;
   background-repeat: repeat-y;
 }
@@ -954,7 +954,7 @@ a:visited {
   left: 10px;
   background-color: #B22222;
   color: white;
-  background-image: url("images/icons/buttons/hide-white.png");
+  background-image: url("../images/icons/buttons/hide-white.png");
   background-position: 50% 60%;
   background-repeat: no-repeat;
   background-size: 30px 30px;

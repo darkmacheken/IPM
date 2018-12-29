@@ -10,7 +10,7 @@
     right: 10px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     border: none;
-    background-image: url("images/icons/account/user-white.png");
+    background-image: url("../images/icons/account/user-white.png");
     background-position: 10% 45%;
     background-repeat: no-repeat;
     background-size: 25px 25px;
@@ -47,7 +47,7 @@
     color: white;
     border: none;
     line-height: 25px;
-    background-image: url("images/icons/account/login-white.png");
+    background-image: url("../images/icons/account/login-white.png");
     background-position: 10% 47%;
     background-repeat: no-repeat;
     background-size: 25px 25px;
@@ -67,7 +67,7 @@
     color: white;
     border: none;
     line-height: 25px;
-    background-image: url("images/icons/account/register-white.png");
+    background-image: url("../images/icons/account/register-white.png");
     background-position: 7% 50%;
     background-repeat: no-repeat;
     background-size: 20px 20px;
@@ -93,7 +93,7 @@
     padding: 1%;
     width: 30px;
     text-align: left;
-    background-image: url(images/icons/buttons/info-white.png);
+    background-image: url(../images/icons/buttons/info-white.png);
     background-position: 75% 45%;
     background-repeat: no-repeat;
     background-size: 20px 20px;
@@ -104,7 +104,7 @@
 .info:active{
   background-color: white;
   color: black;
-  background-image: url(images/icons/buttons/info-black.png);
+  background-image: url(../images/icons/buttons/info-black.png);
 }
 .titulo{
     font-size: 24px;
@@ -204,7 +204,7 @@
     background-color: #363636;
     height: 50px;
     width: 50px;
-    background-image: url("images/icons/buttons/edit-white.png");
+    background-image: url("../images/icons/buttons/edit-white.png");
     background-position: 50% 47%;
     background-repeat: no-repeat;
     background-size: 30px 30px;
@@ -322,7 +322,7 @@
     background-color: #B22222; /* red */
     color: white;
     border: none;
-    background-image: url("images/icons/buttons/menu-principal-white.png");
+    background-image: url("../images/icons/buttons/menu-principal-white.png");
     background-position: 7% 45%;
     background-repeat: no-repeat;
     background-size: 35px 35px;
@@ -345,7 +345,7 @@
     color: white;
     border: none;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    background-image: url("images/icons/buttons/confirmar-white.png");
+    background-image: url("../images/icons/buttons/confirmar-white.png");
     background-position: 17% 52%;
     background-repeat: no-repeat;
     background-size: 35px 35px;
@@ -380,14 +380,14 @@
     top: 0px;
     left: 0px;
     border-top: none;
-    background-image: url("images/icons/food-menu/bread-white.png");
+    background-image: url("../images/icons/food-menu/bread-white.png");
     background-position: 14% 47%;
     background-repeat: no-repeat;
     background-size: 20px 20px;
 }
 #menu-entradas.selected {
     border-top: none;
-    background-image: url("images/icons/food-menu/bread-black.png");
+    background-image: url("../images/icons/food-menu/bread-black.png");
     background-position: 14% 47%;
     background-repeat: no-repeat;
     background-size: 20px 20px;
@@ -396,13 +396,13 @@
     position: absolute;
     top: 87px;
     left: 0px;
-    background-image: url("images/icons/food-menu/soup-white.png");
+    background-image: url("../images/icons/food-menu/soup-white.png");
     background-position: 10% 45%;
     background-repeat: no-repeat;
     background-size: 30px 30px;
 }
 #menu-sopas.selected {
-    background-image: url("images/icons/food-menu/soup-black.png");
+    background-image: url("../images/icons/food-menu/soup-black.png");
     background-position: 10% 45%;
     background-repeat: no-repeat;
     background-size: 30px 30px;
@@ -411,13 +411,13 @@
     position: absolute;
     top: 174px;
     left: 0px;
-    background-image: url("images/icons/food-menu/plate-white.png");
+    background-image: url("../images/icons/food-menu/plate-white.png");
     background-position: 10% 50%;
     background-repeat: no-repeat;
     background-size: 30px 30px;
 }
 #menu-pratos.selected {
-    background-image: url("images/icons/food-menu/plate-black.png");
+    background-image: url("../images/icons/food-menu/plate-black.png");
     background-position: 10% 50%;
     background-repeat: no-repeat;
     background-size: 30px 30px;
@@ -428,14 +428,14 @@
     position: absolute;
     top: 261.5px;
     left: 0px;
-    background-image: url("images/icons/food-menu/drink-white.png");
+    background-image: url("../images/icons/food-menu/drink-white.png");
     background-position: 10% 45%;
     background-repeat: no-repeat;
     background-size: 30px 30px;
 }
 
 #menu-bebidas.selected {
-    background-image: url("images/icons/food-menu/drink-black.png");
+    background-image: url("../images/icons/food-menu/drink-black.png");
     background-position: 10% 45%;
     background-repeat: no-repeat;
     background-size: 30px 30px;
@@ -445,13 +445,13 @@
     position: absolute;
     top: 349px;
     left: 0px;
-    background-image: url("images/icons/food-menu/dessert-white.png");
+    background-image: url("../images/icons/food-menu/dessert-white.png");
     background-position: 7% 49%;
     background-repeat: no-repeat;
     background-size: 40px 40px;
 }
 #menu-sobremesas.selected {
-    background-image: url("images/icons/food-menu/dessert-black.png");
+    background-image: url("../images/icons/food-menu/dessert-black.png");
     background-position: 7% 49%;
     background-repeat: no-repeat;
     background-size: 40px 40px;
@@ -462,7 +462,7 @@
     left: 0px;
     height: 42px;
     border-bottom: none;
-    background-image: url("images/icons/food-menu/coffee-white.png");
+    background-image: url("../images/icons/food-menu/coffee-white.png");
     background-position: 10% 48%;
     background-repeat: no-repeat;
     background-size: 30px 30px;
@@ -470,7 +470,7 @@
 
 #menu-cafetaria.selected {
     border-bottom: none;
-    background-image: url("images/icons/food-menu/coffee-black.png");
+    background-image: url("../images/icons/food-menu/coffee-black.png");
     background-position: 10% 48%;
     background-repeat: no-repeat;
     background-size: 30px 30px;
@@ -505,7 +505,7 @@
     right: 10px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     border: none;
-    background-image: url("images/icons/account/history-white.png");
+    background-image: url("../images/icons/account/history-white.png");
     background-position: 10% 45%;
     background-repeat: no-repeat;
     background-size: 25px 25px;
@@ -587,7 +587,7 @@
     border-right: 1px solid #202020;
     background-color: #4CAF50; /* Green */
     color: white;
-    background-image: url("images/icons/buttons/restart-white.png");
+    background-image: url("../images/icons/buttons/restart-white.png");
     background-position: 4% 50%;
     background-repeat: no-repeat;
     background-size: 13px 13px;
@@ -628,7 +628,7 @@
     border-left: none;
     border-right: none;
     background-color: #B22222; /* red */
-    background-image: url("images/icons/buttons/close-white.png");
+    background-image: url("../images/icons/buttons/close-white.png");
     background-position: 32% 50%;
     background-repeat: no-repeat;
     background-size: 15px 15px;
@@ -664,7 +664,7 @@
     border:none;
     background-color: #4CAF50; /* Green */
     color: white;
-    background-image: url("images/icons/buttons/restart-white.png");
+    background-image: url("../images/icons/buttons/restart-white.png");
     background-position: 7% 50%;
     background-repeat: no-repeat;
     background-size: 15px 15px;
@@ -684,7 +684,7 @@
     border:none;
     background-color: #B22222; /* red */
     color: white;
-    background-image: url("images/icons/buttons/back-white.png");
+    background-image: url("../images/icons/buttons/back-white.png");
     background-position: 15% 50%;
     background-repeat: no-repeat;
     background-size: 20px 20px;
@@ -704,7 +704,7 @@
     right: 10px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     border: none;
-    background-image: url("images/icons/account/definicoes-white.png");
+    background-image: url("../images/icons/account/definicoes-white.png");
     background-position: 10% 45%;
     background-repeat: no-repeat;
     background-size: 25px 25px;
@@ -736,7 +736,7 @@
     background-color: #4CAF50; /* Green */
     color: white;
     border: none;
-    background-image: url(images/icons/buttons/save-white.png);
+    background-image: url(../images/icons/buttons/save-white.png);
     background-position: 15% 50%;
     background-repeat: no-repeat;
     background-size: 15px 15px;
@@ -758,7 +758,7 @@
     background-color: #B22222; /* red */
     color: white;
     border: none;
-    background-image: url("images/icons/buttons/close-white.png");
+    background-image: url("../images/icons/buttons/close-white.png");
     background-position: 17% 50%;
     background-repeat: no-repeat;
     background-size: 15px 15px;
@@ -775,7 +775,7 @@
     width: 40px;
     height: 40px;
     border: none;
-    background-image: url("images/icons/account/history-black.png");
+    background-image: url("../images/icons/account/history-black.png");
     background-repeat: no-repeat;
     background-size: 40px 40px;
     background-color: transparent;
@@ -789,7 +789,7 @@
     width: 40px;
     height: 40px;
     border: none;
-    background-image: url("images/icons/account/definicoes-black.png");
+    background-image: url("../images/icons/account/definicoes-black.png");
     background-repeat: no-repeat;
     background-size: 40px 40px;
     background-color: transparent;
@@ -803,7 +803,7 @@
     width: 35px;
     height: 35px;
     border: none;
-    background-image: url("images/icons/account/logout-black.png");
+    background-image: url("../images/icons/account/logout-black.png");
     background-repeat: no-repeat;
     background-size: 35px 35px;
     background-color: transparent;
@@ -851,7 +851,7 @@
     left: 340px;
     border: none;
     background-color: transparent;
-    background-image: url("images/rate/stars.png");
+    background-image: url("../images/rate/stars.png");
     background-repeat: no-repeat;
     background-size: 333px 333px;
     background-color: transparent;

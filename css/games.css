@@ -6,7 +6,7 @@
 
 
 #tic-tac-toe-game-div{
-  background-image: url("images/games/tic-tac-toe-black.png");
+  background-image: url("../images/games/tic-tac-toe-black.png");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: 70% 70%;
@@ -26,11 +26,11 @@
   background-size: 13% 75%;
 }
 #tic-tac-toe-computer-score{
-    background-image: url(images/games/computer-black.png);
+    background-image: url(../images/games/computer-black.png);
 }
 #tic-tac-toe-user-score{
   bottom: 1%;
-  background-image: url(images/games/user-black.png);
+  background-image: url(../images/games/user-black.png);
   background-position: 2% 71%;
 }
 
@@ -38,7 +38,7 @@
   width: 20%;
   height: 20%;
   position: absolute;
-  /*background-image: url("images/games/tic-tac-toe-x-blue.png");*/
+  /*background-image: url("../images/games/tic-tac-toe-x-blue.png");*/
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: 70% 70%;
@@ -99,7 +99,7 @@
   height: 30%;
   position: absolute;
   left: 17%;
-  background-image: url(images/games/reta-horizontal-yellow.png);
+  background-image: url(../images/games/reta-horizontal-yellow.png);
   background-position: 0% 0%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -112,7 +112,7 @@
   width: 30%;
   position: absolute;
   top: 17%;
-  background-image: url(images/games/reta-vertical-yellow.png);
+  background-image: url(../images/games/reta-vertical-yellow.png);
   background-position: 0% 0%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -126,7 +126,7 @@
   position: absolute;
   top: 17%;
   left: 17%;
-  background-image: url(images/games/reta-diagonal-positivo-yellow.png);
+  background-image: url(../images/games/reta-diagonal-positivo-yellow.png);
   background-position: 0% 0%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -137,7 +137,7 @@
   position: absolute;
   top: 17%;
   left: 17%;
-  background-image: url(images/games/reta-diagonal-negativo-yellow.png);
+  background-image: url(../images/games/reta-diagonal-negativo-yellow.png);
   background-position: 0% 0%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -206,7 +206,7 @@
   width: 50%;
   height: 30%;
   position: absolute;
-  background-image: url("images/games/esmurristo2.png");
+  background-image: url("../images/games/esmurristo2.png");
   background-position: 0% 0%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -246,7 +246,7 @@
       line-height: 160%;
       background-color: #009ee1;
       color: white;
-      background-image: url(images/icons/buttons/play-again-black.png);
+      background-image: url(../images/icons/buttons/play-again-black.png);
       background-position: 2% 40%;
       background-repeat: no-repeat;
       background-size: 15% 46%;
@@ -270,7 +270,7 @@
       line-height: 139%;
       background-color: #009ee1;
       color: white;
-      background-image: url(images/icons/buttons/play-black.png);
+      background-image: url(../images/icons/buttons/play-black.png);
       background-position: 9% 50%;
       background-repeat: no-repeat;
       background-size: 20% 50%;
@@ -298,16 +298,16 @@
 }
 
 #pong-computer-score{
-    background-image: url(images/games/computer-black.png);
+    background-image: url(../images/games/computer-black.png);
 }
 #pong-user-score{
   bottom: 1%;
-  background-image: url(images/games/user-black.png);
+  background-image: url(../images/games/user-black.png);
   background-position: 2% 71%;
 }
 
 .retaDashed{
-  background-image: url(images/games/dashed-line-black.png);
+  background-image: url(../images/games/dashed-line-black.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   height: 6%;

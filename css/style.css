@@ -9,7 +9,7 @@ html {
 body {
     width: 95em;
     height: 10em;
-    background-image: url("images/background/back1.png");
+    background-image: url("../images/background/back1.png");
     background-repeat: repeat-x repeat-y;
     vertical-align: middle;
     text-align: center;
